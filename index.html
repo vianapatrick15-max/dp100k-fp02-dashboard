@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DP100K-Fp02 · Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0b0f;
+  --card:#131520;
+  --card2:#1c1f2d;
+  --card3:#242838;
+  --border:#252938;
+  --border2:#343a4f;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --white:#eceef5;
+  --muted:#5a5f72;
+  --muted2:#8b8fa8;
+  --green:#2db87a;
+  --green2:#5fd4a0;
+  --red:#e05252;
+  --blue:#4b8ef5;
+  --orange:#e08832;
+  --purple:#9b6dea;
+}
+html{font-size:13px}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-height:100vh;padding-bottom:60px}
+
+.hdr{background:var(--card);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.hdr-l{display:flex;align-items:baseline;gap:12px}
+.hdr-title{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.hdr-sub{font-size:10px;color:var(--muted2);letter-spacing:.05em}
+.hdr-r{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--muted2)}
+.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);margin-right:6px}
+
+.fbar{background:var(--card);border-bottom:1px solid var(--border);padding:10px 28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.fg{display:flex;align-items:center;gap:6px}
+.fl{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap;margin-right:4px}
+.fb{font-size:11px;padding:6px 12px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:3px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
+.fb:hover{color:var(--white);border-color:var(--border2)}
+.fb.on{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.55);color:var(--gold2)}
+.fsep{width:1px;height:22px;background:var(--border)}
+.fb-sub{font-size:9px;color:var(--muted);margin-left:6px}
+
+.main{padding:20px 28px;display:flex;flex-direction:column;gap:22px;max-width:1480px;margin:0 auto}
+
+.section-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.section-title{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
+.section-num{font-family:'Roboto Mono',monospace;color:var(--gold);font-size:9px;letter-spacing:.15em;margin-right:8px;opacity:.7}
+.section-hint{font-size:10px;color:var(--muted);font-style:italic}
+
+/* ── VEREDITO (5 KPIs) ── */
+.veredito{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.kpi-big{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px;position:relative;overflow:hidden}
+.kpi-big::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px}
+.kpi-big.spend::after{background:var(--gold)}
+.kpi-big.vendas::after{background:var(--green)}
+.kpi-big.cpa::after{background:var(--blue)}
+.kpi-big.roas::after{background:var(--green)}
+.kpi-big.mql::after{background:var(--purple)}
+.kpi-lbl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.kpi-val{font-size:30px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--white);font-family:'Roboto Mono',monospace;margin-bottom:10px}
+.kpi-bot{display:flex;justify-content:space-between;align-items:flex-end;font-size:11px}
+.kpi-delta{font-weight:600}
+.kpi-delta.up{color:var(--green)}
+.kpi-delta.dn{color:var(--red)}
+.kpi-delta.inv-up{color:var(--red)}
+.kpi-delta.inv-dn{color:var(--green)}
+.kpi-delta.neutral{color:var(--muted2)}
+.kpi-delta-lbl{font-size:9px;color:var(--muted);margin-left:4px}
+.kpi-sub{font-size:10px;color:var(--muted2);text-align:right}
+
+/* ── FUNIL ── */
+.funnel-grid{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px}
+.funnel-hdr{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.funnel-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch}
+.fnl-step{position:relative;padding:14px 18px;border-right:1px solid var(--border)}
+.fnl-step:last-child{border-right:0}
+.fnl-name{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.fnl-val{font-size:22px;font-weight:600;color:var(--white);font-family:'Roboto Mono',monospace;line-height:1}
+.fnl-rate{position:absolute;right:-18px;top:50%;transform:translateY(-50%);background:var(--card2);border:1px solid var(--border2);border-radius:14px;padding:4px 10px;font-size:10px;color:var(--gold);font-family:'Roboto Mono',monospace;z-index:2;font-weight:600}
+.fnl-step:last-child .fnl-rate{display:none}
+.fnl-bar{height:5px;background:var(--card2);border-radius:2px;margin-top:10px;overflow:hidden}
+.fnl-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px}
+
+/* ── LINHA DO TEMPO ── */
+.chart-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px}
+.chart-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.chart-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.chart-leg{display:flex;gap:14px;font-size:10px;color:var(--muted2)}
+.leg-item{display:flex;align-items:center;gap:5px}
+.leg-sw{width:14px;height:3px;border-radius:2px}
+.leg-sw.spend{background:rgba(201,168,76,.65)}
+.leg-sw.vendas{background:var(--green)}
+.chart-wrap{height:260px}
+
+/* ── TOP ADS TABLE ── */
+.tbl-card{background:var(--card);border:1px solid var(--border);border-radius:5px;overflow:hidden}
+.tbl-hdr{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border)}
+.tbl-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.tbl-sub{font-size:10px;color:var(--muted2)}
+.tbl-wrap{overflow-x:auto;max-height:520px;overflow-y:auto}
+.tbl{width:100%;border-collapse:collapse;font-size:11.5px}
+.tbl thead th{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 12px;text-align:right;background:var(--card2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1;white-space:nowrap}
+.tbl thead th:first-child{text-align:left;padding-left:20px}
+.tbl tbody tr{border-bottom:1px solid rgba(35,40,56,.45);transition:background .15s}
+.tbl tbody tr:hover{background:rgba(255,255,255,.018)}
+.tbl tbody td{padding:10px 12px;text-align:right;font-family:'Roboto Mono',monospace;color:var(--white);font-weight:500;white-space:nowrap}
+.tbl tbody td:first-child{text-align:left;padding-left:20px;font-family:'Inter',sans-serif;font-weight:500}
+.cell-spend{color:var(--gold2)}
+.cell-good{color:var(--green)}
+.cell-warn{color:#d4c44c}
+.cell-bad{color:var(--red)}
+.cell-muted{color:var(--muted)}
+.ad-name{font-size:11.5px;font-weight:500;color:var(--white)}
+.ad-meta{font-size:9px;color:var(--muted);margin-top:1px;letter-spacing:.04em}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+.sg{background:var(--green);box-shadow:0 0 4px var(--green)}
+.sr{background:#777}
+.ig-link{font-size:10px;color:var(--gold);text-decoration:none;border-bottom:1px dotted rgba(201,168,76,.4)}
+.ig-link:hover{color:var(--gold2)}
+
+/* ── PERSONA CARDS ── */
+.persona-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.p-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:16px 18px}
+.p-card-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.p-title{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.p-total{font-size:10px;color:var(--gold);font-family:'Roboto Mono',monospace}
+.p-row{display:flex;align-items:center;margin-bottom:7px;gap:10px;font-size:11px}
+.p-label{flex:1;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px}
+.p-bar{flex:1;height:6px;background:var(--card2);border-radius:3px;overflow:hidden;position:relative}
+.p-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.p-fill.compradoras{background:linear-gradient(90deg,var(--green),var(--green2))}
+.p-fill.mql{background:linear-gradient(90deg,var(--purple),#c08fff)}
+.p-pct{font-size:10.5px;color:var(--muted2);font-family:'Roboto Mono',monospace;min-width:48px;text-align:right}
+.p-n{font-size:10px;color:var(--muted);font-family:'Roboto Mono',monospace}
+
+.persona-dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.persona-mode-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--card);border:1px solid var(--border);border-radius:5px;margin-bottom:10px}
+.pm-title{font-size:11px;font-weight:600;color:var(--white)}
+.pm-lead .pm-title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+.pm-buyer .pm-title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:8px;vertical-align:middle}
+.pm-sub{font-size:10px;color:var(--muted2)}
+
+/* ── HUBLA SUMMARY ── */
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+/* ── MQL POR AD ── */
+.mql-card{background:var(--card);border:1px solid var(--border);border-radius:5px;overflow:hidden}
+.mql-tbl-wrap{max-height:480px;overflow-y:auto}
+
+/* ── FOOTER ── */
+.footer{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:9px 28px;display:flex;justify-content:space-between;align-items:center;z-index:90;font-size:11px}
+.foot-l{display:flex;gap:18px;align-items:center}
+.foot-item{display:flex;align-items:center;gap:6px}
+.foot-lbl{color:var(--muted);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.foot-val{color:var(--white);font-family:'Roboto Mono',monospace;font-weight:600}
+.foot-val.green{color:var(--green)}
+.foot-val.yellow{color:#d4c44c}
+.foot-val.gold{color:var(--gold)}
+.foot-r{font-size:10px;color:var(--muted2)}
+.foot-r a{color:var(--gold2);font-size:11px;text-decoration:none;border-bottom:1px dotted var(--gold)}
+.foot-r a:hover{color:var(--gold)}
+
+/* ── BADGE ── */
+.badge{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border-radius:2px;font-family:'Inter',sans-serif;vertical-align:middle}
+.badge.live{background:rgba(45,184,122,.15);color:var(--green);border:1px solid rgba(45,184,122,.4)}
+.badge.paused{background:rgba(122,122,122,.15);color:var(--muted2);border:1px solid var(--border2)}
+
+@media (max-width: 1100px){
+  .veredito{grid-template-columns:repeat(2,1fr)}
+  .persona-grid{grid-template-columns:repeat(2,1fr)}
+  .summary-grid{grid-template-columns:repeat(2,1fr)}
+  .funnel-steps{grid-template-columns:1fr;gap:8px}
+  .fnl-step{border-right:0;border-bottom:1px solid var(--border)}
+  .fnl-rate{display:none!important}
+  .persona-dual{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-l">
+    <div class="hdr-title">DP100K-Fp02 · Dashboard</div>
+    <div class="hdr-sub">Tráfego · MQL · Persona · Pesquisa</div>
+  </div>
+  <div class="hdr-r">
+    <span><span class="live-dot"></span><span id="last-update">carregando...</span></span>
+    <span style="color:var(--muted)">·</span>
+    <span style="color:var(--muted);font-size:10px">refresh hourly</span>
+  </div>
+</div>
+
+<div class="fbar">
+  <div class="fg" id="filter-periodo">
+    <span class="fl">Período</span>
+    <button class="fb on" data-key="mes">Mês completo</button>
+    <button class="fb" data-key="sem1">Sem 1 <span class="fb-sub">28/04–04/05</span></button>
+    <button class="fb" data-key="sem2">Sem 2 <span class="fb-sub">05/05–11/05</span></button>
+    <button class="fb" data-key="sem3">Sem 3 <span class="fb-sub">12/05–18/05</span></button>
+    <button class="fb" data-key="sem4">Sem 4 <span class="fb-sub">19/05–25/05</span></button>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- LAYER 1 · VEREDITO -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">01</span>Veredito</div><div class="section-hint">tá no azul? — em 5 segundos</div></div>
+  </div>
+  <div class="veredito" id="veredito"></div>
+
+  <!-- LAYER 2 · FUNIL -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">02</span>Funil</div><div class="section-hint">onde tá vazando?</div></div>
+  </div>
+  <div class="funnel-grid">
+    <div class="funnel-hdr">Impressões → Cliques → LPV → IC → Compras</div>
+    <div class="funnel-steps" id="funnel"></div>
+  </div>
+
+  <!-- LAYER 3 · LINHA DO TEMPO -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">03</span>Linha do tempo</div><div class="section-hint">tendência diária</div></div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-hdr">
+      <div class="chart-title">Spend & Vendas por dia</div>
+      <div class="chart-leg">
+        <span class="leg-item"><span class="leg-sw spend"></span>Spend (R$)</span>
+        <span class="leg-item"><span class="leg-sw vendas"></span>Vendas (Hubla Fp02)</span>
+      </div>
+    </div>
+    <div class="chart-wrap"><canvas id="chart-daily"></canvas></div>
+  </div>
+
+  <!-- LAYER 4 · HUBLA SUMMARY -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">04</span>Vendas Hubla</div><div class="section-hint">faturamento real e origem</div></div>
+  </div>
+  <div class="summary-grid" id="hubla-summary"></div>
+
+  <!-- LAYER 5 · TOP ADS -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">05</span>Top Ads (por spend)</div><div class="section-hint">quem está puxando o resultado</div></div>
+  </div>
+  <div class="tbl-card">
+    <div class="tbl-hdr">
+      <div class="tbl-title">Performance por anúncio</div>
+      <div class="tbl-sub"><span id="topads-count">0</span> anúncios · ordenado por spend</div>
+    </div>
+    <div class="tbl-wrap">
+      <table class="tbl" id="tbl-topads">
+        <thead><tr>
+          <th>Ad</th><th>Status</th><th>Spend</th><th>Impr</th><th>CTR</th>
+          <th>LPV</th><th>IC</th><th>Vendas</th><th>CPA</th><th>ROAS</th><th>IG</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- LAYER 6 · PERSONA -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">06</span>Persona · Pesquisa</div><div class="section-hint">quem o tráfego está atraindo (Meta Ads)</div></div>
+  </div>
+  <div class="persona-dual">
+    <div>
+      <div class="persona-mode-hdr pm-lead">
+        <span class="pm-title">Todos os leads Meta Ads</span>
+        <span class="pm-sub"><span id="persona-leads-total">0</span> respondentes · MQL <span id="persona-leads-mql">0</span> (<span id="persona-leads-mqlpct">0</span>%)</span>
+      </div>
+      <div class="persona-grid" id="persona-leads"></div>
+    </div>
+    <div>
+      <div class="persona-mode-hdr pm-buyer">
+        <span class="pm-title">Apenas compradoras (Hubla × Pesquisa)</span>
+        <span class="pm-sub"><span id="persona-buyers-total">0</span> matchadas · MQL <span id="persona-buyers-mql">0</span> (<span id="persona-buyers-mqlpct">0</span>%)</span>
+      </div>
+      <div class="persona-grid" id="persona-buyers"></div>
+    </div>
+  </div>
+
+  <!-- LAYER 7 · MQL POR AD -->
+  <div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">07</span>MQL por anúncio</div><div class="section-hint">qual criativo qualifica melhor (Pesquisa)</div></div>
+  </div>
+  <div class="mql-card tbl-card">
+    <div class="tbl-hdr">
+      <div class="tbl-title">Eficiência de qualificação</div>
+      <div class="tbl-sub">ordenado por # MQL · respondentes Meta Ads</div>
+    </div>
+    <div class="mql-tbl-wrap">
+      <table class="tbl" id="tbl-mqlad">
+        <thead><tr>
+          <th>Ad</th><th>Respondentes</th><th>MQL</th><th>MQL %</th><th>Barra</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="foot-l">
+    <div class="foot-item"><span class="foot-lbl">Período ativo:</span><span class="foot-val gold" id="foot-periodo">—</span></div>
+    <div class="foot-item"><span class="foot-lbl">Match Hubla×Pesquisa:</span><span class="foot-val green" id="foot-match">—</span></div>
+    <div class="foot-item"><span class="foot-lbl">Schema:</span><span class="foot-val" id="foot-schema">v1</span></div>
+  </div>
+  <div class="foot-r"><a href="data.json" target="_blank">data.json</a></div>
+</div>
+
+<script>
+let DATA = null;
+let activeKey = 'mes';
+let chartDaily = null;
+
+const fmt = {
+  brl: v => 'R$ ' + (v||0).toLocaleString('pt-BR',{minimumFractionDigits:0, maximumFractionDigits:0}),
+  brlk: v => {
+    const n = v||0;
+    if (n >= 1e6) return 'R$ ' + (n/1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return 'R$ ' + (n/1e3).toFixed(1) + 'k';
+    return 'R$ ' + n.toFixed(0);
+  },
+  int: v => (v||0).toLocaleString('pt-BR'),
+  pct: v => (v||0).toFixed(1) + '%',
+  pct0: v => (v||0).toFixed(0) + '%',
+  dec: v => (v||0).toFixed(2),
+};
+
+function delta(now, prev) {
+  if (!prev) return { v: 0, dir: 'neutral', text: '—' };
+  const d = (now - prev) / prev * 100;
+  if (Math.abs(d) < 0.5) return { v: d, dir: 'neutral', text: '~ 0%' };
+  return {
+    v: d,
+    dir: d > 0 ? 'up' : 'dn',
+    text: (d > 0 ? '↑ ' : '↓ ') + Math.abs(d).toFixed(0) + '%',
+  };
+}
+
+function previousKey(key) {
+  const order = ['sem1','sem2','sem3','sem4'];
+  if (key === 'mes' || !order.includes(key)) return null;
+  const i = order.indexOf(key);
+  return i > 0 ? order[i-1] : null;
+}
+
+function load() {
+  fetch('data.json?_=' + Date.now()).then(r => r.json()).then(d => {
+    DATA = d;
+    document.getElementById('last-update').textContent = 'Atualizado ' + (d.updated_at || '—');
+    document.getElementById('foot-schema').textContent = 'v' + (d.schema_version || 1);
+    render(activeKey);
+  });
+}
+
+function render(key) {
+  if (!DATA) return;
+  activeKey = key;
+  document.querySelectorAll('#filter-periodo .fb').forEach(b => {
+    b.classList.toggle('on', b.dataset.key === key);
+  });
+  const p = DATA.periodos[key];
+  if (!p) return;
+  document.getElementById('foot-periodo').textContent = p.periodo.nome + ' (' + p.periodo.inicio + ' a ' + p.periodo.fim + ')';
+  document.getElementById('foot-match').textContent = (p.match.match_pct||0).toFixed(0) + '%';
+  renderVeredito(p, key);
+  renderFunnel(p);
+  renderChart(p);
+  renderHublaSummary(p);
+  renderTopAds(p);
+  renderPersona(p);
+  renderMqlAd(p);
+}
+
+function renderVeredito(p, key) {
+  const prev = DATA.periodos[previousKey(key)];
+  const t = p.trafego;
+  const m = p.pesquisa;
+  const h = p.hubla;
+  const dSpend = delta(t.spend, prev?.trafego.spend);
+  const dVendas = delta(h.total, prev?.hubla.total);
+  const dCpa = delta(t.cpa, prev?.trafego.cpa);
+  const dRoas = delta(t.roas, prev?.trafego.roas);
+  const dMql = delta(m.mql_pct, prev?.pesquisa.mql_pct);
+  document.getElementById('veredito').innerHTML = `
+    <div class="kpi-big spend">
+      <div class="kpi-lbl">Investimento</div>
+      <div class="kpi-val">${fmt.brlk(t.spend)}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta inv-${dSpend.dir==='up'?'up':dSpend.dir==='dn'?'dn':'neutral'}">${dSpend.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">${t.impressions.toLocaleString('pt-BR')} impr</span></div>
+    </div>
+    <div class="kpi-big vendas">
+      <div class="kpi-lbl">Vendas (Hubla)</div>
+      <div class="kpi-val">${h.total}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta ${dVendas.dir}">${dVendas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">Meta ${h.pct_meta.toFixed(0)}% · ${t.purch} pixel</span></div>
+    </div>
+    <div class="kpi-big cpa">
+      <div class="kpi-lbl">CPA</div>
+      <div class="kpi-val">${fmt.brl(t.cpa)}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpa.dir==='up'?'up':dCpa.dir==='dn'?'dn':'neutral'}">${dCpa.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">por compra pixel</span></div>
+    </div>
+    <div class="kpi-big roas">
+      <div class="kpi-lbl">ROAS (ticket ${fmt.brl(DATA.ticket_medio)})</div>
+      <div class="kpi-val">${fmt.dec(t.roas)}x</div>
+      <div class="kpi-bot"><span><span class="kpi-delta ${dRoas.dir}">${dRoas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">${fmt.brlk(t.faturamento_estimado)} est.</span></div>
+    </div>
+    <div class="kpi-big mql">
+      <div class="kpi-lbl">MQL % (Pesquisa)</div>
+      <div class="kpi-val">${fmt.pct0(m.mql_pct)}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta ${dMql.dir}">${dMql.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">${m.mql}/${m.meta_ads} respondentes</span></div>
+    </div>`;
+}
+
+function renderFunnel(p) {
+  const t = p.trafego;
+  const steps = [
+    { name: 'Impressões', val: t.impressions, rate: null },
+    { name: 'Cliques', val: t.clicks, rate: t.ctr, rateLbl: 'CTR' },
+    { name: 'Landing Page View', val: t.lpv, rate: t.click_lpv, rateLbl: 'Click→LPV' },
+    { name: 'Initiated Checkout', val: t.ic, rate: t.lpv_ic, rateLbl: 'LPV→IC' },
+    { name: 'Vendas (pixel)', val: t.purch, rate: t.ic_purch, rateLbl: 'IC→Compra' },
+  ];
+  const maxV = Math.max(...steps.map(s => s.val), 1);
+  document.getElementById('funnel').innerHTML = steps.map((s, i) => {
+    const pct = (s.val / maxV) * 100;
+    const rate = s.rate !== null
+      ? `<div class="fnl-rate">${s.rateLbl}: ${s.rate.toFixed(1)}%</div>` : '';
+    return `<div class="fnl-step">
+      ${rate}
+      <div class="fnl-name">${s.name}</div>
+      <div class="fnl-val">${fmt.int(s.val)}</div>
+      <div class="fnl-bar"><div class="fnl-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  }).join('');
+}
+
+function renderChart(p) {
+  const dates = p.serie_diaria.map(r => r.date);
+  const spend = p.serie_diaria.map(r => r.spend);
+  const purch = p.serie_diaria.map(r => r.purch);
+  if (chartDaily) chartDaily.destroy();
+  const ctx = document.getElementById('chart-daily').getContext('2d');
+  chartDaily = new Chart(ctx, {
+    data: {
+      labels: dates,
+      datasets: [
+        { type: 'bar', label: 'Spend (R$)', yAxisID: 'y1',
+          data: spend, backgroundColor: 'rgba(201,168,76,.55)', borderColor: 'rgba(201,168,76,.85)', borderWidth: 1 },
+        { type: 'line', label: 'Vendas', yAxisID: 'y2',
+          data: purch, borderColor: '#2db87a', backgroundColor: 'rgba(45,184,122,.18)',
+          tension: 0.25, pointBackgroundColor: '#5fd4a0', pointRadius: 3, borderWidth: 2 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0a0b0f', borderColor: '#252938', borderWidth: 1 } },
+      scales: {
+        x: { ticks: { color: '#8b8fa8', font: { size: 10 } }, grid: { color: 'rgba(35,40,56,.4)' } },
+        y1: { position: 'left', ticks: { color: '#c9a84c', font: { size: 10 },
+              callback: v => 'R$ ' + (v >= 1000 ? (v/1000).toFixed(1)+'k' : v) },
+              grid: { color: 'rgba(35,40,56,.4)' } },
+        y2: { position: 'right', ticks: { color: '#5fd4a0', font: { size: 10 }, precision: 0 },
+              grid: { display: false }, beginAtZero: true },
+      }
+    }
+  });
+}
+
+function renderHublaSummary(p) {
+  const h = p.hubla;
+  const cards = [
+    { l: 'Vendas (Hubla)', v: h.total, sub: 'Fp02 no período' },
+    { l: 'Faturamento', v: fmt.brlk(h.faturamento), sub: 'Ticket médio ' + fmt.brl(h.ticket_medio) },
+    { l: 'Via Meta Ads', v: h.meta_ads + ' (' + h.pct_meta.toFixed(0) + '%)', sub: 'utm_source=meta' },
+    { l: 'Match Pesquisa', v: p.match.matched_pesquisa + '/' + p.match.vendas_total, sub: (p.match.match_pct||0).toFixed(0) + '% das compradoras responderam' },
+  ];
+  document.getElementById('hubla-summary').innerHTML = cards.map(c => `
+    <div class="kpi-big" style="--bar:var(--green)">
+      <div class="kpi-lbl">${c.l}</div>
+      <div class="kpi-val" style="font-size:24px">${c.v}</div>
+      <div class="kpi-bot"><span class="kpi-sub" style="text-align:left">${c.sub}</span></div>
+    </div>`).join('');
+}
+
+function renderTopAds(p) {
+  const tb = document.querySelector('#tbl-topads tbody');
+  document.getElementById('topads-count').textContent = p.top_ads.length;
+  tb.innerHTML = p.top_ads.map(a => {
+    const cpaCls = a.cpa <= 200 ? 'cell-good' : a.cpa <= 300 ? 'cell-warn' : a.cpa > 0 ? 'cell-bad' : 'cell-muted';
+    const roasCls = a.roas >= 5 ? 'cell-good' : a.roas >= 3 ? 'cell-warn' : a.roas > 0 ? 'cell-bad' : 'cell-muted';
+    const statusOn = (a.ad_status === 'ACTIVE');
+    const ig = a.ig_url ? `<a class="ig-link" href="${a.ig_url}" target="_blank">↗ ver</a>` : '<span class="cell-muted">—</span>';
+    return `<tr>
+      <td>
+        <div class="ad-name">${a.ad_code || a.name.substring(0,42)}</div>
+        <div class="ad-meta">${(a.adset||'').substring(0,80)}</div>
+      </td>
+      <td><span class="status-dot ${statusOn?'sg':'sr'}"></span><span class="${statusOn?'cell-good':'cell-muted'}" style="font-size:10px">${statusOn?'LIVE':'PAUSED'}</span></td>
+      <td class="cell-spend">${fmt.brl(a.spend)}</td>
+      <td>${fmt.int(a.impr)}</td>
+      <td>${a.ctr.toFixed(1)}%</td>
+      <td>${fmt.int(a.lpv)}</td>
+      <td>${fmt.int(a.ic)}</td>
+      <td>${fmt.int(a.purch)}</td>
+      <td class="${cpaCls}">${a.cpa>0?fmt.brl(a.cpa):'—'}</td>
+      <td class="${roasCls}">${a.roas>0?a.roas.toFixed(1)+'x':'—'}</td>
+      <td>${ig}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderDistList(items, total, fillClass) {
+  const N = (items || []).slice(0, 6);
+  return N.map(i => `
+    <div class="p-row">
+      <div class="p-label" title="${i.k}">${i.k}</div>
+      <div class="p-bar"><div class="p-fill ${fillClass||''}" style="width:${i.pct.toFixed(1)}%"></div></div>
+      <div class="p-pct">${i.pct.toFixed(0)}% <span class="p-n">(${i.n})</span></div>
+    </div>`).join('');
+}
+
+function personaCards(p, fillClass) {
+  if (!p || !p.idade) return '<div style="grid-column:1/-1;color:var(--muted);text-align:center;padding:30px">sem dados de pesquisa neste período</div>';
+  const cards = [
+    { t: 'Idade', d: p.idade },
+    { t: 'Gênero', d: p.genero },
+    { t: 'Renda mensal', d: p.renda },
+    { t: 'Ocupação', d: p.ocupacao },
+    { t: 'Tempo me conhece', d: p.tempo },
+    { t: 'Já participou antes', d: p.previo },
+    { t: 'Autoimagem (palestras)', d: p.autoimg },
+    { t: 'Objetivo', d: p.objetivo },
+  ];
+  return cards.map(c => `
+    <div class="p-card">
+      <div class="p-card-hdr"><div class="p-title">${c.t}</div></div>
+      ${renderDistList(c.d, p.total_respondentes, fillClass)}
+    </div>`).join('');
+}
+
+function renderPersona(p) {
+  const lead = p.persona_leads_meta || {};
+  const buyer = p.persona_compradoras_meta || {};
+  document.getElementById('persona-leads-total').textContent = lead.total_respondentes || 0;
+  document.getElementById('persona-leads-mql').textContent = lead.mql || 0;
+  document.getElementById('persona-leads-mqlpct').textContent = (lead.mql_pct || 0).toFixed(0);
+  document.getElementById('persona-buyers-total').textContent = buyer.total_respondentes || 0;
+  document.getElementById('persona-buyers-mql').textContent = buyer.mql || 0;
+  document.getElementById('persona-buyers-mqlpct').textContent = (buyer.mql_pct || 0).toFixed(0);
+  document.getElementById('persona-leads').innerHTML = personaCards(lead, '');
+  document.getElementById('persona-buyers').innerHTML = personaCards(buyer, 'compradoras');
+}
+
+function renderMqlAd(p) {
+  const tb = document.querySelector('#tbl-mqlad tbody');
+  tb.innerHTML = (p.mql_por_ad || []).map(r => {
+    const pctCls = r.mql_pct >= 60 ? 'cell-good' : r.mql_pct >= 40 ? 'cell-warn' : 'cell-bad';
+    return `<tr>
+      <td><div class="ad-name">${r.ad}</div></td>
+      <td>${r.total}</td>
+      <td class="cell-good" style="font-weight:600">${r.mql}</td>
+      <td class="${pctCls}">${r.mql_pct.toFixed(0)}%</td>
+      <td style="text-align:left;padding-left:0;min-width:140px"><div class="p-bar" style="width:140px"><div class="p-fill mql" style="width:${Math.min(100, r.mql_pct).toFixed(1)}%"></div></div></td>
+    </tr>`;
+  }).join('');
+}
+
+document.querySelectorAll('#filter-periodo .fb').forEach(b => {
+  b.addEventListener('click', () => render(b.dataset.key));
+});
+
+load();
+setInterval(load, 5 * 60 * 1000); // recarrega a cada 5 min
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+name: Refresh DP100K Fp02 Dashboard
+on:
+  schedule:
+    - cron: '5 * * * *'   # 5min depois de cada hora
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Write service account credentials
+        env:
+          SA_JSON: ${{ secrets.GCP_SA_JSON }}
+        run: |
+          echo "$SA_JSON" > $RUNNER_TEMP/sa.json
+          echo "GOOGLE_SHEETS_CREDENTIALS_PATH=$RUNNER_TEMP/sa.json" >> $GITHUB_ENV
+
+      - name: Aggregate
+        run: python aggregate.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet data.json; then
+            echo "no changes"
+          else
+            git add data.json
+            git commit -m "refresh: $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
