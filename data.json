@@ -13048,8 +13048,8 @@
   },
   "_diag": {
     "trafego_linhas": 779,
-    "hubla_linhas": 1562,
-    "pesquisa_linhas": 2463,
+    "hubla_linhas": 1564,
+    "pesquisa_linhas": 2464,
     "invest_linhas": 592
   },
   "raw": {
@@ -27770,6 +27770,20 @@
           "meta_ads",
           "[ad-152][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-05-22",
+          "nis_mohammed@hotmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-05-22",
+          "yagocrepaldi@hotmail.com",
+          "ipm",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -33265,12 +33279,29 @@
           "Goiás",
           true,
           false
+        ],
+        [
+          "2026-05-22",
+          "shirleyrrrodrigues@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Funcionário(a) Público(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra",
+          "Paraíba",
+          true,
+          false
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-05-22"
   },
-  "updated_at": "2026-05-22 17:01:16 BRT",
+  "updated_at": "2026-05-22 18:19:35 BRT",
   "schema_version": 2
 }
