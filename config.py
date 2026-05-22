@@ -12,23 +12,22 @@ TICKET_MEDIO = 97.0  # ingresso DP100K (fallback p/ estimativa quando Hubla nao 
 TRAFEGO_SHEET_ID = "1R2MdILmwPZKwBqFpmT5i6VEaiaHYtpwtwCI4F7HLKQo"
 TRAFEGO_TAB = "Página1"
 
-# Planilha CONSOLIDADA (Hubla + Pesquisa)
+# Planilha CONSOLIDADA (Hubla + Pesquisa + Investimento por Hora)
 CONSOLIDADO_SHEET_ID = "1G6fjdMB9iwCrnDIHhmSoCC2nbHYIOaEvfRYxPUpBIK8"
 TAB_HUBLA = "Dados_venda_Hubla"
 TAB_PESQUISA = "Pesquisa"
+TAB_INVEST = "Investimento por Hora"   # FONTE CANONICA dos KPIs (spend/vendas/impr/clicks por turma)
 
 # --- Semanas ---
 # Cada semana mapeia para um TURMA_LABEL na planilha (col 0 em Hubla e Pesquisa)
 # E para um intervalo de datas no Trafego (col Date)
+# Datas exibidas no botao do filtro (override fica a cargo do aggregate, que descobre range REAL via Invest por Hora)
 SEMANAS = [
-    {"key": "sem1", "label": "Maio/26 - 1", "nome": "Semana 1", "inicio": "2026-04-28", "fim": "2026-05-04"},
-    {"key": "sem2", "label": "Maio/26 - 2", "nome": "Semana 2", "inicio": "2026-05-05", "fim": "2026-05-11"},
-    {"key": "sem3", "label": "Maio/26 - 3", "nome": "Semana 3", "inicio": "2026-05-12", "fim": "2026-05-18"},
-    {"key": "sem4", "label": "Maio/26 - 4", "nome": "Semana 4", "inicio": "2026-05-19", "fim": "2026-05-25"},
+    {"key": "sem1", "label": "Maio/26 - 1", "nome": "Semana 1"},
+    {"key": "sem2", "label": "Maio/26 - 2", "nome": "Semana 2"},
+    {"key": "sem3", "label": "Maio/26 - 3", "nome": "Semana 3"},
+    {"key": "sem4", "label": "Maio/26 - 4", "nome": "Semana 4"},
 ]
-
-MES_INICIO = SEMANAS[0]["inicio"]
-MES_FIM = SEMANAS[-1]["fim"]
 
 # --- Pesquisa: nomes oficiais das colunas (devem bater com headers da Pesquisa) ---
 COL_PESQ_TURMA  = "Turma"
@@ -122,10 +121,4 @@ def parse_date(s):
 
 
 def semana_atual_key():
-    hoje = date.today().isoformat()
-    for s in SEMANAS:
-        if s["inicio"] <= hoje <= s["fim"]:
-            return s["key"]
-    if hoje < SEMANAS[0]["inicio"]:
-        return SEMANAS[0]["key"]
     return SEMANAS[-1]["key"]

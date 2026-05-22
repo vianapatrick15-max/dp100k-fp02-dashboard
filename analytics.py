@@ -19,7 +19,96 @@ from config import (
 AD_PAT = re.compile(r'AD-(\d+)', re.I)
 
 # ============================================================================
-# TRAFEGO (daily granular)
+# INVESTIMENTO POR HORA (FONTE CANONICA dos KPIs por turma)
+# ============================================================================
+
+def invest_normalize(rows):
+    """Normaliza Investimento por Hora. Mantem coluna `turma` pra filtrar.
+    Cols esperadas: Turma, CHAVE, DATA, HORA, INVESTIDO, VENDAS, INITIATE CHECKOUT,
+                    CTR, VISITAS A PAGINA, IMPRESSOES, CLICKS"""
+    out = []
+    for r in rows:
+        turma = (r.get('Turma') or '').strip()
+        if not turma.startswith('Maio/26'):
+            continue
+        out.append({
+            'turma': turma,
+            'date': parse_date(r.get('DATA', '')),
+            'hora': r.get('HORA', '') or '',
+            'spend':   parse_money(r.get('INVESTIDO', 0)),
+            'vendas':  parse_int(r.get('VENDAS', 0)),
+            'ic':      parse_int(r.get('INITIATE CHECKOUT', 0)),
+            'visitas': parse_int(r.get('VISITAS A PAGINA', 0)),
+            'impr':    parse_int(r.get('IMPRESSÕES', 0)),
+            'clicks':  parse_int(r.get('CLICKS', 0)),
+        })
+    return out
+
+
+def filter_invest_turmas(rows, turma_labels):
+    return [r for r in rows if r['turma'] in turma_labels]
+
+
+def date_range_from_invest(rows):
+    """Range REAL de datas dadas as linhas filtradas."""
+    dates = sorted({r['date'] for r in rows if r['date']})
+    return (dates[0], dates[-1]) if dates else (None, None)
+
+
+def agg_invest(rows):
+    if not rows:
+        return _empty_invest()
+    spend = sum(r['spend'] for r in rows)
+    vendas = sum(r['vendas'] for r in rows)
+    ic = sum(r['ic'] for r in rows)
+    visitas = sum(r['visitas'] for r in rows)
+    impr = sum(r['impr'] for r in rows)
+    clicks = sum(r['clicks'] for r in rows)
+    return {
+        'spend': spend,
+        'vendas_gerenciador': vendas,
+        'ic': ic,
+        'visitas': visitas,
+        'impressions': impr,
+        'clicks': clicks,
+        'ctr':   safe_div(clicks, impr) * 100,
+        'cpm':   safe_div(spend, impr) * 1000,
+        'cpc':   safe_div(spend, clicks),
+        'cpa':   safe_div(spend, vendas),
+        'cpic':  safe_div(spend, ic),
+        'cplpv': safe_div(spend, visitas),
+        'click_lpv':  safe_div(visitas, clicks) * 100,
+        'lpv_ic':     safe_div(ic, visitas) * 100,
+        'ic_purch':   safe_div(vendas, ic) * 100,
+        'lpv_purch':  safe_div(vendas, visitas) * 100,
+    }
+
+
+def _empty_invest():
+    return {k: 0 for k in ['spend','vendas_gerenciador','ic','visitas','impressions','clicks',
+                           'ctr','cpm','cpc','cpa','cpic','cplpv',
+                           'click_lpv','lpv_ic','ic_purch','lpv_purch']}
+
+
+def daily_series_invest(rows):
+    """Serie diaria agregada da Invest por Hora."""
+    by = defaultdict(lambda: dict(spend=0, vendas=0, ic=0, visitas=0, impr=0, clicks=0))
+    for r in rows:
+        d = r['date']
+        if not d:
+            continue
+        b = by[d]
+        b['spend']   += r['spend']
+        b['vendas']  += r['vendas']
+        b['ic']      += r['ic']
+        b['visitas'] += r['visitas']
+        b['impr']    += r['impr']
+        b['clicks']  += r['clicks']
+    return [dict(date=d, **v) for d, v in sorted(by.items())]
+
+
+# ============================================================================
+# TRAFEGO (daily granular) — usado pra top_ads e persona-por-ad
 # ============================================================================
 
 def trafego_normalize(rows):
@@ -171,13 +260,12 @@ def top_ads(rows, limit=30):
 # ============================================================================
 
 def hubla_normalize(rows):
+    """Normaliza Hubla SEM filtrar por Fp02 — filtragem real eh por TURMA."""
     out = []
     for r in rows:
-        produto = (r.get('oferta') or '') + ' ' + (r.get('Campanha') or '') + ' ' + (r.get('utm campaign') or '')
-        # so Fp02
-        if 'fp02' not in produto.lower():
-            continue
+        turma = (r.get('Turma') or '').strip()
         out.append({
+            'turma':    turma,
             'data':     parse_date(r.get('data', '') or r.get('DATA', '')),
             'email':    (r.get('email') or '').strip().lower(),
             'utm_source':   (r.get('utm source') or '').strip().lower(),
@@ -187,6 +275,10 @@ def hubla_normalize(rows):
             'mql_renda': r.get('MQL') or '',
         })
     return out
+
+
+def filter_hubla_turmas(rows, turma_labels):
+    return [r for r in rows if r['turma'] in turma_labels]
 
 
 def origem_group(src):
@@ -203,6 +295,7 @@ def origem_group(src):
 
 
 def filter_hubla_period(rows, inicio, fim):
+    """Filtro por data (fallback quando turma nao disponivel)."""
     return [r for r in rows if r['data'] and inicio <= r['data'] <= fim]
 
 
@@ -232,8 +325,14 @@ def agg_hubla(rows):
 def pesquisa_normalize(rows):
     out = []
     for r in rows:
+        # planilha tem 2 cols 'Turma' (col 0 e col 35). O fetch desambigua com __2.
+        # Regra de pertinencia: linha pertence a uma turma se QUALQUER uma das 2 cols bater.
+        t0 = (r.get('Turma') or '').strip()
+        t1 = (r.get('Turma__2') or '').strip()
+        turma = t0 if t0.startswith(('Maio/26','Abril/26','Marco/26','Fevereiro/26','Janeiro/26')) else t1
         out.append({
-            'turma':     (r.get('Turma') or '').strip(),
+            'turma':     turma,
+            'turmas':    [t for t in (t0, t1) if t],  # ambas cols pra filtro abrangente
             'submitted': parse_date(r.get('Submitted At', '')),
             'email':     (r.get(COL_EMAIL) or '').strip().lower(),
             'origem':    (r.get(COL_ORIGEM) or '').strip().lower(),
@@ -252,6 +351,12 @@ def pesquisa_normalize(rows):
     return out
 
 
+def filter_pesquisa_turmas(rows, turma_labels):
+    """Linha pertence a uma das turmas se QUALQUER uma das suas 2 cols Turma bater."""
+    targets = set(turma_labels)
+    return [r for r in rows if any(t in targets for t in r.get('turmas', []))]
+
+
 def filter_pesquisa_period(rows, inicio, fim):
     return [r for r in rows if r['submitted'] and inicio <= r['submitted'] <= fim]
 
@@ -262,6 +367,9 @@ def agg_pesquisa(rows):
     total = len(rows)
     meta = [r for r in rows if 'meta' in r['origem'] or 'facebook' in r['origem']]
     mql_meta = [r for r in meta if r['is_mql']]
+    mql_total = [r for r in rows if r['is_mql']]
+    mql10k_meta = [r for r in meta if _is_mql_10k(r['income'])]
+    mql10k_total = [r for r in rows if _is_mql_10k(r['income'])]
     by_origem = Counter(
         ('Meta Ads' if ('meta' in r['origem'] or 'facebook' in r['origem'])
          else ('Orgânico Instagram' if r['origem'] == 'instagram'
@@ -276,13 +384,36 @@ def agg_pesquisa(rows):
         'pct_meta': safe_div(len(meta), total) * 100,
         'mql': len(mql_meta),
         'mql_pct': safe_div(len(mql_meta), len(meta)) * 100,
+        'mql_total': len(mql_total),
+        'mql_total_pct': safe_div(len(mql_total), total) * 100,
+        'mql_10k': len(mql10k_total),
+        'mql_10k_pct': safe_div(len(mql10k_total), total) * 100,
+        'mql_10k_meta': len(mql10k_meta),
+        'mql_10k_meta_pct': safe_div(len(mql10k_meta), len(meta)) * 100,
         'por_origem': [{'origem': o, 'n': n, 'pct': safe_div(n, total) * 100}
                         for o, n in by_origem.most_common()],
     }
 
 
+def _is_mql_10k(renda):
+    """MQL alto: renda >= R$ 10.001."""
+    s = (renda or '').lower().strip()
+    if 'r$ 10.001' in s or 'r$ 15.001' in s or 'r$ 20.001' in s:
+        return True
+    if 'acima de r$' in s:
+        m = re.search(r'acima de r\$\s?([\d.]+)', s)
+        if m:
+            try:
+                return float(m.group(1).replace('.', '')) >= 10000
+            except Exception:
+                return False
+    return False
+
+
 def _empty_pesquisa():
     return {'total': 0, 'meta_ads': 0, 'pct_meta': 0, 'mql': 0, 'mql_pct': 0,
+            'mql_total': 0, 'mql_total_pct': 0, 'mql_10k': 0, 'mql_10k_pct': 0,
+            'mql_10k_meta': 0, 'mql_10k_meta_pct': 0,
             'por_origem': []}
 
 
@@ -396,74 +527,92 @@ def persona_compradoras_meta(buyer_pesq):
 # Helpers principais (entry points usados pelo aggregate.py)
 # ============================================================================
 
-def build_periodo(trafego_n, hubla_n, pesquisa_n, inicio, fim, label, nome):
-    """Monta o blob completo de um periodo."""
-    tr = filter_period(trafego_n, inicio, fim)
-    hb = filter_hubla_period(hubla_n, inicio, fim)
-    pq = filter_pesquisa_period(pesquisa_n, inicio, fim)
+def build_periodo(trafego_n, hubla_n, pesquisa_n, invest_n, turma_labels, label, nome):
+    """Monta o blob completo de um periodo (turma_labels = lista de Turma strings).
+
+    - KPIs (spend/vendas/IC/visitas/impr/clicks/CTR) vem da aba `Investimento por Hora`
+      (FONTE CANONICA do cliente — bate com a apuracao manual).
+    - Hubla e Pesquisa: filtragem por TURMA (coluna Turma).
+    - Top_ads e persona_por_ad: vem do Trafego daily, filtrado pelo range de datas
+      REAIS observado no Invest por Hora pra essas turmas.
+    """
+    inv = filter_invest_turmas(invest_n, turma_labels)
+    ini, fim = date_range_from_invest(inv)
+    tr = filter_period(trafego_n, ini, fim) if ini else []
+    hb = filter_hubla_turmas(hubla_n, turma_labels)
+    pq = filter_pesquisa_turmas(pesquisa_n, turma_labels)
 
     # persona Meta apenas
     pq_meta = [r for r in pq if 'meta' in r['origem'] or 'facebook' in r['origem']]
     _, _, buyer_pesq = match_buyers(hb, pq)
 
-    tt = agg_trafego(tr)
+    inv_kpis = agg_invest(inv)
     hh = agg_hubla(hb)
-    # ROAS real = faturamento Hubla / spend tráfego. Mais honesto que estimar com ticket fixo.
-    roas_real = safe_div(hh['faturamento'], tt['spend'])
-    cpa_hubla = safe_div(tt['spend'], hh['total'])  # CPA por venda real
+    # ROAS = faturamento Hubla / spend (canonico do Invest)
+    roas_real = safe_div(hh['faturamento'], inv_kpis['spend'])
+    # CPA: 2 calculos (Vendas Gerenciador = pixel; Hubla = real)
+    cpa_ger = safe_div(inv_kpis['spend'], inv_kpis['vendas_gerenciador'])
+    cpa_hubla = safe_div(inv_kpis['spend'], hh['total'])
 
     return {
         'periodo': {
-            'inicio': inicio, 'fim': fim,
+            'inicio': ini, 'fim': fim,
             'label': label, 'nome': nome,
+            'turmas': turma_labels,
         },
-        'trafego': tt,
-        'hubla':   hh,
+        'trafego':  inv_kpis,             # CANONICO (Invest por Hora)
+        'hubla':    hh,
         'pesquisa': agg_pesquisa(pq),
         'persona_leads_meta': persona(pq_meta),
         'persona_compradoras_meta': persona_compradoras_meta(buyer_pesq),
-        'match': match_summary(len(hb), buyer_pesq),
-        'top_ads': top_ads(tr, limit=30),
-        'mql_por_ad': mql_por_ad(pq, top_n=20),
+        'match':    match_summary(len(hb), buyer_pesq),
+        'top_ads':  top_ads(tr, limit=30),
+        'mql_por_ad':    mql_por_ad(pq, top_n=20),
         'persona_por_ad': persona_por_ad(pq, min_n=3),
-        'serie_diaria': daily_series(tr),
-        'roas_real': roas_real,           # faturamento Hubla / spend
-        'cpa_hubla': cpa_hubla,           # spend / vendas Hubla (não pixel)
+        'serie_diaria':  daily_series_invest(inv),
+        'roas_real':     roas_real,
+        'cpa_hubla':     cpa_hubla,
+        'cpa_gerenciador': cpa_ger,
     }
 
 
-def build_all(trafego_raw, hubla_raw, pesquisa_raw):
+def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
     """Constroi o data.json completo (mes + 4 semanas)."""
-    trafego_n = trafego_normalize(trafego_raw)
-    hubla_n = hubla_normalize(hubla_raw)
+    trafego_n  = trafego_normalize(trafego_raw)
+    hubla_n    = hubla_normalize(hubla_raw)
     pesquisa_n = pesquisa_normalize(pesquisa_raw)
+    invest_n   = invest_normalize(invest_raw)
 
     out = {
         'produto': PRODUTO,
         'ticket_medio': TICKET_MEDIO,
-        'semanas_meta': [{'key': s['key'], 'nome': s['nome'], 'inicio': s['inicio'],
-                          'fim': s['fim'], 'label': s['label']} for s in SEMANAS],
+        'semanas_meta': [{'key': s['key'], 'nome': s['nome'], 'label': s['label']} for s in SEMANAS],
         'periodos': {},
     }
 
-    # MES (uniao das 4 semanas)
+    # MES (uniao das 4 turmas)
+    todas = [s['label'] for s in SEMANAS]
     out['periodos']['mes'] = build_periodo(
-        trafego_n, hubla_n, pesquisa_n,
-        SEMANAS[0]['inicio'], SEMANAS[-1]['fim'],
+        trafego_n, hubla_n, pesquisa_n, invest_n, todas,
         label='Mes Completo', nome='Maio/26 — Mês',
     )
-    # cada semana
+    # cada semana = uma turma
     for s in SEMANAS:
         out['periodos'][s['key']] = build_periodo(
-            trafego_n, hubla_n, pesquisa_n,
-            s['inicio'], s['fim'],
+            trafego_n, hubla_n, pesquisa_n, invest_n, [s['label']],
             label=s['label'], nome=s['nome'],
         )
+        # injeta range de datas no meta da semana pra UI
+        peri = out['periodos'][s['key']]['periodo']
+        for sm in out['semanas_meta']:
+            if sm['key'] == s['key']:
+                sm['inicio'] = peri['inicio']
+                sm['fim'] = peri['fim']
 
-    # diagnostico de saude do dado
     out['_diag'] = {
         'trafego_linhas': len(trafego_n),
         'hubla_linhas': len(hubla_n),
         'pesquisa_linhas': len(pesquisa_n),
+        'invest_linhas': len(invest_n),
     }
     return out

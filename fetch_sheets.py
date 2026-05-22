@@ -10,7 +10,7 @@ from google.oauth2.service_account import Credentials
 
 from config import (
     TRAFEGO_SHEET_ID, TRAFEGO_TAB,
-    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_PESQUISA,
+    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_PESQUISA, TAB_INVEST,
 )
 
 
@@ -41,11 +41,22 @@ def _read(sheet_id, tab):
     if not rows:
         return []
     header = rows[0]
+    # disambigua headers duplicados (ex.: planilha Pesquisa tem 2 cols "Turma")
+    seen = {}
+    norm_hdr = []
+    for h in header:
+        h = h or ''
+        if h in seen:
+            seen[h] += 1
+            norm_hdr.append(f"{h}__{seen[h]}")
+        else:
+            seen[h] = 1
+            norm_hdr.append(h)
     out = []
     for r in rows[1:]:
         if not any((c or '').strip() for c in r):
             continue
-        d = {h: (r[i] if i < len(r) else '') for i, h in enumerate(header)}
+        d = {h: (r[i] if i < len(r) else '') for i, h in enumerate(norm_hdr)}
         out.append(d)
     return out
 
@@ -54,7 +65,8 @@ def fetch():
     trafego = _read(TRAFEGO_SHEET_ID, TRAFEGO_TAB)
     hubla = _read(CONSOLIDADO_SHEET_ID, TAB_HUBLA)
     pesquisa = _read(CONSOLIDADO_SHEET_ID, TAB_PESQUISA)
-    return {"trafego": trafego, "hubla": hubla, "pesquisa": pesquisa}
+    invest = _read(CONSOLIDADO_SHEET_ID, TAB_INVEST)
+    return {"trafego": trafego, "hubla": hubla, "pesquisa": pesquisa, "invest": invest}
 
 
 if __name__ == "__main__":
@@ -62,5 +74,6 @@ if __name__ == "__main__":
     print(f"trafego  : {len(d['trafego']):5d} linhas")
     print(f"hubla    : {len(d['hubla']):5d} linhas")
     print(f"pesquisa : {len(d['pesquisa']):5d} linhas")
+    print(f"invest   : {len(d['invest']):5d} linhas")
     if d['trafego']:
         print("\ntrafego cols:", list(d['trafego'][0].keys()))

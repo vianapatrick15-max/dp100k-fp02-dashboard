@@ -218,10 +218,6 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
   <div class="fg" id="filter-periodo">
     <span class="fl">Período</span>
     <button class="fb on" data-key="mes">Mês completo</button>
-    <button class="fb" data-key="sem1">Sem 1 <span class="fb-sub">28/04–04/05</span></button>
-    <button class="fb" data-key="sem2">Sem 2 <span class="fb-sub">05/05–11/05</span></button>
-    <button class="fb" data-key="sem3">Sem 3 <span class="fb-sub">12/05–18/05</span></button>
-    <button class="fb" data-key="sem4">Sem 4 <span class="fb-sub">19/05–25/05</span></button>
   </div>
 </div>
 
@@ -248,10 +244,10 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
   </div>
   <div class="chart-card">
     <div class="chart-hdr">
-      <div class="chart-title">Spend & Vendas por dia</div>
+      <div class="chart-title">Spend & Vendas Gerenciador por dia</div>
       <div class="chart-leg">
         <span class="leg-item"><span class="leg-sw spend"></span>Spend (R$)</span>
-        <span class="leg-item"><span class="leg-sw vendas"></span>Vendas (Hubla Fp02)</span>
+        <span class="leg-item"><span class="leg-sw vendas"></span>Vendas Gerenciador</span>
       </div>
     </div>
     <div class="chart-wrap"><canvas id="chart-daily"></canvas></div>
@@ -375,6 +371,18 @@ function load() {
     DATA = d;
     document.getElementById('last-update').textContent = 'Atualizado ' + (d.updated_at || '—');
     document.getElementById('foot-schema').textContent = 'v' + (d.schema_version || 1);
+    // monta botoes do filter-periodo dinamicamente (datas REAIS vem do JSON)
+    const fp = document.getElementById('filter-periodo');
+    fp.innerHTML = '<span class="fl">Período</span>' +
+      `<button class="fb ${activeKey==='mes'?'on':''}" data-key="mes">Mês completo</button>` +
+      (d.semanas_meta || []).map(s => {
+        const ini = (s.inicio||'').slice(5).replace('-','/');
+        const fim = (s.fim||'').slice(5).replace('-','/');
+        return `<button class="fb ${activeKey===s.key?'on':''}" data-key="${s.key}">${s.nome} <span class="fb-sub">${ini}–${fim}</span></button>`;
+      }).join('');
+    fp.querySelectorAll('.fb').forEach(b => {
+      b.addEventListener('click', () => render(b.dataset.key));
+    });
     render(activeKey);
   });
 }
@@ -385,6 +393,8 @@ function render(key) {
   document.querySelectorAll('#filter-periodo .fb').forEach(b => {
     b.classList.toggle('on', b.dataset.key === key);
   });
+  // Reset filtro de ad ao trocar de periodo
+  if (personaMode.kind === 'adfocus') personaMode = { kind: 'leads', ad: null };
   const p = DATA.periodos[key];
   if (!p) return;
   document.getElementById('foot-periodo').textContent = p.periodo.nome + ' (' + p.periodo.inicio + ' a ' + p.periodo.fim + ')';
@@ -404,41 +414,41 @@ function renderVeredito(p, key) {
   const m = p.pesquisa;
   const h = p.hubla;
   const dSpend = delta(t.spend, prev?.trafego.spend);
-  const dVendas = delta(h.total, prev?.hubla.total);
-  const dCpaH = delta(p.cpa_hubla, prev?.cpa_hubla);
+  const dVendas = delta(t.vendas_gerenciador, prev?.trafego.vendas_gerenciador);
+  const dCpa = delta(p.cpa_gerenciador, prev?.cpa_gerenciador);
   const dRoasR = delta(p.roas_real, prev?.roas_real);
-  const dMql = delta(m.mql_pct, prev?.pesquisa.mql_pct);
+  const dMql = delta(m.mql_total_pct, prev?.pesquisa.mql_total_pct);
   const roasCls = p.roas_real >= 1 ? 'cell-good' : p.roas_real >= 0.5 ? 'cell-warn' : 'cell-bad';
   document.getElementById('veredito').innerHTML = `
     <div class="kpi-big spend">
-      <div class="kpi-lbl">Investimento</div>
+      <div class="kpi-lbl">Investimento Tráfego</div>
       <div class="kpi-val">${fmt.brlk(t.spend)}</div>
       <div class="kpi-bot"><span><span class="kpi-delta inv-${dSpend.dir==='up'?'up':dSpend.dir==='dn'?'dn':'neutral'}">${dSpend.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${t.impressions.toLocaleString('pt-BR')} impr</span></div>
+        <span class="kpi-sub">${t.impressions.toLocaleString('pt-BR')} impr · ${t.ctr.toFixed(2)}% CTR</span></div>
     </div>
     <div class="kpi-big vendas">
-      <div class="kpi-lbl">Vendas Hubla · Faturamento</div>
-      <div class="kpi-val">${h.total} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${fmt.brlk(h.faturamento)}</div>
+      <div class="kpi-lbl">Vendas Gerenciador · Hubla</div>
+      <div class="kpi-val">${t.vendas_gerenciador} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${h.total}</div>
       <div class="kpi-bot"><span><span class="kpi-delta ${dVendas.dir}">${dVendas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">Ticket ${fmt.brl(h.ticket_medio)} · ${t.purch} pixel</span></div>
+        <span class="kpi-sub">Fat. ${fmt.brlk(h.faturamento)} · Ticket ${fmt.brl(h.ticket_medio)}</span></div>
     </div>
     <div class="kpi-big cpa">
-      <div class="kpi-lbl">CPA Hubla</div>
-      <div class="kpi-val">${fmt.brl(p.cpa_hubla)}</div>
-      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpaH.dir==='up'?'up':dCpaH.dir==='dn'?'dn':'neutral'}">${dCpaH.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">spend ÷ vendas Hubla</span></div>
+      <div class="kpi-lbl">CPA Tráfego</div>
+      <div class="kpi-val">${fmt.brl(p.cpa_gerenciador)}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpa.dir==='up'?'up':dCpa.dir==='dn'?'dn':'neutral'}">${dCpa.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">spend ÷ vendas ger.</span></div>
     </div>
     <div class="kpi-big roas">
-      <div class="kpi-lbl">ROAS Real (Hubla)</div>
+      <div class="kpi-lbl">ROAS Venda Direta</div>
       <div class="kpi-val ${roasCls}">${fmt.dec(p.roas_real)}x</div>
       <div class="kpi-bot"><span><span class="kpi-delta ${dRoasR.dir}">${dRoasR.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${fmt.brlk(h.faturamento)} ÷ ${fmt.brlk(t.spend)}</span></div>
+        <span class="kpi-sub">fat. Hubla ÷ spend</span></div>
     </div>
     <div class="kpi-big mql">
-      <div class="kpi-lbl">MQL % (Pesquisa)</div>
-      <div class="kpi-val">${fmt.pct0(m.mql_pct)}</div>
+      <div class="kpi-lbl">MQL +8k · Taxa</div>
+      <div class="kpi-val">${m.mql_total} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${m.mql_total_pct.toFixed(0)}%</div>
       <div class="kpi-bot"><span><span class="kpi-delta ${dMql.dir}">${dMql.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${m.mql}/${m.meta_ads} respondentes</span></div>
+        <span class="kpi-sub">${m.total} respondentes (MQL+10k: ${m.mql_10k})</span></div>
     </div>`;
 }
 
@@ -447,9 +457,9 @@ function renderFunnel(p) {
   const steps = [
     { name: 'Impressões', val: t.impressions, rate: null },
     { name: 'Cliques', val: t.clicks, rate: t.ctr, rateLbl: 'CTR' },
-    { name: 'Landing Page View', val: t.lpv, rate: t.click_lpv, rateLbl: 'Click→LPV' },
+    { name: 'Visitas Página', val: t.visitas, rate: t.click_lpv, rateLbl: 'Click→LPV' },
     { name: 'Initiated Checkout', val: t.ic, rate: t.lpv_ic, rateLbl: 'LPV→IC' },
-    { name: 'Vendas (pixel)', val: t.purch, rate: t.ic_purch, rateLbl: 'IC→Compra' },
+    { name: 'Vendas Gerenciador', val: t.vendas_gerenciador, rate: t.ic_purch, rateLbl: 'IC→Compra' },
   ];
   const maxV = Math.max(...steps.map(s => s.val), 1);
   document.getElementById('funnel').innerHTML = steps.map((s, i) => {
@@ -468,7 +478,7 @@ function renderFunnel(p) {
 function renderChart(p) {
   const dates = p.serie_diaria.map(r => r.date);
   const spend = p.serie_diaria.map(r => r.spend);
-  const purch = p.serie_diaria.map(r => r.purch);
+  const purch = p.serie_diaria.map(r => r.vendas);
   if (chartDaily) chartDaily.destroy();
   const ctx = document.getElementById('chart-daily').getContext('2d');
   chartDaily = new Chart(ctx, {
@@ -500,10 +510,10 @@ function renderChart(p) {
 function renderHublaSummary(p) {
   const h = p.hubla;
   const cards = [
-    { l: 'Vendas (Hubla)', v: h.total, sub: 'Fp02 no período' },
+    { l: 'Vendas (Hubla)', v: h.total, sub: 'da turma · ' + (h.pct_meta||0).toFixed(0) + '% via Meta' },
     { l: 'Faturamento', v: fmt.brlk(h.faturamento), sub: 'Ticket médio ' + fmt.brl(h.ticket_medio) },
-    { l: 'Via Meta Ads', v: h.meta_ads + ' (' + h.pct_meta.toFixed(0) + '%)', sub: 'utm_source=meta' },
-    { l: 'Match Pesquisa', v: p.match.matched_pesquisa + '/' + p.match.vendas_total, sub: (p.match.match_pct||0).toFixed(0) + '% das compradoras responderam' },
+    { l: 'Match Pesquisa', v: p.match.matched_pesquisa + '/' + p.match.vendas_total, sub: (p.match.match_pct||0).toFixed(0) + '% compradoras responderam' },
+    { l: 'MQL +10k', v: p.pesquisa.mql_10k + ' (' + (p.pesquisa.mql_10k_pct||0).toFixed(0) + '%)', sub: 'renda mensal ≥ R$ 10.001' },
   ];
   document.getElementById('hubla-summary').innerHTML = cards.map(c => `
     <div class="kpi-big" style="--bar:var(--green)">
@@ -657,10 +667,6 @@ function renderMqlAd(p) {
     tr.addEventListener('click', () => setPersonaMode('adfocus', tr.dataset.ad));
   });
 }
-
-document.querySelectorAll('#filter-periodo .fb').forEach(b => {
-  b.addEventListener('click', () => render(b.dataset.key));
-});
 
 load();
 setInterval(load, 5 * 60 * 1000); // recarrega a cada 5 min
