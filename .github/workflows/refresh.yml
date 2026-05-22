@@ -21,9 +21,9 @@ jobs:
 
       - name: Write service account credentials
         env:
-          SA_JSON: ${{ secrets.GCP_SA_JSON }}
+          SA_B64: ${{ secrets.GCP_SA_B64 }}
         run: |
-          printf '%s' "$SA_JSON" > $RUNNER_TEMP/sa.json
+          echo "$SA_B64" | base64 -d > $RUNNER_TEMP/sa.json
           python3 -c "import json,os; json.load(open(os.environ['RUNNER_TEMP']+'/sa.json'))" \
             && echo "JSON OK"
           echo "GOOGLE_SHEETS_CREDENTIALS_PATH=$RUNNER_TEMP/sa.json" >> $GITHUB_ENV
