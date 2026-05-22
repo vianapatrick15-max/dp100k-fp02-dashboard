@@ -75,41 +75,41 @@
         ]
       },
       "pesquisa": {
-        "total": 302,
+        "total": 303,
         "meta_ads": 175,
-        "pct_meta": 57.94701986754966,
+        "pct_meta": 57.755775577557756,
         "mql": 93,
         "mql_pct": 53.142857142857146,
         "por_origem": [
           {
             "origem": "Meta Ads",
             "n": 175,
-            "pct": 57.94701986754966
+            "pct": 57.755775577557756
           },
           {
             "origem": "Sem origem",
-            "n": 64,
-            "pct": 21.192052980132452
+            "n": 65,
+            "pct": 21.45214521452145
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 28,
-            "pct": 9.271523178807946
+            "pct": 9.24092409240924
           },
           {
             "origem": "Orgânico Instagram",
             "n": 19,
-            "pct": 6.291390728476822
+            "pct": 6.270627062706271
           },
           {
             "origem": "WhatsApp",
             "n": 13,
-            "pct": 4.304635761589404
+            "pct": 4.29042904290429
           },
           {
             "origem": "Outros",
             "n": 3,
-            "pct": 0.9933774834437087
+            "pct": 0.9900990099009901
           }
         ]
       },
@@ -1408,6 +1408,2789 @@
           "mql_pct": 50.0
         }
       ],
+      "persona_por_ad": {
+        "unknown": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 6,
+              "pct": 85.71428571428571
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Estudante",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Vendedor(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Tenho uma reserva financeira temporária.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 42.857142857142854
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Buenos Aires F.D.",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 2,
+          "mql_pct": 28.57142857142857
+        },
+        "AD-95": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 6,
+              "pct": 85.71428571428571
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 42.857142857142854
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 4,
+          "mql_pct": 57.14285714285714
+        },
+        "AD-101": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 5,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 5,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Criador",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Tenho uma reserva financeira temporária.",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 60.0
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 40.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "total_respondentes": 5,
+          "mql": 2,
+          "mql_pct": 40.0
+        },
+        "AD-93": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Advogada",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "CLT",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Contribuir com a evolução das pessoas que apresentam dificuldades nas relações humanas",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Paraíba",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 6,
+          "mql_pct": 85.71428571428571
+        },
+        "AD-108": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Advogada",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Mato Grosso do Sul",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 2,
+          "mql_pct": 66.66666666666666
+        },
+        "AD-97": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 19,
+              "pct": 45.23809523809524
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 9,
+              "pct": 21.428571428571427
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 8,
+              "pct": 19.047619047619047
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 3,
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 3,
+              "pct": 7.142857142857142
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 34,
+              "pct": 80.95238095238095
+            },
+            {
+              "k": "Masculino",
+              "n": 8,
+              "pct": 19.047619047619047
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 16,
+              "pct": 38.095238095238095
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 11,
+              "pct": 26.190476190476193
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 10,
+              "pct": 23.809523809523807
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 5,
+              "pct": 11.904761904761903
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 35,
+              "pct": 83.33333333333334
+            },
+            {
+              "k": "Yes",
+              "n": 7,
+              "pct": 16.666666666666664
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 11,
+              "pct": 26.190476190476193
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 11,
+              "pct": 26.190476190476193
+            },
+            {
+              "k": "Palestrante",
+              "n": 5,
+              "pct": 11.904761904761903
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 4,
+              "pct": 9.523809523809524
+            },
+            {
+              "k": "Professor(a)",
+              "n": 3,
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 2,
+              "pct": 4.761904761904762
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 9,
+              "pct": 21.428571428571427
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 8,
+              "pct": 19.047619047619047
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 7,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 5,
+              "pct": 11.904761904761903
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 5,
+              "pct": 11.904761904761903
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 5,
+              "pct": 11.904761904761903
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 2.380952380952381
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 21,
+              "pct": 50.0
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 11,
+              "pct": 26.190476190476193
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 10,
+              "pct": 23.809523809523807
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 23,
+              "pct": 54.761904761904766
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 11,
+              "pct": 26.190476190476193
+            },
+            {
+              "k": "Renda extra",
+              "n": 7,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Palestras para militantes de uma filosofia sem renda e palestras particulares",
+              "n": 1,
+              "pct": 2.380952380952381
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 12,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 8,
+              "pct": 19.047619047619047
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 4,
+              "pct": 9.523809523809524
+            },
+            {
+              "k": "Bahia",
+              "n": 3,
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "Federal District",
+              "n": 2,
+              "pct": 4.761904761904762
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 2.380952380952381
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 2.380952380952381
+            },
+            {
+              "k": "Rio Grande do Norte",
+              "n": 1,
+              "pct": 2.380952380952381
+            },
+            {
+              "k": "Paraíba",
+              "n": 1,
+              "pct": 2.380952380952381
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 2.380952380952381
+            }
+          ],
+          "total_respondentes": 42,
+          "mql": 23,
+          "mql_pct": 54.761904761904766
+        },
+        "AD-99": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 6,
+              "pct": 85.71428571428571
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Coordenadora financeira",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 3,
+              "pct": 42.857142857142854
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Compartilhar com as pessoas tudo que foi cura para mim e ajudar o maximo de pessoas possível Que passam o que passei",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Pernambuco",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 4,
+          "mql_pct": 57.14285714285714
+        },
+        "AD-39": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Renda extra",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 1,
+          "mql_pct": 33.33333333333333
+        },
+        "AD-118": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 6,
+              "pct": 46.15384615384615
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 3,
+              "pct": 23.076923076923077
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 2,
+              "pct": 15.384615384615385
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 8,
+              "pct": 61.53846153846154
+            },
+            {
+              "k": "Masculino",
+              "n": 5,
+              "pct": 38.46153846153847
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 7,
+              "pct": 53.84615384615385
+            },
+            {
+              "k": "Conheci agora",
+              "n": 4,
+              "pct": 30.76923076923077
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 15.384615384615385
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 10,
+              "pct": 76.92307692307693
+            },
+            {
+              "k": "Yes",
+              "n": 3,
+              "pct": 23.076923076923077
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 4,
+              "pct": 30.76923076923077
+            },
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Assessora técnica",
+              "n": 1,
+              "pct": 7.6923076923076925
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 23.076923076923077
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 7.6923076923076925
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 6,
+              "pct": 46.15384615384615
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 5,
+              "pct": 38.46153846153847
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 15.384615384615385
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 5,
+              "pct": 38.46153846153847
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 5,
+              "pct": 38.46153846153847
+            },
+            {
+              "k": "Renda extra",
+              "n": 3,
+              "pct": 23.076923076923077
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 4,
+              "pct": 30.76923076923077
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Maranhão",
+              "n": 2,
+              "pct": 15.384615384615385
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Espírito Santo",
+              "n": 1,
+              "pct": 7.6923076923076925
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 7.6923076923076925
+            }
+          ],
+          "total_respondentes": 13,
+          "mql": 9,
+          "mql_pct": 69.23076923076923
+        },
+        "AD-105": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 8,
+              "pct": 80.0
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 20.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 5,
+              "pct": 50.0
+            },
+            {
+              "k": "Conheci agora",
+              "n": 4,
+              "pct": 40.0
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 9,
+              "pct": 90.0
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Aposentado(a)",
+              "n": 4,
+              "pct": 40.0
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Analista de Projetos",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 6,
+              "pct": 60.0
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 40.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 6,
+              "pct": 60.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Santa Catarina",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Virginia",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Pernambuco",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "total_respondentes": 10,
+          "mql": 5,
+          "mql_pct": 50.0
+        },
+        "AD-104": {
+          "idade": [
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Professor(a)",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Enfermeira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 1,
+          "mql_pct": 33.33333333333333
+        },
+        "AD-106": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Yes",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mãe",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "estado": [
+            {
+              "k": "Minas Gerais",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Sergipe",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 1,
+          "mql_pct": 14.285714285714285
+        },
+        "AD-128": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Medica",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "Amapá",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 2,
+          "mql_pct": 66.66666666666666
+        },
+        "AD-04": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Vendedor(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Renda extra",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Espírito Santo",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 3,
+          "mql_pct": 100.0
+        },
+        "AD-07": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 4,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 16.666666666666664
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 9,
+              "pct": 75.0
+            },
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 25.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 6,
+              "pct": 50.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 8.333333333333332
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 9,
+              "pct": 75.0
+            },
+            {
+              "k": "Yes",
+              "n": 3,
+              "pct": 25.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Palestrante",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "CLT",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Advogada e era vice ministra do turismo",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Advogado",
+              "n": 1,
+              "pct": 8.333333333333332
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 8.333333333333332
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 6,
+              "pct": 50.0
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 4,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 16.666666666666664
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 6,
+              "pct": 50.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 25.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Federal District",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 25.0
+            },
+            {
+              "k": "Bahia",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 8.333333333333332
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 8.333333333333332
+            }
+          ],
+          "total_respondentes": 12,
+          "mql": 9,
+          "mql_pct": 75.0
+        },
+        "AD-133": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Enfermeira",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Secretaria",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Apresentação evento",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 0,
+          "mql_pct": 0.0
+        },
+        "AD-147": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "genero": [
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 50.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Yes",
+              "n": 2,
+              "pct": 33.33333333333333
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "total_respondentes": 6,
+          "mql": 5,
+          "mql_pct": 83.33333333333334
+        }
+      },
       "serie_diaria": [
         {
           "date": "2026-04-28",
@@ -2963,6 +5746,745 @@
           "mql_pct": 0.0
         }
       ],
+      "persona_por_ad": {
+        "unknown": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 60.0
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 40.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 80.0
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Estudante",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Vendedor(a)",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Tenho uma reserva financeira temporária.",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 4,
+              "pct": 80.0
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 4,
+              "pct": 80.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Buenos Aires F.D.",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "total_respondentes": 5,
+          "mql": 1,
+          "mql_pct": 20.0
+        },
+        "AD-95": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 75.0
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 3,
+              "pct": 75.0
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 3,
+              "pct": 75.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "total_respondentes": 4,
+          "mql": 3,
+          "mql_pct": 75.0
+        },
+        "AD-93": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Advogada",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "CLT",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Contribuir com a evolução das pessoas que apresentam dificuldades nas relações humanas",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Paraíba",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 6,
+          "mql_pct": 85.71428571428571
+        },
+        "AD-97": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 12,
+              "pct": 54.54545454545454
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 7,
+              "pct": 31.818181818181817
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 4.545454545454546
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 19,
+              "pct": 86.36363636363636
+            },
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 13.636363636363635
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 9,
+              "pct": 40.909090909090914
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 8,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 9.090909090909092
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 19,
+              "pct": 86.36363636363636
+            },
+            {
+              "k": "Yes",
+              "n": 3,
+              "pct": 13.636363636363635
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 7,
+              "pct": 31.818181818181817
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 5,
+              "pct": 22.727272727272727
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "Professor(a)",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Médico",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Palestrante",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 4.545454545454546
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 6,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 4,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 4.545454545454546
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 13,
+              "pct": 59.09090909090909
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 5,
+              "pct": 22.727272727272727
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 4,
+              "pct": 18.181818181818183
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 11,
+              "pct": 50.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 7,
+              "pct": 31.818181818181817
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 4,
+              "pct": 18.181818181818183
+            }
+          ],
+          "estado": [
+            {
+              "k": "Minas Gerais",
+              "n": 5,
+              "pct": 22.727272727272727
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 13.636363636363635
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Bahia",
+              "n": 2,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Rio Grande do Norte",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Paraíba",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 4.545454545454546
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 4.545454545454546
+            }
+          ],
+          "total_respondentes": 22,
+          "mql": 15,
+          "mql_pct": 68.18181818181817
+        }
+      },
       "serie_diaria": [
         {
           "date": "2026-04-28",
@@ -4340,6 +7862,926 @@
           "mql_pct": 0.0
         }
       ],
+      "persona_por_ad": {
+        "AD-118": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 6,
+              "pct": 54.54545454545454
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 8,
+              "pct": 72.72727272727273
+            },
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 27.27272727272727
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 7,
+              "pct": 63.63636363636363
+            },
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 18.181818181818183
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 8,
+              "pct": 72.72727272727273
+            },
+            {
+              "k": "Yes",
+              "n": 3,
+              "pct": 27.27272727272727
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Assessora técnica",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 5,
+              "pct": 45.45454545454545
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 18.181818181818183
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 5,
+              "pct": 45.45454545454545
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "Renda extra",
+              "n": 3,
+              "pct": 27.27272727272727
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Espírito Santo",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "total_respondentes": 11,
+          "mql": 7,
+          "mql_pct": 63.63636363636363
+        },
+        "AD-97": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Palestrante",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Federal District",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 2,
+          "mql_pct": 28.57142857142857
+        },
+        "AD-105": {
+          "idade": [
+            {
+              "k": "Acima de 65 anos",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 6,
+              "pct": 85.71428571428571
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Aposentado(a)",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 42.857142857142854
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Renda extra",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "estado": [
+            {
+              "k": "Santa Catarina",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Virginia",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 4,
+          "mql_pct": 57.14285714285714
+        },
+        "AD-99": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 3,
+              "pct": 60.0
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 5,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 80.0
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 80.0
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 40.0
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Rio de Janeiro",
+              "n": 1,
+              "pct": 20.0
+            },
+            {
+              "k": "Pernambuco",
+              "n": 1,
+              "pct": 20.0
+            }
+          ],
+          "total_respondentes": 5,
+          "mql": 3,
+          "mql_pct": 60.0
+        },
+        "AD-104": {
+          "idade": [
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Professor(a)",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Enfermeira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 1,
+          "mql_pct": 33.33333333333333
+        },
+        "AD-101": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Criador",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Tenho uma reserva financeira temporária.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 1,
+          "mql_pct": 33.33333333333333
+        }
+      },
       "serie_diaria": [
         {
           "date": "2026-05-05",
@@ -5756,6 +10198,635 @@
           "mql_pct": 0.0
         }
       ],
+      "persona_por_ad": {
+        "AD-97": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Acima de 65 anos",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 8,
+              "pct": 72.72727272727273
+            },
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 27.27272727272727
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 18.181818181818183
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 9,
+              "pct": 81.81818181818183
+            },
+            {
+              "k": "Yes",
+              "n": 2,
+              "pct": 18.181818181818183
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Palestrante",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Vendedor(a)",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "renda": [
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 18.181818181818183
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 7,
+              "pct": 63.63636363636363
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 7,
+              "pct": 63.63636363636363
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 3,
+              "pct": 27.27272727272727
+            },
+            {
+              "k": "Palestras para militantes de uma filosofia sem renda e palestras particulares",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 4,
+              "pct": 36.36363636363637
+            },
+            {
+              "k": "Espírito Santo",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Federal District",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Minas Gerais",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Bahia",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 9.090909090909092
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 9.090909090909092
+            }
+          ],
+          "total_respondentes": 11,
+          "mql": 6,
+          "mql_pct": 54.54545454545454
+        },
+        "AD-105": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Masculino",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Yes",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Analista de Projetos",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "Minas Gerais",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Pernambuco",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 1,
+          "mql_pct": 33.33333333333333
+        },
+        "AD-106": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 4,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 7,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 5,
+              "pct": 71.42857142857143
+            },
+            {
+              "k": "Yes",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Empresário(a)",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mãe",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 28.57142857142857
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "estado": [
+            {
+              "k": "Minas Gerais",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 2,
+              "pct": 28.57142857142857
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Ceará",
+              "n": 1,
+              "pct": 14.285714285714285
+            },
+            {
+              "k": "Sergipe",
+              "n": 1,
+              "pct": 14.285714285714285
+            }
+          ],
+          "total_respondentes": 7,
+          "mql": 1,
+          "mql_pct": 14.285714285714285
+        },
+        "AD-128": {
+          "idade": [
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Conheci agora",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 3,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Medica",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "estado": [
+            {
+              "k": "Amapá",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "São Paulo",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 33.33333333333333
+            }
+          ],
+          "total_respondentes": 3,
+          "mql": 2,
+          "mql_pct": 66.66666666666666
+        }
+      },
       "serie_diaria": [
         {
           "date": "2026-05-12",
@@ -5874,31 +10945,31 @@
         ]
       },
       "pesquisa": {
-        "total": 80,
+        "total": 81,
         "meta_ads": 25,
-        "pct_meta": 31.25,
+        "pct_meta": 30.864197530864196,
         "mql": 15,
         "mql_pct": 60.0,
         "por_origem": [
           {
             "origem": "Sem origem",
-            "n": 49,
-            "pct": 61.25000000000001
+            "n": 50,
+            "pct": 61.72839506172839
           },
           {
             "origem": "Meta Ads",
             "n": 25,
-            "pct": 31.25
+            "pct": 30.864197530864196
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 4,
-            "pct": 5.0
+            "pct": 4.938271604938271
           },
           {
             "origem": "Orgânico Instagram",
             "n": 2,
-            "pct": 2.5
+            "pct": 2.4691358024691357
           }
         ]
       },
@@ -7065,6 +12136,364 @@
           "mql_pct": 0.0
         }
       ],
+      "persona_por_ad": {
+        "AD-07": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 2,
+              "pct": 20.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 7,
+              "pct": 70.0
+            },
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 30.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 5,
+              "pct": 50.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 2,
+              "pct": 20.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 7,
+              "pct": 70.0
+            },
+            {
+              "k": "Yes",
+              "n": 3,
+              "pct": 30.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Empresário(a)",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "CLT",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Advogada e era vice ministra do turismo",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Advogado",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 5,
+              "pct": 50.0
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 2,
+              "pct": 20.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Uma nova carreira",
+              "n": 6,
+              "pct": 60.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Federal District",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 30.0
+            },
+            {
+              "k": "Goiás",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 10.0
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 10.0
+            }
+          ],
+          "total_respondentes": 10,
+          "mql": 7,
+          "mql_pct": 70.0
+        },
+        "AD-147": {
+          "idade": [
+            {
+              "k": "55 a 64 anos",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "35 a 44 anos",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "genero": [
+            {
+              "k": "Masculino",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Feminino",
+              "n": 3,
+              "pct": 50.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Conheci agora",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Menos de 6 meses",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Yes",
+              "n": 2,
+              "pct": 33.33333333333333
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Aposentado(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 16.666666666666664
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Acima de R$ 20.000",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 33.33333333333333
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Se destacar na profissão",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Renda extra",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "estado": [
+            {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 50.0
+            },
+            {
+              "k": "Paraná",
+              "n": 2,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 16.666666666666664
+            }
+          ],
+          "total_respondentes": 6,
+          "mql": 5,
+          "mql_pct": 83.33333333333334
+        }
+      },
       "serie_diaria": [
         {
           "date": "2026-05-19",
@@ -7114,8 +12543,8 @@
   "_diag": {
     "trafego_linhas": 776,
     "hubla_linhas": 266,
-    "pesquisa_linhas": 2453
+    "pesquisa_linhas": 2454
   },
-  "updated_at": "2026-05-22 12:07:58 BRT",
+  "updated_at": "2026-05-22 12:14:06 BRT",
   "schema_version": 1
 }
