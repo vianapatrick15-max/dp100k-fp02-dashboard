@@ -387,13 +387,19 @@ def build_periodo(trafego_n, hubla_n, pesquisa_n, inicio, fim, label, nome):
     pq_meta = [r for r in pq if 'meta' in r['origem'] or 'facebook' in r['origem']]
     _, _, buyer_pesq = match_buyers(hb, pq)
 
+    tt = agg_trafego(tr)
+    hh = agg_hubla(hb)
+    # ROAS real = faturamento Hubla / spend tráfego. Mais honesto que estimar com ticket fixo.
+    roas_real = safe_div(hh['faturamento'], tt['spend'])
+    cpa_hubla = safe_div(tt['spend'], hh['total'])  # CPA por venda real
+
     return {
         'periodo': {
             'inicio': inicio, 'fim': fim,
             'label': label, 'nome': nome,
         },
-        'trafego': agg_trafego(tr),
-        'hubla':   agg_hubla(hb),
+        'trafego': tt,
+        'hubla':   hh,
         'pesquisa': agg_pesquisa(pq),
         'persona_leads_meta': persona(pq_meta),
         'persona_compradoras_meta': persona_compradoras_meta(buyer_pesq),
@@ -401,6 +407,8 @@ def build_periodo(trafego_n, hubla_n, pesquisa_n, inicio, fim, label, nome):
         'top_ads': top_ads(tr, limit=30),
         'mql_por_ad': mql_por_ad(pq, top_n=20),
         'serie_diaria': daily_series(tr),
+        'roas_real': roas_real,           # faturamento Hubla / spend
+        'cpa_hubla': cpa_hubla,           # spend / vendas Hubla (não pixel)
     }
 
 

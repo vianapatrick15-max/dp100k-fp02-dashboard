@@ -388,9 +388,10 @@ function renderVeredito(p, key) {
   const h = p.hubla;
   const dSpend = delta(t.spend, prev?.trafego.spend);
   const dVendas = delta(h.total, prev?.hubla.total);
-  const dCpa = delta(t.cpa, prev?.trafego.cpa);
-  const dRoas = delta(t.roas, prev?.trafego.roas);
+  const dCpaH = delta(p.cpa_hubla, prev?.cpa_hubla);
+  const dRoasR = delta(p.roas_real, prev?.roas_real);
   const dMql = delta(m.mql_pct, prev?.pesquisa.mql_pct);
+  const roasCls = p.roas_real >= 1 ? 'cell-good' : p.roas_real >= 0.5 ? 'cell-warn' : 'cell-bad';
   document.getElementById('veredito').innerHTML = `
     <div class="kpi-big spend">
       <div class="kpi-lbl">Investimento</div>
@@ -399,22 +400,22 @@ function renderVeredito(p, key) {
         <span class="kpi-sub">${t.impressions.toLocaleString('pt-BR')} impr</span></div>
     </div>
     <div class="kpi-big vendas">
-      <div class="kpi-lbl">Vendas (Hubla)</div>
-      <div class="kpi-val">${h.total}</div>
+      <div class="kpi-lbl">Vendas Hubla · Faturamento</div>
+      <div class="kpi-val">${h.total} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${fmt.brlk(h.faturamento)}</div>
       <div class="kpi-bot"><span><span class="kpi-delta ${dVendas.dir}">${dVendas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">Meta ${h.pct_meta.toFixed(0)}% · ${t.purch} pixel</span></div>
+        <span class="kpi-sub">Ticket ${fmt.brl(h.ticket_medio)} · ${t.purch} pixel</span></div>
     </div>
     <div class="kpi-big cpa">
-      <div class="kpi-lbl">CPA</div>
-      <div class="kpi-val">${fmt.brl(t.cpa)}</div>
-      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpa.dir==='up'?'up':dCpa.dir==='dn'?'dn':'neutral'}">${dCpa.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">por compra pixel</span></div>
+      <div class="kpi-lbl">CPA Hubla</div>
+      <div class="kpi-val">${fmt.brl(p.cpa_hubla)}</div>
+      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpaH.dir==='up'?'up':dCpaH.dir==='dn'?'dn':'neutral'}">${dCpaH.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">spend ÷ vendas Hubla</span></div>
     </div>
     <div class="kpi-big roas">
-      <div class="kpi-lbl">ROAS (ticket ${fmt.brl(DATA.ticket_medio)})</div>
-      <div class="kpi-val">${fmt.dec(t.roas)}x</div>
-      <div class="kpi-bot"><span><span class="kpi-delta ${dRoas.dir}">${dRoas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${fmt.brlk(t.faturamento_estimado)} est.</span></div>
+      <div class="kpi-lbl">ROAS Real (Hubla)</div>
+      <div class="kpi-val ${roasCls}">${fmt.dec(p.roas_real)}x</div>
+      <div class="kpi-bot"><span><span class="kpi-delta ${dRoasR.dir}">${dRoasR.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
+        <span class="kpi-sub">${fmt.brlk(h.faturamento)} ÷ ${fmt.brlk(t.spend)}</span></div>
     </div>
     <div class="kpi-big mql">
       <div class="kpi-lbl">MQL % (Pesquisa)</div>

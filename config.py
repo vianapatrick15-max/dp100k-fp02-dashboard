@@ -4,7 +4,7 @@ from datetime import date
 PRODUTO = "DP100K-Fp02"
 MES_LABEL = "Maio/26"
 
-TICKET_MEDIO = 1100.0
+TICKET_MEDIO = 97.0  # ingresso DP100K (fallback p/ estimativa quando Hubla nao tem valor)
 
 # --- Fontes ---
 

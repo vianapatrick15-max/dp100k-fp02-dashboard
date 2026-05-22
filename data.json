@@ -1,6 +1,6 @@
 {
   "produto": "DP100K-Fp02",
-  "ticket_medio": 1100.0,
+  "ticket_medio": 97.0,
   "semanas_meta": [
     {
       "key": "sem1",
@@ -57,8 +57,8 @@
         "lpv_ic": 5.110107284020327,
         "ic_purch": 77.62430939226519,
         "lpv_purch": 3.966685488424619,
-        "roas": 4.598646471502158,
-        "faturamento_estimado": 309100.0
+        "roas": 0.405517007032463,
+        "faturamento_estimado": 27257.0
       },
       "hubla": {
         "total": 266,
@@ -703,7 +703,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzFkrDKHv/",
-          "roas": 4.821960532672747
+          "roas": 0.42520924697205126
         },
         {
           "name": "[AD-97][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -723,7 +723,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqXfDOxx/",
-          "roas": 3.5892485690590457
+          "roas": 0.3165064647261159
         },
         {
           "name": "[AD-04][VID][VD][DP100K-Fp02]",
@@ -743,7 +743,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
-          "roas": 4.844705177668552
+          "roas": 0.4272149111216814
         },
         {
           "name": "[AD-132][EST][VD][DP100K-Fp02]",
@@ -763,7 +763,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeohsAjJaZ/",
-          "roas": 5.655158704317457
+          "roas": 0.49868217665344844
         },
         {
           "name": "[AD-118][EST][VD][DP100K-Fp02]",
@@ -783,7 +783,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DX4iZtSjIGp/",
-          "roas": 6.763697391455317
+          "roas": 0.5964351336101507
         },
         {
           "name": "[AD-07][VID][VD][DP100K-Fp02]",
@@ -803,7 +803,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYenPvMDO8x/",
-          "roas": 7.623841832640258
+          "roas": 0.6722842343328227
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -823,7 +823,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzGPpjIM7/",
-          "roas": 5.760720613778597
+          "roas": 0.5079908177604763
         },
         {
           "name": "[AD-99][EST][VD][DP100K-Fp02]",
@@ -843,7 +843,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzHdZjAOP/",
-          "roas": 4.89463192367934
+          "roas": 0.4316175423608145
         },
         {
           "name": "[AD-147][EST][VD][DP100K-Fp02]",
@@ -863,7 +863,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYhPbNkjAq6/",
-          "roas": 6.463101565607261
+          "roas": 0.5699280471490039
         },
         {
           "name": "[AD-95][EST][VD][DP100K-Fp02]",
@@ -883,7 +883,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLRFuDJzu/",
-          "roas": 3.119048406686106
+          "roas": 0.2750433594986839
         },
         {
           "name": "[AD-106][EST][VD][DP100K-Fp02]",
@@ -903,7 +903,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzH4RjJTH/",
-          "roas": 8.05424165653785
+          "roas": 0.7102376733492467
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
@@ -923,7 +923,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYenMFnjO48/",
-          "roas": 8.77328534612106
+          "roas": 0.7736442532488572
         },
         {
           "name": "[AD-101][EST][VD][DP100K-Fp02]",
@@ -943,7 +943,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzG4mDJjp/",
-          "roas": 5.094505652842888
+          "roas": 0.4492427712052365
         },
         {
           "name": "[AD-93][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -963,7 +963,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqTvjC2e/",
-          "roas": 3.5539185991099043
+          "roas": 0.3133910037396916
         },
         {
           "name": "[AD-39][VID][VD][DP100K-Fp02]-Variacao-leo",
@@ -983,7 +983,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DX6nSQ5jFO2/",
-          "roas": 3.5656401944894647
+          "roas": 0.3144246353322528
         },
         {
           "name": "[AD-93][EST][VD][DP100K-Fp02]",
@@ -1003,7 +1003,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLbCwDFYo/",
-          "roas": 4.459326884876396
+          "roas": 0.393231552575464
         },
         {
           "name": "[AD-100][EST][VD][DP100K-Fp02]",
@@ -1023,7 +1023,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLHvKDGT6/",
-          "roas": 1.9000241821259543
+          "roas": 0.16754758696928868
         },
         {
           "name": "[AD-108][EST][VD][DP100K-Fp02]",
@@ -1043,7 +1043,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLI5yDJlk/",
-          "roas": 3.935388082929359
+          "roas": 0.34702967640377075
         },
         {
           "name": "[AD-104][EST][VD][DP100K-Fp02]",
@@ -1063,7 +1063,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzIyfDEfV/",
-          "roas": 3.987349228357303
+          "roas": 0.3516117046824167
         },
         {
           "name": "[AD-94][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -1083,7 +1083,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqQNjP2o/",
-          "roas": 1.0686044026501391
+          "roas": 0.09423147914278499
         },
         {
           "name": "[AD-128][CARR][VD][DP100K-Fp02]",
@@ -1103,7 +1103,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3bRJDDnw/",
-          "roas": 4.298260181503805
+          "roas": 0.3790283978235174
         },
         {
           "name": "[AD-97][EST][VD][DP100K-Fp02][TESTE_PUB]",
@@ -1143,7 +1143,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3dyADGbS/",
-          "roas": 4.002814099609423
+          "roas": 0.35297542514737634
         },
         {
           "name": "[AD-129][CARR][VD][DP100K-Fp02]",
@@ -1163,7 +1163,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3cm8DLtQ/",
-          "roas": 2.7550969293192407
+          "roas": 0.24294945649451485
         },
         {
           "name": "[AD-133][EST][VD][DP100K-Fp02]",
@@ -1183,7 +1183,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
-          "roas": 5.822185171952946
+          "roas": 0.5134108742540325
         },
         {
           "name": "[AD-131][CARR][VD][DP100K-Fp02]",
@@ -1203,7 +1203,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3fEqDCP4/",
-          "roas": 3.3146008165971104
+          "roas": 0.29228752655447243
         },
         {
           "name": "[AD-102][EST][VD][DP100K-Fp02]",
@@ -1223,7 +1223,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLUxODJ66/",
-          "roas": 3.7168440614968747
+          "roas": 0.327758067241088
         },
         {
           "name": "[AD-110][EST][VD][DP100K-Fp02]",
@@ -1243,7 +1243,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DX4iWCpjLHV/",
-          "roas": 3.7942155459358773
+          "roas": 0.3345808254143456
         },
         {
           "name": "[AD-36][VID][VD][DP100K-Fp02]-Variacao-leo",
@@ -1283,7 +1283,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeokpiDJi9/",
-          "roas": 4.341733930650668
+          "roas": 0.38286199206646804
         }
       ],
       "mql_por_ad": [
@@ -1659,7 +1659,9 @@
           "purch": 4,
           "reach": 20780
         }
-      ]
+      ],
+      "roas_real": 0.3933980635101199,
+      "cpa_hubla": 252.68958646616517
     },
     "sem1": {
       "periodo": {
@@ -1686,8 +1688,8 @@
         "lpv_ic": 4.412546517809676,
         "ic_purch": 75.90361445783132,
         "lpv_purch": 3.349282296650718,
-        "roas": 3.953132843517547,
-        "faturamento_estimado": 69300.0
+        "roas": 0.34859444165563824,
+        "faturamento_estimado": 6111.0
       },
       "hubla": {
         "total": 62,
@@ -2292,7 +2294,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqXfDOxx/",
-          "roas": 3.5892485690590457
+          "roas": 0.3165064647261159
         },
         {
           "name": "[AD-97][EST][VD][DP100K-Fp02]",
@@ -2312,7 +2314,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLc08DGbU/",
-          "roas": 5.779114219402372
+          "roas": 0.5096127993473001
         },
         {
           "name": "[AD-94][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -2332,7 +2334,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqQNjP2o/",
-          "roas": 1.0686044026501391
+          "roas": 0.09423147914278499
         },
         {
           "name": "[AD-93][EST][VD][DP100K-Fp02]",
@@ -2352,7 +2354,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLbCwDFYo/",
-          "roas": 5.885941161991802
+          "roas": 0.5190329933756407
         },
         {
           "name": "[AD-101][EST][VD][DP100K-Fp02]",
@@ -2372,7 +2374,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLKn-DKtM/",
-          "roas": 2.3696937709367827
+          "roas": 0.20896390525533448
         },
         {
           "name": "[AD-93][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -2392,7 +2394,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqTvjC2e/",
-          "roas": 4.862630683199611
+          "roas": 0.4287956147912384
         },
         {
           "name": "[AD-97][EST][VD][DP100K-Fp02][TESTE_PUB]",
@@ -2432,7 +2434,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLHvKDGT6/",
-          "roas": 2.908129543952412
+          "roas": 0.2564441506939854
         },
         {
           "name": "[AD-94][EST][VD][DP100K-Fp02]",
@@ -2452,7 +2454,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLlOajDb_/",
-          "roas": 4.859837858136916
+          "roas": 0.42854933839934617
         },
         {
           "name": "[AD-39][VID][VD][DP100K-Fp02]-Variacao-leo",
@@ -2472,7 +2474,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DX6nSQ5jFO2/",
-          "roas": 3.1249112241129513
+          "roas": 0.27556035339905116
         },
         {
           "name": "[AD-96][EST][VD][DP100K-Fp02]",
@@ -2492,7 +2494,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLNAsDNIC/",
-          "roas": 3.2976586623497313
+          "roas": 0.29079353658902174
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -2512,7 +2514,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLQukjNPm/",
-          "roas": 6.942910341780541
+          "roas": 0.6122384574115568
         },
         {
           "name": "[AD-95][EST][VD][DP100K-Fp02]",
@@ -2532,7 +2534,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLRFuDJzu/",
-          "roas": 7.148427345983884
+          "roas": 0.6303613205094879
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02][DIAMANTE]",
@@ -2552,7 +2554,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuVPP2DNkQ/",
-          "roas": 4.5567522783761385
+          "roas": 0.4018227009113504
         },
         {
           "name": "[AD-102][EST][VD][DP100K-Fp02]",
@@ -2572,7 +2574,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLUxODJ66/",
-          "roas": 9.39007213282684
+          "roas": 0.8280336335310939
         },
         {
           "name": "[AD-108][EST][VD][DP100K-Fp02]",
@@ -2592,7 +2594,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLI5yDJlk/",
-          "roas": 11.09430156328795
+          "roas": 0.9783156833081191
         },
         {
           "name": "[AD-98][EST][VD][DP100K-Fp02]",
@@ -2712,7 +2714,7 @@
           "ad_status": "CAMPAIGN_PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DXuOqNljEUA/",
-          "roas": 7.213114754098361
+          "roas": 0.6360655737704918
         },
         {
           "name": "[AD-99][EST][VD][DP100K-Fp02]",
@@ -2732,7 +2734,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLO6dDL-u/",
-          "roas": 7.297333156428288
+          "roas": 0.6434921056123126
         },
         {
           "name": "[AD-107][EST][VD][DP100K-Fp02]",
@@ -2792,7 +2794,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLOK2jCZO/",
-          "roas": 8.132485583321012
+          "roas": 0.7171373650746711
         },
         {
           "name": "[AD-36][VID][VD][DP100K-Fp02]-Variacao-leo",
@@ -2852,7 +2854,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLeq5jGS0/",
-          "roas": 9.779516358463727
+          "roas": 0.862375533428165
         },
         {
           "name": "[AD-101][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -3032,7 +3034,9 @@
           "purch": 9,
           "reach": 23271
         }
-      ]
+      ],
+      "roas_real": 0.35126523068498156,
+      "cpa_hubla": 282.74838709677414
     },
     "sem2": {
       "periodo": {
@@ -3059,8 +3063,8 @@
         "lpv_ic": 4.293193717277487,
         "ic_purch": 80.48780487804879,
         "lpv_purch": 3.4554973821989527,
-        "roas": 4.008356816635897,
-        "faturamento_estimado": 72600.0
+        "roas": 0.3534641920124381,
+        "faturamento_estimado": 6402.0
       },
       "hubla": {
         "total": 60,
@@ -3655,7 +3659,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLc08DGbU/",
-          "roas": 3.7887050665319575
+          "roas": 0.3340949013214544
         },
         {
           "name": "[AD-118][EST][VD][DP100K-Fp02]",
@@ -3675,7 +3679,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DX4iZtSjIGp/",
-          "roas": 7.875495574508454
+          "roas": 0.6944755188430182
         },
         {
           "name": "[AD-99][EST][VD][DP100K-Fp02]",
@@ -3695,7 +3699,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLO6dDL-u/",
-          "roas": 4.140085436308549
+          "roas": 0.3650802612017539
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -3715,7 +3719,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLQukjNPm/",
-          "roas": 4.158318527199183
+          "roas": 0.36668808830756433
         },
         {
           "name": "[AD-95][EST][VD][DP100K-Fp02]",
@@ -3735,7 +3739,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLRFuDJzu/",
-          "roas": 2.94314381270903
+          "roas": 0.25953177257525084
         },
         {
           "name": "[AD-39][VID][VD][DP100K-Fp02]-Variacao-leo",
@@ -3755,7 +3759,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DX6nSQ5jFO2/",
-          "roas": 3.7415390197167766
+          "roas": 0.32993571355684304
         },
         {
           "name": "[AD-101][EST][VD][DP100K-Fp02]",
@@ -3775,7 +3779,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLKn-DKtM/",
-          "roas": 9.859533656862618
+          "roas": 0.8694316042869764
         },
         {
           "name": "[AD-108][EST][VD][DP100K-Fp02]",
@@ -3795,7 +3799,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLI5yDJlk/",
-          "roas": 3.5415895297734994
+          "roas": 0.31230380398911767
         },
         {
           "name": "[AD-110][EST][VD][DP100K-Fp02]",
@@ -3815,7 +3819,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DX4iWCpjLHV/",
-          "roas": 2.1620346711741814
+          "roas": 0.19065214827626872
         },
         {
           "name": "[AD-104][EST][VD][DP100K-Fp02]",
@@ -3835,7 +3839,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLI_KjFYI/",
-          "roas": 6.5341359100269285
+          "roas": 0.5761919847932837
         },
         {
           "name": "[AD-120][EST][VD][DP100K-Fp02]",
@@ -3855,7 +3859,7 @@
           "ad_status": "CAMPAIGN_PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYGBgS5DCLc/",
-          "roas": 6.860992141045365
+          "roas": 0.6050147615285458
         },
         {
           "name": "[AD-100][EST][VD][DP100K-Fp02]",
@@ -3915,7 +3919,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DX8RBP5DLJY/",
-          "roas": 2.81928390188892
+          "roas": 0.24860958043929568
         },
         {
           "name": "[AD-40][VID][VD][DP100K-Fp02]-Variacao-pedro",
@@ -3935,7 +3939,7 @@
           "ad_status": "PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DX6nSaSDMYH/",
-          "roas": 6.052935673801794
+          "roas": 0.5337588730534308
         },
         {
           "name": "[AD-102][EST][VD][DP100K-Fp02]",
@@ -3975,7 +3979,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLOK2jCZO/",
-          "roas": 3.1784558483587606
+          "roas": 0.2802820157189089
         },
         {
           "name": "[AD-93][EST][VD][DP100K-Fp02][CBO_LAL]",
@@ -4035,7 +4039,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DXrLeq5jGS0/",
-          "roas": 4.956517820934529
+          "roas": 0.43707475330059026
         },
         {
           "name": "[AD-121][EST][VD][DP100K-Fp02]",
@@ -4407,7 +4411,9 @@
           "purch": 5,
           "reach": 21415
         }
-      ]
+      ],
+      "roas_real": 0.331068188443565,
+      "cpa_hubla": 301.86933333333326
     },
     "sem3": {
       "periodo": {
@@ -4434,8 +4440,8 @@
         "lpv_ic": 5.173501577287067,
         "ic_purch": 85.36585365853658,
         "lpv_purch": 4.416403785488959,
-        "roas": 5.047813280731185,
-        "faturamento_estimado": 77000.0
+        "roas": 0.44512535293720445,
+        "faturamento_estimado": 6790.0
       },
       "hubla": {
         "total": 64,
@@ -5045,7 +5051,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzFkrDKHv/",
-          "roas": 4.740445232466509
+          "roas": 0.41802107959022855
         },
         {
           "name": "[AD-106][EST][VD][DP100K-Fp02]",
@@ -5065,7 +5071,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzH4RjJTH/",
-          "roas": 8.342083770855208
+          "roas": 0.7356201143390502
         },
         {
           "name": "[AD-128][CARR][VD][DP100K-Fp02]",
@@ -5085,7 +5091,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3bRJDDnw/",
-          "roas": 4.546675760018187
+          "roas": 0.40093413520160376
         },
         {
           "name": "[AD-130][CARR][VD][DP100K-Fp02]",
@@ -5105,7 +5111,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3dyADGbS/",
-          "roas": 2.8210553311534268
+          "roas": 0.24876578829262036
         },
         {
           "name": "[AD-129][CARR][VD][DP100K-Fp02]",
@@ -5125,7 +5131,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3cm8DLtQ/",
-          "roas": 3.045572844565037
+          "roas": 0.2685641508389169
         },
         {
           "name": "[AD-131][CARR][VD][DP100K-Fp02]",
@@ -5145,7 +5151,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3fEqDCP4/",
-          "roas": 4.125876748809122
+          "roas": 0.3638273133040771
         },
         {
           "name": "[AD-99][EST][VD][DP100K-Fp02]",
@@ -5165,7 +5171,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzHdZjAOP/",
-          "roas": 6.567817693302817
+          "roas": 0.5791621056821574
         },
         {
           "name": "[AD-118][EST][VD][DP100K-Fp02]",
@@ -5205,7 +5211,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzIyfDEfV/",
-          "roas": 2.6993865030674846
+          "roas": 0.23803680981595093
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -5225,7 +5231,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYVzGPpjIM7/",
-          "roas": 11.359822373686521
+          "roas": 1.001729791134175
         },
         {
           "name": "[AD-95][EST][VD][DP100K-Fp02]",
@@ -5285,7 +5291,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeokpiDJi9/",
-          "roas": 7.8847394452010615
+          "roas": 0.69529066016773
         },
         {
           "name": "[AD-127][CARR][VD][DP100K-Fp02]",
@@ -5305,7 +5311,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYF3aDujNiw/",
-          "roas": 4.00830812957767
+          "roas": 0.3534598986991218
         },
         {
           "name": "[AD-135][EST][VD][DP100K-Fp02]",
@@ -5325,7 +5331,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeojHxDFHL/",
-          "roas": 8.378079896416468
+          "roas": 0.738794318138543
         },
         {
           "name": "[AD-04][VID][VD][DP100K-Fp02]",
@@ -5345,7 +5351,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
-          "roas": 16.91201906445786
+          "roas": 1.4913325902294656
         },
         {
           "name": "[AD-101][EST][VD][DP100K-Fp02]",
@@ -5385,7 +5391,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyvRjDK2W/",
-          "roas": 19.170442662948766
+          "roas": 1.6904844893691182
         },
         {
           "name": "[AD-132][EST][VD][DP100K-Fp02]",
@@ -5425,7 +5431,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyuMQDLTg/",
-          "roas": 10.92570520460866
+          "roas": 0.9634485498609455
         },
         {
           "name": "[AD-111][EST][VD][DP100K-Fp02]",
@@ -5485,7 +5491,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
-          "roas": 8.838180941668007
+          "roas": 0.7793668648561787
         },
         {
           "name": "[AD-06][VID][VD][DP100K-Fp02]",
@@ -5821,7 +5827,9 @@
           "purch": 18,
           "reach": 48903
         }
-      ]
+      ],
+      "roas_real": 0.4145592046219612,
+      "cpa_hubla": 238.34578125000004
     },
     "sem4": {
       "periodo": {
@@ -5848,8 +5856,8 @@
         "lpv_ic": 6.7330210772833725,
         "ic_purch": 71.30434782608695,
         "lpv_purch": 4.8009367681498825,
-        "roas": 5.527387531145173,
-        "faturamento_estimado": 90200.0
+        "roas": 0.48741508229189257,
+        "faturamento_estimado": 7954.0
       },
       "hubla": {
         "total": 80,
@@ -6424,7 +6432,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
-          "roas": 3.8466307011994494
+          "roas": 0.3392028891057696
         },
         {
           "name": "[AD-132][EST][VD][DP100K-Fp02]",
@@ -6444,7 +6452,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeohsAjJaZ/",
-          "roas": 6.077012319761339
+          "roas": 0.5358819954698635
         },
         {
           "name": "[AD-07][VID][VD][DP100K-Fp02]",
@@ -6464,7 +6472,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYenPvMDO8x/",
-          "roas": 7.36208878600337
+          "roas": 0.6492023747657517
         },
         {
           "name": "[AD-147][EST][VD][DP100K-Fp02]",
@@ -6484,7 +6492,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYhPbNkjAq6/",
-          "roas": 6.463101565607261
+          "roas": 0.5699280471490039
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
@@ -6504,7 +6512,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYenMFnjO48/",
-          "roas": 7.430047788716458
+          "roas": 0.6551951231868149
         },
         {
           "name": "[AD-133][EST][VD][DP100K-Fp02]",
@@ -6524,7 +6532,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
-          "roas": 5.227557146704263
+          "roas": 0.46097549384573955
         },
         {
           "name": "[AD-154][EST][VD][DP100K-Fp02]",
@@ -6544,7 +6552,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIGDPjPST/",
-          "roas": 6.031363088057901
+          "roas": 0.5318565632196512
         },
         {
           "name": "[AD-152][EST][VD][DP100K-Fp02]",
@@ -6564,7 +6572,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF9hjPAg/",
-          "roas": 6.098575151078339
+          "roas": 0.5377834451405444
         },
         {
           "name": "[AD-06][VID][VD][DP100K-Fp02]",
@@ -6584,7 +6592,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
-          "roas": 9.22947839463012
+          "roas": 0.8138721857082926
         },
         {
           "name": "[AD-149][EST][VD][DP100K-Fp02]",
@@ -6644,7 +6652,7 @@
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYeojHxDFHL/",
-          "roas": 4.6158365154630525
+          "roas": 0.40703285636356007
         },
         {
           "name": "[AD-136][EST][VD][DP100K-Fp02]",
@@ -6684,7 +6692,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyuBEDEwN/",
-          "roas": 5.073800738007379
+          "roas": 0.44741697416974163
         },
         {
           "name": "[AD-143][EST][VD][DP100K-Fp02]",
@@ -6724,7 +6732,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
-          "roas": 9.263157894736842
+          "roas": 0.8168421052631579
         },
         {
           "name": "[AD-06][DP100K-FP02][NT]_15-anos-palestrante",
@@ -6984,7 +6992,7 @@
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF-NjPPC/",
-          "roas": 25.670945157526248
+          "roas": 2.2637106184364058
         },
         {
           "name": "[AD-145][EST][VD][DP100K-Fp02]",
@@ -7098,7 +7106,9 @@
           "purch": 4,
           "reach": 20780
         }
-      ]
+      ],
+      "roas_real": 0.4880585143215712,
+      "cpa_hubla": 203.98425000000003
     }
   },
   "_diag": {
@@ -7106,6 +7116,6 @@
     "hubla_linhas": 266,
     "pesquisa_linhas": 2453
   },
-  "updated_at": "2026-05-22 11:59:30 BRT",
+  "updated_at": "2026-05-22 12:06:51 BRT",
   "schema_version": 1
 }
