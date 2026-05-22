@@ -333,6 +333,25 @@ def mql_por_ad(pesquisa_rows, top_n=20):
     return sorted(out, key=lambda x: (-x['mql'], -x['total']))[:top_n]
 
 
+def persona_por_ad(pesquisa_rows, min_n=3):
+    """Persona individual de cada AD (so leads Meta).
+
+    Retorna {AD-XX: persona_blob} para todos ads com >= min_n respondentes.
+    """
+    by = defaultdict(list)
+    for r in pesquisa_rows:
+        if 'meta' not in r['origem'] and 'facebook' not in r['origem']:
+            continue
+        code = ad_code_from(r['content']) or 'unknown'
+        by[code].append(r)
+    out = {}
+    for code, rows in by.items():
+        if len(rows) < min_n:
+            continue
+        out[code] = persona(rows)
+    return out
+
+
 # ============================================================================
 # MATCH Hubla x Pesquisa (compradoras)
 # ============================================================================
@@ -406,6 +425,7 @@ def build_periodo(trafego_n, hubla_n, pesquisa_n, inicio, fim, label, nome):
         'match': match_summary(len(hb), buyer_pesq),
         'top_ads': top_ads(tr, limit=30),
         'mql_por_ad': mql_por_ad(pq, top_n=20),
+        'persona_por_ad': persona_por_ad(pq, min_n=3),
         'serie_diaria': daily_series(tr),
         'roas_real': roas_real,           # faturamento Hubla / spend
         'cpa_hubla': cpa_hubla,           # spend / vendas Hubla (não pixel)

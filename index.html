@@ -125,26 +125,38 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 .ig-link:hover{color:var(--gold2)}
 
 /* ── PERSONA CARDS ── */
-.persona-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.p-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:16px 18px}
-.p-card-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
-.p-title{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.p-total{font-size:10px;color:var(--gold);font-family:'Roboto Mono',monospace}
-.p-row{display:flex;align-items:center;margin-bottom:7px;gap:10px;font-size:11px}
-.p-label{flex:1;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px}
-.p-bar{flex:1;height:6px;background:var(--card2);border-radius:3px;overflow:hidden;position:relative}
-.p-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.persona-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.p-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:14px 14px;min-width:0;overflow:hidden}
+.p-card-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px}
+.p-title{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p-total{font-size:9px;color:var(--gold);font-family:'Roboto Mono',monospace}
+.p-row{display:grid;grid-template-columns:1fr 50px;align-items:center;margin-bottom:8px;gap:8px;font-size:10.5px}
+.p-row-top{display:flex;justify-content:space-between;align-items:baseline;gap:6px;min-width:0}
+.p-label{color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;min-width:0;flex:1}
+.p-bar{height:5px;background:var(--card2);border-radius:3px;overflow:hidden;position:relative;grid-column:1/3}
+.p-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .35s}
 .p-fill.compradoras{background:linear-gradient(90deg,var(--green),var(--green2))}
+.p-fill.adfocus{background:linear-gradient(90deg,var(--purple),#c08fff)}
 .p-fill.mql{background:linear-gradient(90deg,var(--purple),#c08fff)}
-.p-pct{font-size:10.5px;color:var(--muted2);font-family:'Roboto Mono',monospace;min-width:48px;text-align:right}
-.p-n{font-size:10px;color:var(--muted);font-family:'Roboto Mono',monospace}
+.p-pct{font-size:10px;color:var(--muted2);font-family:'Roboto Mono',monospace;text-align:right;white-space:nowrap}
+.p-n{font-size:9px;color:var(--muted);font-family:'Roboto Mono',monospace}
 
-.persona-dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
-.persona-mode-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--card);border:1px solid var(--border);border-radius:5px;margin-bottom:10px}
-.pm-title{font-size:11px;font-weight:600;color:var(--white)}
-.pm-lead .pm-title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
-.pm-buyer .pm-title::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:8px;vertical-align:middle}
-.pm-sub{font-size:10px;color:var(--muted2)}
+.persona-mode-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:5px;margin-bottom:10px;flex-wrap:wrap;gap:10px}
+.pm-l{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pm-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.pm-pill{font-size:11px;font-weight:500;padding:5px 11px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:14px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
+.pm-pill:hover{color:var(--white);border-color:var(--border2)}
+.pm-pill.on.leads{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.55);color:var(--gold2)}
+.pm-pill.on.buyers{background:rgba(45,184,122,.18);border-color:rgba(45,184,122,.55);color:var(--green2)}
+.pm-pill.on.adfocus{background:rgba(155,109,234,.2);border-color:rgba(155,109,234,.6);color:#c08fff}
+.pm-pill-close{margin-left:4px;color:inherit;opacity:.6}
+.pm-pill-close:hover{opacity:1}
+.pm-sub{font-size:11px;color:var(--muted2);font-family:'Roboto Mono',monospace}
+.pm-sub b{color:var(--white);font-family:'Roboto Mono',monospace}
+
+.clickable-row{cursor:pointer;transition:background .15s}
+.clickable-row:hover{background:rgba(155,109,234,.06)!important}
+.clickable-row.active{background:rgba(155,109,234,.13)!important;box-shadow:inset 3px 0 0 var(--purple)}
 
 /* ── HUBLA SUMMARY ── */
 .summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -171,6 +183,9 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 .badge.live{background:rgba(45,184,122,.15);color:var(--green);border:1px solid rgba(45,184,122,.4)}
 .badge.paused{background:rgba(122,122,122,.15);color:var(--muted2);border:1px solid var(--border2)}
 
+@media (max-width: 1280px){
+  .persona-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media (max-width: 1100px){
   .veredito{grid-template-columns:repeat(2,1fr)}
   .persona-grid{grid-template-columns:repeat(2,1fr)}
@@ -178,7 +193,10 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
   .funnel-steps{grid-template-columns:1fr;gap:8px}
   .fnl-step{border-right:0;border-bottom:1px solid var(--border)}
   .fnl-rate{display:none!important}
-  .persona-dual{grid-template-columns:1fr}
+}
+@media (max-width: 720px){
+  .persona-grid{grid-template-columns:1fr}
+  .summary-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -267,23 +285,22 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 
   <!-- LAYER 6 · PERSONA -->
   <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">06</span>Persona · Pesquisa</div><div class="section-hint">quem o tráfego está atraindo (Meta Ads)</div></div>
+    <div class="section-hdr"><div class="section-title"><span class="section-num">06</span>Persona · Pesquisa</div><div class="section-hint">clique num ad nas tabelas abaixo pra filtrar quem respondeu</div></div>
   </div>
-  <div class="persona-dual">
-    <div>
-      <div class="persona-mode-hdr pm-lead">
-        <span class="pm-title">Todos os leads Meta Ads</span>
-        <span class="pm-sub"><span id="persona-leads-total">0</span> respondentes · MQL <span id="persona-leads-mql">0</span> (<span id="persona-leads-mqlpct">0</span>%)</span>
+  <div id="persona-section">
+    <div class="persona-mode-hdr">
+      <div class="pm-l">
+        <span class="pm-title">Modo</span>
+        <button class="pm-pill on leads" data-mode="leads">Todos leads Meta</button>
+        <button class="pm-pill buyers" data-mode="buyers">Só compradoras</button>
+        <button class="pm-pill adfocus" data-mode="adfocus" id="pm-adfocus" style="display:none">
+          <span id="pm-adfocus-label">—</span>
+          <span class="pm-pill-close" id="pm-adfocus-close">✕</span>
+        </button>
       </div>
-      <div class="persona-grid" id="persona-leads"></div>
+      <div class="pm-sub" id="persona-sub">—</div>
     </div>
-    <div>
-      <div class="persona-mode-hdr pm-buyer">
-        <span class="pm-title">Apenas compradoras (Hubla × Pesquisa)</span>
-        <span class="pm-sub"><span id="persona-buyers-total">0</span> matchadas · MQL <span id="persona-buyers-mql">0</span> (<span id="persona-buyers-mqlpct">0</span>%)</span>
-      </div>
-      <div class="persona-grid" id="persona-buyers"></div>
-    </div>
+    <div class="persona-grid" id="persona-grid"></div>
   </div>
 
   <!-- LAYER 7 · MQL POR AD -->
@@ -499,14 +516,17 @@ function renderHublaSummary(p) {
 function renderTopAds(p) {
   const tb = document.querySelector('#tbl-topads tbody');
   document.getElementById('topads-count').textContent = p.top_ads.length;
+  const personaSet = new Set(Object.keys(p.persona_por_ad || {}));
   tb.innerHTML = p.top_ads.map(a => {
-    const cpaCls = a.cpa <= 200 ? 'cell-good' : a.cpa <= 300 ? 'cell-warn' : a.cpa > 0 ? 'cell-bad' : 'cell-muted';
-    const roasCls = a.roas >= 5 ? 'cell-good' : a.roas >= 3 ? 'cell-warn' : a.roas > 0 ? 'cell-bad' : 'cell-muted';
+    const cpaCls = a.cpa <= 100 ? 'cell-good' : a.cpa <= 200 ? 'cell-warn' : a.cpa > 0 ? 'cell-bad' : 'cell-muted';
+    const roasCls = a.roas >= 1 ? 'cell-good' : a.roas >= 0.5 ? 'cell-warn' : a.roas > 0 ? 'cell-bad' : 'cell-muted';
     const statusOn = (a.ad_status === 'ACTIVE');
-    const ig = a.ig_url ? `<a class="ig-link" href="${a.ig_url}" target="_blank">↗ ver</a>` : '<span class="cell-muted">—</span>';
-    return `<tr>
+    const ig = a.ig_url ? `<a class="ig-link" href="${a.ig_url}" target="_blank" onclick="event.stopPropagation()">↗ ver</a>` : '<span class="cell-muted">—</span>';
+    const code = a.ad_code;
+    const clickable = code && personaSet.has(code);
+    return `<tr class="${clickable?'clickable-row':''}" ${clickable?`data-ad="${code}"`:''}>
       <td>
-        <div class="ad-name">${a.ad_code || a.name.substring(0,42)}</div>
+        <div class="ad-name">${code || a.name.substring(0,42)} ${clickable?'<span style="font-size:9px;color:var(--purple);margin-left:6px;letter-spacing:.08em">↳ FILTRA PERSONA</span>':''}</div>
         <div class="ad-meta">${(a.adset||'').substring(0,80)}</div>
       </td>
       <td><span class="status-dot ${statusOn?'sg':'sr'}"></span><span class="${statusOn?'cell-good':'cell-muted'}" style="font-size:10px">${statusOn?'LIVE':'PAUSED'}</span></td>
@@ -521,62 +541,121 @@ function renderTopAds(p) {
       <td>${ig}</td>
     </tr>`;
   }).join('');
+  // bind clicks
+  tb.querySelectorAll('.clickable-row').forEach(tr => {
+    tr.addEventListener('click', () => setPersonaMode('adfocus', tr.dataset.ad));
+  });
 }
 
-function renderDistList(items, total, fillClass) {
-  const N = (items || []).slice(0, 6);
+function renderDistList(items, fillClass) {
+  const N = (items || []).slice(0, 5);
   return N.map(i => `
     <div class="p-row">
-      <div class="p-label" title="${i.k}">${i.k}</div>
+      <div class="p-row-top">
+        <div class="p-label" title="${i.k}">${i.k}</div>
+        <div class="p-pct">${i.pct.toFixed(0)}% <span class="p-n">(${i.n})</span></div>
+      </div>
       <div class="p-bar"><div class="p-fill ${fillClass||''}" style="width:${i.pct.toFixed(1)}%"></div></div>
-      <div class="p-pct">${i.pct.toFixed(0)}% <span class="p-n">(${i.n})</span></div>
     </div>`).join('');
 }
 
 function personaCards(p, fillClass) {
-  if (!p || !p.idade) return '<div style="grid-column:1/-1;color:var(--muted);text-align:center;padding:30px">sem dados de pesquisa neste período</div>';
+  if (!p || !p.idade) return '<div style="grid-column:1/-1;color:var(--muted);text-align:center;padding:32px;background:var(--card);border:1px dashed var(--border);border-radius:5px">Sem dados de pesquisa neste corte</div>';
   const cards = [
     { t: 'Idade', d: p.idade },
     { t: 'Gênero', d: p.genero },
     { t: 'Renda mensal', d: p.renda },
     { t: 'Ocupação', d: p.ocupacao },
     { t: 'Tempo me conhece', d: p.tempo },
-    { t: 'Já participou antes', d: p.previo },
-    { t: 'Autoimagem (palestras)', d: p.autoimg },
+    { t: 'Já participou?', d: p.previo },
+    { t: 'Autoimagem palestras', d: p.autoimg },
     { t: 'Objetivo', d: p.objetivo },
   ];
   return cards.map(c => `
     <div class="p-card">
       <div class="p-card-hdr"><div class="p-title">${c.t}</div></div>
-      ${renderDistList(c.d, p.total_respondentes, fillClass)}
+      ${renderDistList(c.d, fillClass)}
     </div>`).join('');
 }
 
-function renderPersona(p) {
-  const lead = p.persona_leads_meta || {};
-  const buyer = p.persona_compradoras_meta || {};
-  document.getElementById('persona-leads-total').textContent = lead.total_respondentes || 0;
-  document.getElementById('persona-leads-mql').textContent = lead.mql || 0;
-  document.getElementById('persona-leads-mqlpct').textContent = (lead.mql_pct || 0).toFixed(0);
-  document.getElementById('persona-buyers-total').textContent = buyer.total_respondentes || 0;
-  document.getElementById('persona-buyers-mql').textContent = buyer.mql || 0;
-  document.getElementById('persona-buyers-mqlpct').textContent = (buyer.mql_pct || 0).toFixed(0);
-  document.getElementById('persona-leads').innerHTML = personaCards(lead, '');
-  document.getElementById('persona-buyers').innerHTML = personaCards(buyer, 'compradoras');
+// ── PERSONA STATE: 'leads' | 'buyers' | { ad: 'AD-XX' } ──
+let personaMode = { kind: 'leads', ad: null };
+
+function setPersonaMode(kind, ad) {
+  personaMode = { kind, ad: ad || null };
+  // toggle pills
+  document.querySelectorAll('#persona-section .pm-pill').forEach(b => {
+    b.classList.toggle('on', b.dataset.mode === kind);
+  });
+  // ad focus pill
+  const adPill = document.getElementById('pm-adfocus');
+  if (kind === 'adfocus' && ad) {
+    adPill.style.display = 'inline-flex';
+    document.getElementById('pm-adfocus-label').textContent = ad;
+    adPill.classList.add('on');
+  } else {
+    adPill.classList.remove('on');
+    if (kind !== 'adfocus') adPill.style.display = 'none';
+  }
+  // re-render
+  renderPersona(DATA.periodos[activeKey]);
+  // marcar linha ativa nas tabelas
+  document.querySelectorAll('.clickable-row').forEach(tr => {
+    tr.classList.toggle('active', kind === 'adfocus' && tr.dataset.ad === ad);
+  });
 }
+
+function renderPersona(p) {
+  const grid = document.getElementById('persona-grid');
+  const sub = document.getElementById('persona-sub');
+  let pData = null, fillCls = '';
+  if (personaMode.kind === 'leads') {
+    pData = p.persona_leads_meta || {};
+    fillCls = '';
+    sub.innerHTML = `<b>${pData.total_respondentes || 0}</b> respondentes · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
+  } else if (personaMode.kind === 'buyers') {
+    pData = p.persona_compradoras_meta || {};
+    fillCls = 'compradoras';
+    sub.innerHTML = `<b>${pData.total_respondentes || 0}</b> compradoras matched · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
+  } else if (personaMode.kind === 'adfocus' && personaMode.ad) {
+    pData = (p.persona_por_ad || {})[personaMode.ad] || {};
+    fillCls = 'adfocus';
+    sub.innerHTML = `Filtro <b>${personaMode.ad}</b> · <b>${pData.total_respondentes || 0}</b> respondentes · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
+  }
+  grid.innerHTML = personaCards(pData, fillCls);
+}
+
+// pills handlers
+document.querySelectorAll('#persona-section .pm-pill').forEach(b => {
+  b.addEventListener('click', e => {
+    if (e.target.id === 'pm-adfocus-close') return;
+    const mode = b.dataset.mode;
+    if (mode === 'adfocus') return; // só ativa via clique em ad
+    setPersonaMode(mode);
+  });
+});
+document.getElementById('pm-adfocus-close').addEventListener('click', e => {
+  e.stopPropagation();
+  setPersonaMode('leads');
+});
 
 function renderMqlAd(p) {
   const tb = document.querySelector('#tbl-mqlad tbody');
+  const personaSet = new Set(Object.keys(p.persona_por_ad || {}));
   tb.innerHTML = (p.mql_por_ad || []).map(r => {
     const pctCls = r.mql_pct >= 60 ? 'cell-good' : r.mql_pct >= 40 ? 'cell-warn' : 'cell-bad';
-    return `<tr>
-      <td><div class="ad-name">${r.ad}</div></td>
+    const clickable = personaSet.has(r.ad);
+    return `<tr class="${clickable?'clickable-row':''}" ${clickable?`data-ad="${r.ad}"`:''}>
+      <td><div class="ad-name">${r.ad}${clickable?'<span style="font-size:9px;color:var(--purple);margin-left:6px;letter-spacing:.08em">↳ FILTRA PERSONA</span>':''}</div></td>
       <td>${r.total}</td>
       <td class="cell-good" style="font-weight:600">${r.mql}</td>
       <td class="${pctCls}">${r.mql_pct.toFixed(0)}%</td>
-      <td style="text-align:left;padding-left:0;min-width:140px"><div class="p-bar" style="width:140px"><div class="p-fill mql" style="width:${Math.min(100, r.mql_pct).toFixed(1)}%"></div></div></td>
+      <td style="text-align:left;padding-left:0;min-width:140px"><div class="p-bar" style="width:140px;height:5px"><div class="p-fill mql" style="width:${Math.min(100, r.mql_pct).toFixed(1)}%"></div></div></td>
     </tr>`;
   }).join('');
+  tb.querySelectorAll('.clickable-row').forEach(tr => {
+    tr.addEventListener('click', () => setPersonaMode('adfocus', tr.dataset.ad));
+  });
 }
 
 document.querySelectorAll('#filter-periodo .fb').forEach(b => {
