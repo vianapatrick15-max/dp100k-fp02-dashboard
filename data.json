@@ -75,41 +75,41 @@
         ]
       },
       "pesquisa": {
-        "total": 301,
+        "total": 302,
         "meta_ads": 175,
-        "pct_meta": 58.139534883720934,
+        "pct_meta": 57.94701986754966,
         "mql": 93,
         "mql_pct": 53.142857142857146,
         "por_origem": [
           {
             "origem": "Meta Ads",
             "n": 175,
-            "pct": 58.139534883720934
+            "pct": 57.94701986754966
           },
           {
             "origem": "Sem origem",
-            "n": 63,
-            "pct": 20.930232558139537
+            "n": 64,
+            "pct": 21.192052980132452
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 28,
-            "pct": 9.30232558139535
+            "pct": 9.271523178807946
           },
           {
             "origem": "Orgânico Instagram",
             "n": 19,
-            "pct": 6.312292358803987
+            "pct": 6.291390728476822
           },
           {
             "origem": "WhatsApp",
             "n": 13,
-            "pct": 4.318936877076411
+            "pct": 4.304635761589404
           },
           {
             "origem": "Outros",
             "n": 3,
-            "pct": 0.9966777408637874
+            "pct": 0.9933774834437087
           }
         ]
       },
@@ -5866,31 +5866,31 @@
         ]
       },
       "pesquisa": {
-        "total": 79,
+        "total": 80,
         "meta_ads": 25,
-        "pct_meta": 31.645569620253166,
+        "pct_meta": 31.25,
         "mql": 15,
         "mql_pct": 60.0,
         "por_origem": [
           {
             "origem": "Sem origem",
-            "n": 48,
-            "pct": 60.75949367088608
+            "n": 49,
+            "pct": 61.25000000000001
           },
           {
             "origem": "Meta Ads",
             "n": 25,
-            "pct": 31.645569620253166
+            "pct": 31.25
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 4,
-            "pct": 5.063291139240507
+            "pct": 5.0
           },
           {
             "origem": "Orgânico Instagram",
             "n": 2,
-            "pct": 2.5316455696202533
+            "pct": 2.5
           }
         ]
       },
@@ -7104,8 +7104,8 @@
   "_diag": {
     "trafego_linhas": 776,
     "hubla_linhas": 266,
-    "pesquisa_linhas": 2452
+    "pesquisa_linhas": 2453
   },
-  "updated_at": "2026-05-22 11:48:21 BRT",
+  "updated_at": "2026-05-22 11:59:30 BRT",
   "schema_version": 1
 }
