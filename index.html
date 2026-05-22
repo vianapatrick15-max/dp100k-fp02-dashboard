@@ -43,8 +43,14 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 .fb{font-size:11px;padding:6px 12px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:3px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
 .fb:hover{color:var(--white);border-color:var(--border2)}
 .fb.on{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.55);color:var(--gold2)}
+.fb.custom-on{background:rgba(155,109,234,.18);border-color:rgba(155,109,234,.55);color:#c08fff}
 .fsep{width:1px;height:22px;background:var(--border)}
 .fb-sub{font-size:9px;color:var(--muted);margin-left:6px}
+.fd{font-size:11px;padding:5px 9px;background:var(--card2);border:1px solid var(--border);color:var(--white);border-radius:3px;font-family:'Inter',sans-serif;color-scheme:dark}
+.fd:focus{outline:none;border-color:var(--gold)}
+.fb-apply{border-color:rgba(155,109,234,.55);color:#c08fff}
+.fb-apply:hover{background:rgba(155,109,234,.15)}
+.fb-clear{border-color:var(--border2);color:var(--muted2)}
 
 .main{padding:20px 28px;display:flex;flex-direction:column;gap:22px;max-width:1480px;margin:0 auto}
 
@@ -219,6 +225,15 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
     <span class="fl">Período</span>
     <button class="fb on" data-key="mes">Mês completo</button>
   </div>
+  <div class="fsep"></div>
+  <div class="fg" id="filter-custom">
+    <span class="fl">Personalizado</span>
+    <input type="date" id="date-from" class="fd">
+    <span style="color:var(--muted2);font-size:11px">→</span>
+    <input type="date" id="date-to" class="fd">
+    <button class="fb fb-apply" id="apply-custom">Aplicar</button>
+    <button class="fb fb-clear" id="clear-custom" style="display:none">Limpar</button>
+  </div>
 </div>
 
 <div class="main">
@@ -333,6 +348,208 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 let DATA = null;
 let activeKey = 'mes';
 let chartDaily = null;
+let customPeriod = null;  // {ini, fim, periodo blob} quando filtro custom ativo
+
+const AD_RE = /AD-(\d+)/i;
+const TICKET_FALLBACK = 97;
+
+function safeDiv(a, b) { return b ? a / b : 0; }
+
+function tableToObjs(tbl) {
+  if (!tbl || !tbl.rows) return [];
+  return tbl.rows.map(r => Object.fromEntries(tbl.cols.map((c, i) => [c, r[i]])));
+}
+
+function buildPeriodFromRaw(ini, fim, label, nome) {
+  if (!DATA || !DATA.raw) return null;
+  const R = DATA.raw;
+  const inRange = d => d && d >= ini && d <= fim;
+
+  const inv = R.invest.rows.filter(r => inRange(r[0]));
+  const tr  = R.trafego.rows.filter(r => inRange(r[0]));
+  const hb  = R.hubla.rows.filter(r => inRange(r[0]));
+  const pq  = R.pesquisa.rows.filter(r => inRange(r[0]));
+
+  // INVEST agg
+  const inv_sum = inv.reduce((a, r) => {
+    a.spend   += r[1]; a.vendas  += r[2]; a.ic     += r[3];
+    a.visitas += r[4]; a.impr    += r[5]; a.clicks += r[6];
+    return a;
+  }, {spend:0,vendas:0,ic:0,visitas:0,impr:0,clicks:0});
+
+  const trafego_agg = {
+    spend: inv_sum.spend,
+    vendas_gerenciador: inv_sum.vendas,
+    ic: inv_sum.ic,
+    visitas: inv_sum.visitas,
+    impressions: inv_sum.impr,
+    clicks: inv_sum.clicks,
+    ctr:   safeDiv(inv_sum.clicks, inv_sum.impr) * 100,
+    cpm:   safeDiv(inv_sum.spend, inv_sum.impr) * 1000,
+    cpc:   safeDiv(inv_sum.spend, inv_sum.clicks),
+    cpa:   safeDiv(inv_sum.spend, inv_sum.vendas),
+    cpic:  safeDiv(inv_sum.spend, inv_sum.ic),
+    cplpv: safeDiv(inv_sum.spend, inv_sum.visitas),
+    click_lpv: safeDiv(inv_sum.visitas, inv_sum.clicks) * 100,
+    lpv_ic:    safeDiv(inv_sum.ic, inv_sum.visitas) * 100,
+    ic_purch:  safeDiv(inv_sum.vendas, inv_sum.ic) * 100,
+    lpv_purch: safeDiv(inv_sum.vendas, inv_sum.visitas) * 100,
+  };
+
+  // HUBLA agg
+  const hubla_agg = {
+    total: hb.length,
+    meta_ads: hb.filter(r => /meta|facebook/i.test(r[2])).length,
+    faturamento: hb.reduce((s, r) => s + r[4], 0),
+    ticket_medio: hb.length ? hb.reduce((s, r) => s + r[4], 0) / hb.length : 0,
+    pct_meta: 0,
+  };
+  hubla_agg.pct_meta = safeDiv(hubla_agg.meta_ads, hubla_agg.total) * 100;
+
+  // PESQUISA agg
+  const pq_meta = pq.filter(r => /meta|facebook/i.test(r[2]));
+  const mql_meta = pq_meta.filter(r => r[13]);
+  const mql_total = pq.filter(r => r[13]);
+  const mql10k_meta = pq_meta.filter(r => r[14]);
+  const mql10k_total = pq.filter(r => r[14]);
+  const pesq_agg = {
+    total: pq.length,
+    meta_ads: pq_meta.length,
+    pct_meta: safeDiv(pq_meta.length, pq.length) * 100,
+    mql: mql_meta.length,
+    mql_pct: safeDiv(mql_meta.length, pq_meta.length) * 100,
+    mql_total: mql_total.length,
+    mql_total_pct: safeDiv(mql_total.length, pq.length) * 100,
+    mql_10k: mql10k_total.length,
+    mql_10k_pct: safeDiv(mql10k_total.length, pq.length) * 100,
+    mql_10k_meta: mql10k_meta.length,
+  };
+
+  // MATCH (Hubla email -> Pesquisa email)
+  const buyerEmails = new Set(hb.map(r => r[1]).filter(Boolean));
+  const buyer_pesq = pq.filter(r => buyerEmails.has(r[1]));
+  const match = {
+    vendas_total: hb.length,
+    matched_pesquisa: buyer_pesq.length,
+    match_pct: safeDiv(buyer_pesq.length, hb.length) * 100,
+  };
+
+  // TOP_ADS agregado por Ad Name
+  const byAd = {};
+  for (const r of tr) {
+    const k = r[1] || '_';
+    if (!byAd[k]) byAd[k] = {name: r[1], ad_code: r[2], campaign: r[3], adset: r[4],
+                            spend:0, impr:0, clicks:0, lpv:0, ic:0, purch:0,
+                            ad_status: r[11], ig_url: r[12]};
+    const b = byAd[k];
+    b.spend += r[5]; b.impr += r[6]; b.clicks += r[7];
+    b.lpv += r[8]; b.ic += r[9]; b.purch += r[10];
+    if (r[11]) b.ad_status = r[11];
+    if (r[12]) b.ig_url = r[12];
+  }
+  const top_ads = Object.values(byAd).map(a => ({
+    ...a,
+    ctr: safeDiv(a.clicks, a.impr) * 100,
+    cpa: safeDiv(a.spend, a.purch),
+    roas: safeDiv(a.purch * TICKET_FALLBACK, a.spend),
+  })).sort((x, y) => y.spend - x.spend).slice(0, 30);
+
+  // MQL POR AD (a partir de Pesquisa.content + origem Meta)
+  const byAdMql = {};
+  for (const r of pq) {
+    if (!/meta|facebook/i.test(r[2])) continue;
+    const m = (r[3] || '').match(AD_RE);
+    const code = m ? `AD-${parseInt(m[1], 10).toString().padStart(2, '0')}` : 'unknown';
+    if (!byAdMql[code]) byAdMql[code] = {total:0, mql:0};
+    byAdMql[code].total += 1;
+    if (r[13]) byAdMql[code].mql += 1;
+  }
+  const mql_por_ad = Object.entries(byAdMql)
+    .map(([ad, v]) => ({ad, total: v.total, mql: v.mql, mql_pct: safeDiv(v.mql, v.total) * 100}))
+    .sort((a, b) => b.mql - a.mql || b.total - a.total)
+    .slice(0, 20);
+
+  // PERSONA por origem (leads Meta, compradoras Meta)
+  function personaFromRows(rows) {
+    if (!rows.length) return {};
+    const dist = (idx, topN) => {
+      const c = {};
+      for (const r of rows) {
+        const k = (r[idx] || '').trim();
+        if (!k) continue;
+        c[k] = (c[k] || 0) + 1;
+      }
+      const total = Object.values(c).reduce((a, b) => a + b, 0);
+      return Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, topN)
+        .map(([k, n]) => ({k, n, pct: total ? n / total * 100 : 0}));
+    };
+    return {
+      total_respondentes: rows.length,
+      mql: rows.filter(r => r[13]).length,
+      mql_pct: safeDiv(rows.filter(r => r[13]).length, rows.length) * 100,
+      idade:    dist(4, 8),
+      genero:   dist(5, 4),
+      tempo:    dist(6, 6),
+      previo:   dist(7, 3),
+      ocupacao: dist(8, 8),
+      renda:    dist(9, 8),
+      autoimg:  dist(10, 5),
+      objetivo: dist(11, 6),
+      estado:   dist(12, 12),
+    };
+  }
+
+  const persona_leads = personaFromRows(pq_meta);
+  const persona_buyers = personaFromRows(buyer_pesq.filter(r => /meta|facebook/i.test(r[2])));
+
+  // PERSONA POR AD (min 3 respondentes)
+  const adGroups = {};
+  for (const r of pq) {
+    if (!/meta|facebook/i.test(r[2])) continue;
+    const m = (r[3] || '').match(AD_RE);
+    const code = m ? `AD-${parseInt(m[1], 10).toString().padStart(2, '0')}` : 'unknown';
+    if (!adGroups[code]) adGroups[code] = [];
+    adGroups[code].push(r);
+  }
+  const persona_por_ad = {};
+  for (const [code, rows] of Object.entries(adGroups)) {
+    if (rows.length < 3) continue;
+    persona_por_ad[code] = personaFromRows(rows);
+  }
+
+  // SERIE DIARIA (vai do invest)
+  const byDate = {};
+  for (const r of inv) {
+    const d = r[0];
+    if (!byDate[d]) byDate[d] = {date:d, spend:0, vendas:0, ic:0, visitas:0, impr:0, clicks:0};
+    const b = byDate[d];
+    b.spend += r[1]; b.vendas += r[2]; b.ic += r[3];
+    b.visitas += r[4]; b.impr += r[5]; b.clicks += r[6];
+  }
+  const serie_diaria = Object.values(byDate).sort((a, b) => a.date.localeCompare(b.date));
+
+  // CPA gerenciador, hubla, ROAS real
+  const cpa_ger = safeDiv(inv_sum.spend, inv_sum.vendas);
+  const cpa_hubla = safeDiv(inv_sum.spend, hubla_agg.total);
+  const roas_real = safeDiv(hubla_agg.faturamento, inv_sum.spend);
+
+  return {
+    periodo: {inicio: ini, fim: fim, label, nome, custom: true},
+    trafego: trafego_agg,
+    hubla:   hubla_agg,
+    pesquisa: pesq_agg,
+    persona_leads_meta: persona_leads,
+    persona_compradoras_meta: persona_buyers,
+    match,
+    top_ads,
+    mql_por_ad,
+    persona_por_ad,
+    serie_diaria,
+    roas_real,
+    cpa_hubla,
+    cpa_gerenciador: cpa_ger,
+  };
+}
 
 const fmt = {
   brl: v => 'R$ ' + (v||0).toLocaleString('pt-BR',{minimumFractionDigits:0, maximumFractionDigits:0}),
@@ -381,31 +598,68 @@ function load() {
         return `<button class="fb ${activeKey===s.key?'on':''}" data-key="${s.key}">${s.nome} <span class="fb-sub">${ini}–${fim}</span></button>`;
       }).join('');
     fp.querySelectorAll('.fb').forEach(b => {
-      b.addEventListener('click', () => render(b.dataset.key));
+      b.addEventListener('click', () => {
+        customPeriod = null;
+        document.getElementById('apply-custom').classList.remove('custom-on');
+        document.getElementById('clear-custom').style.display = 'none';
+        render(b.dataset.key);
+      });
     });
+    // popula limites dos date inputs com base nos dados disponiveis
+    if (d.raw && d.raw.invest && d.raw.invest.rows.length) {
+      const dates = d.raw.invest.rows.map(r => r[0]).sort();
+      const minD = dates[0], maxD = dates[dates.length - 1];
+      const df = document.getElementById('date-from');
+      const dt = document.getElementById('date-to');
+      df.min = minD; df.max = maxD; df.value = minD;
+      dt.min = minD; dt.max = maxD; dt.value = maxD;
+    }
     render(activeKey);
   });
 }
 
-function render(key) {
+document.getElementById('apply-custom').addEventListener('click', applyCustom);
+document.getElementById('clear-custom').addEventListener('click', clearCustom);
+
+function render(key, customP) {
   if (!DATA) return;
-  activeKey = key;
+  const p = customP || DATA.periodos[key];
+  if (!p) return;
+  activeKey = customP ? 'custom' : key;
   document.querySelectorAll('#filter-periodo .fb').forEach(b => {
-    b.classList.toggle('on', b.dataset.key === key);
+    b.classList.toggle('on', !customP && b.dataset.key === key);
   });
   // Reset filtro de ad ao trocar de periodo
   if (personaMode.kind === 'adfocus') personaMode = { kind: 'leads', ad: null };
-  const p = DATA.periodos[key];
-  if (!p) return;
   document.getElementById('foot-periodo').textContent = p.periodo.nome + ' (' + p.periodo.inicio + ' a ' + p.periodo.fim + ')';
   document.getElementById('foot-match').textContent = (p.match.match_pct||0).toFixed(0) + '%';
-  renderVeredito(p, key);
+  renderVeredito(p, customP ? null : key);
   renderFunnel(p);
   renderChart(p);
   renderHublaSummary(p);
   renderTopAds(p);
   renderPersona(p);
   renderMqlAd(p);
+}
+
+function applyCustom() {
+  const ini = document.getElementById('date-from').value;
+  const fim = document.getElementById('date-to').value;
+  if (!ini || !fim) { alert('Escolha início e fim'); return; }
+  if (ini > fim) { alert('Início > fim'); return; }
+  const nome = `${ini} a ${fim}`;
+  const p = buildPeriodFromRaw(ini, fim, 'Personalizado', nome);
+  customPeriod = p;
+  document.getElementById('apply-custom').classList.add('custom-on');
+  document.getElementById('clear-custom').style.display = 'inline-flex';
+  render(null, p);
+}
+
+function clearCustom() {
+  customPeriod = null;
+  document.getElementById('apply-custom').classList.remove('custom-on');
+  document.getElementById('clear-custom').style.display = 'none';
+  render('mes');
 }
 
 function renderVeredito(p, key) {

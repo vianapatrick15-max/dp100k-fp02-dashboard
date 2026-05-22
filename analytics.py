@@ -576,6 +576,55 @@ def build_periodo(trafego_n, hubla_n, pesquisa_n, invest_n, turma_labels, label,
     }
 
 
+def export_raw(invest_n, trafego_n, hubla_n, pesquisa_n, date_min=None, date_max=None):
+    """Exporta dados granulares em formato compact array-of-arrays pra client-side filter.
+
+    Limita ao range [date_min, date_max] pra controlar tamanho do JSON.
+
+    Schema:
+      invest:   [date, spend, vendas, ic, visitas, impr, clicks]
+      trafego:  [date, ad_name, ad_code, campaign, adset, spend, impr, clicks, lpv, ic, purch, ad_status, ig_url]
+      hubla:    [data, email, utm_source, utm_content, valor]
+      pesquisa: [submitted, email, origem, content, age, gender, time, prev, occ, income, self_img, desire, state, is_mql, is_mql_10k]
+    """
+    def in_range(d):
+        if not d: return False
+        if date_min and d < date_min: return False
+        if date_max and d > date_max: return False
+        return True
+
+    # Agregar invest por dia (vem horario) — pra filtro custom ser por dia natural
+    by_day = defaultdict(lambda: dict(spend=0.0, vendas=0, ic=0, visitas=0, impr=0, clicks=0))
+    for r in invest_n:
+        if not in_range(r['date']):
+            continue
+        b = by_day[r['date']]
+        b['spend']   += r['spend']
+        b['vendas']  += r['vendas']
+        b['ic']      += r['ic']
+        b['visitas'] += r['visitas']
+        b['impr']    += r['impr']
+        b['clicks']  += r['clicks']
+    inv = [[d, round(v['spend'], 2), v['vendas'], v['ic'], v['visitas'], v['impr'], v['clicks']]
+           for d, v in sorted(by_day.items())]
+    tr = [[r['date'], r['ad'], ad_code_from(r['ad']), r['campaign'][:80], r['adset'][:80],
+           round(r['spend'], 2), r['impr'], r['clicks'], r['lpv'], r['ic'], r['purch'],
+           r['ad_status'], r['ig_url']]
+          for r in trafego_n if in_range(r['date'])]
+    hb = [[r['data'], r['email'], r['utm_source'], r['utm_content'], round(r['valor'], 2)]
+          for r in hubla_n if in_range(r['data'])]
+    pq = [[r['submitted'], r['email'], r['origem'], r['content'],
+           r['age'], r['gender'], r['time'], r['prev'], r['occ'], r['income'],
+           r['self_img'], r['desire'], r['state'], r['is_mql'], _is_mql_10k(r['income'])]
+          for r in pesquisa_n if in_range(r['submitted'])]
+    return {
+        'invest':   {'cols': ['date','spend','vendas','ic','visitas','impr','clicks'], 'rows': inv},
+        'trafego':  {'cols': ['date','ad','ad_code','campaign','adset','spend','impr','clicks','lpv','ic','purch','ad_status','ig_url'], 'rows': tr},
+        'hubla':    {'cols': ['data','email','utm_source','utm_content','valor'], 'rows': hb},
+        'pesquisa': {'cols': ['submitted','email','origem','content','age','gender','time','prev','occ','income','self_img','desire','state','is_mql','is_mql_10k'], 'rows': pq},
+    }
+
+
 def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
     """Constroi o data.json completo (mes + 4 semanas)."""
     trafego_n  = trafego_normalize(trafego_raw)
@@ -615,4 +664,11 @@ def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
         'pesquisa_linhas': len(pesquisa_n),
         'invest_linhas': len(invest_n),
     }
+    # raw pra filtro personalizado client-side — limita ao range visivel (Maio/26)
+    inv_dates = sorted({r['date'] for r in invest_n if r['date']})
+    date_min = inv_dates[0] if inv_dates else None
+    date_max = inv_dates[-1] if inv_dates else None
+    out['raw'] = export_raw(invest_n, trafego_n, hubla_n, pesquisa_n, date_min, date_max)
+    out['raw']['date_min'] = date_min
+    out['raw']['date_max'] = date_max
     return out
