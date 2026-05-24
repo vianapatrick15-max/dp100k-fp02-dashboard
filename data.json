@@ -844,20 +844,20 @@
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          "spend": 2508.54,
-          "impr": 34819,
+          "spend": 2508.58,
+          "impr": 34820,
           "clicks": 292,
           "lpv": 274,
           "ic": 30,
           "purch": 20,
-          "ctr": 0.8386225911140469,
-          "cpa": 125.42699999999999,
-          "cpic": 83.618,
+          "ctr": 0.8385985066053993,
+          "cpa": 125.429,
+          "cpic": 83.61933333333333,
           "click_lpv": 93.83561643835617,
           "ad_status": "CAMPAIGN_PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYenMFnjO48/",
-          "roas": 0.7733582083602414
+          "roas": 0.7733458769503065
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -11885,20 +11885,20 @@
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          "spend": 2508.54,
-          "impr": 34819,
+          "spend": 2508.58,
+          "impr": 34820,
           "clicks": 292,
           "lpv": 274,
           "ic": 30,
           "purch": 20,
-          "ctr": 0.8386225911140469,
-          "cpa": 125.42699999999999,
-          "cpic": 83.618,
+          "ctr": 0.8385985066053993,
+          "cpa": 125.429,
+          "cpic": 83.61933333333333,
           "click_lpv": 93.83561643835617,
           "ad_status": "CAMPAIGN_PAUSED",
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYenMFnjO48/",
-          "roas": 0.7733582083602414
+          "roas": 0.7733458769503065
         },
         {
           "name": "[AD-147][EST][VD][DP100K-Fp02]",
@@ -13049,7 +13049,7 @@
   "_diag": {
     "trafego_linhas": 805,
     "hubla_linhas": 1599,
-    "pesquisa_linhas": 2496,
+    "pesquisa_linhas": 2497,
     "invest_linhas": 592
   },
   "raw": {
@@ -24903,8 +24903,8 @@
           "AD-03",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05",
           "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          734.63,
-          12006,
+          734.67,
+          12007,
           85,
           81,
           8,
@@ -33456,6 +33456,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-22"
   },
-  "updated_at": "2026-05-24 13:08:58 BRT",
+  "updated_at": "2026-05-24 15:05:27 BRT",
   "schema_version": 2
 }
