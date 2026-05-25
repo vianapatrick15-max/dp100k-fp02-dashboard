@@ -13070,9 +13070,9 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 805,
-    "hubla_linhas": 1603,
-    "pesquisa_linhas": 2500,
+    "trafego_linhas": 818,
+    "hubla_linhas": 1607,
+    "pesquisa_linhas": 2503,
     "invest_linhas": 628
   },
   "raw": {
@@ -34122,6 +34122,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-23"
   },
-  "updated_at": "2026-05-25 01:44:38 BRT",
+  "updated_at": "2026-05-25 09:41:23 BRT",
   "schema_version": 2
 }
