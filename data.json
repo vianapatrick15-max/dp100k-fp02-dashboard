@@ -30919,6 +30919,13 @@
           "meta_ads",
           "",
           97.0
+        ],
+        [
+          "2026-05-25",
+          "c.madelon@hotmail.com",
+          "meta_ads",
+          "[ad-154][est][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -37145,12 +37152,29 @@
           "Rio de Janeiro",
           true,
           true
+        ],
+        [
+          "2026-05-25",
+          "c.madelon@hotmail.com",
+          "meta_ads",
+          "[AD-154][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Analista de RH Sênior",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Espírito Santo",
+          false,
+          false
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-25 16:53:40 BRT",
+  "updated_at": "2026-05-25 18:18:45 BRT",
   "schema_version": 2
 }
