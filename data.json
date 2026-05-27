@@ -13024,7 +13024,7 @@
           "cpa": 241.37,
           "cpic": 241.37,
           "click_lpv": 100.0,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYenOLijHsJ/",
           "roas": 0.40187264365911257
@@ -24714,7 +24714,7 @@
           4,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -25359,7 +25359,7 @@
           1,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -26034,7 +26034,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -26649,7 +26649,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -27234,7 +27234,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -27909,7 +27909,7 @@
           3,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYenOLijHsJ/"
         ],
         [
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-27 16:31:04 BRT",
+  "updated_at": "2026-05-27 19:04:38 BRT",
   "schema_version": 2
 }
