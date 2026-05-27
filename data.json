@@ -814,7 +814,7 @@
           "cpa": 197.08399999999997,
           "cpic": 140.7742857142857,
           "click_lpv": 99.72067039106145,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.4921759249863003
@@ -10973,7 +10973,7 @@
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 96.29629629629629,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.0
@@ -12864,7 +12864,7 @@
           "cpa": 197.08399999999997,
           "cpic": 140.7742857142857,
           "click_lpv": 99.72067039106145,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.4921759249863003
@@ -24474,7 +24474,7 @@
           26,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DY0XLLADH4W/"
         ],
         [
@@ -24984,7 +24984,7 @@
           48,
           4,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DY0XLLADH4W/"
         ],
         [
@@ -25689,7 +25689,7 @@
           117,
           6,
           4,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DY0XLLADH4W/"
         ],
         [
@@ -26334,7 +26334,7 @@
           131,
           11,
           9,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DY0XLLADH4W/"
         ],
         [
@@ -26964,7 +26964,7 @@
           27,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DY0XLLADH4W/"
         ],
         [
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-27 05:44:58 BRT",
+  "updated_at": "2026-05-27 09:29:04 BRT",
   "schema_version": 2
 }
