@@ -774,7 +774,7 @@
           "cpa": 164.87363636363636,
           "cpic": 120.90733333333334,
           "click_lpv": 90.25522041763341,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIGDPjPST/",
           "roas": 0.5883293541610379
@@ -12824,7 +12824,7 @@
           "cpa": 164.87363636363636,
           "cpic": 120.90733333333334,
           "click_lpv": 90.25522041763341,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIGDPjPST/",
           "roas": 0.5883293541610379
@@ -15315,7 +15315,7 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 871,
+    "trafego_linhas": 872,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
     "invest_linhas": 669
@@ -25314,7 +25314,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -25989,7 +25989,7 @@
           5,
           1,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -26604,7 +26604,7 @@
           18,
           2,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27189,7 +27189,7 @@
           54,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27489,7 +27489,7 @@
           82,
           7,
           6,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27684,7 +27684,7 @@
           134,
           14,
           10,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27879,7 +27879,7 @@
           96,
           5,
           4,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-28 05:50:57 BRT",
+  "updated_at": "2026-05-28 09:38:40 BRT",
   "schema_version": 2
 }
