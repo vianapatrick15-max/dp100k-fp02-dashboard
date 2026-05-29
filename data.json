@@ -795,7 +795,7 @@
           "cpic": 171.285,
           "click_lpv": 92.24137931034483,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
           "roas": 0.424730711971276
         },
@@ -1135,7 +1135,7 @@
           "cpic": 214.31199999999998,
           "click_lpv": 85.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.36208891709283664
         },
@@ -10934,7 +10934,7 @@
           "cpic": 52.03399999999999,
           "click_lpv": 111.42857142857143,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
           "roas": 1.4913325902294656
         },
@@ -10954,7 +10954,7 @@
           "cpic": 76.50666666666666,
           "click_lpv": 100.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfyvRjDK2W/",
           "roas": 1.6904844893691182
         },
@@ -10994,7 +10994,7 @@
           "cpic": 100.68,
           "click_lpv": 103.33333333333334,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfyuMQDLTg/",
           "roas": 0.9634485498609455
         },
@@ -11094,7 +11094,7 @@
           "cpic": 61.510000000000005,
           "click_lpv": 80.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.0
         },
@@ -12845,7 +12845,7 @@
           "cpic": 171.285,
           "click_lpv": 92.24137931034483,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfytpljOJx/",
           "roas": 0.424730711971276
         },
@@ -12945,7 +12945,7 @@
           "cpic": 214.31199999999998,
           "click_lpv": 85.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.36208891709283664
         },
@@ -13144,7 +13144,7 @@
           "cpa": 86.11333333333333,
           "cpic": 129.17,
           "click_lpv": 95.0,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
           "roas": 1.1264225439343503
@@ -25194,7 +25194,7 @@
           1,
           0,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -25869,7 +25869,7 @@
           2,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -26484,7 +26484,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -27084,7 +27084,7 @@
           13,
           2,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -27459,7 +27459,7 @@
           1,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -27654,7 +27654,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -27849,7 +27849,7 @@
           2,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYpIF-4jK72/"
         ],
         [
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-29 05:49:02 BRT",
+  "updated_at": "2026-05-29 09:24:49 BRT",
   "schema_version": 2
 }
