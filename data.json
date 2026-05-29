@@ -815,7 +815,7 @@
           "cpic": 140.7742857142857,
           "click_lpv": 99.72067039106145,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.4921759249863003
         },
@@ -1255,7 +1255,7 @@
           "cpic": 125.955,
           "click_lpv": 107.6086956521739,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
           "roas": 0.5134108742540325
         },
@@ -10894,7 +10894,7 @@
           "cpic": 139.51,
           "click_lpv": 90.9090909090909,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeokpiDJi9/",
           "roas": 0.69529066016773
         },
@@ -10914,7 +10914,7 @@
           "cpic": 87.52999999999999,
           "click_lpv": 93.18181818181817,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeojHxDFHL/",
           "roas": 0.738794318138543
         },
@@ -10974,7 +10974,7 @@
           "cpic": 0,
           "click_lpv": 96.29629629629629,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.0
         },
@@ -11034,7 +11034,7 @@
           "cpic": 0,
           "click_lpv": 81.81818181818183,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYpII9KjBev/",
           "roas": 0.0
         },
@@ -11054,7 +11054,7 @@
           "cpic": 124.46,
           "click_lpv": 105.26315789473684,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
           "roas": 0.7793668648561787
         },
@@ -12865,7 +12865,7 @@
           "cpic": 140.7742857142857,
           "click_lpv": 99.72067039106145,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DY0XLLADH4W/",
           "roas": 0.4921759249863003
         },
@@ -12965,7 +12965,7 @@
           "cpic": 125.955,
           "click_lpv": 107.6086956521739,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeoiVmDA4Y/",
           "roas": 0.5134108742540325
         },
@@ -12985,7 +12985,7 @@
           "cpic": 253.355,
           "click_lpv": 100.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeokpiDJi9/",
           "roas": 0.38286199206646804
         },
@@ -13005,7 +13005,7 @@
           "cpic": 125.225,
           "click_lpv": 96.875,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYeojHxDFHL/",
           "roas": 0.5809542822918746
         },
@@ -13065,7 +13065,7 @@
           "cpic": 187.5,
           "click_lpv": 106.66666666666667,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYpIIgEDBUM/",
           "roas": 0.25866666666666666
         },
@@ -13105,7 +13105,7 @@
           "cpic": 0,
           "click_lpv": 95.0,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYpILdbjDVo/",
           "roas": 0.0
         },
@@ -13125,7 +13125,7 @@
           "cpic": 0,
           "click_lpv": 88.88888888888889,
           "ad_status": "PAUSED",
-          "camp_status": "ACTIVE",
+          "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYpII9KjBev/",
           "roas": 0.0
         },
@@ -15315,7 +15315,7 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 885,
+    "trafego_linhas": 887,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
     "invest_linhas": 669
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-29 09:24:49 BRT",
+  "updated_at": "2026-05-29 13:51:29 BRT",
   "schema_version": 2
 }
