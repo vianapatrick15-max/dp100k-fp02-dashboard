@@ -774,7 +774,7 @@
           "cpa": 164.87363636363636,
           "cpic": 120.90733333333334,
           "click_lpv": 90.25522041763341,
-          "ad_status": "PAUSED",
+          "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIGDPjPST/",
           "roas": 0.5883293541610379
@@ -12824,7 +12824,7 @@
           "cpa": 164.87363636363636,
           "cpic": 120.90733333333334,
           "click_lpv": 90.25522041763341,
-          "ad_status": "PAUSED",
+          "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIGDPjPST/",
           "roas": 0.5883293541610379
@@ -13044,7 +13044,7 @@
           "cpa": 150.93666666666667,
           "cpic": 90.562,
           "click_lpv": 86.48648648648648,
-          "ad_status": "PAUSED",
+          "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF9hjPAg/",
           "roas": 0.6426536516419691
@@ -25284,7 +25284,7 @@
           4,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -25314,7 +25314,7 @@
           0,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -25959,7 +25959,7 @@
           4,
           1,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -25989,7 +25989,7 @@
           5,
           1,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -26574,7 +26574,7 @@
           9,
           2,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -26604,7 +26604,7 @@
           18,
           2,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27159,7 +27159,7 @@
           9,
           2,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -27189,7 +27189,7 @@
           54,
           1,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27474,7 +27474,7 @@
           5,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -27489,7 +27489,7 @@
           82,
           7,
           6,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27669,7 +27669,7 @@
           0,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -27684,7 +27684,7 @@
           134,
           14,
           10,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -27864,7 +27864,7 @@
           1,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIF9hjPAg/"
         ],
         [
@@ -27879,7 +27879,7 @@
           96,
           5,
           4,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DYpIGDPjPST/"
         ],
         [
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-05-30 13:11:38 BRT",
+  "updated_at": "2026-05-30 15:08:54 BRT",
   "schema_version": 2
 }
