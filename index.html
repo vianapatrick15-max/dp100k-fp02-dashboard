@@ -43,6 +43,8 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 .fb{font-size:11px;padding:6px 12px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:3px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
 .fb:hover{color:var(--white);border-color:var(--border2)}
 .fb.on{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.55);color:var(--gold2)}
+#filter-mes .fb{font-weight:600}
+#filter-mes .fb.on{background:var(--gold2);border-color:var(--gold2);color:#1a1205}
 .fb.custom-on{background:rgba(155,109,234,.18);border-color:rgba(155,109,234,.55);color:#c08fff}
 .fsep{width:1px;height:22px;background:var(--border)}
 .fb-sub{font-size:9px;color:var(--muted);margin-left:6px}
@@ -221,6 +223,10 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 </div>
 
 <div class="fbar">
+  <div class="fg" id="filter-mes">
+    <span class="fl">Mês</span>
+  </div>
+  <div class="fsep"></div>
   <div class="fg" id="filter-periodo">
     <span class="fl">Período</span>
     <button class="fb on" data-key="mes">Mês completo</button>
@@ -346,7 +352,8 @@ body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-
 
 <script>
 let DATA = null;
-let activeKey = 'mes';
+let activeMes = null;     // mes ativo ('maio' | 'junho')
+let activeKey = null;     // chave de periodo COMPLETA ('junho_mes', 'maio_sem1', ...)
 let chartDaily = null;
 let customPeriod = null;  // {ini, fim, periodo blob} quando filtro custom ativo
 
@@ -576,11 +583,68 @@ function delta(now, prev) {
   };
 }
 
+function mesMetaByKey(mk) {
+  return (DATA.meses_meta || []).find(m => m.key === mk) || null;
+}
+
+// previousKey recebe pk completa ('junho_sem2') e devolve a pk da semana anterior
+// DO MESMO mes ('junho_sem1'), ou null pra "mes completo" / primeira semana.
 function previousKey(key) {
-  const order = ['sem1','sem2','sem3','sem4'];
-  if (key === 'mes' || !order.includes(key)) return null;
+  if (!key) return null;
+  const [mk, sub] = key.split('_');
+  if (sub === 'mes') return null;
+  const m = mesMetaByKey(mk);
+  if (!m) return null;
+  const order = m.semanas.map(s => s.pk);
   const i = order.indexOf(key);
   return i > 0 ? order[i-1] : null;
+}
+
+function buildMesButtons() {
+  const fm = document.getElementById('filter-mes');
+  fm.innerHTML = '<span class="fl">Mês</span>' +
+    (DATA.meses_meta || []).map(m =>
+      `<button class="fb ${m.key===activeMes?'on':''}" data-mes="${m.key}">${m.nome}</button>`
+    ).join('');
+  fm.querySelectorAll('.fb').forEach(b => {
+    b.addEventListener('click', () => selectMes(b.dataset.mes));
+  });
+}
+
+function buildPeriodoButtons() {
+  const m = mesMetaByKey(activeMes);
+  const fp = document.getElementById('filter-periodo');
+  if (!m) { fp.innerHTML = '<span class="fl">Período</span>'; return; }
+  fp.innerHTML = '<span class="fl">Período</span>' +
+    `<button class="fb ${activeKey===m.mes_pk?'on':''}" data-key="${m.mes_pk}">Mês completo</button>` +
+    (m.semanas || []).map(s => {
+      const ini = (s.inicio||'').slice(5).replace('-','/');
+      const fim = (s.fim||'').slice(5).replace('-','/');
+      return `<button class="fb ${activeKey===s.pk?'on':''}" data-key="${s.pk}">${s.nome} <span class="fb-sub">${ini}–${fim}</span></button>`;
+    }).join('');
+  fp.querySelectorAll('.fb').forEach(b => {
+    b.addEventListener('click', () => {
+      clearCustomFlags();
+      render(b.dataset.key);
+    });
+  });
+}
+
+function clearCustomFlags() {
+  customPeriod = null;
+  document.getElementById('apply-custom').classList.remove('custom-on');
+  document.getElementById('clear-custom').style.display = 'none';
+}
+
+function selectMes(mk) {
+  const m = mesMetaByKey(mk);
+  if (!m || mk === activeMes) return;
+  activeMes = mk;
+  clearCustomFlags();
+  buildMesButtons();
+  activeKey = m.mes_pk;     // ao trocar de mes, abre no "Mês completo"
+  buildPeriodoButtons();
+  render(m.mes_pk);
 }
 
 function load() {
@@ -588,24 +652,13 @@ function load() {
     DATA = d;
     document.getElementById('last-update').textContent = 'Atualizado ' + (d.updated_at || '—');
     document.getElementById('foot-schema').textContent = 'v' + (d.schema_version || 1);
-    // monta botoes do filter-periodo dinamicamente (datas REAIS vem do JSON)
-    const fp = document.getElementById('filter-periodo');
-    fp.innerHTML = '<span class="fl">Período</span>' +
-      `<button class="fb ${activeKey==='mes'?'on':''}" data-key="mes">Mês completo</button>` +
-      (d.semanas_meta || []).map(s => {
-        const ini = (s.inicio||'').slice(5).replace('-','/');
-        const fim = (s.fim||'').slice(5).replace('-','/');
-        return `<button class="fb ${activeKey===s.key?'on':''}" data-key="${s.key}">${s.nome} <span class="fb-sub">${ini}–${fim}</span></button>`;
-      }).join('');
-    fp.querySelectorAll('.fb').forEach(b => {
-      b.addEventListener('click', () => {
-        customPeriod = null;
-        document.getElementById('apply-custom').classList.remove('custom-on');
-        document.getElementById('clear-custom').style.display = 'none';
-        render(b.dataset.key);
-      });
-    });
-    // popula limites dos date inputs com base nos dados disponiveis
+    // mes default (mes corrente), com fallback pro primeiro disponivel
+    activeMes = (mesMetaByKey(d.mes_default) ? d.mes_default : (d.meses_meta?.[0]?.key)) || null;
+    const m = mesMetaByKey(activeMes);
+    activeKey = m ? m.mes_pk : null;
+    buildMesButtons();
+    buildPeriodoButtons();
+    // popula limites dos date inputs com base nos dados disponiveis (cobre todos os meses)
     if (d.raw && d.raw.invest && d.raw.invest.rows.length) {
       const dates = d.raw.invest.rows.map(r => r[0]).sort();
       const minD = dates[0], maxD = dates[dates.length - 1];
@@ -614,7 +667,7 @@ function load() {
       df.min = minD; df.max = maxD; df.value = minD;
       dt.min = minD; dt.max = maxD; dt.value = maxD;
     }
-    render(activeKey);
+    if (activeKey) render(activeKey);
   });
 }
 
@@ -625,7 +678,16 @@ function render(key, customP) {
   if (!DATA) return;
   const p = customP || DATA.periodos[key];
   if (!p) return;
-  activeKey = customP ? 'custom' : key;
+  if (!customP) {
+    activeKey = key;
+    // se a pk pertence a outro mes (ex: deep-link futuro), sincroniza o seletor de mes
+    const mk = key.split('_')[0];
+    if (mk !== activeMes && mesMetaByKey(mk)) {
+      activeMes = mk;
+      buildMesButtons();
+      buildPeriodoButtons();
+    }
+  }
   document.querySelectorAll('#filter-periodo .fb').forEach(b => {
     b.classList.toggle('on', !customP && b.dataset.key === key);
   });
@@ -656,10 +718,9 @@ function applyCustom() {
 }
 
 function clearCustom() {
-  customPeriod = null;
-  document.getElementById('apply-custom').classList.remove('custom-on');
-  document.getElementById('clear-custom').style.display = 'none';
-  render('mes');
+  clearCustomFlags();
+  const m = mesMetaByKey(activeMes);
+  render(m ? m.mes_pk : activeKey);
 }
 
 function renderVeredito(p, key) {
@@ -861,8 +922,8 @@ function setPersonaMode(kind, ad) {
     adPill.classList.remove('on');
     if (kind !== 'adfocus') adPill.style.display = 'none';
   }
-  // re-render
-  renderPersona(DATA.periodos[activeKey]);
+  // re-render (respeita filtro custom ativo)
+  renderPersona(customPeriod || DATA.periodos[activeKey]);
   // marcar linha ativa nas tabelas
   document.querySelectorAll('.clickable-row').forEach(tr => {
     tr.classList.toggle('active', kind === 'adfocus' && tr.dataset.ad === ad);

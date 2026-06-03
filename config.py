@@ -2,7 +2,6 @@
 from datetime import date
 
 PRODUTO = "DP100K-Fp02"
-MES_LABEL = "Maio/26"
 
 TICKET_MEDIO = 97.0  # ingresso DP100K (fallback p/ estimativa quando Hubla nao tem valor)
 
@@ -18,16 +17,22 @@ TAB_HUBLA = "Dados_venda_Hubla"
 TAB_PESQUISA = "Pesquisa"
 TAB_INVEST = "Investimento por Hora"   # FONTE CANONICA dos KPIs (spend/vendas/impr/clicks por turma)
 
-# --- Semanas ---
-# Cada semana mapeia para um TURMA_LABEL na planilha (col 0 em Hubla e Pesquisa)
-# E para um intervalo de datas no Trafego (col Date)
-# Datas exibidas no botao do filtro (override fica a cargo do aggregate, que descobre range REAL via Invest por Hora)
-SEMANAS = [
-    {"key": "sem1", "label": "Maio/26 - 1", "nome": "Semana 1"},
-    {"key": "sem2", "label": "Maio/26 - 2", "nome": "Semana 2"},
-    {"key": "sem3", "label": "Maio/26 - 3", "nome": "Semana 3"},
-    {"key": "sem4", "label": "Maio/26 - 4", "nome": "Semana 4"},
+# --- Meses ---
+# O dashboard cobre multiplos meses. Cada mes tem um label (prefixo da Turma na
+# planilha, ex: "Maio/26") e suas semanas sao AUTO-DESCOBERTAS a partir das turmas
+# presentes na aba Investimento por Hora (turmas no formato "<label> - N").
+# Assim, novas semanas (ex: "Junho/26 - 3") entram sozinhas no refresh hourly,
+# sem precisar editar este arquivo.
+MESES = [
+    {"key": "maio",  "nome": "Maio",  "label": "Maio/26"},
+    {"key": "junho", "nome": "Junho", "label": "Junho/26"},
 ]
+
+# Mes que abre por padrao na UI (mes corrente)
+MES_DEFAULT = "junho"
+
+# Prefixos validos de turma (pra filtrar invest/hubla/pesquisa pros meses que exibimos)
+MES_LABELS = [m["label"] for m in MESES]
 
 # --- Pesquisa: nomes oficiais das colunas (devem bater com headers da Pesquisa) ---
 COL_PESQ_TURMA  = "Turma"
@@ -120,5 +125,5 @@ def parse_date(s):
     return None
 
 
-def semana_atual_key():
-    return SEMANAS[-1]["key"]
+def mes_default_key():
+    return MES_DEFAULT

@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 
 from config import (
-    PRODUTO, TICKET_MEDIO, SEMANAS,
+    PRODUTO, TICKET_MEDIO, MESES, MES_LABELS, MES_DEFAULT,
     COL_AGE, COL_GENDER, COL_TIME, COL_PREV, COL_OCC, COL_INCOME,
     COL_SELF, COL_DESIRE, COL_STATE, COL_ORIGEM, COL_CONTENT, COL_EMAIL,
     ORIGEM_LABELS,
@@ -29,7 +29,7 @@ def invest_normalize(rows):
     out = []
     for r in rows:
         turma = (r.get('Turma') or '').strip()
-        if not turma.startswith('Maio/26'):
+        if not any(turma.startswith(lbl) for lbl in MES_LABELS):
             continue
         out.append({
             'turma': turma,
@@ -47,6 +47,31 @@ def invest_normalize(rows):
 
 def filter_invest_turmas(rows, turma_labels):
     return [r for r in rows if r['turma'] in turma_labels]
+
+
+def discover_semanas(invest_n, mes_label):
+    """Descobre as semanas (turmas) presentes pra um mes, a partir das turmas
+    da aba Investimento por Hora no formato '<mes_label> - N'.
+
+    Retorna lista ordenada por N: [{'key':'sem1','nome':'Semana 1',
+    'label':'<mes_label> - 1', 'n':1}, ...].
+    Assim novas semanas entram sozinhas no refresh sem editar config.
+    """
+    pat = re.compile(r'^' + re.escape(mes_label) + r'\s*-\s*(\d+)\s*$')
+    nums = set()
+    for r in invest_n:
+        m = pat.match(r['turma'])
+        if m:
+            nums.add(int(m.group(1)))
+    out = []
+    for n in sorted(nums):
+        out.append({
+            'key': f'sem{n}',
+            'nome': f'Semana {n}',
+            'label': f'{mes_label} - {n}',
+            'n': n,
+        })
+    return out
 
 
 def date_range_from_invest(rows):
@@ -329,7 +354,7 @@ def pesquisa_normalize(rows):
         # Regra de pertinencia: linha pertence a uma turma se QUALQUER uma das 2 cols bater.
         t0 = (r.get('Turma') or '').strip()
         t1 = (r.get('Turma__2') or '').strip()
-        turma = t0 if t0.startswith(('Maio/26','Abril/26','Marco/26','Fevereiro/26','Janeiro/26')) else t1
+        turma = t0 if t0.startswith(('Junho/26','Maio/26','Abril/26','Marco/26','Fevereiro/26','Janeiro/26')) else t1
         out.append({
             'turma':     turma,
             'turmas':    [t for t in (t0, t1) if t],  # ambas cols pra filtro abrangente
@@ -626,7 +651,11 @@ def export_raw(invest_n, trafego_n, hubla_n, pesquisa_n, date_min=None, date_max
 
 
 def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
-    """Constroi o data.json completo (mes + 4 semanas)."""
+    """Constroi o data.json completo — multiplos meses, cada um com suas semanas.
+
+    Chaves de periodo sao namespaced por mes: `<meskey>_mes` e `<meskey>_<semkey>`
+    (ex: 'maio_mes', 'maio_sem1', 'junho_mes', 'junho_sem2').
+    """
     trafego_n  = trafego_normalize(trafego_raw)
     hubla_n    = hubla_normalize(hubla_raw)
     pesquisa_n = pesquisa_normalize(pesquisa_raw)
@@ -635,28 +664,50 @@ def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
     out = {
         'produto': PRODUTO,
         'ticket_medio': TICKET_MEDIO,
-        'semanas_meta': [{'key': s['key'], 'nome': s['nome'], 'label': s['label']} for s in SEMANAS],
+        'mes_default': MES_DEFAULT,
+        'meses_meta': [],
         'periodos': {},
     }
 
-    # MES (uniao das 4 turmas)
-    todas = [s['label'] for s in SEMANAS]
-    out['periodos']['mes'] = build_periodo(
-        trafego_n, hubla_n, pesquisa_n, invest_n, todas,
-        label='Mes Completo', nome='Maio/26 — Mês',
-    )
-    # cada semana = uma turma
-    for s in SEMANAS:
-        out['periodos'][s['key']] = build_periodo(
-            trafego_n, hubla_n, pesquisa_n, invest_n, [s['label']],
-            label=s['label'], nome=s['nome'],
+    for mes in MESES:
+        mkey, mlabel, mnome = mes['key'], mes['label'], mes['nome']
+        semanas = discover_semanas(invest_n, mlabel)
+        # so inclui mes que tem ao menos uma semana com dados
+        if not semanas:
+            continue
+
+        # MES = uniao de todas as turmas do mes
+        todas = [s['label'] for s in semanas]
+        mes_pk = f'{mkey}_mes'
+        out['periodos'][mes_pk] = build_periodo(
+            trafego_n, hubla_n, pesquisa_n, invest_n, todas,
+            label=f'{mlabel} — Mês', nome=f'{mnome} — Mês',
         )
-        # injeta range de datas no meta da semana pra UI
-        peri = out['periodos'][s['key']]['periodo']
-        for sm in out['semanas_meta']:
-            if sm['key'] == s['key']:
-                sm['inicio'] = peri['inicio']
-                sm['fim'] = peri['fim']
+        mes_peri = out['periodos'][mes_pk]['periodo']
+
+        sem_meta = []
+        for s in semanas:
+            pk = f'{mkey}_{s["key"]}'
+            out['periodos'][pk] = build_periodo(
+                trafego_n, hubla_n, pesquisa_n, invest_n, [s['label']],
+                label=s['label'], nome=s['nome'],
+            )
+            peri = out['periodos'][pk]['periodo']
+            sem_meta.append({
+                'key': s['key'], 'pk': pk, 'nome': s['nome'], 'label': s['label'],
+                'inicio': peri['inicio'], 'fim': peri['fim'],
+            })
+
+        out['meses_meta'].append({
+            'key': mkey, 'nome': mnome, 'label': mlabel,
+            'mes_pk': mes_pk,
+            'inicio': mes_peri['inicio'], 'fim': mes_peri['fim'],
+            'semanas': sem_meta,
+        })
+
+    # se o mes default nao tem dados, cai no ultimo mes disponivel
+    if out['meses_meta'] and not any(m['key'] == MES_DEFAULT for m in out['meses_meta']):
+        out['mes_default'] = out['meses_meta'][-1]['key']
 
     out['_diag'] = {
         'trafego_linhas': len(trafego_n),
@@ -664,7 +715,7 @@ def build_all(trafego_raw, hubla_raw, pesquisa_raw, invest_raw):
         'pesquisa_linhas': len(pesquisa_n),
         'invest_linhas': len(invest_n),
     }
-    # raw pra filtro personalizado client-side — limita ao range visivel (Maio/26)
+    # raw pra filtro personalizado client-side — cobre todo o range visivel (Maio+Junho)
     inv_dates = sorted({r['date'] for r in invest_n if r['date']})
     date_min = inv_dates[0] if inv_dates else None
     date_max = inv_dates[-1] if inv_dates else None

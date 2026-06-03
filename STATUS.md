@@ -2,13 +2,24 @@
 
 **Live:** https://vianapatrick15-max.github.io/dp100k-fp02-dashboard/
 **Repo:** vianapatrick15-max/dp100k-fp02-dashboard (público)
-**Última atualização do schema:** 2026-05-22 (v1)
+**Última atualização do schema:** 2026-06-03 (v3 — multi-mês)
 
 ## TL;DR
 
 Dashboard consolida 3 fontes (Tráfego daily + Hubla + Pesquisa) numa visão única
-do **DP100K-Fp02** (Maio/26), com seletor por semana. Atualiza sozinho hourly
-via GitHub Action (cron `5 * * * *`).
+do **DP100K-Fp02**, com seletor de **MÊS** (Maio/26, Junho/26) e, dentro de cada
+mês, seletor de **semana**. Atualiza sozinho hourly via GitHub Action (cron `5 * * * *`).
+
+### Schema v3 (multi-mês) — o que mudou vs v2
+- `config.py` define a lista `MESES` (label = prefixo da Turma) + `MES_DEFAULT`.
+  As **semanas são auto-descobertas** dos dados (turmas `<label> - N` na aba
+  Investimento por Hora) — uma nova `Junho/26 - 3` entra sozinha no refresh, sem editar config.
+- `data.json` agora traz `meses_meta` (lista de meses, cada um com `mes_pk` e `semanas[]`
+  com `pk`/datas) e `periodos` com **chaves namespaced**: `maio_mes`, `maio_sem1..4`,
+  `junho_mes`, `junho_sem1..N`. Há `mes_default` no topo.
+- `index.html` tem um grupo de filtro "Mês" (toggle preenchido) antes do "Período".
+  `previousKey` compara semana vs semana anterior **do mesmo mês** (não cruza meses).
+- KPIs de TODOS os meses vêm da aba **Investimento por Hora** (fonte canônica v2).
 
 ## Arquitetura
 
@@ -111,12 +122,15 @@ gh run list --workflow="Refresh DP100K Fp02 Dashboard" --repo vianapatrick15-max
 gh run view <run-id> --log --repo vianapatrick15-max/dp100k-fp02-dashboard
 ```
 
-### Adicionar semana 5 (próximo mês)
-Editar `config.py` → array `SEMANAS`, adicionar:
-```python
-{"key": "sem5", "label": "Maio/26 - 5", "nome": "Semana 5", "inicio": "2026-05-26", "fim": "2026-06-01"},
-```
-e atualizar o array do `<div id="filter-periodo">` no `index.html` com um novo botão.
+### Adicionar uma SEMANA nova (mesmo mês)
+Nada a fazer — as semanas são **auto-descobertas** das turmas `Junho/26 - N` na aba
+Investimento por Hora. Quando o cliente criar a próxima turma, o próximo refresh hourly
+já cria o botão `Semana N` e o período `junho_semN`.
+
+### Adicionar um MÊS novo (ex: Julho/26)
+Editar `config.py` → lista `MESES`, adicionar `{"key": "julho", "nome": "Julho", "label": "Julho/26"}`
+e (opcional) trocar `MES_DEFAULT = "julho"`. As semanas do mês entram sozinhas.
+O seletor de mês no `index.html` é montado dinâmico de `meses_meta` — não precisa tocar HTML.
 
 ### Mudar ticket médio
 `config.py` → `TICKET_MEDIO = 1100.0` → trocar valor.
