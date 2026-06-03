@@ -1134,7 +1134,7 @@
           "cpa": 267.89,
           "cpic": 214.31199999999998,
           "click_lpv": 85.0,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.36208891709283664
@@ -11093,7 +11093,7 @@
           "cpa": 0,
           "cpic": 61.510000000000005,
           "click_lpv": 80.0,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.0
@@ -12944,7 +12944,7 @@
           "cpa": 267.89,
           "cpic": 214.31199999999998,
           "click_lpv": 85.0,
-          "ad_status": "ACTIVE",
+          "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
           "roas": 0.36208891709283664
@@ -15315,7 +15315,7 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 1007,
+    "trafego_linhas": 1009,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
     "invest_linhas": 669
@@ -24804,7 +24804,7 @@
           3,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ],
         [
@@ -25449,7 +25449,7 @@
           4,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ],
         [
@@ -26124,7 +26124,7 @@
           10,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ],
         [
@@ -26739,7 +26739,7 @@
           10,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ],
         [
@@ -27294,7 +27294,7 @@
           28,
           2,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ],
         [
@@ -27939,7 +27939,7 @@
           14,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ]
       ]
@@ -37567,6 +37567,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-05-25"
   },
-  "updated_at": "2026-06-03 11:55:34 BRT",
+  "updated_at": "2026-06-03 15:52:55 BRT",
   "schema_version": 2
 }
