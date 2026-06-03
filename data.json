@@ -15366,22 +15366,22 @@
         ]
       },
       "trafego": {
-        "spend": 23033.709999999995,
+        "spend": 23060.790000000005,
         "vendas_gerenciador": 123,
-        "ic": 168,
-        "visitas": 2604,
-        "impressions": 325363,
-        "clicks": 2683,
-        "ctr": 0.8246174273042725,
-        "cpm": 70.79388252505662,
-        "cpc": 8.585057771151694,
-        "cpa": 187.26593495934955,
-        "cpic": 137.10541666666663,
-        "cplpv": 8.84551075268817,
-        "click_lpv": 97.05553484904958,
-        "lpv_ic": 6.451612903225806,
-        "ic_purch": 73.21428571428571,
-        "lpv_purch": 4.723502304147465
+        "ic": 169,
+        "visitas": 2616,
+        "impressions": 325684,
+        "clicks": 2686,
+        "ctr": 0.8247258078382727,
+        "cpm": 70.80725488510336,
+        "cpc": 8.585551005212213,
+        "cpa": 187.48609756097565,
+        "cpic": 136.45437869822487,
+        "cplpv": 8.815286697247709,
+        "click_lpv": 97.39389426656739,
+        "lpv_ic": 6.460244648318043,
+        "ic_purch": 72.7810650887574,
+        "lpv_purch": 4.701834862385321
       },
       "hubla": {
         "total": 166,
@@ -15428,47 +15428,47 @@
         ]
       },
       "pesquisa": {
-        "total": 131,
-        "meta_ads": 82,
-        "pct_meta": 62.59541984732825,
+        "total": 132,
+        "meta_ads": 83,
+        "pct_meta": 62.878787878787875,
         "mql": 40,
-        "mql_pct": 48.78048780487805,
+        "mql_pct": 48.19277108433735,
         "mql_total": 66,
-        "mql_total_pct": 50.38167938931297,
+        "mql_total_pct": 50.0,
         "mql_10k": 46,
-        "mql_10k_pct": 35.11450381679389,
+        "mql_10k_pct": 34.84848484848485,
         "mql_10k_meta": 27,
-        "mql_10k_meta_pct": 32.926829268292686,
+        "mql_10k_meta_pct": 32.53012048192771,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 82,
-            "pct": 62.59541984732825
+            "n": 83,
+            "pct": 62.878787878787875
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 18,
-            "pct": 13.740458015267176
+            "pct": 13.636363636363635
           },
           {
             "origem": "Sem origem",
             "n": 9,
-            "pct": 6.870229007633588
+            "pct": 6.8181818181818175
           },
           {
             "origem": "Orgânico Instagram",
             "n": 9,
-            "pct": 6.870229007633588
+            "pct": 6.8181818181818175
           },
           {
             "origem": "WhatsApp",
             "n": 7,
-            "pct": 5.343511450381679
+            "pct": 5.303030303030303
           },
           {
             "origem": "Outros",
             "n": 6,
-            "pct": 4.580152671755725
+            "pct": 4.545454545454546
           }
         ]
       },
@@ -15477,7 +15477,270 @@
           {
             "k": "45 a 54 anos",
             "n": 35,
-            "pct": 42.68292682926829
+            "pct": 42.168674698795186
+          },
+          {
+            "k": "35 a 44 anos",
+            "n": 23,
+            "pct": 27.710843373493976
+          },
+          {
+            "k": "26 a 34 anos",
+            "n": 10,
+            "pct": 12.048192771084338
+          },
+          {
+            "k": "55 a 64 anos",
+            "n": 9,
+            "pct": 10.843373493975903
+          },
+          {
+            "k": "Acima de 65 anos",
+            "n": 4,
+            "pct": 4.819277108433735
+          },
+          {
+            "k": "Menos de 25",
+            "n": 2,
+            "pct": 2.4096385542168677
+          }
+        ],
+        "genero": [
+          {
+            "k": "Feminino",
+            "n": 67,
+            "pct": 80.72289156626506
+          },
+          {
+            "k": "Masculino",
+            "n": 16,
+            "pct": 19.27710843373494
+          }
+        ],
+        "tempo": [
+          {
+            "k": "Mais de 1 ano",
+            "n": 23,
+            "pct": 27.710843373493976
+          },
+          {
+            "k": "Menos de 6 meses",
+            "n": 22,
+            "pct": 26.506024096385545
+          },
+          {
+            "k": "Conheci agora",
+            "n": 21,
+            "pct": 25.301204819277107
+          },
+          {
+            "k": "De 7 meses a 1 ano",
+            "n": 17,
+            "pct": 20.481927710843372
+          }
+        ],
+        "previo": [
+          {
+            "k": "No",
+            "n": 73,
+            "pct": 87.95180722891565
+          },
+          {
+            "k": "Yes",
+            "n": 10,
+            "pct": 12.048192771084338
+          }
+        ],
+        "ocupacao": [
+          {
+            "k": "Empresário(a)",
+            "n": 20,
+            "pct": 24.096385542168676
+          },
+          {
+            "k": "Profissional Autônomo(a)",
+            "n": 20,
+            "pct": 24.096385542168676
+          },
+          {
+            "k": "Terapeuta",
+            "n": 15,
+            "pct": 18.072289156626507
+          },
+          {
+            "k": "Executivo (Diretor, Gerente, Gestor)",
+            "n": 9,
+            "pct": 10.843373493975903
+          },
+          {
+            "k": "Professor(a)",
+            "n": 5,
+            "pct": 6.024096385542169
+          },
+          {
+            "k": "Funcionário(a) Público(a)",
+            "n": 4,
+            "pct": 4.819277108433735
+          },
+          {
+            "k": "Aposentado(a)",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "CLT",
+            "n": 2,
+            "pct": 2.4096385542168677
+          }
+        ],
+        "renda": [
+          {
+            "k": "De R$ 2.001,00 até R$ 5.000,00",
+            "n": 18,
+            "pct": 21.686746987951807
+          },
+          {
+            "k": "De R$ 5.001,00 até R$ 8.000,00",
+            "n": 15,
+            "pct": 18.072289156626507
+          },
+          {
+            "k": "De R$ 8.001,00 até R$ 10.000,00",
+            "n": 13,
+            "pct": 15.66265060240964
+          },
+          {
+            "k": "De R$ 15.001,00 até R$ 20.000,00",
+            "n": 10,
+            "pct": 12.048192771084338
+          },
+          {
+            "k": "Acima de R$ 20.000",
+            "n": 9,
+            "pct": 10.843373493975903
+          },
+          {
+            "k": "De R$ 10.001,00 até R$ 15.000,00",
+            "n": 8,
+            "pct": 9.63855421686747
+          },
+          {
+            "k": "Até R$ 2.000,00",
+            "n": 7,
+            "pct": 8.433734939759036
+          },
+          {
+            "k": "No momento, estou sem renda.",
+            "n": 2,
+            "pct": 2.4096385542168677
+          }
+        ],
+        "autoimg": [
+          {
+            "k": "Já palestrei, mas não me considero um palestrante.",
+            "n": 43,
+            "pct": 51.80722891566265
+          },
+          {
+            "k": "Iniciante, nunca palestrei.",
+            "n": 24,
+            "pct": 28.915662650602407
+          },
+          {
+            "k": "Sou palestrante e quero me tornar memorável.",
+            "n": 16,
+            "pct": 19.27710843373494
+          }
+        ],
+        "objetivo": [
+          {
+            "k": "Uma nova carreira",
+            "n": 43,
+            "pct": 51.80722891566265
+          },
+          {
+            "k": "Se destacar na profissão",
+            "n": 27,
+            "pct": 32.53012048192771
+          },
+          {
+            "k": "Renda extra",
+            "n": 13,
+            "pct": 15.66265060240964
+          }
+        ],
+        "estado": [
+          {
+            "k": "São Paulo",
+            "n": 25,
+            "pct": 30.120481927710845
+          },
+          {
+            "k": "Rio Grande do Sul",
+            "n": 8,
+            "pct": 9.63855421686747
+          },
+          {
+            "k": "Paraná",
+            "n": 7,
+            "pct": 8.433734939759036
+          },
+          {
+            "k": "Minas Gerais",
+            "n": 7,
+            "pct": 8.433734939759036
+          },
+          {
+            "k": "Rio de Janeiro",
+            "n": 7,
+            "pct": 8.433734939759036
+          },
+          {
+            "k": "Bahia",
+            "n": 4,
+            "pct": 4.819277108433735
+          },
+          {
+            "k": "Federal District",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "Ceará",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "Mato Grosso",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "Pará",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "Espírito Santo",
+            "n": 3,
+            "pct": 3.614457831325301
+          },
+          {
+            "k": "Santa Catarina",
+            "n": 3,
+            "pct": 3.614457831325301
+          }
+        ],
+        "total_respondentes": 83,
+        "mql": 40,
+        "mql_pct": 48.19277108433735
+      },
+      "persona_compradoras_meta": {
+        "idade": [
+          {
+            "k": "45 a 54 anos",
+            "n": 34,
+            "pct": 41.46341463414634
           },
           {
             "k": "35 a 44 anos",
@@ -15485,12 +15748,12 @@
             "pct": 28.04878048780488
           },
           {
-            "k": "55 a 64 anos",
-            "n": 9,
-            "pct": 10.975609756097562
+            "k": "26 a 34 anos",
+            "n": 10,
+            "pct": 12.195121951219512
           },
           {
-            "k": "26 a 34 anos",
+            "k": "55 a 64 anos",
             "n": 9,
             "pct": 10.975609756097562
           },
@@ -15508,13 +15771,13 @@
         "genero": [
           {
             "k": "Feminino",
-            "n": 66,
-            "pct": 80.48780487804879
+            "n": 67,
+            "pct": 81.70731707317073
           },
           {
             "k": "Masculino",
-            "n": 16,
-            "pct": 19.51219512195122
+            "n": 15,
+            "pct": 18.29268292682927
           }
         ],
         "tempo": [
@@ -15542,13 +15805,13 @@
         "previo": [
           {
             "k": "No",
-            "n": 72,
-            "pct": 87.8048780487805
+            "n": 73,
+            "pct": 89.02439024390245
           },
           {
             "k": "Yes",
-            "n": 10,
-            "pct": 12.195121951219512
+            "n": 9,
+            "pct": 10.975609756097562
           }
         ],
         "ocupacao": [
@@ -15564,8 +15827,8 @@
           },
           {
             "k": "Terapeuta",
-            "n": 14,
-            "pct": 17.073170731707318
+            "n": 15,
+            "pct": 18.29268292682927
           },
           {
             "k": "Executivo (Diretor, Gerente, Gestor)",
@@ -15579,8 +15842,8 @@
           },
           {
             "k": "Funcionário(a) Público(a)",
-            "n": 4,
-            "pct": 4.878048780487805
+            "n": 3,
+            "pct": 3.6585365853658534
           },
           {
             "k": "Aposentado(a)",
@@ -15601,8 +15864,8 @@
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 15,
-            "pct": 18.29268292682927
+            "n": 14,
+            "pct": 17.073170731707318
           },
           {
             "k": "De R$ 8.001,00 até R$ 10.000,00",
@@ -15631,8 +15894,8 @@
           },
           {
             "k": "No momento, estou sem renda.",
-            "n": 1,
-            "pct": 1.2195121951219512
+            "n": 2,
+            "pct": 2.4390243902439024
           }
         ],
         "autoimg": [
@@ -15660,13 +15923,13 @@
           },
           {
             "k": "Se destacar na profissão",
-            "n": 26,
-            "pct": 31.70731707317073
+            "n": 27,
+            "pct": 32.926829268292686
           },
           {
             "k": "Renda extra",
-            "n": 13,
-            "pct": 15.853658536585366
+            "n": 12,
+            "pct": 14.634146341463413
           }
         ],
         "estado": [
@@ -15676,12 +15939,12 @@
             "pct": 30.48780487804878
           },
           {
-            "k": "Rio Grande do Sul",
-            "n": 8,
-            "pct": 9.75609756097561
+            "k": "Paraná",
+            "n": 7,
+            "pct": 8.536585365853659
           },
           {
-            "k": "Paraná",
+            "k": "Rio Grande do Sul",
             "n": 7,
             "pct": 8.536585365853659
           },
@@ -15696,6 +15959,11 @@
             "pct": 8.536585365853659
           },
           {
+            "k": "Bahia",
+            "n": 4,
+            "pct": 4.878048780487805
+          },
+          {
             "k": "Federal District",
             "n": 3,
             "pct": 3.6585365853658534
@@ -15707,11 +15975,6 @@
           },
           {
             "k": "Mato Grosso",
-            "n": 3,
-            "pct": 3.6585365853658534
-          },
-          {
-            "k": "Bahia",
             "n": 3,
             "pct": 3.6585365853658534
           },
@@ -15735,273 +15998,10 @@
         "mql": 40,
         "mql_pct": 48.78048780487805
       },
-      "persona_compradoras_meta": {
-        "idade": [
-          {
-            "k": "45 a 54 anos",
-            "n": 34,
-            "pct": 41.9753086419753
-          },
-          {
-            "k": "35 a 44 anos",
-            "n": 23,
-            "pct": 28.39506172839506
-          },
-          {
-            "k": "55 a 64 anos",
-            "n": 9,
-            "pct": 11.11111111111111
-          },
-          {
-            "k": "26 a 34 anos",
-            "n": 9,
-            "pct": 11.11111111111111
-          },
-          {
-            "k": "Acima de 65 anos",
-            "n": 4,
-            "pct": 4.938271604938271
-          },
-          {
-            "k": "Menos de 25",
-            "n": 2,
-            "pct": 2.4691358024691357
-          }
-        ],
-        "genero": [
-          {
-            "k": "Feminino",
-            "n": 66,
-            "pct": 81.48148148148148
-          },
-          {
-            "k": "Masculino",
-            "n": 15,
-            "pct": 18.51851851851852
-          }
-        ],
-        "tempo": [
-          {
-            "k": "Mais de 1 ano",
-            "n": 23,
-            "pct": 28.39506172839506
-          },
-          {
-            "k": "Menos de 6 meses",
-            "n": 22,
-            "pct": 27.160493827160494
-          },
-          {
-            "k": "Conheci agora",
-            "n": 19,
-            "pct": 23.456790123456788
-          },
-          {
-            "k": "De 7 meses a 1 ano",
-            "n": 17,
-            "pct": 20.98765432098765
-          }
-        ],
-        "previo": [
-          {
-            "k": "No",
-            "n": 72,
-            "pct": 88.88888888888889
-          },
-          {
-            "k": "Yes",
-            "n": 9,
-            "pct": 11.11111111111111
-          }
-        ],
-        "ocupacao": [
-          {
-            "k": "Empresário(a)",
-            "n": 20,
-            "pct": 24.691358024691358
-          },
-          {
-            "k": "Profissional Autônomo(a)",
-            "n": 20,
-            "pct": 24.691358024691358
-          },
-          {
-            "k": "Terapeuta",
-            "n": 14,
-            "pct": 17.28395061728395
-          },
-          {
-            "k": "Executivo (Diretor, Gerente, Gestor)",
-            "n": 9,
-            "pct": 11.11111111111111
-          },
-          {
-            "k": "Professor(a)",
-            "n": 5,
-            "pct": 6.172839506172839
-          },
-          {
-            "k": "Funcionário(a) Público(a)",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Aposentado(a)",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "CLT",
-            "n": 2,
-            "pct": 2.4691358024691357
-          }
-        ],
-        "renda": [
-          {
-            "k": "De R$ 2.001,00 até R$ 5.000,00",
-            "n": 18,
-            "pct": 22.22222222222222
-          },
-          {
-            "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 14,
-            "pct": 17.28395061728395
-          },
-          {
-            "k": "De R$ 8.001,00 até R$ 10.000,00",
-            "n": 13,
-            "pct": 16.049382716049383
-          },
-          {
-            "k": "De R$ 15.001,00 até R$ 20.000,00",
-            "n": 10,
-            "pct": 12.345679012345679
-          },
-          {
-            "k": "Acima de R$ 20.000",
-            "n": 9,
-            "pct": 11.11111111111111
-          },
-          {
-            "k": "De R$ 10.001,00 até R$ 15.000,00",
-            "n": 8,
-            "pct": 9.876543209876543
-          },
-          {
-            "k": "Até R$ 2.000,00",
-            "n": 7,
-            "pct": 8.641975308641975
-          },
-          {
-            "k": "No momento, estou sem renda.",
-            "n": 1,
-            "pct": 1.2345679012345678
-          }
-        ],
-        "autoimg": [
-          {
-            "k": "Já palestrei, mas não me considero um palestrante.",
-            "n": 43,
-            "pct": 53.086419753086425
-          },
-          {
-            "k": "Iniciante, nunca palestrei.",
-            "n": 22,
-            "pct": 27.160493827160494
-          },
-          {
-            "k": "Sou palestrante e quero me tornar memorável.",
-            "n": 16,
-            "pct": 19.753086419753085
-          }
-        ],
-        "objetivo": [
-          {
-            "k": "Uma nova carreira",
-            "n": 43,
-            "pct": 53.086419753086425
-          },
-          {
-            "k": "Se destacar na profissão",
-            "n": 26,
-            "pct": 32.098765432098766
-          },
-          {
-            "k": "Renda extra",
-            "n": 12,
-            "pct": 14.814814814814813
-          }
-        ],
-        "estado": [
-          {
-            "k": "São Paulo",
-            "n": 25,
-            "pct": 30.864197530864196
-          },
-          {
-            "k": "Paraná",
-            "n": 7,
-            "pct": 8.641975308641975
-          },
-          {
-            "k": "Rio Grande do Sul",
-            "n": 7,
-            "pct": 8.641975308641975
-          },
-          {
-            "k": "Minas Gerais",
-            "n": 7,
-            "pct": 8.641975308641975
-          },
-          {
-            "k": "Rio de Janeiro",
-            "n": 7,
-            "pct": 8.641975308641975
-          },
-          {
-            "k": "Federal District",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Ceará",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Mato Grosso",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Bahia",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Pará",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Espírito Santo",
-            "n": 3,
-            "pct": 3.7037037037037033
-          },
-          {
-            "k": "Santa Catarina",
-            "n": 3,
-            "pct": 3.7037037037037033
-          }
-        ],
-        "total_respondentes": 81,
-        "mql": 40,
-        "mql_pct": 49.382716049382715
-      },
       "match": {
         "vendas_total": 166,
-        "matched_pesquisa": 124,
-        "match_pct": 74.69879518072288
+        "matched_pesquisa": 125,
+        "match_pct": 75.30120481927712
       },
       "top_ads": [
         {
@@ -16009,20 +16009,20 @@
           "ad_code": "AD-147",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 6306.52,
-          "impr": 88425,
-          "clicks": 792,
-          "lpv": 772,
+          "spend": 6501.48,
+          "impr": 91241,
+          "clicks": 812,
+          "lpv": 789,
           "ic": 57,
           "purch": 41,
-          "ctr": 0.8956743002544528,
-          "cpa": 153.81756097560978,
-          "cpic": 110.64070175438597,
-          "click_lpv": 97.47474747474747,
+          "ctr": 0.8899507896669261,
+          "cpa": 158.57268292682926,
+          "cpic": 114.06105263157895,
+          "click_lpv": 97.16748768472905,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XM6BDGJP/",
-          "roas": 0.6306172025142234
+          "roas": 0.6117068728966328
         },
         {
           "name": "[AD-154][EST][VD][DP100K-Fp02]",
@@ -16049,40 +16049,40 @@
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 3333.1399999999994,
-          "impr": 43122,
+          "spend": 3352.4999999999995,
+          "impr": 43330,
           "clicks": 318,
           "lpv": 328,
-          "ic": 27,
-          "purch": 23,
-          "ctr": 0.7374426047029359,
-          "cpa": 144.91913043478257,
-          "cpic": 123.44962962962961,
+          "ic": 28,
+          "purch": 24,
+          "ctr": 0.7339026078929148,
+          "cpa": 139.68749999999997,
+          "cpic": 119.73214285714285,
           "click_lpv": 103.14465408805032,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 0.6693388216516559
+          "roas": 0.6944071588366891
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          "spend": 2649.3099999999995,
-          "impr": 40921,
-          "clicks": 308,
-          "lpv": 298,
+          "spend": 2678.4199999999996,
+          "impr": 41389,
+          "clicks": 309,
+          "lpv": 299,
           "ic": 21,
           "purch": 14,
-          "ctr": 0.7526697783534128,
-          "cpa": 189.23642857142855,
-          "cpic": 126.15761904761902,
-          "click_lpv": 96.75324675324676,
+          "ctr": 0.7465751769793906,
+          "cpa": 191.31571428571425,
+          "cpic": 127.5438095238095,
+          "click_lpv": 96.76375404530745,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyvRjDK2W/",
-          "roas": 0.5125862960544445
+          "roas": 0.507015329933319
         },
         {
           "name": "[AD-132][EST][VD][DP100K-Fp02]",
@@ -16109,20 +16109,20 @@
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-06]_18_05",
-          "spend": 1159.41,
-          "impr": 14143,
+          "spend": 1159.94,
+          "impr": 14148,
           "clicks": 138,
-          "lpv": 125,
-          "ic": 4,
-          "purch": 3,
-          "ctr": 0.9757477197200027,
-          "cpa": 386.47,
-          "cpic": 289.8525,
-          "click_lpv": 90.57971014492753,
+          "lpv": 126,
+          "ic": 5,
+          "purch": 4,
+          "ctr": 0.9754028837998304,
+          "cpa": 289.985,
+          "cpic": 231.988,
+          "click_lpv": 91.30434782608695,
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
-          "roas": 0.25098972753383186
+          "roas": 0.334500060347949
         },
         {
           "name": "[AD-05][VID][VD][DP100K-Fp02]",
@@ -16189,20 +16189,20 @@
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 276.26,
-          "impr": 3232,
-          "clicks": 68,
-          "lpv": 63,
+          "spend": 291.26,
+          "impr": 3420,
+          "clicks": 71,
+          "lpv": 68,
           "ic": 3,
           "purch": 1,
-          "ctr": 2.103960396039604,
-          "cpa": 276.26,
-          "cpic": 92.08666666666666,
-          "click_lpv": 92.64705882352942,
+          "ctr": 2.0760233918128654,
+          "cpa": 291.26,
+          "cpic": 97.08666666666666,
+          "click_lpv": 95.77464788732394,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT3mYjMEA/",
-          "roas": 0.35111851154709334
+          "roas": 0.3330357755956877
         },
         {
           "name": "[AD-07][VID][VD][DP100K-Fp02]",
@@ -16229,20 +16229,20 @@
           "ad_code": "AD-16",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 227.73000000000002,
-          "impr": 4548,
+          "spend": 233.49,
+          "impr": 4710,
           "clicks": 43,
           "lpv": 47,
           "ic": 4,
           "purch": 3,
-          "ctr": 0.9454705364995603,
-          "cpa": 75.91000000000001,
-          "cpic": 56.932500000000005,
+          "ctr": 0.9129511677282378,
+          "cpa": 77.83,
+          "cpic": 58.3725,
           "click_lpv": 109.30232558139534,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8K7jBz9/",
-          "roas": 1.2778290080358319
+          "roas": 1.2463060516510343
         },
         {
           "name": "[AD-105][EST][VD][DP100K-Fp02]",
@@ -16285,6 +16285,26 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-08][DP100K-FP02][NT]_palestra-pronta-tati",
+          "ad_code": "AD-08",
+          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          "spend": 144.15,
+          "impr": 7129,
+          "clicks": 0,
+          "lpv": 0,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.0,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "",
+          "roas": 0.0
+        },
+        {
           "name": "[AD-118][EST][VD][DP100K-Fp02]",
           "ad_code": "AD-118",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_CRIATIVOS]_02_05",
@@ -16305,23 +16325,23 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-08][DP100K-FP02][NT]_palestra-pronta-tati",
-          "ad_code": "AD-08",
+          "name": "[AD-01][DP100K-FP02][NT]_mentoria-interna-ipm",
+          "ad_code": "AD-01",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 142.41,
-          "impr": 7070,
-          "clicks": 0,
+          "spend": 142.38,
+          "impr": 7142,
+          "clicks": 1,
           "lpv": 0,
           "ic": 0,
           "purch": 0,
-          "ctr": 0.0,
+          "ctr": 0.014001680201624195,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 0,
+          "click_lpv": 0.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
-          "ig_url": "",
+          "ig_url": "https://www.instagram.com/p/DYW8Ze0jKWW/",
           "roas": 0.0
         },
         {
@@ -16329,8 +16349,8 @@
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 140.19,
-          "impr": 9964,
+          "spend": 142.26,
+          "impr": 10083,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16345,32 +16365,12 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-01][DP100K-FP02][NT]_mentoria-interna-ipm",
-          "ad_code": "AD-01",
-          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
-          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 140.07,
-          "impr": 7056,
-          "clicks": 1,
-          "lpv": 0,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.01417233560090703,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 0.0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYW8Ze0jKWW/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-05][DP100K-FP02][NT]_contrato-88k",
           "ad_code": "AD-05",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 139.82999999999998,
-          "impr": 8712,
+          "spend": 141.69,
+          "impr": 8808,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16389,8 +16389,8 @@
           "ad_code": "AD-02",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 139.79,
-          "impr": 12597,
+          "spend": 141.45999999999998,
+          "impr": 12690,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16405,12 +16405,32 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-146][EST][VD][DP100K-Fp02]",
+          "ad_code": "AD-146",
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          "spend": 141.45,
+          "impr": 1755,
+          "clicks": 14,
+          "lpv": 14,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.7977207977207977,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 100.0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
+          "roas": 0.0
+        },
+        {
           "name": "[AD-07][DP100K-FP02][NT]_arte-terapia-melhoria",
           "ad_code": "AD-07",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 138.82,
-          "impr": 9731,
+          "spend": 140.71,
+          "impr": 9839,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16429,8 +16449,8 @@
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 138.49999999999997,
-          "impr": 9457,
+          "spend": 140.35999999999999,
+          "impr": 9580,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16449,8 +16469,8 @@
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 138.03,
-          "impr": 10581,
+          "spend": 139.81,
+          "impr": 10708,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16469,8 +16489,8 @@
           "ad_code": "AD-04",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 137.7,
-          "impr": 10514,
+          "spend": 139.14,
+          "impr": 10580,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16489,8 +16509,8 @@
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 130.54,
-          "impr": 11392,
+          "spend": 132.08,
+          "impr": 11479,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16505,57 +16525,37 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-146][EST][VD][DP100K-Fp02]",
-          "ad_code": "AD-146",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
-          "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 107.16000000000001,
-          "impr": 1288,
-          "clicks": 10,
-          "lpv": 9,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.7763975155279503,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 90.0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
           "ad_code": "AD-15",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 63.0,
-          "impr": 796,
-          "clicks": 19,
-          "lpv": 18,
-          "ic": 2,
-          "purch": 1,
-          "ctr": 2.386934673366834,
-          "cpa": 63.0,
-          "cpic": 31.5,
-          "click_lpv": 94.73684210526315,
+          "spend": 67.67,
+          "impr": 865,
+          "clicks": 23,
+          "lpv": 21,
+          "ic": 3,
+          "purch": 2,
+          "ctr": 2.6589595375722546,
+          "cpa": 33.835,
+          "cpic": 22.55666666666667,
+          "click_lpv": 91.30434782608695,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8mcjP98/",
-          "roas": 1.5396825396825398
+          "roas": 2.8668538495640608
         },
         {
           "name": "[AD-11][DP100K-Fp02][VID][VD]_evento_nao_adianta_ser_bom",
           "ad_code": "AD-11",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 50.09,
-          "impr": 495,
+          "spend": 54.519999999999996,
+          "impr": 550,
           "clicks": 7,
           "lpv": 7,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.4141414141414141,
+          "ctr": 1.2727272727272727,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -16569,16 +16569,16 @@
           "ad_code": "AD-155",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 28.03,
-          "impr": 681,
-          "clicks": 8,
+          "spend": 31.220000000000002,
+          "impr": 753,
+          "clicks": 9,
           "lpv": 4,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.1747430249632893,
+          "ctr": 1.1952191235059761,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 50.0,
+          "click_lpv": 44.44444444444444,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUbmjjPbk/",
@@ -16589,16 +16589,16 @@
           "ad_code": "AD-12",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 21.939999999999998,
-          "impr": 252,
-          "clicks": 9,
-          "lpv": 7,
+          "spend": 23.060000000000002,
+          "impr": 269,
+          "clicks": 10,
+          "lpv": 8,
           "ic": 0,
           "purch": 0,
-          "ctr": 3.571428571428571,
+          "ctr": 3.717472118959108,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 77.77777777777779,
+          "click_lpv": 80.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT6ytjMq4/",
@@ -16674,7 +16674,7 @@
         },
         {
           "ad": "AD-09",
-          "total": 1,
+          "total": 2,
           "mql": 0,
           "mql_pct": 0.0
         },
@@ -17968,26 +17968,26 @@
         },
         {
           "date": "2026-06-02",
-          "spend": 2009.27,
+          "spend": 2009.5000000000005,
           "vendas": 17,
           "ic": 24,
           "visitas": 286,
-          "impr": 27465,
+          "impr": 27476,
           "clicks": 299
         },
         {
           "date": "2026-06-03",
-          "spend": 845.8800000000001,
+          "spend": 872.7299999999999,
           "vendas": 5,
-          "ic": 7,
-          "visitas": 88,
-          "impr": 9944,
-          "clicks": 108
+          "ic": 8,
+          "visitas": 100,
+          "impr": 10254,
+          "clicks": 111
         }
       ],
-      "roas_real": 0.7150315776312195,
-      "cpa_hubla": 138.75728915662648,
-      "cpa_gerenciador": 187.26593495934955
+      "roas_real": 0.7141919249080362,
+      "cpa_hubla": 138.920421686747,
+      "cpa_gerenciador": 187.48609756097565
     },
     "junho_sem1": {
       "periodo": {
@@ -20238,22 +20238,22 @@
         ]
       },
       "trafego": {
-        "spend": 3004.7000000000007,
+        "spend": 3031.7800000000007,
         "vendas_gerenciador": 23,
-        "ic": 33,
-        "visitas": 395,
-        "impressions": 39332,
-        "clicks": 428,
-        "ctr": 1.0881724804230652,
-        "cpm": 76.39326756839216,
-        "cpc": 7.02032710280374,
-        "cpa": 130.63913043478263,
-        "cpic": 91.05151515151518,
-        "cplpv": 7.606835443037976,
-        "click_lpv": 92.28971962616822,
-        "lpv_ic": 8.354430379746836,
-        "ic_purch": 69.6969696969697,
-        "lpv_purch": 5.822784810126582
+        "ic": 34,
+        "visitas": 407,
+        "impressions": 39653,
+        "clicks": 431,
+        "ctr": 1.086929110029506,
+        "cpm": 76.45777116485513,
+        "cpc": 7.034292343387473,
+        "cpa": 131.81652173913045,
+        "cpic": 89.17000000000002,
+        "cplpv": 7.449090909090911,
+        "click_lpv": 94.43155452436194,
+        "lpv_ic": 8.353808353808354,
+        "ic_purch": 67.64705882352942,
+        "lpv_purch": 5.651105651105651
       },
       "hubla": {
         "total": 36,
@@ -20295,47 +20295,47 @@
         ]
       },
       "pesquisa": {
-        "total": 30,
-        "meta_ads": 21,
-        "pct_meta": 70.0,
+        "total": 31,
+        "meta_ads": 22,
+        "pct_meta": 70.96774193548387,
         "mql": 7,
-        "mql_pct": 33.33333333333333,
+        "mql_pct": 31.818181818181817,
         "mql_total": 11,
-        "mql_total_pct": 36.666666666666664,
+        "mql_total_pct": 35.483870967741936,
         "mql_10k": 10,
-        "mql_10k_pct": 33.33333333333333,
+        "mql_10k_pct": 32.25806451612903,
         "mql_10k_meta": 7,
-        "mql_10k_meta_pct": 33.33333333333333,
+        "mql_10k_meta_pct": 31.818181818181817,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 21,
-            "pct": 70.0
+            "n": 22,
+            "pct": 70.96774193548387
           },
           {
             "origem": "Orgânico Instagram",
             "n": 3,
-            "pct": 10.0
+            "pct": 9.67741935483871
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 2,
-            "pct": 6.666666666666667
+            "pct": 6.451612903225806
           },
           {
             "origem": "WhatsApp",
             "n": 2,
-            "pct": 6.666666666666667
+            "pct": 6.451612903225806
           },
           {
             "origem": "Outros",
             "n": 1,
-            "pct": 3.3333333333333335
+            "pct": 3.225806451612903
           },
           {
             "origem": "Sem origem",
             "n": 1,
-            "pct": 3.3333333333333335
+            "pct": 3.225806451612903
           }
         ]
       },
@@ -20344,481 +20344,491 @@
           {
             "k": "45 a 54 anos",
             "n": 11,
-            "pct": 52.38095238095239
+            "pct": 50.0
           },
           {
             "k": "35 a 44 anos",
             "n": 6,
-            "pct": 28.57142857142857
+            "pct": 27.27272727272727
           },
           {
             "k": "26 a 34 anos",
-            "n": 2,
-            "pct": 9.523809523809524
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "Acima de 65 anos",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "55 a 64 anos",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 19,
-            "pct": 90.47619047619048
+            "n": 20,
+            "pct": 90.9090909090909
           },
           {
             "k": "Masculino",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           }
         ],
         "tempo": [
           {
             "k": "Menos de 6 meses",
             "n": 8,
-            "pct": 38.095238095238095
+            "pct": 36.36363636363637
           },
           {
             "k": "Mais de 1 ano",
             "n": 6,
-            "pct": 28.57142857142857
+            "pct": 27.27272727272727
+          },
+          {
+            "k": "Conheci agora",
+            "n": 4,
+            "pct": 18.181818181818183
           },
           {
             "k": "De 7 meses a 1 ano",
             "n": 4,
-            "pct": 19.047619047619047
-          },
-          {
-            "k": "Conheci agora",
-            "n": 3,
-            "pct": 14.285714285714285
+            "pct": 18.181818181818183
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 18,
-            "pct": 85.71428571428571
+            "n": 19,
+            "pct": 86.36363636363636
           },
           {
             "k": "Yes",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "ocupacao": [
           {
             "k": "Profissional Autônomo(a)",
             "n": 8,
-            "pct": 38.095238095238095
+            "pct": 36.36363636363637
           },
           {
             "k": "Empresário(a)",
             "n": 4,
-            "pct": 19.047619047619047
+            "pct": 18.181818181818183
+          },
+          {
+            "k": "Terapeuta",
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "Professor(a)",
             "n": 2,
-            "pct": 9.523809523809524
-          },
-          {
-            "k": "Terapeuta",
-            "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Aposentado(a)",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Medico",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Executivo (Diretor, Gerente, Gestor)",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
             "n": 9,
-            "pct": 42.857142857142854
+            "pct": 40.909090909090914
           },
           {
             "k": "Até R$ 2.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 10.001,00 até R$ 15.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 15.001,00 até R$ 20.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
+          },
+          {
+            "k": "No momento, estou sem renda.",
+            "n": 1,
+            "pct": 4.545454545454546
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
             "n": 13,
-            "pct": 61.904761904761905
+            "pct": 59.09090909090909
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 5,
-            "pct": 23.809523809523807
+            "n": 6,
+            "pct": 27.27272727272727
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "objetivo": [
           {
             "k": "Uma nova carreira",
             "n": 11,
-            "pct": 52.38095238095239
+            "pct": 50.0
           },
           {
             "k": "Se destacar na profissão",
-            "n": 7,
-            "pct": 33.33333333333333
+            "n": 8,
+            "pct": 36.36363636363637
           },
           {
             "k": "Renda extra",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "estado": [
           {
             "k": "Paraná",
             "n": 5,
-            "pct": 23.809523809523807
+            "pct": 22.727272727272727
           },
           {
             "k": "Minas Gerais",
             "n": 4,
-            "pct": 19.047619047619047
+            "pct": 18.181818181818183
           },
           {
             "k": "Rio de Janeiro",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
+          },
+          {
+            "k": "Bahia",
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "São Paulo",
             "n": 2,
-            "pct": 9.523809523809524
-          },
-          {
-            "k": "Bahia",
-            "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Federal District",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Espírito Santo",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Mato Grosso",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Rio Grande do Sul",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Santa Catarina",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
-        "total_respondentes": 21,
+        "total_respondentes": 22,
         "mql": 7,
-        "mql_pct": 33.33333333333333
+        "mql_pct": 31.818181818181817
       },
       "persona_compradoras_meta": {
         "idade": [
           {
             "k": "45 a 54 anos",
             "n": 11,
-            "pct": 52.38095238095239
+            "pct": 50.0
           },
           {
             "k": "35 a 44 anos",
             "n": 6,
-            "pct": 28.57142857142857
+            "pct": 27.27272727272727
           },
           {
             "k": "26 a 34 anos",
-            "n": 2,
-            "pct": 9.523809523809524
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "Acima de 65 anos",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "55 a 64 anos",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 19,
-            "pct": 90.47619047619048
+            "n": 20,
+            "pct": 90.9090909090909
           },
           {
             "k": "Masculino",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           }
         ],
         "tempo": [
           {
             "k": "Menos de 6 meses",
             "n": 8,
-            "pct": 38.095238095238095
+            "pct": 36.36363636363637
           },
           {
             "k": "Mais de 1 ano",
             "n": 6,
-            "pct": 28.57142857142857
+            "pct": 27.27272727272727
+          },
+          {
+            "k": "Conheci agora",
+            "n": 4,
+            "pct": 18.181818181818183
           },
           {
             "k": "De 7 meses a 1 ano",
             "n": 4,
-            "pct": 19.047619047619047
-          },
-          {
-            "k": "Conheci agora",
-            "n": 3,
-            "pct": 14.285714285714285
+            "pct": 18.181818181818183
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 18,
-            "pct": 85.71428571428571
+            "n": 19,
+            "pct": 86.36363636363636
           },
           {
             "k": "Yes",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "ocupacao": [
           {
             "k": "Profissional Autônomo(a)",
             "n": 8,
-            "pct": 38.095238095238095
+            "pct": 36.36363636363637
           },
           {
             "k": "Empresário(a)",
             "n": 4,
-            "pct": 19.047619047619047
+            "pct": 18.181818181818183
+          },
+          {
+            "k": "Terapeuta",
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "Professor(a)",
             "n": 2,
-            "pct": 9.523809523809524
-          },
-          {
-            "k": "Terapeuta",
-            "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Aposentado(a)",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Medico",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Executivo (Diretor, Gerente, Gestor)",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
             "n": 9,
-            "pct": 42.857142857142854
+            "pct": 40.909090909090914
           },
           {
             "k": "Até R$ 2.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 10.001,00 até R$ 15.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 15.001,00 até R$ 20.000,00",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
             "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
+          },
+          {
+            "k": "No momento, estou sem renda.",
+            "n": 1,
+            "pct": 4.545454545454546
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
             "n": 13,
-            "pct": 61.904761904761905
+            "pct": 59.09090909090909
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 5,
-            "pct": 23.809523809523807
+            "n": 6,
+            "pct": 27.27272727272727
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "objetivo": [
           {
             "k": "Uma nova carreira",
             "n": 11,
-            "pct": 52.38095238095239
+            "pct": 50.0
           },
           {
             "k": "Se destacar na profissão",
-            "n": 7,
-            "pct": 33.33333333333333
+            "n": 8,
+            "pct": 36.36363636363637
           },
           {
             "k": "Renda extra",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
           }
         ],
         "estado": [
           {
             "k": "Paraná",
             "n": 5,
-            "pct": 23.809523809523807
+            "pct": 22.727272727272727
           },
           {
             "k": "Minas Gerais",
             "n": 4,
-            "pct": 19.047619047619047
+            "pct": 18.181818181818183
           },
           {
             "k": "Rio de Janeiro",
             "n": 3,
-            "pct": 14.285714285714285
+            "pct": 13.636363636363635
+          },
+          {
+            "k": "Bahia",
+            "n": 3,
+            "pct": 13.636363636363635
           },
           {
             "k": "São Paulo",
             "n": 2,
-            "pct": 9.523809523809524
-          },
-          {
-            "k": "Bahia",
-            "n": 2,
-            "pct": 9.523809523809524
+            "pct": 9.090909090909092
           },
           {
             "k": "Federal District",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Espírito Santo",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Mato Grosso",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Rio Grande do Sul",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           },
           {
             "k": "Santa Catarina",
             "n": 1,
-            "pct": 4.761904761904762
+            "pct": 4.545454545454546
           }
         ],
-        "total_respondentes": 21,
+        "total_respondentes": 22,
         "mql": 7,
-        "mql_pct": 33.33333333333333
+        "mql_pct": 31.818181818181817
       },
       "match": {
         "vendas_total": 36,
-        "matched_pesquisa": 30,
-        "match_pct": 83.33333333333334
+        "matched_pesquisa": 31,
+        "match_pct": 86.11111111111111
       },
       "top_ads": [
         {
@@ -20826,120 +20836,120 @@
           "ad_code": "AD-147",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 1423.07,
-          "impr": 17957,
-          "clicks": 169,
-          "lpv": 168,
+          "spend": 1618.0300000000002,
+          "impr": 20773,
+          "clicks": 189,
+          "lpv": 185,
           "ic": 20,
           "purch": 14,
-          "ctr": 0.941137160995712,
-          "cpa": 101.64785714285713,
-          "cpic": 71.1535,
-          "click_lpv": 99.40828402366864,
+          "ctr": 0.9098348818177442,
+          "cpa": 115.57357142857144,
+          "cpic": 80.90150000000001,
+          "click_lpv": 97.88359788359789,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XM6BDGJP/",
-          "roas": 0.9542749126887645
+          "roas": 0.8392922257312904
         },
         {
           "name": "[AD-152][EST][VD][DP100K-Fp02]",
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 565.82,
-          "impr": 7230,
+          "spend": 585.18,
+          "impr": 7438,
           "clicks": 65,
           "lpv": 64,
-          "ic": 5,
-          "purch": 5,
-          "ctr": 0.8990318118948823,
-          "cpa": 113.16400000000002,
-          "cpic": 113.16400000000002,
+          "ic": 6,
+          "purch": 6,
+          "ctr": 0.8738908308685129,
+          "cpa": 97.52999999999999,
+          "cpic": 97.52999999999999,
           "click_lpv": 98.46153846153847,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 0.8571630553886395
+          "roas": 0.9945657746334462
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          "spend": 522.02,
-          "impr": 7861,
-          "clicks": 55,
-          "lpv": 50,
+          "spend": 551.13,
+          "impr": 8329,
+          "clicks": 56,
+          "lpv": 51,
           "ic": 5,
           "purch": 2,
-          "ctr": 0.6996565322478057,
-          "cpa": 261.01,
-          "cpic": 104.404,
-          "click_lpv": 90.9090909090909,
+          "ctr": 0.6723496218033378,
+          "cpa": 275.565,
+          "cpic": 110.226,
+          "click_lpv": 91.07142857142857,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyvRjDK2W/",
-          "roas": 0.37163327075590974
+          "roas": 0.3520040643768258
         },
         {
           "name": "[AD-06][VID][VD][DP100K-Fp02]",
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "adset": "[DP100K-Fp02][ADV+][BROAD][AD-06]_18_05",
-          "spend": 436.43,
-          "impr": 4489,
+          "spend": 436.96000000000004,
+          "impr": 4494,
           "clicks": 59,
-          "lpv": 53,
-          "ic": 2,
-          "purch": 1,
-          "ctr": 1.3143239028736913,
-          "cpa": 436.43,
-          "cpic": 218.215,
-          "click_lpv": 89.83050847457628,
+          "lpv": 54,
+          "ic": 3,
+          "purch": 2,
+          "ctr": 1.312861593235425,
+          "cpa": 218.48000000000002,
+          "cpic": 145.65333333333334,
+          "click_lpv": 91.52542372881356,
           "ad_status": "PAUSED",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYfyukijLAj/",
-          "roas": 0.22225786494970556
+          "roas": 0.4439765653606737
         },
         {
           "name": "[AD-09][DP100K-Fp02][VID][VD]_carro_selfie",
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 276.26,
-          "impr": 3232,
-          "clicks": 68,
-          "lpv": 63,
+          "spend": 291.26,
+          "impr": 3420,
+          "clicks": 71,
+          "lpv": 68,
           "ic": 3,
           "purch": 1,
-          "ctr": 2.103960396039604,
-          "cpa": 276.26,
-          "cpic": 92.08666666666666,
-          "click_lpv": 92.64705882352942,
+          "ctr": 2.0760233918128654,
+          "cpa": 291.26,
+          "cpic": 97.08666666666666,
+          "click_lpv": 95.77464788732394,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT3mYjMEA/",
-          "roas": 0.35111851154709334
+          "roas": 0.3330357755956877
         },
         {
           "name": "[AD-16][DP100K-Fp02][VID][VD]_meme_pov_15mil",
           "ad_code": "AD-16",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 227.73000000000002,
-          "impr": 4548,
+          "spend": 233.49,
+          "impr": 4710,
           "clicks": 43,
           "lpv": 47,
           "ic": 4,
           "purch": 3,
-          "ctr": 0.9454705364995603,
-          "cpa": 75.91000000000001,
-          "cpic": 56.932500000000005,
+          "ctr": 0.9129511677282378,
+          "cpa": 77.83,
+          "cpic": 58.3725,
           "click_lpv": 109.30232558139534,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8K7jBz9/",
-          "roas": 1.2778290080358319
+          "roas": 1.2463060516510343
         },
         {
           "name": "[AD-154][EST][VD][DP100K-Fp02]",
@@ -20962,37 +20972,57 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-146][EST][VD][DP100K-Fp02]",
+          "ad_code": "AD-146",
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          "spend": 74.44999999999999,
+          "impr": 1077,
+          "clicks": 10,
+          "lpv": 11,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.9285051067780872,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 110.00000000000001,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
+          "roas": 0.0
+        },
+        {
           "name": "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
           "ad_code": "AD-15",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 63.0,
-          "impr": 796,
-          "clicks": 19,
-          "lpv": 18,
-          "ic": 2,
-          "purch": 1,
-          "ctr": 2.386934673366834,
-          "cpa": 63.0,
-          "cpic": 31.5,
-          "click_lpv": 94.73684210526315,
+          "spend": 67.67,
+          "impr": 865,
+          "clicks": 23,
+          "lpv": 21,
+          "ic": 3,
+          "purch": 2,
+          "ctr": 2.6589595375722546,
+          "cpa": 33.835,
+          "cpic": 22.55666666666667,
+          "click_lpv": 91.30434782608695,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8mcjP98/",
-          "roas": 1.5396825396825398
+          "roas": 2.8668538495640608
         },
         {
           "name": "[AD-11][DP100K-Fp02][VID][VD]_evento_nao_adianta_ser_bom",
           "ad_code": "AD-11",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 50.09,
-          "impr": 495,
+          "spend": 54.519999999999996,
+          "impr": 550,
           "clicks": 7,
           "lpv": 7,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.4141414141414141,
+          "ctr": 1.2727272727272727,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21006,8 +21036,8 @@
           "ad_code": "AD-08",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 40.849999999999994,
-          "impr": 1683,
+          "spend": 42.589999999999996,
+          "impr": 1742,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21022,52 +21052,12 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-146][EST][VD][DP100K-Fp02]",
-          "ad_code": "AD-146",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
-          "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 40.160000000000004,
-          "impr": 610,
-          "clicks": 6,
-          "lpv": 6,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.9836065573770493,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 100.0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
-          "roas": 0.0
-        },
-        {
-          "name": "[AD-02][DP100K-FP02][NT]_mindset-strass",
-          "ad_code": "AD-02",
-          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
-          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 38.339999999999996,
-          "impr": 2263,
-          "clicks": 0,
-          "lpv": 0,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.0,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYW8b9ujGJT/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-05][DP100K-FP02][NT]_contrato-88k",
           "ad_code": "AD-05",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 38.25,
-          "impr": 1583,
+          "spend": 40.11,
+          "impr": 1679,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21082,12 +21072,52 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-02][DP100K-FP02][NT]_mindset-strass",
+          "ad_code": "AD-02",
+          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          "spend": 40.01,
+          "impr": 2356,
+          "clicks": 0,
+          "lpv": 0,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.0,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DYW8b9ujGJT/",
+          "roas": 0.0
+        },
+        {
+          "name": "[AD-01][DP100K-FP02][NT]_mentoria-interna-ipm",
+          "ad_code": "AD-01",
+          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          "spend": 39.81,
+          "impr": 1647,
+          "clicks": 1,
+          "lpv": 0,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.060716454159077116,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 0.0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DYW8Ze0jKWW/",
+          "roas": 0.0
+        },
+        {
           "name": "[AD-04][DP100K-FP02][NT]_eric-bocardi-3M-7M",
           "ad_code": "AD-04",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 38.03,
-          "impr": 1782,
+          "spend": 39.47,
+          "impr": 1848,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21102,32 +21132,12 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-01][DP100K-FP02][NT]_mentoria-interna-ipm",
-          "ad_code": "AD-01",
-          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
-          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 37.5,
-          "impr": 1561,
-          "clicks": 1,
-          "lpv": 0,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.06406149903907751,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 0.0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYW8Ze0jKWW/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-09][DP100K-FP02][NT]_palestrante-anos-metodo",
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 37.06,
-          "impr": 2159,
+          "spend": 39.13,
+          "impr": 2278,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21146,8 +21156,8 @@
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 36.92,
-          "impr": 2307,
+          "spend": 38.78,
+          "impr": 2430,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21166,8 +21176,8 @@
           "ad_code": "AD-07",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 36.67,
-          "impr": 2297,
+          "spend": 38.56,
+          "impr": 2405,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21186,8 +21196,8 @@
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 36.650000000000006,
-          "impr": 1853,
+          "spend": 38.19,
+          "impr": 1940,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21206,8 +21216,8 @@
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 35.83,
-          "impr": 2552,
+          "spend": 37.61,
+          "impr": 2679,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21226,16 +21236,16 @@
           "ad_code": "AD-155",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 28.03,
-          "impr": 681,
-          "clicks": 8,
+          "spend": 31.220000000000002,
+          "impr": 753,
+          "clicks": 9,
           "lpv": 4,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.1747430249632893,
+          "ctr": 1.1952191235059761,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 50.0,
+          "click_lpv": 44.44444444444444,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUbmjjPbk/",
@@ -21246,16 +21256,16 @@
           "ad_code": "AD-12",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 21.939999999999998,
-          "impr": 252,
-          "clicks": 9,
-          "lpv": 7,
+          "spend": 23.060000000000002,
+          "impr": 269,
+          "clicks": 10,
+          "lpv": 8,
           "ic": 0,
           "purch": 0,
-          "ctr": 3.571428571428571,
+          "ctr": 3.717472118959108,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 77.77777777777779,
+          "click_lpv": 80.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT6ytjMq4/",
@@ -21266,8 +21276,8 @@
           "ad_code": "AD-17",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 20.82,
-          "impr": 223,
+          "spend": 21.02,
+          "impr": 226,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21286,13 +21296,13 @@
           "ad_code": "AD-08",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 20.07,
-          "impr": 168,
+          "spend": 20.49,
+          "impr": 173,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.1904761904761905,
+          "ctr": 1.1560693641618496,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21306,13 +21316,13 @@
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 16.85,
-          "impr": 158,
+          "spend": 17.05,
+          "impr": 160,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.2658227848101267,
+          "ctr": 1.25,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21326,16 +21336,16 @@
           "ad_code": "AD-13",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 13.68,
-          "impr": 108,
+          "spend": 14.3,
+          "impr": 116,
           "clicks": 4,
-          "lpv": 2,
+          "lpv": 3,
           "ic": 0,
           "purch": 0,
-          "ctr": 3.7037037037037033,
+          "ctr": 3.4482758620689653,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 50.0,
+          "click_lpv": 75.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUZ-bjLCg/",
@@ -21346,13 +21356,13 @@
           "ad_code": "AD-18",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 10.45,
-          "impr": 119,
+          "spend": 10.6,
+          "impr": 123,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.680672268907563,
+          "ctr": 1.6260162601626018,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21366,13 +21376,13 @@
           "ad_code": "AD-156",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 8.93,
-          "impr": 177,
+          "spend": 9.07,
+          "impr": 183,
           "clicks": 1,
           "lpv": 1,
           "ic": 0,
           "purch": 0,
-          "ctr": 0.5649717514124294,
+          "ctr": 0.546448087431694,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21386,13 +21396,13 @@
           "ad_code": "AD-161",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 7.82,
-          "impr": 109,
+          "spend": 8.11,
+          "impr": 112,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.834862385321101,
+          "ctr": 1.7857142857142856,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21406,16 +21416,16 @@
           "ad_code": "AD-157",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 6.34,
-          "impr": 113,
-          "clicks": 2,
-          "lpv": 1,
+          "spend": 6.66,
+          "impr": 121,
+          "clicks": 3,
+          "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.7699115044247788,
+          "ctr": 2.479338842975207,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 50.0,
+          "click_lpv": 66.66666666666666,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUcR3DAlg/",
@@ -21461,6 +21471,12 @@
         },
         {
           "ad": "AD-15",
+          "total": 1,
+          "mql": 0,
+          "mql_pct": 0.0
+        },
+        {
+          "ad": "AD-09",
           "total": 1,
           "mql": 0,
           "mql_pct": 0.0
@@ -21997,26 +22013,26 @@
         },
         {
           "date": "2026-06-02",
-          "spend": 2009.27,
+          "spend": 2009.5000000000005,
           "vendas": 17,
           "ic": 24,
           "visitas": 286,
-          "impr": 27465,
+          "impr": 27476,
           "clicks": 299
         },
         {
           "date": "2026-06-03",
-          "spend": 845.8800000000001,
+          "spend": 872.7299999999999,
           "vendas": 5,
-          "ic": 7,
-          "visitas": 88,
-          "impr": 9944,
-          "clicks": 108
+          "ic": 8,
+          "visitas": 100,
+          "impr": 10254,
+          "clicks": 111
         }
       ],
-      "roas_real": 1.1840017306220252,
-      "cpa_hubla": 83.4638888888889,
-      "cpa_gerenciador": 130.63913043478263
+      "roas_real": 1.173426172083726,
+      "cpa_hubla": 84.21611111111113,
+      "cpa_gerenciador": 131.81652173913045
     }
   },
   "_diag": {
@@ -22363,21 +22379,21 @@
         ],
         [
           "2026-06-02",
-          2009.27,
+          2009.5,
           17,
           24,
           286,
-          27465,
+          27476,
           299
         ],
         [
           "2026-06-03",
-          845.88,
+          872.73,
           5,
-          7,
-          88,
-          9944,
-          108
+          8,
+          100,
+          10254,
+          111
         ]
       ]
     },
@@ -36549,8 +36565,8 @@
           "AD-03",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          15.08,
-          761,
+          15.09,
+          762,
           0,
           0,
           0,
@@ -36669,8 +36685,8 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          214.42,
-          2973,
+          214.43,
+          2974,
           28,
           25,
           3,
@@ -36699,8 +36715,8 @@
           "AD-09",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          143.15,
-          1751,
+          143.17,
+          1752,
           46,
           44,
           2,
@@ -36969,8 +36985,8 @@
           "AD-147",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          753.01,
-          10129,
+          753.07,
+          10130,
           91,
           95,
           10,
@@ -37014,8 +37030,8 @@
           "AD-01",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.17,
-          221,
+          7.48,
+          307,
           0,
           0,
           0,
@@ -37029,8 +37045,8 @@
           "AD-02",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.22,
-          288,
+          6.89,
+          381,
           0,
           0,
           0,
@@ -37044,8 +37060,8 @@
           "AD-03",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.31,
-          253,
+          6.84,
+          339,
           0,
           0,
           0,
@@ -37059,8 +37075,8 @@
           "AD-04",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.54,
-          207,
+          6.98,
+          273,
           0,
           0,
           0,
@@ -37074,8 +37090,8 @@
           "AD-05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          4.88,
-          196,
+          6.74,
+          292,
           0,
           0,
           0,
@@ -37089,8 +37105,8 @@
           "AD-06",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.66,
-          345,
+          7.52,
+          468,
           0,
           0,
           0,
@@ -37104,8 +37120,8 @@
           "AD-07",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.38,
-          307,
+          7.27,
+          415,
           0,
           0,
           0,
@@ -37119,8 +37135,8 @@
           "AD-08",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.47,
-          195,
+          7.21,
+          254,
           0,
           0,
           0,
@@ -37134,8 +37150,8 @@
           "AD-09",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.0,
-          273,
+          7.07,
+          392,
           0,
           0,
           0,
@@ -37149,8 +37165,8 @@
           "AD-10",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          5.17,
-          399,
+          6.95,
+          526,
           0,
           0,
           0,
@@ -37164,12 +37180,12 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          84.45,
-          876,
+          103.8,
+          1083,
           7,
           8,
-          0,
-          0,
+          1,
+          1,
           "ACTIVE",
           "https://www.instagram.com/p/DY7H5S6jPiL/"
         ],
@@ -37179,10 +37195,10 @@
           "AD-146",
           "[DP100K-Fp02][VENDA][CBO][ADV+][ESCALA]_03_06",
           "[DP100K-Fp02][ADV+][AMPLO]_03_06",
-          32.52,
-          528,
-          3,
-          3,
+          66.32,
+          994,
+          7,
+          8,
           0,
           0,
           "ACTIVE",
@@ -37194,10 +37210,10 @@
           "AD-147",
           "[DP100K-Fp02][VENDA][CBO][ADV+][ESCALA]_03_06",
           "[DP100K-Fp02][ADV+][AMPLO]_03_06",
-          67.85,
-          1125,
-          4,
-          2,
+          155.22,
+          2552,
+          11,
+          7,
           0,
           0,
           "ACTIVE",
@@ -37209,8 +37225,8 @@
           "AD-08",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          5.64,
-          38,
+          6.06,
+          43,
           0,
           0,
           0,
@@ -37224,10 +37240,10 @@
           "AD-09",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          133.11,
-          1481,
-          22,
-          19,
+          148.09,
+          1668,
+          25,
+          24,
           1,
           1,
           "ACTIVE",
@@ -37239,8 +37255,8 @@
           "AD-10",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.51,
-          13,
+          1.71,
+          15,
           1,
           1,
           0,
@@ -37254,8 +37270,8 @@
           "AD-11",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          11.81,
-          142,
+          16.24,
+          197,
           4,
           4,
           0,
@@ -37269,10 +37285,10 @@
           "AD-12",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          7.59,
-          75,
+          8.71,
+          92,
+          5,
           4,
-          3,
           0,
           0,
           "ACTIVE",
@@ -37284,10 +37300,10 @@
           "AD-13",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          2.43,
-          20,
+          3.05,
+          28,
           1,
-          1,
+          2,
           0,
           0,
           "ACTIVE",
@@ -37299,8 +37315,8 @@
           "AD-14",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.2,
-          13,
+          1.28,
+          15,
           0,
           0,
           0,
@@ -37314,9 +37330,9 @@
           "AD-155",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          19.32,
-          458,
-          5,
+          22.51,
+          530,
+          6,
           2,
           0,
           0,
@@ -37329,8 +37345,8 @@
           "AD-156",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          2.82,
-          64,
+          2.96,
+          70,
           0,
           0,
           0,
@@ -37344,10 +37360,10 @@
           "AD-157",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          3.22,
-          39,
-          0,
-          0,
+          3.54,
+          47,
+          1,
+          1,
           0,
           0,
           "ACTIVE",
@@ -37359,8 +37375,8 @@
           "AD-158",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          0.33,
-          11,
+          0.54,
+          15,
           0,
           0,
           0,
@@ -37374,8 +37390,8 @@
           "AD-159",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.2,
-          21,
+          1.36,
+          23,
           0,
           0,
           0,
@@ -37389,12 +37405,12 @@
           "AD-15",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          36.02,
-          415,
-          11,
-          10,
-          1,
-          1,
+          40.69,
+          484,
+          15,
+          13,
+          2,
+          2,
           "ACTIVE",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
@@ -37404,8 +37420,8 @@
           "AD-160",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.36,
-          12,
+          1.43,
+          13,
           0,
           0,
           0,
@@ -37419,8 +37435,8 @@
           "AD-161",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          5.47,
-          79,
+          5.76,
+          82,
           1,
           1,
           0,
@@ -37434,8 +37450,8 @@
           "AD-16",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          84.58,
-          1595,
+          90.34,
+          1757,
           12,
           17,
           0,
@@ -37449,8 +37465,8 @@
           "AD-17",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.35,
-          8,
+          1.55,
+          11,
           0,
           0,
           0,
@@ -37464,8 +37480,8 @@
           "AD-18",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          1.27,
-          14,
+          1.42,
+          18,
           0,
           0,
           0,
@@ -37479,8 +37495,8 @@
           "AD-146",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          1.89,
-          14,
+          2.38,
+          15,
           0,
           0,
           0,
@@ -37494,10 +37510,10 @@
           "AD-147",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          370.41,
-          3957,
-          32,
-          31,
+          477.94,
+          5345,
+          45,
+          43,
           5,
           3,
           "ACTIVE",
@@ -37509,10 +37525,10 @@
           "AD-03",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "[DP100K-Fp02][ADV+][BROAD][AD-03]_18_05",
-          170.99,
-          2864,
+          200.1,
+          3332,
+          20,
           19,
-          18,
           3,
           0,
           "ACTIVE",
@@ -37524,12 +37540,12 @@
           "AD-06",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS]_18_05_force",
           "[DP100K-Fp02][ADV+][BROAD][AD-06]_18_05",
-          206.91,
-          1934,
+          207.44,
+          1939,
           26,
-          22,
-          0,
-          0,
+          23,
+          1,
+          1,
           "PAUSED",
           "https://www.instagram.com/p/DYfyukijLAj/"
         ]
@@ -41826,6 +41842,13 @@
           "irlanescopsi@gmail.com",
           "ipm",
           "organico",
+          102.12
+        ],
+        [
+          "2026-06-03",
+          "thais.bacchi@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
           102.12
         ]
       ]
@@ -50637,12 +50660,46 @@
           "Pará",
           false,
           false
+        ],
+        [
+          "2026-06-03",
+          "cleideaguiar82@gmail.com",
+          "meta_ads",
+          "[AD-09][DP100K-Fp02][VID][VD]_carro_selfie",
+          "26 a 34 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Terapeuta",
+          "No momento, estou sem renda.",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Bahia",
+          false,
+          false
+        ],
+        [
+          "2026-06-03",
+          "thais.bacchi@gmail.com",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Mato Grosso",
+          true,
+          true
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-06-03"
   },
-  "updated_at": "2026-06-03 16:19:59 BRT",
+  "updated_at": "2026-06-03 18:56:41 BRT",
   "schema_version": 3
 }
