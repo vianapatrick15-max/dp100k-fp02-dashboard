@@ -15433,47 +15433,47 @@
         ]
       },
       "pesquisa": {
-        "total": 150,
+        "total": 151,
         "meta_ads": 91,
-        "pct_meta": 60.66666666666667,
+        "pct_meta": 60.264900662251655,
         "mql": 44,
         "mql_pct": 48.35164835164835,
         "mql_total": 73,
-        "mql_total_pct": 48.66666666666667,
+        "mql_total_pct": 48.34437086092716,
         "mql_10k": 52,
-        "mql_10k_pct": 34.66666666666667,
+        "mql_10k_pct": 34.437086092715234,
         "mql_10k_meta": 31,
         "mql_10k_meta_pct": 34.065934065934066,
         "por_origem": [
           {
             "origem": "Meta Ads",
             "n": 91,
-            "pct": 60.66666666666667
+            "pct": 60.264900662251655
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 22,
-            "pct": 14.666666666666666
+            "pct": 14.56953642384106
           },
           {
             "origem": "Sem origem",
             "n": 14,
-            "pct": 9.333333333333334
+            "pct": 9.271523178807946
           },
           {
             "origem": "Orgânico Instagram",
             "n": 10,
-            "pct": 6.666666666666667
+            "pct": 6.622516556291391
           },
           {
             "origem": "WhatsApp",
-            "n": 7,
-            "pct": 4.666666666666667
+            "n": 8,
+            "pct": 5.298013245033113
           },
           {
             "origem": "Outros",
             "n": 6,
-            "pct": 4.0
+            "pct": 3.9735099337748347
           }
         ]
       },
@@ -16005,8 +16005,8 @@
       },
       "match": {
         "vendas_total": 185,
-        "matched_pesquisa": 137,
-        "match_pct": 74.05405405405405
+        "matched_pesquisa": 138,
+        "match_pct": 74.5945945945946
       },
       "top_ads": [
         {
@@ -20488,47 +20488,47 @@
         ]
       },
       "pesquisa": {
-        "total": 48,
+        "total": 49,
         "meta_ads": 30,
-        "pct_meta": 62.5,
+        "pct_meta": 61.224489795918366,
         "mql": 11,
         "mql_pct": 36.666666666666664,
         "mql_total": 17,
-        "mql_total_pct": 35.41666666666667,
+        "mql_total_pct": 34.69387755102041,
         "mql_10k": 15,
-        "mql_10k_pct": 31.25,
+        "mql_10k_pct": 30.612244897959183,
         "mql_10k_meta": 11,
         "mql_10k_meta_pct": 36.666666666666664,
         "por_origem": [
           {
             "origem": "Meta Ads",
             "n": 30,
-            "pct": 62.5
+            "pct": 61.224489795918366
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 6,
-            "pct": 12.5
+            "pct": 12.244897959183673
           },
           {
             "origem": "Sem origem",
             "n": 5,
-            "pct": 10.416666666666668
+            "pct": 10.204081632653061
           },
           {
             "origem": "Orgânico Instagram",
             "n": 4,
-            "pct": 8.333333333333332
+            "pct": 8.16326530612245
           },
           {
             "origem": "WhatsApp",
-            "n": 2,
-            "pct": 4.166666666666666
+            "n": 3,
+            "pct": 6.122448979591836
           },
           {
             "origem": "Outros",
             "n": 1,
-            "pct": 2.083333333333333
+            "pct": 2.0408163265306123
           }
         ]
       },
@@ -21030,8 +21030,8 @@
       },
       "match": {
         "vendas_total": 55,
-        "matched_pesquisa": 43,
-        "match_pct": 78.18181818181819
+        "matched_pesquisa": 44,
+        "match_pct": 80.0
       },
       "top_ads": [
         {
@@ -42850,6 +42850,41 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-04",
+          "elaineoninsha@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-04",
+          "rafaelaschimidt10@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-04",
+          "raul-sor@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-04",
+          "arnaldorosa.voluntariado@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-04",
+          "psicopaulosiqueira@icloud.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -51949,12 +51984,114 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-06-04",
+          "elaineoninsha@gmail.com",
+          "meta_ads",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Pará",
+          true,
+          true
+        ],
+        [
+          "2026-06-04",
+          "arnaldorosa.voluntariado@gmail.com",
+          "meta_ads",
+          "[ad-74][est][vd][dp100k-fp01]",
+          "35 a 44 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Acre",
+          false,
+          false
+        ],
+        [
+          "2026-06-04",
+          "raul-sor@hotmail.com",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "55 a 64 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Maranhão",
+          false,
+          false
+        ],
+        [
+          "2026-06-04",
+          "rafaelaschimidt10@gmail.co",
+          "#n/a",
+          "#N/A",
+          "26 a 34 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Gestora comercial ",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Renda extra",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-06-04",
+          "psicopaulosiqueira@icloud.com",
+          "meta_ads",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Renda extra",
+          "São Paulo",
+          true,
+          true
+        ],
+        [
+          "2026-06-04",
+          "josafacs@gmail.com",
+          "whatsapp",
+          "organico",
+          "45 a 54 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "Yes",
+          "Funcionário(a) Público(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Renda extra",
+          "Mato Grosso do Sul",
+          false,
+          false
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-06-04"
   },
-  "updated_at": "2026-06-04 16:28:50 BRT",
+  "updated_at": "2026-06-04 18:49:29 BRT",
   "schema_version": 3
 }
