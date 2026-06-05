@@ -45280,6 +45280,13 @@
           "meta_ads",
           "[ad-146][est][vd][dp100k-fp02]",
           103.86
+        ],
+        [
+          "2026-06-05",
+          "danieledornelas0@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -55008,12 +55015,29 @@
           "Minas Gerais",
           false,
           false
+        ],
+        [
+          "2026-06-05",
+          "danieledornelas0@gmail.com",
+          "meta_ads",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Espírito Santo",
+          false,
+          false
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-06-05"
   },
-  "updated_at": "2026-06-05 17:51:53 BRT",
+  "updated_at": "2026-06-05 19:21:11 BRT",
   "schema_version": 3
 }
