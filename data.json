@@ -51,7 +51,7 @@
       "label": "Junho/26",
       "mes_pk": "junho_mes",
       "inicio": "2026-05-25",
-      "fim": "2026-06-04",
+      "fim": "2026-06-05",
       "semanas": [
         {
           "key": "sem1",
@@ -67,7 +67,7 @@
           "nome": "Semana 2",
           "label": "Junho/26 - 2",
           "inicio": "2026-06-01",
-          "fim": "2026-06-04"
+          "fim": "2026-06-05"
         }
       ]
     }
@@ -15357,7 +15357,7 @@
     "junho_mes": {
       "periodo": {
         "inicio": "2026-05-25",
-        "fim": "2026-06-04",
+        "fim": "2026-06-05",
         "label": "Junho/26 — Mês",
         "nome": "Junho — Mês",
         "turmas": [
@@ -15366,114 +15366,114 @@
         ]
       },
       "trafego": {
-        "spend": 25112.679999999997,
-        "vendas_gerenciador": 134,
-        "ic": 184,
-        "visitas": 2874,
-        "impressions": 354055,
-        "clicks": 2960,
-        "ctr": 0.8360283006877461,
-        "cpm": 70.92875400714577,
-        "cpc": 8.484013513513512,
-        "cpa": 187.4080597014925,
-        "cpic": 136.4819565217391,
-        "cplpv": 8.737884481558801,
-        "click_lpv": 97.0945945945946,
-        "lpv_ic": 6.4022268615170494,
-        "ic_purch": 72.82608695652173,
-        "lpv_purch": 4.662491301322199
+        "spend": 27382.769999999997,
+        "vendas_gerenciador": 153,
+        "ic": 210,
+        "visitas": 3261,
+        "impressions": 386683,
+        "clicks": 3371,
+        "ctr": 0.8717735199116589,
+        "cpm": 70.81451731780294,
+        "cpc": 8.123040640759418,
+        "cpa": 178.97235294117644,
+        "cpic": 130.39414285714284,
+        "cplpv": 8.397046918123275,
+        "click_lpv": 96.73687333135568,
+        "lpv_ic": 6.439742410303588,
+        "ic_purch": 72.85714285714285,
+        "lpv_purch": 4.6918123275068995
       },
       "hubla": {
-        "total": 185,
-        "meta_ads": 124,
-        "pct_meta": 67.02702702702703,
-        "faturamento": 18333.469999999994,
-        "ticket_medio": 99.09983783783781,
+        "total": 208,
+        "meta_ads": 144,
+        "pct_meta": 69.23076923076923,
+        "faturamento": 20587.949999999993,
+        "ticket_medio": 98.98052884615382,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 124,
-            "pct": 67.02702702702703
+            "n": 144,
+            "pct": 69.23076923076923
           },
           {
             "origem": "IPM (cross-sell)",
-            "n": 28,
-            "pct": 15.135135135135137
+            "n": 29,
+            "pct": 13.942307692307693
           },
           {
             "origem": "Orgânico Instagram",
-            "n": 12,
-            "pct": 6.486486486486487
+            "n": 13,
+            "pct": 6.25
           },
           {
             "origem": "WhatsApp",
-            "n": 9,
-            "pct": 4.864864864864865
+            "n": 10,
+            "pct": 4.807692307692308
           },
           {
             "origem": "Outros (mcpm)",
             "n": 5,
-            "pct": 2.7027027027027026
+            "pct": 2.403846153846154
           },
           {
             "origem": "Sem UTM",
             "n": 5,
-            "pct": 2.7027027027027026
+            "pct": 2.403846153846154
           },
           {
             "origem": "Outros (janaina)",
             "n": 1,
-            "pct": 0.5405405405405406
+            "pct": 0.4807692307692308
           },
           {
             "origem": "E-mail",
             "n": 1,
-            "pct": 0.5405405405405406
+            "pct": 0.4807692307692308
           }
         ]
       },
       "pesquisa": {
-        "total": 151,
-        "meta_ads": 91,
-        "pct_meta": 60.264900662251655,
-        "mql": 44,
-        "mql_pct": 48.35164835164835,
-        "mql_total": 73,
-        "mql_total_pct": 48.34437086092716,
-        "mql_10k": 52,
-        "mql_10k_pct": 34.437086092715234,
-        "mql_10k_meta": 31,
-        "mql_10k_meta_pct": 34.065934065934066,
+        "total": 166,
+        "meta_ads": 104,
+        "pct_meta": 62.65060240963856,
+        "mql": 49,
+        "mql_pct": 47.11538461538461,
+        "mql_total": 80,
+        "mql_total_pct": 48.19277108433735,
+        "mql_10k": 56,
+        "mql_10k_pct": 33.734939759036145,
+        "mql_10k_meta": 34,
+        "mql_10k_meta_pct": 32.69230769230769,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 91,
-            "pct": 60.264900662251655
+            "n": 104,
+            "pct": 62.65060240963856
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 22,
-            "pct": 14.56953642384106
+            "pct": 13.253012048192772
           },
           {
             "origem": "Sem origem",
             "n": 14,
-            "pct": 9.271523178807946
+            "pct": 8.433734939759036
           },
           {
             "origem": "Orgânico Instagram",
-            "n": 10,
-            "pct": 6.622516556291391
+            "n": 11,
+            "pct": 6.626506024096386
           },
           {
             "origem": "WhatsApp",
-            "n": 8,
-            "pct": 5.298013245033113
+            "n": 9,
+            "pct": 5.421686746987952
           },
           {
             "origem": "Outros",
             "n": 6,
-            "pct": 3.9735099337748347
+            "pct": 3.614457831325301
           }
         ]
       },
@@ -15481,532 +15481,542 @@
         "idade": [
           {
             "k": "45 a 54 anos",
-            "n": 36,
-            "pct": 39.56043956043956
+            "n": 40,
+            "pct": 38.46153846153847
           },
           {
             "k": "35 a 44 anos",
-            "n": 26,
-            "pct": 28.57142857142857
+            "n": 28,
+            "pct": 26.923076923076923
           },
           {
             "k": "26 a 34 anos",
-            "n": 12,
-            "pct": 13.186813186813188
+            "n": 15,
+            "pct": 14.423076923076922
           },
           {
             "k": "55 a 64 anos",
-            "n": 11,
-            "pct": 12.087912087912088
+            "n": 14,
+            "pct": 13.461538461538462
           },
           {
             "k": "Acima de 65 anos",
-            "n": 4,
-            "pct": 4.395604395604396
+            "n": 5,
+            "pct": 4.807692307692308
           },
           {
             "k": "Menos de 25",
             "n": 2,
-            "pct": 2.197802197802198
+            "pct": 1.9230769230769231
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 75,
-            "pct": 82.41758241758241
+            "n": 83,
+            "pct": 79.8076923076923
           },
           {
             "k": "Masculino",
-            "n": 16,
-            "pct": 17.582417582417584
+            "n": 21,
+            "pct": 20.192307692307693
           }
         ],
         "tempo": [
           {
             "k": "Mais de 1 ano",
-            "n": 28,
+            "n": 32,
             "pct": 30.76923076923077
           },
           {
             "k": "Menos de 6 meses",
-            "n": 23,
-            "pct": 25.274725274725274
+            "n": 27,
+            "pct": 25.961538461538463
           },
           {
             "k": "Conheci agora",
-            "n": 21,
-            "pct": 23.076923076923077
+            "n": 25,
+            "pct": 24.03846153846154
           },
           {
             "k": "De 7 meses a 1 ano",
-            "n": 19,
-            "pct": 20.87912087912088
+            "n": 20,
+            "pct": 19.230769230769234
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 79,
-            "pct": 86.81318681318682
+            "n": 89,
+            "pct": 85.57692307692307
           },
           {
             "k": "Yes",
-            "n": 12,
-            "pct": 13.186813186813188
+            "n": 15,
+            "pct": 14.423076923076922
           }
         ],
         "ocupacao": [
           {
-            "k": "Profissional Autônomo(a)",
-            "n": 21,
+            "k": "Empresário(a)",
+            "n": 24,
             "pct": 23.076923076923077
           },
           {
-            "k": "Empresário(a)",
-            "n": 20,
-            "pct": 21.978021978021978
+            "k": "Profissional Autônomo(a)",
+            "n": 23,
+            "pct": 22.115384615384613
           },
           {
             "k": "Terapeuta",
-            "n": 16,
-            "pct": 17.582417582417584
+            "n": 20,
+            "pct": 19.230769230769234
           },
           {
             "k": "Executivo (Diretor, Gerente, Gestor)",
-            "n": 10,
-            "pct": 10.989010989010989
+            "n": 11,
+            "pct": 10.576923076923077
+          },
+          {
+            "k": "Professor(a)",
+            "n": 7,
+            "pct": 6.730769230769231
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 6,
-            "pct": 6.593406593406594
-          },
-          {
-            "k": "Professor(a)",
-            "n": 5,
-            "pct": 5.4945054945054945
+            "pct": 5.769230769230769
           },
           {
             "k": "Aposentado(a)",
             "n": 3,
-            "pct": 3.296703296703297
+            "pct": 2.8846153846153846
           },
           {
             "k": "CLT",
             "n": 2,
-            "pct": 2.197802197802198
+            "pct": 1.9230769230769231
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
-            "n": 19,
-            "pct": 20.87912087912088
+            "n": 23,
+            "pct": 22.115384615384613
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 18,
-            "pct": 19.78021978021978
+            "n": 20,
+            "pct": 19.230769230769234
           },
           {
             "k": "De R$ 8.001,00 até R$ 10.000,00",
-            "n": 13,
-            "pct": 14.285714285714285
+            "n": 15,
+            "pct": 14.423076923076922
           },
           {
             "k": "De R$ 15.001,00 até R$ 20.000,00",
-            "n": 11,
-            "pct": 12.087912087912088
+            "n": 14,
+            "pct": 13.461538461538462
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 10,
-            "pct": 10.989010989010989
+            "pct": 9.615384615384617
           },
           {
             "k": "De R$ 10.001,00 até R$ 15.000,00",
             "n": 10,
-            "pct": 10.989010989010989
+            "pct": 9.615384615384617
           },
           {
             "k": "Até R$ 2.000,00",
-            "n": 7,
+            "n": 8,
             "pct": 7.6923076923076925
           },
           {
             "k": "No momento, estou sem renda.",
-            "n": 2,
-            "pct": 2.197802197802198
+            "n": 3,
+            "pct": 2.8846153846153846
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
-            "n": 46,
-            "pct": 50.54945054945055
+            "n": 51,
+            "pct": 49.03846153846153
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 25,
-            "pct": 27.472527472527474
+            "n": 30,
+            "pct": 28.846153846153843
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
-            "n": 20,
-            "pct": 21.978021978021978
+            "n": 23,
+            "pct": 22.115384615384613
           }
         ],
         "objetivo": [
           {
             "k": "Uma nova carreira",
-            "n": 45,
-            "pct": 49.45054945054945
+            "n": 48,
+            "pct": 46.15384615384615
           },
           {
             "k": "Se destacar na profissão",
-            "n": 32,
-            "pct": 35.16483516483517
+            "n": 40,
+            "pct": 38.46153846153847
           },
           {
             "k": "Renda extra",
-            "n": 14,
-            "pct": 15.384615384615385
+            "n": 15,
+            "pct": 14.423076923076922
+          },
+          {
+            "k": "Mais um modelo ne negócio",
+            "n": 1,
+            "pct": 0.9615384615384616
           }
         ],
         "estado": [
           {
             "k": "São Paulo",
-            "n": 25,
-            "pct": 27.472527472527474
+            "n": 29,
+            "pct": 27.884615384615387
+          },
+          {
+            "k": "Rio Grande do Sul",
+            "n": 11,
+            "pct": 10.576923076923077
           },
           {
             "k": "Paraná",
             "n": 10,
-            "pct": 10.989010989010989
-          },
-          {
-            "k": "Rio Grande do Sul",
-            "n": 10,
-            "pct": 10.989010989010989
+            "pct": 9.615384615384617
           },
           {
             "k": "Minas Gerais",
-            "n": 7,
+            "n": 8,
             "pct": 7.6923076923076925
           },
           {
             "k": "Rio de Janeiro",
             "n": 7,
-            "pct": 7.6923076923076925
+            "pct": 6.730769230769231
+          },
+          {
+            "k": "Santa Catarina",
+            "n": 6,
+            "pct": 5.769230769230769
+          },
+          {
+            "k": "Mato Grosso",
+            "n": 5,
+            "pct": 4.807692307692308
           },
           {
             "k": "Federal District",
             "n": 4,
-            "pct": 4.395604395604396
-          },
-          {
-            "k": "Mato Grosso",
-            "n": 4,
-            "pct": 4.395604395604396
+            "pct": 3.8461538461538463
           },
           {
             "k": "Bahia",
             "n": 4,
-            "pct": 4.395604395604396
+            "pct": 3.8461538461538463
+          },
+          {
+            "k": "Pará",
+            "n": 4,
+            "pct": 3.8461538461538463
           },
           {
             "k": "Ceará",
             "n": 3,
-            "pct": 3.296703296703297
-          },
-          {
-            "k": "Pará",
-            "n": 3,
-            "pct": 3.296703296703297
+            "pct": 2.8846153846153846
           },
           {
             "k": "Espírito Santo",
             "n": 3,
-            "pct": 3.296703296703297
-          },
-          {
-            "k": "Santa Catarina",
-            "n": 3,
-            "pct": 3.296703296703297
+            "pct": 2.8846153846153846
           }
         ],
-        "total_respondentes": 91,
-        "mql": 44,
-        "mql_pct": 48.35164835164835
+        "total_respondentes": 104,
+        "mql": 49,
+        "mql_pct": 47.11538461538461
       },
       "persona_compradoras_meta": {
         "idade": [
           {
             "k": "45 a 54 anos",
-            "n": 35,
-            "pct": 39.325842696629216
+            "n": 39,
+            "pct": 37.86407766990291
           },
           {
             "k": "35 a 44 anos",
-            "n": 26,
-            "pct": 29.213483146067414
+            "n": 28,
+            "pct": 27.184466019417474
           },
           {
             "k": "26 a 34 anos",
-            "n": 12,
-            "pct": 13.48314606741573
+            "n": 15,
+            "pct": 14.563106796116504
           },
           {
             "k": "55 a 64 anos",
-            "n": 10,
-            "pct": 11.235955056179774
+            "n": 14,
+            "pct": 13.592233009708737
           },
           {
             "k": "Acima de 65 anos",
-            "n": 4,
-            "pct": 4.49438202247191
+            "n": 5,
+            "pct": 4.854368932038835
           },
           {
             "k": "Menos de 25",
             "n": 2,
-            "pct": 2.247191011235955
+            "pct": 1.9417475728155338
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 74,
-            "pct": 83.14606741573034
+            "n": 83,
+            "pct": 80.58252427184466
           },
           {
             "k": "Masculino",
-            "n": 15,
-            "pct": 16.853932584269664
+            "n": 20,
+            "pct": 19.41747572815534
           }
         ],
         "tempo": [
           {
             "k": "Mais de 1 ano",
-            "n": 27,
-            "pct": 30.337078651685395
+            "n": 32,
+            "pct": 31.06796116504854
           },
           {
             "k": "Menos de 6 meses",
-            "n": 23,
-            "pct": 25.842696629213485
+            "n": 27,
+            "pct": 26.21359223300971
           },
           {
             "k": "Conheci agora",
-            "n": 20,
-            "pct": 22.47191011235955
+            "n": 24,
+            "pct": 23.300970873786408
           },
           {
             "k": "De 7 meses a 1 ano",
-            "n": 19,
-            "pct": 21.34831460674157
+            "n": 20,
+            "pct": 19.41747572815534
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 78,
-            "pct": 87.64044943820225
+            "n": 89,
+            "pct": 86.40776699029125
           },
           {
             "k": "Yes",
-            "n": 11,
-            "pct": 12.359550561797752
+            "n": 14,
+            "pct": 13.592233009708737
           }
         ],
         "ocupacao": [
           {
-            "k": "Profissional Autônomo(a)",
-            "n": 21,
-            "pct": 23.595505617977526
+            "k": "Empresário(a)",
+            "n": 24,
+            "pct": 23.300970873786408
           },
           {
-            "k": "Empresário(a)",
-            "n": 20,
-            "pct": 22.47191011235955
+            "k": "Profissional Autônomo(a)",
+            "n": 23,
+            "pct": 22.330097087378643
           },
           {
             "k": "Terapeuta",
-            "n": 16,
-            "pct": 17.97752808988764
+            "n": 20,
+            "pct": 19.41747572815534
           },
           {
             "k": "Executivo (Diretor, Gerente, Gestor)",
-            "n": 10,
-            "pct": 11.235955056179774
+            "n": 11,
+            "pct": 10.679611650485436
+          },
+          {
+            "k": "Professor(a)",
+            "n": 7,
+            "pct": 6.796116504854369
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 5,
-            "pct": 5.617977528089887
-          },
-          {
-            "k": "Professor(a)",
-            "n": 5,
-            "pct": 5.617977528089887
+            "pct": 4.854368932038835
           },
           {
             "k": "Aposentado(a)",
             "n": 3,
-            "pct": 3.3707865168539324
+            "pct": 2.912621359223301
           },
           {
             "k": "CLT",
             "n": 2,
-            "pct": 2.247191011235955
+            "pct": 1.9417475728155338
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
-            "n": 19,
-            "pct": 21.34831460674157
+            "n": 23,
+            "pct": 22.330097087378643
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 17,
-            "pct": 19.101123595505616
+            "n": 19,
+            "pct": 18.446601941747574
           },
           {
             "k": "De R$ 8.001,00 até R$ 10.000,00",
-            "n": 13,
-            "pct": 14.606741573033707
+            "n": 15,
+            "pct": 14.563106796116504
           },
           {
             "k": "De R$ 15.001,00 até R$ 20.000,00",
-            "n": 11,
-            "pct": 12.359550561797752
+            "n": 14,
+            "pct": 13.592233009708737
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 10,
-            "pct": 11.235955056179774
+            "pct": 9.70873786407767
           },
           {
             "k": "De R$ 10.001,00 até R$ 15.000,00",
-            "n": 9,
-            "pct": 10.112359550561797
+            "n": 10,
+            "pct": 9.70873786407767
           },
           {
             "k": "Até R$ 2.000,00",
-            "n": 7,
-            "pct": 7.865168539325842
+            "n": 8,
+            "pct": 7.766990291262135
           },
           {
             "k": "No momento, estou sem renda.",
-            "n": 2,
-            "pct": 2.247191011235955
+            "n": 3,
+            "pct": 2.912621359223301
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
-            "n": 46,
-            "pct": 51.68539325842697
+            "n": 51,
+            "pct": 49.51456310679612
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 24,
-            "pct": 26.96629213483146
+            "n": 29,
+            "pct": 28.155339805825243
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
-            "n": 19,
-            "pct": 21.34831460674157
+            "n": 23,
+            "pct": 22.330097087378643
           }
         ],
         "objetivo": [
           {
             "k": "Uma nova carreira",
-            "n": 44,
-            "pct": 49.43820224719101
+            "n": 48,
+            "pct": 46.601941747572816
           },
           {
             "k": "Se destacar na profissão",
-            "n": 32,
-            "pct": 35.95505617977528
+            "n": 40,
+            "pct": 38.83495145631068
           },
           {
             "k": "Renda extra",
-            "n": 13,
-            "pct": 14.606741573033707
+            "n": 14,
+            "pct": 13.592233009708737
+          },
+          {
+            "k": "Mais um modelo ne negócio",
+            "n": 1,
+            "pct": 0.9708737864077669
           }
         ],
         "estado": [
           {
             "k": "São Paulo",
-            "n": 25,
-            "pct": 28.08988764044944
+            "n": 29,
+            "pct": 28.155339805825243
           },
           {
             "k": "Paraná",
             "n": 10,
-            "pct": 11.235955056179774
+            "pct": 9.70873786407767
           },
           {
             "k": "Rio Grande do Sul",
-            "n": 9,
-            "pct": 10.112359550561797
+            "n": 10,
+            "pct": 9.70873786407767
           },
           {
             "k": "Minas Gerais",
-            "n": 7,
-            "pct": 7.865168539325842
+            "n": 8,
+            "pct": 7.766990291262135
           },
           {
             "k": "Rio de Janeiro",
             "n": 7,
-            "pct": 7.865168539325842
+            "pct": 6.796116504854369
+          },
+          {
+            "k": "Santa Catarina",
+            "n": 6,
+            "pct": 5.825242718446602
           },
           {
             "k": "Mato Grosso",
+            "n": 5,
+            "pct": 4.854368932038835
+          },
+          {
+            "k": "Federal District",
             "n": 4,
-            "pct": 4.49438202247191
+            "pct": 3.8834951456310676
           },
           {
             "k": "Bahia",
             "n": 4,
-            "pct": 4.49438202247191
+            "pct": 3.8834951456310676
           },
           {
-            "k": "Federal District",
-            "n": 3,
-            "pct": 3.3707865168539324
+            "k": "Pará",
+            "n": 4,
+            "pct": 3.8834951456310676
           },
           {
             "k": "Ceará",
             "n": 3,
-            "pct": 3.3707865168539324
-          },
-          {
-            "k": "Pará",
-            "n": 3,
-            "pct": 3.3707865168539324
+            "pct": 2.912621359223301
           },
           {
             "k": "Espírito Santo",
             "n": 3,
-            "pct": 3.3707865168539324
-          },
-          {
-            "k": "Santa Catarina",
-            "n": 3,
-            "pct": 3.3707865168539324
+            "pct": 2.912621359223301
           }
         ],
-        "total_respondentes": 89,
-        "mql": 43,
-        "mql_pct": 48.31460674157304
+        "total_respondentes": 103,
+        "mql": 49,
+        "mql_pct": 47.57281553398058
       },
       "match": {
-        "vendas_total": 185,
-        "matched_pesquisa": 138,
-        "match_pct": 74.5945945945946
+        "vendas_total": 208,
+        "matched_pesquisa": 155,
+        "match_pct": 74.51923076923077
       },
       "top_ads": [
         {
@@ -16014,20 +16024,20 @@
           "ad_code": "AD-147",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 7903.42,
-          "impr": 109337,
-          "clicks": 995,
-          "lpv": 960,
-          "ic": 71,
-          "purch": 54,
-          "ctr": 0.910030456295673,
-          "cpa": 146.35962962962964,
-          "cpic": 111.31577464788732,
-          "click_lpv": 96.4824120603015,
+          "spend": 7944.62,
+          "impr": 109770,
+          "clicks": 1002,
+          "lpv": 967,
+          "ic": 72,
+          "purch": 55,
+          "ctr": 0.9128177097567641,
+          "cpa": 144.44763636363635,
+          "cpic": 110.34194444444444,
+          "click_lpv": 96.50698602794411,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XM6BDGJP/",
-          "roas": 0.6627510621983901
+          "roas": 0.6715236222752001
         },
         {
           "name": "[AD-154][EST][VD][DP100K-Fp02]",
@@ -16054,20 +16064,20 @@
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 3801.74,
-          "impr": 49185,
-          "clicks": 379,
-          "lpv": 382,
-          "ic": 33,
+          "spend": 3812.3399999999997,
+          "impr": 49351,
+          "clicks": 380,
+          "lpv": 385,
+          "ic": 34,
           "purch": 29,
-          "ctr": 0.7705601301209718,
-          "cpa": 131.09448275862067,
-          "cpic": 115.20424242424242,
-          "click_lpv": 100.7915567282322,
+          "ctr": 0.7699945289862414,
+          "cpa": 131.45999999999998,
+          "cpic": 112.12764705882353,
+          "click_lpv": 101.3157894736842,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 0.7399243504290142
+          "roas": 0.7378670317967443
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
@@ -16194,16 +16204,16 @@
           "ad_code": "AD-146",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 388.90999999999997,
-          "impr": 5107,
-          "clicks": 51,
-          "lpv": 47,
-          "ic": 2,
+          "spend": 397.23999999999995,
+          "impr": 5204,
+          "clicks": 54,
+          "lpv": 51,
+          "ic": 3,
           "purch": 0,
-          "ctr": 0.9986293322890151,
+          "ctr": 1.037663335895465,
           "cpa": 0,
-          "cpic": 194.45499999999998,
-          "click_lpv": 92.15686274509804,
+          "cpic": 132.41333333333333,
+          "click_lpv": 94.44444444444444,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
@@ -16214,20 +16224,40 @@
           "ad_code": "AD-16",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 339.2,
-          "impr": 7568,
-          "clicks": 84,
-          "lpv": 86,
+          "spend": 342.49,
+          "impr": 7657,
+          "clicks": 87,
+          "lpv": 89,
           "ic": 6,
           "purch": 4,
-          "ctr": 1.1099365750528543,
-          "cpa": 84.8,
-          "cpic": 56.53333333333333,
-          "click_lpv": 102.38095238095238,
+          "ctr": 1.136215227896043,
+          "cpa": 85.6225,
+          "cpic": 57.08166666666667,
+          "click_lpv": 102.29885057471265,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8K7jBz9/",
-          "roas": 1.1438679245283019
+          "roas": 1.1328797921107185
+        },
+        {
+          "name": "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
+          "ad_code": "AD-15",
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          "spend": 333.9,
+          "impr": 5768,
+          "clicks": 76,
+          "lpv": 72,
+          "ic": 8,
+          "purch": 5,
+          "ctr": 1.3176144244105408,
+          "cpa": 66.78,
+          "cpic": 41.7375,
+          "click_lpv": 94.73684210526315,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DZFT8mcjP98/",
+          "roas": 1.4525306978137167
         },
         {
           "name": "[AD-99][EST][VD][DP100K-Fp02]",
@@ -16248,26 +16278,6 @@
           "camp_status": "PAUSED",
           "ig_url": "https://www.instagram.com/p/DYVzHdZjAOP/",
           "roas": 0.2940641484266052
-        },
-        {
-          "name": "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
-          "ad_code": "AD-15",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
-          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 324.51,
-          "impr": 5615,
-          "clicks": 74,
-          "lpv": 70,
-          "ic": 8,
-          "purch": 5,
-          "ctr": 1.3178984861976848,
-          "cpa": 64.902,
-          "cpic": 40.56375,
-          "click_lpv": 94.5945945945946,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DZFT8mcjP98/",
-          "roas": 1.4945610304767187
         },
         {
           "name": "[AD-07][VID][VD][DP100K-Fp02]",
@@ -16314,8 +16324,8 @@
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 157.39999999999998,
-          "impr": 11032,
+          "spend": 157.45,
+          "impr": 11038,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16334,8 +16344,8 @@
           "ad_code": "AD-02",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 157.1,
-          "impr": 13569,
+          "spend": 157.42,
+          "impr": 13596,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16354,13 +16364,13 @@
           "ad_code": "AD-01",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 157.01000000000002,
-          "impr": 7708,
+          "spend": 157.05,
+          "impr": 7714,
           "clicks": 1,
           "lpv": 0,
           "ic": 0,
           "purch": 0,
-          "ctr": 0.012973533990659055,
+          "ctr": 0.012963443090484831,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 0.0,
@@ -16370,12 +16380,32 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-12][DP100K-Fp02][VID][VD]_nr01_reacao",
+          "ad_code": "AD-12",
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          "spend": 156.99999999999997,
+          "impr": 2157,
+          "clicks": 48,
+          "lpv": 41,
+          "ic": 1,
+          "purch": 1,
+          "ctr": 2.2253129346314324,
+          "cpa": 156.99999999999997,
+          "cpic": 156.99999999999997,
+          "click_lpv": 85.41666666666666,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DZFT6ytjMq4/",
+          "roas": 0.6178343949044587
+        },
+        {
           "name": "[AD-05][DP100K-FP02][NT]_contrato-88k",
           "ad_code": "AD-05",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 156.38,
-          "impr": 9394,
+          "spend": 156.76,
+          "impr": 9405,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16394,8 +16424,8 @@
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 155.37999999999997,
-          "impr": 10455,
+          "spend": 155.42999999999998,
+          "impr": 10458,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16414,8 +16444,8 @@
           "ad_code": "AD-07",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 155.09,
-          "impr": 10628,
+          "spend": 155.12,
+          "impr": 10632,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16434,8 +16464,8 @@
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 154.70000000000002,
-          "impr": 11698,
+          "spend": 154.77,
+          "impr": 11705,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16454,8 +16484,8 @@
           "ad_code": "AD-04",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 154.22,
-          "impr": 11289,
+          "spend": 154.29,
+          "impr": 11292,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16490,26 +16520,6 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-12][DP100K-Fp02][VID][VD]_nr01_reacao",
-          "ad_code": "AD-12",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
-          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 147.95,
-          "impr": 2025,
-          "clicks": 43,
-          "lpv": 35,
-          "ic": 1,
-          "purch": 1,
-          "ctr": 2.123456790123457,
-          "cpa": 147.95,
-          "cpic": 147.95,
-          "click_lpv": 81.3953488372093,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DZFT6ytjMq4/",
-          "roas": 0.6556269009800609
-        },
-        {
           "name": "[AD-106][EST][VD][DP100K-Fp02]",
           "ad_code": "AD-106",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][ESCALA_FDS]_14_05",
@@ -16534,8 +16544,8 @@
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 147.10999999999999,
-          "impr": 12184,
+          "spend": 147.26999999999998,
+          "impr": 12194,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -16574,13 +16584,13 @@
           "ad_code": "AD-11",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 102.82,
-          "impr": 1260,
+          "spend": 103.8,
+          "impr": 1272,
           "clicks": 15,
           "lpv": 15,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.1904761904761905,
+          "ctr": 1.179245283018868,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -16594,16 +16604,16 @@
           "ad_code": "AD-155",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 67.64,
-          "impr": 1695,
-          "clicks": 24,
+          "spend": 69.13000000000001,
+          "impr": 1732,
+          "clicks": 25,
           "lpv": 18,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.415929203539823,
+          "ctr": 1.443418013856813,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 75.0,
+          "click_lpv": 72.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUbmjjPbk/",
@@ -16613,21 +16623,21 @@
       "mql_por_ad": [
         {
           "ad": "AD-147",
-          "total": 31,
-          "mql": 16,
-          "mql_pct": 51.61290322580645
+          "total": 34,
+          "mql": 17,
+          "mql_pct": 50.0
+        },
+        {
+          "ad": "AD-152",
+          "total": 20,
+          "mql": 8,
+          "mql_pct": 40.0
         },
         {
           "ad": "AD-154",
           "total": 15,
           "mql": 8,
           "mql_pct": 53.333333333333336
-        },
-        {
-          "ad": "AD-152",
-          "total": 15,
-          "mql": 5,
-          "mql_pct": 33.33333333333333
         },
         {
           "ad": "AD-16",
@@ -16660,13 +16670,19 @@
           "mql_pct": 100.0
         },
         {
+          "ad": "AD-15",
+          "total": 4,
+          "mql": 1,
+          "mql_pct": 25.0
+        },
+        {
           "ad": "unknown",
           "total": 3,
           "mql": 1,
           "mql_pct": 33.33333333333333
         },
         {
-          "ad": "AD-15",
+          "ad": "AD-146",
           "total": 3,
           "mql": 1,
           "mql_pct": 33.33333333333333
@@ -16690,7 +16706,13 @@
           "mql_pct": 0.0
         },
         {
-          "ad": "AD-146",
+          "ad": "AD-10",
+          "total": 1,
+          "mql": 0,
+          "mql_pct": 0.0
+        },
+        {
+          "ad": "AD-12",
           "total": 1,
           "mql": 0,
           "mql_pct": 0.0
@@ -17353,457 +17375,487 @@
           "idade": [
             {
               "k": "35 a 44 anos",
-              "n": 4,
-              "pct": 26.666666666666668
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "45 a 54 anos",
-              "n": 4,
-              "pct": 26.666666666666668
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "55 a 64 anos",
-              "n": 3,
+              "n": 4,
               "pct": 20.0
             },
             {
               "k": "26 a 34 anos",
-              "n": 2,
-              "pct": 13.333333333333334
+              "n": 3,
+              "pct": 15.0
             },
             {
               "k": "Acima de 65 anos",
-              "n": 2,
-              "pct": 13.333333333333334
+              "n": 3,
+              "pct": 15.0
             }
           ],
           "genero": [
             {
               "k": "Feminino",
-              "n": 13,
-              "pct": 86.66666666666667
+              "n": 16,
+              "pct": 80.0
             },
             {
               "k": "Masculino",
-              "n": 2,
-              "pct": 13.333333333333334
+              "n": 4,
+              "pct": 20.0
             }
           ],
           "tempo": [
             {
               "k": "Mais de 1 ano",
-              "n": 5,
-              "pct": 33.33333333333333
+              "n": 6,
+              "pct": 30.0
             },
             {
               "k": "Menos de 6 meses",
-              "n": 5,
-              "pct": 33.33333333333333
+              "n": 6,
+              "pct": 30.0
             },
             {
               "k": "Conheci agora",
-              "n": 3,
-              "pct": 20.0
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "De 7 meses a 1 ano",
-              "n": 2,
-              "pct": 13.333333333333334
+              "n": 3,
+              "pct": 15.0
             }
           ],
           "previo": [
             {
               "k": "No",
-              "n": 12,
-              "pct": 80.0
+              "n": 17,
+              "pct": 85.0
             },
             {
               "k": "Yes",
               "n": 3,
-              "pct": 20.0
+              "pct": 15.0
             }
           ],
           "ocupacao": [
             {
               "k": "Empresário(a)",
-              "n": 5,
-              "pct": 33.33333333333333
+              "n": 6,
+              "pct": 30.0
             },
             {
               "k": "Terapeuta",
-              "n": 4,
-              "pct": 26.666666666666668
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "Profissional Autônomo(a)",
-              "n": 4,
-              "pct": 26.666666666666668
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "Professor(a)",
-              "n": 1,
-              "pct": 6.666666666666667
+              "n": 2,
+              "pct": 10.0
             },
             {
               "k": "CLT",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 5.0
             }
           ],
           "renda": [
             {
-              "k": "De R$ 8.001,00 até R$ 10.000,00",
-              "n": 4,
-              "pct": 26.666666666666668
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 6,
+              "pct": 30.0
             },
             {
-              "k": "De R$ 2.001,00 até R$ 5.000,00",
-              "n": 4,
-              "pct": 26.666666666666668
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 5,
+              "pct": 25.0
             },
             {
               "k": "Até R$ 2.000,00",
               "n": 4,
-              "pct": 26.666666666666668
+              "pct": 20.0
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 3,
+              "pct": 15.0
             },
             {
               "k": "Tenho uma reserva financeira temporária.",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "De R$ 5.001,00 até R$ 8.000,00",
               "n": 1,
-              "pct": 6.666666666666667
-            },
-            {
-              "k": "De R$ 15.001,00 até R$ 20.000,00",
-              "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             }
           ],
           "autoimg": [
             {
               "k": "Já palestrei, mas não me considero um palestrante.",
-              "n": 9,
-              "pct": 60.0
+              "n": 11,
+              "pct": 55.00000000000001
             },
             {
               "k": "Iniciante, nunca palestrei.",
-              "n": 5,
-              "pct": 33.33333333333333
+              "n": 6,
+              "pct": 30.0
             },
             {
               "k": "Sou palestrante e quero me tornar memorável.",
-              "n": 1,
-              "pct": 6.666666666666667
+              "n": 3,
+              "pct": 15.0
             }
           ],
           "objetivo": [
             {
               "k": "Uma nova carreira",
-              "n": 9,
-              "pct": 60.0
+              "n": 10,
+              "pct": 50.0
             },
             {
               "k": "Se destacar na profissão",
-              "n": 4,
-              "pct": 26.666666666666668
+              "n": 7,
+              "pct": 35.0
             },
             {
               "k": "Renda extra",
-              "n": 2,
-              "pct": 13.333333333333334
+              "n": 3,
+              "pct": 15.0
             }
           ],
           "estado": [
             {
               "k": "São Paulo",
-              "n": 7,
-              "pct": 46.666666666666664
+              "n": 9,
+              "pct": 45.0
             },
             {
               "k": "Ceará",
               "n": 2,
-              "pct": 13.333333333333334
+              "pct": 10.0
             },
             {
               "k": "Paraíba",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "Piauí",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "Rio de Janeiro",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "Paraná",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "Minas Gerais",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
             },
             {
               "k": "Bahia",
               "n": 1,
-              "pct": 6.666666666666667
+              "pct": 5.0
+            },
+            {
+              "k": "Pará",
+              "n": 1,
+              "pct": 5.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 5.0
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 5.0
             }
           ],
-          "total_respondentes": 15,
-          "mql": 5,
-          "mql_pct": 33.33333333333333
+          "total_respondentes": 20,
+          "mql": 8,
+          "mql_pct": 40.0
         },
         "AD-147": {
           "idade": [
             {
               "k": "45 a 54 anos",
-              "n": 13,
-              "pct": 41.935483870967744
+              "n": 14,
+              "pct": 41.17647058823529
             },
             {
               "k": "35 a 44 anos",
               "n": 10,
-              "pct": 32.25806451612903
+              "pct": 29.411764705882355
             },
             {
               "k": "26 a 34 anos",
-              "n": 4,
-              "pct": 12.903225806451612
+              "n": 5,
+              "pct": 14.705882352941178
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 3,
+              "pct": 8.823529411764707
             },
             {
               "k": "Menos de 25",
               "n": 2,
-              "pct": 6.451612903225806
-            },
-            {
-              "k": "55 a 64 anos",
-              "n": 2,
-              "pct": 6.451612903225806
+              "pct": 5.88235294117647
             }
           ],
           "genero": [
             {
               "k": "Feminino",
               "n": 25,
-              "pct": 80.64516129032258
+              "pct": 73.52941176470588
             },
             {
               "k": "Masculino",
-              "n": 6,
-              "pct": 19.35483870967742
+              "n": 9,
+              "pct": 26.47058823529412
             }
           ],
           "tempo": [
             {
               "k": "Mais de 1 ano",
-              "n": 11,
-              "pct": 35.483870967741936
+              "n": 13,
+              "pct": 38.23529411764706
             },
             {
               "k": "De 7 meses a 1 ano",
               "n": 10,
-              "pct": 32.25806451612903
+              "pct": 29.411764705882355
+            },
+            {
+              "k": "Conheci agora",
+              "n": 6,
+              "pct": 17.647058823529413
             },
             {
               "k": "Menos de 6 meses",
               "n": 5,
-              "pct": 16.129032258064516
-            },
-            {
-              "k": "Conheci agora",
-              "n": 5,
-              "pct": 16.129032258064516
+              "pct": 14.705882352941178
             }
           ],
           "previo": [
             {
               "k": "No",
-              "n": 28,
-              "pct": 90.32258064516128
+              "n": 30,
+              "pct": 88.23529411764706
             },
             {
               "k": "Yes",
-              "n": 3,
-              "pct": 9.67741935483871
+              "n": 4,
+              "pct": 11.76470588235294
             }
           ],
           "ocupacao": [
             {
               "k": "Profissional Autônomo(a)",
               "n": 10,
-              "pct": 32.25806451612903
+              "pct": 29.411764705882355
             },
             {
               "k": "Terapeuta",
-              "n": 6,
-              "pct": 19.35483870967742
+              "n": 7,
+              "pct": 20.588235294117645
             },
             {
               "k": "Empresário(a)",
-              "n": 5,
-              "pct": 16.129032258064516
+              "n": 6,
+              "pct": 17.647058823529413
             },
             {
               "k": "Executivo (Diretor, Gerente, Gestor)",
               "n": 4,
-              "pct": 12.903225806451612
+              "pct": 11.76470588235294
             },
             {
               "k": "Professor(a)",
-              "n": 2,
-              "pct": 6.451612903225806
+              "n": 3,
+              "pct": 8.823529411764707
             },
             {
               "k": "Funcionário(a) Público(a)",
               "n": 2,
-              "pct": 6.451612903225806
+              "pct": 5.88235294117647
             },
             {
               "k": "Vendedor(a)",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             },
             {
               "k": "Palestrante",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             }
           ],
           "renda": [
             {
-              "k": "De R$ 2.001,00 até R$ 5.000,00",
-              "n": 7,
-              "pct": 22.58064516129032
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 8,
+              "pct": 23.52941176470588
             },
             {
-              "k": "De R$ 5.001,00 até R$ 8.000,00",
-              "n": 6,
-              "pct": 19.35483870967742
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 7,
+              "pct": 20.588235294117645
             },
             {
               "k": "De R$ 15.001,00 até R$ 20.000,00",
-              "n": 5,
-              "pct": 16.129032258064516
+              "n": 6,
+              "pct": 17.647058823529413
             },
             {
               "k": "De R$ 10.001,00 até R$ 15.000,00",
               "n": 4,
-              "pct": 12.903225806451612
+              "pct": 11.76470588235294
             },
             {
               "k": "Acima de R$ 20.000",
               "n": 4,
-              "pct": 12.903225806451612
+              "pct": 11.76470588235294
             },
             {
               "k": "De R$ 8.001,00 até R$ 10.000,00",
               "n": 3,
-              "pct": 9.67741935483871
+              "pct": 8.823529411764707
             },
             {
               "k": "No momento, estou sem renda.",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             },
             {
               "k": "Até R$ 2.000,00",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             }
           ],
           "autoimg": [
             {
               "k": "Já palestrei, mas não me considero um palestrante.",
-              "n": 12,
-              "pct": 38.70967741935484
+              "n": 13,
+              "pct": 38.23529411764706
             },
             {
               "k": "Iniciante, nunca palestrei.",
-              "n": 10,
-              "pct": 32.25806451612903
+              "n": 11,
+              "pct": 32.35294117647059
             },
             {
               "k": "Sou palestrante e quero me tornar memorável.",
-              "n": 9,
-              "pct": 29.03225806451613
+              "n": 10,
+              "pct": 29.411764705882355
             }
           ],
           "objetivo": [
             {
               "k": "Uma nova carreira",
-              "n": 16,
-              "pct": 51.61290322580645
+              "n": 17,
+              "pct": 50.0
             },
             {
               "k": "Se destacar na profissão",
-              "n": 15,
-              "pct": 48.38709677419355
+              "n": 16,
+              "pct": 47.05882352941176
+            },
+            {
+              "k": "Mais um modelo ne negócio",
+              "n": 1,
+              "pct": 2.941176470588235
             }
           ],
           "estado": [
             {
               "k": "São Paulo",
-              "n": 12,
-              "pct": 38.70967741935484
+              "n": 13,
+              "pct": 38.23529411764706
             },
             {
               "k": "Paraná",
               "n": 4,
-              "pct": 12.903225806451612
+              "pct": 11.76470588235294
             },
             {
               "k": "Rio Grande do Sul",
               "n": 3,
-              "pct": 9.67741935483871
+              "pct": 8.823529411764707
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 3,
+              "pct": 8.823529411764707
             },
             {
               "k": "Minas Gerais",
               "n": 3,
-              "pct": 9.67741935483871
+              "pct": 8.823529411764707
             },
             {
               "k": "Federal District",
               "n": 2,
-              "pct": 6.451612903225806
-            },
-            {
-              "k": "Santa Catarina",
-              "n": 2,
-              "pct": 6.451612903225806
+              "pct": 5.88235294117647
             },
             {
               "k": "Roraima",
               "n": 2,
-              "pct": 6.451612903225806
+              "pct": 5.88235294117647
             },
             {
               "k": "Espírito Santo",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             },
             {
               "k": "Pará",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
             },
             {
               "k": "Mato Grosso",
               "n": 1,
-              "pct": 3.225806451612903
+              "pct": 2.941176470588235
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 2.941176470588235
             }
           ],
-          "total_respondentes": 31,
-          "mql": 16,
-          "mql_pct": 51.61290322580645
+          "total_respondentes": 34,
+          "mql": 17,
+          "mql_pct": 50.0
         },
         "AD-16": {
           "idade": [
@@ -17943,10 +17995,153 @@
             {
               "k": "35 a 44 anos",
               "n": 2,
-              "pct": 66.66666666666666
+              "pct": 50.0
             },
             {
               "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 4,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 50.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Renda extra",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "total_respondentes": 4,
+          "mql": 1,
+          "mql_pct": 25.0
+        },
+        "AD-146": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
               "n": 1,
               "pct": 33.33333333333333
             }
@@ -17961,30 +18156,30 @@
           "tempo": [
             {
               "k": "Menos de 6 meses",
-              "n": 1,
-              "pct": 33.33333333333333
+              "n": 2,
+              "pct": 66.66666666666666
             },
             {
               "k": "Mais de 1 ano",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
-              "k": "De 7 meses a 1 ano",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "previo": [
             {
+              "k": "Yes",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
               "k": "No",
-              "n": 3,
-              "pct": 100.0
+              "n": 1,
+              "pct": 33.33333333333333
             }
           ],
           "ocupacao": [
             {
-              "k": "Funcionário(a) Público(a)",
+              "k": "Advogada",
               "n": 1,
               "pct": 33.33333333333333
             },
@@ -17994,31 +18189,31 @@
               "pct": 33.33333333333333
             },
             {
-              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "k": "Empresário(a)",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "renda": [
             {
-              "k": "De R$ 2.001,00 até R$ 5.000,00",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
-              "k": "De R$ 10.001,00 até R$ 15.000,00",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
               "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "autoimg": [
             {
-              "k": "Sou palestrante e quero me tornar memorável.",
+              "k": "Já palestrei, mas não me considero um palestrante.",
               "n": 2,
               "pct": 66.66666666666666
             },
@@ -18030,14 +18225,9 @@
           ],
           "objetivo": [
             {
-              "k": "Renda extra",
-              "n": 2,
-              "pct": 66.66666666666666
-            },
-            {
               "k": "Se destacar na profissão",
-              "n": 1,
-              "pct": 33.33333333333333
+              "n": 3,
+              "pct": 100.0
             }
           ],
           "estado": [
@@ -18047,12 +18237,12 @@
               "pct": 33.33333333333333
             },
             {
-              "k": "Rio Grande do Sul",
+              "k": "Sergipe",
               "n": 1,
               "pct": 33.33333333333333
             },
             {
-              "k": "Alagoas",
+              "k": "São Paulo",
               "n": 1,
               "pct": 33.33333333333333
             }
@@ -18146,26 +18336,35 @@
         },
         {
           "date": "2026-06-03",
-          "spend": 2421.4799999999996,
+          "spend": 2423.8799999999997,
           "vendas": 13,
           "ic": 18,
           "visitas": 298,
-          "impr": 32974,
-          "clicks": 323
+          "impr": 32997,
+          "clicks": 324
         },
         {
           "date": "2026-06-04",
-          "spend": 503.06999999999994,
+          "spend": 2212.6,
+          "vendas": 19,
+          "ic": 26,
+          "visitas": 370,
+          "impr": 31178,
+          "clicks": 391
+        },
+        {
+          "date": "2026-06-05",
+          "spend": 558.16,
           "vendas": 3,
           "ic": 5,
-          "visitas": 60,
-          "impr": 5648,
-          "clicks": 62
+          "visitas": 77,
+          "impr": 7075,
+          "clicks": 81
         }
       ],
-      "roas_real": 0.7300483261842223,
-      "cpa_hubla": 135.7442162162162,
-      "cpa_gerenciador": 187.4080597014925
+      "roas_real": 0.7518578288463875,
+      "cpa_hubla": 131.64793269230768,
+      "cpa_gerenciador": 178.97235294117644
     },
     "junho_sem1": {
       "periodo": {
@@ -20418,7 +20617,7 @@
     "junho_sem2": {
       "periodo": {
         "inicio": "2026-06-01",
-        "fim": "2026-06-04",
+        "fim": "2026-06-05",
         "label": "Junho/26 - 2",
         "nome": "Semana 2",
         "turmas": [
@@ -20426,109 +20625,109 @@
         ]
       },
       "trafego": {
-        "spend": 5083.67,
-        "vendas_gerenciador": 34,
-        "ic": 49,
-        "visitas": 665,
-        "impressions": 68024,
-        "clicks": 705,
-        "ctr": 1.036398918028931,
-        "cpm": 74.73347642008703,
-        "cpc": 7.210879432624114,
-        "cpa": 149.51970588235295,
-        "cpic": 103.74836734693878,
-        "cplpv": 7.6446165413533835,
-        "click_lpv": 94.32624113475178,
-        "lpv_ic": 7.368421052631578,
-        "ic_purch": 69.38775510204081,
-        "lpv_purch": 5.112781954887218
+        "spend": 7353.760000000002,
+        "vendas_gerenciador": 53,
+        "ic": 75,
+        "visitas": 1052,
+        "impressions": 100652,
+        "clicks": 1116,
+        "ctr": 1.108770814290824,
+        "cpm": 73.06124071056712,
+        "cpc": 6.589390681003586,
+        "cpa": 138.75018867924533,
+        "cpic": 98.05013333333336,
+        "cplpv": 6.990266159695819,
+        "click_lpv": 94.26523297491039,
+        "lpv_ic": 7.1292775665399235,
+        "ic_purch": 70.66666666666667,
+        "lpv_purch": 5.038022813688213
       },
       "hubla": {
-        "total": 55,
-        "meta_ads": 35,
-        "pct_meta": 63.63636363636363,
-        "faturamento": 5421.209999999999,
-        "ticket_medio": 98.56745454545452,
+        "total": 78,
+        "meta_ads": 55,
+        "pct_meta": 70.51282051282051,
+        "faturamento": 7675.689999999999,
+        "ticket_medio": 98.40628205128203,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 35,
-            "pct": 63.63636363636363
+            "n": 55,
+            "pct": 70.51282051282051
           },
           {
             "origem": "IPM (cross-sell)",
-            "n": 8,
-            "pct": 14.545454545454545
+            "n": 9,
+            "pct": 11.538461538461538
           },
           {
             "origem": "Orgânico Instagram",
+            "n": 5,
+            "pct": 6.41025641025641
+          },
+          {
+            "origem": "WhatsApp",
             "n": 4,
-            "pct": 7.2727272727272725
+            "pct": 5.128205128205128
           },
           {
             "origem": "Sem UTM",
             "n": 3,
-            "pct": 5.454545454545454
-          },
-          {
-            "origem": "WhatsApp",
-            "n": 3,
-            "pct": 5.454545454545454
+            "pct": 3.8461538461538463
           },
           {
             "origem": "Outros (mcpm)",
             "n": 1,
-            "pct": 1.8181818181818181
+            "pct": 1.282051282051282
           },
           {
             "origem": "E-mail",
             "n": 1,
-            "pct": 1.8181818181818181
+            "pct": 1.282051282051282
           }
         ]
       },
       "pesquisa": {
-        "total": 49,
-        "meta_ads": 30,
-        "pct_meta": 61.224489795918366,
-        "mql": 11,
-        "mql_pct": 36.666666666666664,
-        "mql_total": 17,
-        "mql_total_pct": 34.69387755102041,
-        "mql_10k": 15,
-        "mql_10k_pct": 30.612244897959183,
-        "mql_10k_meta": 11,
-        "mql_10k_meta_pct": 36.666666666666664,
+        "total": 64,
+        "meta_ads": 43,
+        "pct_meta": 67.1875,
+        "mql": 16,
+        "mql_pct": 37.2093023255814,
+        "mql_total": 24,
+        "mql_total_pct": 37.5,
+        "mql_10k": 19,
+        "mql_10k_pct": 29.6875,
+        "mql_10k_meta": 14,
+        "mql_10k_meta_pct": 32.55813953488372,
         "por_origem": [
           {
             "origem": "Meta Ads",
-            "n": 30,
-            "pct": 61.224489795918366
+            "n": 43,
+            "pct": 67.1875
           },
           {
             "origem": "IPM (cross-sell)",
             "n": 6,
-            "pct": 12.244897959183673
+            "pct": 9.375
+          },
+          {
+            "origem": "Orgânico Instagram",
+            "n": 5,
+            "pct": 7.8125
           },
           {
             "origem": "Sem origem",
             "n": 5,
-            "pct": 10.204081632653061
-          },
-          {
-            "origem": "Orgânico Instagram",
-            "n": 4,
-            "pct": 8.16326530612245
+            "pct": 7.8125
           },
           {
             "origem": "WhatsApp",
-            "n": 3,
-            "pct": 6.122448979591836
+            "n": 4,
+            "pct": 6.25
           },
           {
             "origem": "Outros",
             "n": 1,
-            "pct": 2.0408163265306123
+            "pct": 1.5625
           }
         ]
       },
@@ -20536,502 +20735,532 @@
         "idade": [
           {
             "k": "45 a 54 anos",
-            "n": 12,
-            "pct": 40.0
+            "n": 16,
+            "pct": 37.2093023255814
           },
           {
             "k": "35 a 44 anos",
-            "n": 9,
-            "pct": 30.0
+            "n": 11,
+            "pct": 25.581395348837212
           },
           {
             "k": "26 a 34 anos",
-            "n": 5,
-            "pct": 16.666666666666664
+            "n": 8,
+            "pct": 18.6046511627907
           },
           {
             "k": "55 a 64 anos",
-            "n": 3,
-            "pct": 10.0
+            "n": 6,
+            "pct": 13.953488372093023
           },
           {
             "k": "Acima de 65 anos",
-            "n": 1,
-            "pct": 3.3333333333333335
+            "n": 2,
+            "pct": 4.651162790697675
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 28,
-            "pct": 93.33333333333333
+            "n": 36,
+            "pct": 83.72093023255815
           },
           {
             "k": "Masculino",
-            "n": 2,
-            "pct": 6.666666666666667
+            "n": 7,
+            "pct": 16.27906976744186
           }
         ],
         "tempo": [
           {
             "k": "Mais de 1 ano",
-            "n": 11,
-            "pct": 36.666666666666664
+            "n": 15,
+            "pct": 34.883720930232556
           },
           {
             "k": "Menos de 6 meses",
-            "n": 9,
-            "pct": 30.0
-          },
-          {
-            "k": "De 7 meses a 1 ano",
-            "n": 6,
-            "pct": 20.0
+            "n": 13,
+            "pct": 30.23255813953488
           },
           {
             "k": "Conheci agora",
-            "n": 4,
-            "pct": 13.333333333333334
+            "n": 8,
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "De 7 meses a 1 ano",
+            "n": 7,
+            "pct": 16.27906976744186
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 25,
-            "pct": 83.33333333333334
+            "n": 35,
+            "pct": 81.3953488372093
           },
           {
             "k": "Yes",
-            "n": 5,
-            "pct": 16.666666666666664
+            "n": 8,
+            "pct": 18.6046511627907
           }
         ],
         "ocupacao": [
           {
             "k": "Profissional Autônomo(a)",
-            "n": 9,
-            "pct": 30.0
+            "n": 11,
+            "pct": 25.581395348837212
           },
           {
             "k": "Empresário(a)",
-            "n": 4,
-            "pct": 13.333333333333334
+            "n": 8,
+            "pct": 18.6046511627907
           },
           {
             "k": "Terapeuta",
+            "n": 8,
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "Professor(a)",
             "n": 4,
-            "pct": 13.333333333333334
+            "pct": 9.30232558139535
+          },
+          {
+            "k": "Executivo (Diretor, Gerente, Gestor)",
+            "n": 3,
+            "pct": 6.976744186046512
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 3,
-            "pct": 10.0
-          },
-          {
-            "k": "Professor(a)",
-            "n": 2,
-            "pct": 6.666666666666667
+            "pct": 6.976744186046512
           },
           {
             "k": "Aposentado(a)",
             "n": 2,
-            "pct": 6.666666666666667
-          },
-          {
-            "k": "Executivo (Diretor, Gerente, Gestor)",
-            "n": 2,
-            "pct": 6.666666666666667
+            "pct": 4.651162790697675
           },
           {
             "k": "Medico",
             "n": 1,
-            "pct": 3.3333333333333335
+            "pct": 2.3255813953488373
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
-            "n": 10,
-            "pct": 33.33333333333333
+            "n": 14,
+            "pct": 32.55813953488372
+          },
+          {
+            "k": "De R$ 5.001,00 até R$ 8.000,00",
+            "n": 7,
+            "pct": 16.27906976744186
+          },
+          {
+            "k": "De R$ 15.001,00 até R$ 20.000,00",
+            "n": 7,
+            "pct": 16.27906976744186
           },
           {
             "k": "De R$ 10.001,00 até R$ 15.000,00",
             "n": 5,
-            "pct": 16.666666666666664
-          },
-          {
-            "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 5,
-            "pct": 16.666666666666664
-          },
-          {
-            "k": "De R$ 15.001,00 até R$ 20.000,00",
-            "n": 4,
-            "pct": 13.333333333333334
+            "pct": 11.627906976744185
           },
           {
             "k": "Até R$ 2.000,00",
-            "n": 3,
-            "pct": 10.0
+            "n": 4,
+            "pct": 9.30232558139535
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 2,
-            "pct": 6.666666666666667
+            "pct": 4.651162790697675
           },
           {
             "k": "No momento, estou sem renda.",
-            "n": 1,
-            "pct": 3.3333333333333335
+            "n": 2,
+            "pct": 4.651162790697675
+          },
+          {
+            "k": "De R$ 8.001,00 até R$ 10.000,00",
+            "n": 2,
+            "pct": 4.651162790697675
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
-            "n": 16,
-            "pct": 53.333333333333336
+            "n": 21,
+            "pct": 48.837209302325576
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 7,
-            "pct": 23.333333333333332
+            "n": 12,
+            "pct": 27.906976744186046
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
-            "n": 7,
-            "pct": 23.333333333333332
+            "n": 10,
+            "pct": 23.25581395348837
           }
         ],
         "objetivo": [
           {
-            "k": "Uma nova carreira",
-            "n": 13,
-            "pct": 43.333333333333336
+            "k": "Se destacar na profissão",
+            "n": 21,
+            "pct": 48.837209302325576
           },
           {
-            "k": "Se destacar na profissão",
-            "n": 13,
-            "pct": 43.333333333333336
+            "k": "Uma nova carreira",
+            "n": 16,
+            "pct": 37.2093023255814
           },
           {
             "k": "Renda extra",
-            "n": 4,
-            "pct": 13.333333333333334
+            "n": 5,
+            "pct": 11.627906976744185
+          },
+          {
+            "k": "Mais um modelo ne negócio",
+            "n": 1,
+            "pct": 2.3255813953488373
           }
         ],
         "estado": [
           {
             "k": "Paraná",
             "n": 8,
-            "pct": 26.666666666666668
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "São Paulo",
+            "n": 6,
+            "pct": 13.953488372093023
           },
           {
             "k": "Minas Gerais",
+            "n": 5,
+            "pct": 11.627906976744185
+          },
+          {
+            "k": "Rio Grande do Sul",
             "n": 4,
-            "pct": 13.333333333333334
+            "pct": 9.30232558139535
+          },
+          {
+            "k": "Santa Catarina",
+            "n": 4,
+            "pct": 9.30232558139535
           },
           {
             "k": "Rio de Janeiro",
             "n": 3,
-            "pct": 10.0
+            "pct": 6.976744186046512
+          },
+          {
+            "k": "Mato Grosso",
+            "n": 3,
+            "pct": 6.976744186046512
           },
           {
             "k": "Bahia",
             "n": 3,
-            "pct": 10.0
-          },
-          {
-            "k": "Rio Grande do Sul",
-            "n": 3,
-            "pct": 10.0
+            "pct": 6.976744186046512
           },
           {
             "k": "Federal District",
             "n": 2,
-            "pct": 6.666666666666667
-          },
-          {
-            "k": "São Paulo",
-            "n": 2,
-            "pct": 6.666666666666667
-          },
-          {
-            "k": "Mato Grosso",
-            "n": 2,
-            "pct": 6.666666666666667
+            "pct": 4.651162790697675
           },
           {
             "k": "Espírito Santo",
             "n": 1,
-            "pct": 3.3333333333333335
-          },
-          {
-            "k": "Santa Catarina",
-            "n": 1,
-            "pct": 3.3333333333333335
+            "pct": 2.3255813953488373
           },
           {
             "k": "Alagoas",
             "n": 1,
-            "pct": 3.3333333333333335
+            "pct": 2.3255813953488373
+          },
+          {
+            "k": "Pará",
+            "n": 1,
+            "pct": 2.3255813953488373
           }
         ],
-        "total_respondentes": 30,
-        "mql": 11,
-        "mql_pct": 36.666666666666664
+        "total_respondentes": 43,
+        "mql": 16,
+        "mql_pct": 37.2093023255814
       },
       "persona_compradoras_meta": {
         "idade": [
           {
             "k": "45 a 54 anos",
-            "n": 12,
-            "pct": 41.37931034482759
+            "n": 16,
+            "pct": 37.2093023255814
           },
           {
             "k": "35 a 44 anos",
-            "n": 9,
-            "pct": 31.03448275862069
+            "n": 11,
+            "pct": 25.581395348837212
           },
           {
             "k": "26 a 34 anos",
-            "n": 5,
-            "pct": 17.24137931034483
+            "n": 8,
+            "pct": 18.6046511627907
           },
           {
             "k": "55 a 64 anos",
-            "n": 2,
-            "pct": 6.896551724137931
+            "n": 6,
+            "pct": 13.953488372093023
           },
           {
             "k": "Acima de 65 anos",
-            "n": 1,
-            "pct": 3.4482758620689653
+            "n": 2,
+            "pct": 4.651162790697675
           }
         ],
         "genero": [
           {
             "k": "Feminino",
-            "n": 27,
-            "pct": 93.10344827586206
+            "n": 36,
+            "pct": 83.72093023255815
           },
           {
             "k": "Masculino",
-            "n": 2,
-            "pct": 6.896551724137931
+            "n": 7,
+            "pct": 16.27906976744186
           }
         ],
         "tempo": [
           {
             "k": "Mais de 1 ano",
-            "n": 10,
-            "pct": 34.48275862068966
+            "n": 15,
+            "pct": 34.883720930232556
           },
           {
             "k": "Menos de 6 meses",
-            "n": 9,
-            "pct": 31.03448275862069
-          },
-          {
-            "k": "De 7 meses a 1 ano",
-            "n": 6,
-            "pct": 20.689655172413794
+            "n": 13,
+            "pct": 30.23255813953488
           },
           {
             "k": "Conheci agora",
-            "n": 4,
-            "pct": 13.793103448275861
+            "n": 8,
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "De 7 meses a 1 ano",
+            "n": 7,
+            "pct": 16.27906976744186
           }
         ],
         "previo": [
           {
             "k": "No",
-            "n": 24,
-            "pct": 82.75862068965517
+            "n": 35,
+            "pct": 81.3953488372093
           },
           {
             "k": "Yes",
-            "n": 5,
-            "pct": 17.24137931034483
+            "n": 8,
+            "pct": 18.6046511627907
           }
         ],
         "ocupacao": [
           {
             "k": "Profissional Autônomo(a)",
-            "n": 9,
-            "pct": 31.03448275862069
+            "n": 11,
+            "pct": 25.581395348837212
           },
           {
             "k": "Empresário(a)",
-            "n": 4,
-            "pct": 13.793103448275861
+            "n": 8,
+            "pct": 18.6046511627907
           },
           {
             "k": "Terapeuta",
+            "n": 8,
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "Professor(a)",
             "n": 4,
-            "pct": 13.793103448275861
+            "pct": 9.30232558139535
+          },
+          {
+            "k": "Executivo (Diretor, Gerente, Gestor)",
+            "n": 3,
+            "pct": 6.976744186046512
           },
           {
             "k": "Funcionário(a) Público(a)",
             "n": 3,
-            "pct": 10.344827586206897
-          },
-          {
-            "k": "Professor(a)",
-            "n": 2,
-            "pct": 6.896551724137931
+            "pct": 6.976744186046512
           },
           {
             "k": "Aposentado(a)",
             "n": 2,
-            "pct": 6.896551724137931
-          },
-          {
-            "k": "Executivo (Diretor, Gerente, Gestor)",
-            "n": 2,
-            "pct": 6.896551724137931
+            "pct": 4.651162790697675
           },
           {
             "k": "Medico",
             "n": 1,
-            "pct": 3.4482758620689653
+            "pct": 2.3255813953488373
           }
         ],
         "renda": [
           {
             "k": "De R$ 2.001,00 até R$ 5.000,00",
-            "n": 10,
-            "pct": 34.48275862068966
+            "n": 14,
+            "pct": 32.55813953488372
           },
           {
             "k": "De R$ 5.001,00 até R$ 8.000,00",
-            "n": 5,
-            "pct": 17.24137931034483
-          },
-          {
-            "k": "De R$ 10.001,00 até R$ 15.000,00",
-            "n": 4,
-            "pct": 13.793103448275861
+            "n": 7,
+            "pct": 16.27906976744186
           },
           {
             "k": "De R$ 15.001,00 até R$ 20.000,00",
-            "n": 4,
-            "pct": 13.793103448275861
+            "n": 7,
+            "pct": 16.27906976744186
+          },
+          {
+            "k": "De R$ 10.001,00 até R$ 15.000,00",
+            "n": 5,
+            "pct": 11.627906976744185
           },
           {
             "k": "Até R$ 2.000,00",
-            "n": 3,
-            "pct": 10.344827586206897
+            "n": 4,
+            "pct": 9.30232558139535
           },
           {
             "k": "Acima de R$ 20.000",
             "n": 2,
-            "pct": 6.896551724137931
+            "pct": 4.651162790697675
           },
           {
             "k": "No momento, estou sem renda.",
-            "n": 1,
-            "pct": 3.4482758620689653
+            "n": 2,
+            "pct": 4.651162790697675
+          },
+          {
+            "k": "De R$ 8.001,00 até R$ 10.000,00",
+            "n": 2,
+            "pct": 4.651162790697675
           }
         ],
         "autoimg": [
           {
             "k": "Já palestrei, mas não me considero um palestrante.",
-            "n": 16,
-            "pct": 55.172413793103445
+            "n": 21,
+            "pct": 48.837209302325576
           },
           {
             "k": "Iniciante, nunca palestrei.",
-            "n": 7,
-            "pct": 24.137931034482758
+            "n": 12,
+            "pct": 27.906976744186046
           },
           {
             "k": "Sou palestrante e quero me tornar memorável.",
-            "n": 6,
-            "pct": 20.689655172413794
+            "n": 10,
+            "pct": 23.25581395348837
           }
         ],
         "objetivo": [
           {
             "k": "Se destacar na profissão",
-            "n": 13,
-            "pct": 44.827586206896555
+            "n": 21,
+            "pct": 48.837209302325576
           },
           {
             "k": "Uma nova carreira",
-            "n": 12,
-            "pct": 41.37931034482759
+            "n": 16,
+            "pct": 37.2093023255814
           },
           {
             "k": "Renda extra",
-            "n": 4,
-            "pct": 13.793103448275861
+            "n": 5,
+            "pct": 11.627906976744185
+          },
+          {
+            "k": "Mais um modelo ne negócio",
+            "n": 1,
+            "pct": 2.3255813953488373
           }
         ],
         "estado": [
           {
             "k": "Paraná",
             "n": 8,
-            "pct": 27.586206896551722
+            "pct": 18.6046511627907
+          },
+          {
+            "k": "São Paulo",
+            "n": 6,
+            "pct": 13.953488372093023
           },
           {
             "k": "Minas Gerais",
+            "n": 5,
+            "pct": 11.627906976744185
+          },
+          {
+            "k": "Rio Grande do Sul",
             "n": 4,
-            "pct": 13.793103448275861
+            "pct": 9.30232558139535
+          },
+          {
+            "k": "Santa Catarina",
+            "n": 4,
+            "pct": 9.30232558139535
           },
           {
             "k": "Rio de Janeiro",
             "n": 3,
-            "pct": 10.344827586206897
+            "pct": 6.976744186046512
+          },
+          {
+            "k": "Mato Grosso",
+            "n": 3,
+            "pct": 6.976744186046512
           },
           {
             "k": "Bahia",
             "n": 3,
-            "pct": 10.344827586206897
-          },
-          {
-            "k": "Rio Grande do Sul",
-            "n": 3,
-            "pct": 10.344827586206897
-          },
-          {
-            "k": "São Paulo",
-            "n": 2,
-            "pct": 6.896551724137931
-          },
-          {
-            "k": "Mato Grosso",
-            "n": 2,
-            "pct": 6.896551724137931
+            "pct": 6.976744186046512
           },
           {
             "k": "Federal District",
-            "n": 1,
-            "pct": 3.4482758620689653
+            "n": 2,
+            "pct": 4.651162790697675
           },
           {
             "k": "Espírito Santo",
             "n": 1,
-            "pct": 3.4482758620689653
-          },
-          {
-            "k": "Santa Catarina",
-            "n": 1,
-            "pct": 3.4482758620689653
+            "pct": 2.3255813953488373
           },
           {
             "k": "Alagoas",
             "n": 1,
-            "pct": 3.4482758620689653
+            "pct": 2.3255813953488373
+          },
+          {
+            "k": "Pará",
+            "n": 1,
+            "pct": 2.3255813953488373
           }
         ],
-        "total_respondentes": 29,
-        "mql": 10,
-        "mql_pct": 34.48275862068966
+        "total_respondentes": 43,
+        "mql": 16,
+        "mql_pct": 37.2093023255814
       },
       "match": {
-        "vendas_total": 55,
-        "matched_pesquisa": 44,
-        "match_pct": 80.0
+        "vendas_total": 78,
+        "matched_pesquisa": 61,
+        "match_pct": 78.2051282051282
       },
       "top_ads": [
         {
@@ -21039,40 +21268,40 @@
           "ad_code": "AD-147",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 3019.9700000000003,
-          "impr": 38869,
-          "clicks": 372,
-          "lpv": 356,
-          "ic": 34,
-          "purch": 27,
-          "ctr": 0.9570608968586792,
-          "cpa": 111.85074074074075,
-          "cpic": 88.82264705882353,
-          "click_lpv": 95.6989247311828,
+          "spend": 3061.17,
+          "impr": 39302,
+          "clicks": 379,
+          "lpv": 363,
+          "ic": 35,
+          "purch": 28,
+          "ctr": 0.9643275151391786,
+          "cpa": 109.3275,
+          "cpic": 87.462,
+          "click_lpv": 95.77836411609498,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY0XM6BDGJP/",
-          "roas": 0.8672271578856743
+          "roas": 0.8872424595824472
         },
         {
           "name": "[AD-152][EST][VD][DP100K-Fp02]",
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 1034.42,
-          "impr": 13293,
-          "clicks": 126,
-          "lpv": 118,
-          "ic": 11,
+          "spend": 1045.02,
+          "impr": 13459,
+          "clicks": 127,
+          "lpv": 121,
+          "ic": 12,
           "purch": 11,
-          "ctr": 0.9478672985781991,
-          "cpa": 94.03818181818183,
-          "cpic": 94.03818181818183,
-          "click_lpv": 93.65079365079364,
+          "ctr": 0.943606508655918,
+          "cpa": 95.00181818181818,
+          "cpic": 87.085,
+          "click_lpv": 95.2755905511811,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 1.0314959107519188
+          "roas": 1.0210330902757843
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
@@ -21139,56 +21368,56 @@
           "ad_code": "AD-16",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 339.2,
-          "impr": 7568,
-          "clicks": 84,
-          "lpv": 86,
+          "spend": 342.49,
+          "impr": 7657,
+          "clicks": 87,
+          "lpv": 89,
           "ic": 6,
           "purch": 4,
-          "ctr": 1.1099365750528543,
-          "cpa": 84.8,
-          "cpic": 56.53333333333333,
-          "click_lpv": 102.38095238095238,
+          "ctr": 1.136215227896043,
+          "cpa": 85.6225,
+          "cpic": 57.08166666666667,
+          "click_lpv": 102.29885057471265,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8K7jBz9/",
-          "roas": 1.1438679245283019
+          "roas": 1.1328797921107185
         },
         {
           "name": "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
           "ad_code": "AD-15",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 324.51,
-          "impr": 5615,
-          "clicks": 74,
-          "lpv": 70,
+          "spend": 333.9,
+          "impr": 5768,
+          "clicks": 76,
+          "lpv": 72,
           "ic": 8,
           "purch": 5,
-          "ctr": 1.3178984861976848,
-          "cpa": 64.902,
-          "cpic": 40.56375,
-          "click_lpv": 94.5945945945946,
+          "ctr": 1.3176144244105408,
+          "cpa": 66.78,
+          "cpic": 41.7375,
+          "click_lpv": 94.73684210526315,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT8mcjP98/",
-          "roas": 1.4945610304767187
+          "roas": 1.4525306978137167
         },
         {
           "name": "[AD-146][EST][VD][DP100K-Fp02]",
           "ad_code": "AD-146",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
           "adset": "[DP100K-Fp02][ADV+][AMPLO]_19_05",
-          "spend": 321.90999999999997,
-          "impr": 4429,
-          "clicks": 47,
-          "lpv": 44,
-          "ic": 2,
+          "spend": 330.23999999999995,
+          "impr": 4526,
+          "clicks": 50,
+          "lpv": 48,
+          "ic": 3,
           "purch": 0,
-          "ctr": 1.0611876270038383,
+          "ctr": 1.104728236853734,
           "cpa": 0,
-          "cpic": 160.95499999999998,
-          "click_lpv": 93.61702127659575,
+          "cpic": 110.07999999999998,
+          "click_lpv": 96.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DYpIF-4jK72/",
@@ -21219,33 +21448,33 @@
           "ad_code": "AD-12",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 147.95,
-          "impr": 2025,
-          "clicks": 43,
-          "lpv": 35,
+          "spend": 156.99999999999997,
+          "impr": 2157,
+          "clicks": 48,
+          "lpv": 41,
           "ic": 1,
           "purch": 1,
-          "ctr": 2.123456790123457,
-          "cpa": 147.95,
-          "cpic": 147.95,
-          "click_lpv": 81.3953488372093,
+          "ctr": 2.2253129346314324,
+          "cpa": 156.99999999999997,
+          "cpic": 156.99999999999997,
+          "click_lpv": 85.41666666666666,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFT6ytjMq4/",
-          "roas": 0.6556269009800609
+          "roas": 0.6178343949044587
         },
         {
           "name": "[AD-11][DP100K-Fp02][VID][VD]_evento_nao_adianta_ser_bom",
           "ad_code": "AD-11",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 102.82,
-          "impr": 1260,
+          "spend": 103.8,
+          "impr": 1272,
           "clicks": 15,
           "lpv": 15,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.1904761904761905,
+          "ctr": 1.179245283018868,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21259,19 +21488,39 @@
           "ad_code": "AD-155",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 67.64,
-          "impr": 1695,
-          "clicks": 24,
+          "spend": 69.13000000000001,
+          "impr": 1732,
+          "clicks": 25,
           "lpv": 18,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.415929203539823,
+          "ctr": 1.443418013856813,
           "cpa": 0,
           "cpic": 0,
-          "click_lpv": 75.0,
+          "click_lpv": 72.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DZFUbmjjPbk/",
+          "roas": 0.0
+        },
+        {
+          "name": "[AD-02][DP100K-FP02][NT]_mindset-strass",
+          "ad_code": "AD-02",
+          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          "spend": 55.97,
+          "impr": 3262,
+          "clicks": 0,
+          "lpv": 0,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 0.0,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DYW8b9ujGJT/",
           "roas": 0.0
         },
         {
@@ -21295,32 +21544,12 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-02][DP100K-FP02][NT]_mindset-strass",
-          "ad_code": "AD-02",
-          "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
-          "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 55.65,
-          "impr": 3235,
-          "clicks": 0,
-          "lpv": 0,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 0.0,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DYW8b9ujGJT/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-05][DP100K-FP02][NT]_contrato-88k",
           "ad_code": "AD-05",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 54.8,
-          "impr": 2265,
+          "spend": 55.18,
+          "impr": 2276,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21339,8 +21568,8 @@
           "ad_code": "AD-04",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 54.55,
-          "impr": 2557,
+          "spend": 54.62,
+          "impr": 2560,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21359,13 +21588,13 @@
           "ad_code": "AD-01",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 54.44,
-          "impr": 2213,
+          "spend": 54.48,
+          "impr": 2219,
           "clicks": 1,
           "lpv": 0,
           "ic": 0,
           "purch": 0,
-          "ctr": 0.045187528242205156,
+          "ctr": 0.04506534474988734,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 0.0,
@@ -21379,8 +21608,8 @@
           "ad_code": "AD-09",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 54.27000000000001,
-          "impr": 3227,
+          "spend": 54.32000000000001,
+          "impr": 3233,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21399,8 +21628,8 @@
           "ad_code": "AD-06",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 53.800000000000004,
-          "impr": 3305,
+          "spend": 53.85,
+          "impr": 3308,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21415,12 +21644,32 @@
           "roas": 0.0
         },
         {
+          "name": "[AD-08][DP100K-Fp02][VID][VD]_casa_selfie",
+          "ad_code": "AD-08",
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          "spend": 53.42,
+          "impr": 478,
+          "clicks": 8,
+          "lpv": 8,
+          "ic": 0,
+          "purch": 0,
+          "ctr": 1.6736401673640167,
+          "cpa": 0,
+          "cpic": 0,
+          "click_lpv": 100.0,
+          "ad_status": "ACTIVE",
+          "camp_status": "ACTIVE",
+          "ig_url": "https://www.instagram.com/p/DZFT2vXDECW/",
+          "roas": 0.0
+        },
+        {
           "name": "[AD-03][DP100K-FP02][NT]_morador-rua-saco-lixo",
           "ad_code": "AD-03",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 53.22,
-          "impr": 2645,
+          "spend": 53.379999999999995,
+          "impr": 2655,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21439,8 +21688,8 @@
           "ad_code": "AD-07",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 52.94,
-          "impr": 3194,
+          "spend": 52.97,
+          "impr": 3198,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21455,32 +21704,12 @@
           "roas": 0.0
         },
         {
-          "name": "[AD-08][DP100K-Fp02][VID][VD]_casa_selfie",
-          "ad_code": "AD-08",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
-          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 52.8,
-          "impr": 471,
-          "clicks": 8,
-          "lpv": 8,
-          "ic": 0,
-          "purch": 0,
-          "ctr": 1.6985138004246285,
-          "cpa": 0,
-          "cpic": 0,
-          "click_lpv": 100.0,
-          "ad_status": "ACTIVE",
-          "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DZFT2vXDECW/",
-          "roas": 0.0
-        },
-        {
           "name": "[AD-10][DP100K-FP02][NT]_patinho-feio-aplaudido",
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          "spend": 52.5,
-          "impr": 3669,
+          "spend": 52.57,
+          "impr": 3676,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21499,13 +21728,13 @@
           "ad_code": "AD-10",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 49.35,
-          "impr": 540,
+          "spend": 50.68,
+          "impr": 550,
           "clicks": 7,
           "lpv": 4,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.2962962962962963,
+          "ctr": 1.2727272727272727,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 57.14285714285714,
@@ -21519,13 +21748,13 @@
           "ad_code": "AD-13",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 35.949999999999996,
-          "impr": 329,
+          "spend": 37.449999999999996,
+          "impr": 351,
           "clicks": 10,
           "lpv": 8,
           "ic": 0,
           "purch": 0,
-          "ctr": 3.0395136778115504,
+          "ctr": 2.849002849002849,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 80.0,
@@ -21539,8 +21768,8 @@
           "ad_code": "AD-17",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 26.66,
-          "impr": 315,
+          "spend": 26.94,
+          "impr": 320,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -21559,13 +21788,13 @@
           "ad_code": "AD-18",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 26.09,
-          "impr": 309,
-          "clicks": 5,
-          "lpv": 5,
+          "spend": 26.75,
+          "impr": 317,
+          "clicks": 6,
+          "lpv": 6,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.6181229773462782,
+          "ctr": 1.8927444794952681,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
@@ -21579,13 +21808,13 @@
           "ad_code": "AD-157",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
           "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 23.72,
-          "impr": 492,
+          "spend": 24.46,
+          "impr": 519,
           "clicks": 11,
           "lpv": 12,
           "ic": 0,
           "purch": 0,
-          "ctr": 2.2357723577235773,
+          "ctr": 2.119460500963391,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 109.09090909090908,
@@ -21597,50 +21826,56 @@
         {
           "name": "[AD-156][DP100K-Fp02][EST][VD]_whatsapp_angela",
           "ad_code": "AD-156",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
-          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 13.060000000000002,
-          "impr": 243,
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "adset": "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          "spend": 13.180000000000001,
+          "impr": 247,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 0.823045267489712,
+          "ctr": 0.8097165991902834,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DZFUb1bDE9O/",
+          "ig_url": "https://www.instagram.com/p/DZLJAs-DLKj/",
           "roas": 0.0
         },
         {
           "name": "[AD-161][DP100K-Fp02][EST][VD]_apple_iphone_v2",
           "ad_code": "AD-161",
-          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
-          "adset": "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
-          "spend": 11.48,
-          "impr": 140,
+          "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "adset": "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          "spend": 11.540000000000001,
+          "impr": 142,
           "clicks": 2,
           "lpv": 2,
           "ic": 0,
           "purch": 0,
-          "ctr": 1.4285714285714286,
+          "ctr": 1.4084507042253522,
           "cpa": 0,
           "cpic": 0,
           "click_lpv": 100.0,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
-          "ig_url": "https://www.instagram.com/p/DZFUeZFDM_C/",
+          "ig_url": "https://www.instagram.com/p/DZLJDz-jJi9/",
           "roas": 0.0
         }
       ],
       "mql_por_ad": [
         {
           "ad": "AD-147",
-          "total": 11,
-          "mql": 5,
-          "mql_pct": 45.45454545454545
+          "total": 14,
+          "mql": 6,
+          "mql_pct": 42.857142857142854
+        },
+        {
+          "ad": "AD-152",
+          "total": 9,
+          "mql": 3,
+          "mql_pct": 33.33333333333333
         },
         {
           "ad": "AD-16",
@@ -21650,6 +21885,12 @@
         },
         {
           "ad": "AD-15",
+          "total": 4,
+          "mql": 1,
+          "mql_pct": 25.0
+        },
+        {
+          "ad": "AD-146",
           "total": 3,
           "mql": 1,
           "mql_pct": 33.33333333333333
@@ -21667,12 +21908,6 @@
           "mql_pct": 100.0
         },
         {
-          "ad": "AD-152",
-          "total": 4,
-          "mql": 0,
-          "mql_pct": 0.0
-        },
-        {
           "ad": "AD-03",
           "total": 3,
           "mql": 0,
@@ -21685,7 +21920,13 @@
           "mql_pct": 0.0
         },
         {
-          "ad": "AD-146",
+          "ad": "AD-10",
+          "total": 1,
+          "mql": 0,
+          "mql_pct": 0.0
+        },
+        {
+          "ad": "AD-12",
           "total": 1,
           "mql": 0,
           "mql_pct": 0.0
@@ -21696,332 +21937,422 @@
           "idade": [
             {
               "k": "45 a 54 anos",
-              "n": 3,
-              "pct": 75.0
+              "n": 4,
+              "pct": 44.44444444444444
             },
             {
               "k": "Acima de 65 anos",
+              "n": 2,
+              "pct": 22.22222222222222
+            },
+            {
+              "k": "35 a 44 anos",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 11.11111111111111
             }
           ],
           "genero": [
             {
               "k": "Feminino",
-              "n": 4,
-              "pct": 100.0
+              "n": 7,
+              "pct": 77.77777777777779
+            },
+            {
+              "k": "Masculino",
+              "n": 2,
+              "pct": 22.22222222222222
             }
           ],
           "tempo": [
             {
               "k": "Conheci agora",
-              "n": 2,
-              "pct": 50.0
+              "n": 4,
+              "pct": 44.44444444444444
             },
             {
               "k": "Menos de 6 meses",
-              "n": 1,
-              "pct": 25.0
+              "n": 2,
+              "pct": 22.22222222222222
             },
             {
               "k": "Mais de 1 ano",
+              "n": 2,
+              "pct": 22.22222222222222
+            },
+            {
+              "k": "De 7 meses a 1 ano",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
             }
           ],
           "previo": [
             {
               "k": "No",
-              "n": 3,
-              "pct": 75.0
+              "n": 8,
+              "pct": 88.88888888888889
             },
             {
               "k": "Yes",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
             }
           ],
           "ocupacao": [
             {
               "k": "Terapeuta",
-              "n": 2,
-              "pct": 50.0
+              "n": 3,
+              "pct": 33.33333333333333
             },
             {
               "k": "Empresário(a)",
-              "n": 1,
-              "pct": 25.0
+              "n": 2,
+              "pct": 22.22222222222222
             },
             {
               "k": "Profissional Autônomo(a)",
+              "n": 2,
+              "pct": 22.22222222222222
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "Professor(a)",
+              "n": 1,
+              "pct": 11.11111111111111
             }
           ],
           "renda": [
             {
-              "k": "Até R$ 2.000,00",
-              "n": 2,
-              "pct": 50.0
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 4,
+              "pct": 44.44444444444444
             },
             {
-              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "k": "Até R$ 2.000,00",
               "n": 2,
-              "pct": 50.0
+              "pct": 22.22222222222222
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
+              "n": 2,
+              "pct": 22.22222222222222
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
+              "n": 1,
+              "pct": 11.11111111111111
             }
           ],
           "autoimg": [
             {
-              "k": "Iniciante, nunca palestrei.",
-              "n": 2,
-              "pct": 50.0
+              "k": "Já palestrei, mas não me considero um palestrante.",
+              "n": 4,
+              "pct": 44.44444444444444
             },
             {
-              "k": "Já palestrei, mas não me considero um palestrante.",
+              "k": "Iniciante, nunca palestrei.",
+              "n": 3,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
               "n": 2,
-              "pct": 50.0
+              "pct": 22.22222222222222
             }
           ],
           "objetivo": [
             {
               "k": "Se destacar na profissão",
-              "n": 2,
-              "pct": 50.0
+              "n": 5,
+              "pct": 55.55555555555556
             },
             {
               "k": "Uma nova carreira",
-              "n": 1,
-              "pct": 25.0
+              "n": 2,
+              "pct": 22.22222222222222
             },
             {
               "k": "Renda extra",
-              "n": 1,
-              "pct": 25.0
+              "n": 2,
+              "pct": 22.22222222222222
             }
           ],
           "estado": [
             {
+              "k": "São Paulo",
+              "n": 2,
+              "pct": 22.22222222222222
+            },
+            {
               "k": "Rio de Janeiro",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
             },
             {
               "k": "Paraná",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
             },
             {
               "k": "Minas Gerais",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
             },
             {
               "k": "Bahia",
               "n": 1,
-              "pct": 25.0
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "Pará",
+              "n": 1,
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 11.11111111111111
+            },
+            {
+              "k": "Mato Grosso",
+              "n": 1,
+              "pct": 11.11111111111111
             }
           ],
-          "total_respondentes": 4,
-          "mql": 0,
-          "mql_pct": 0.0
+          "total_respondentes": 9,
+          "mql": 3,
+          "mql_pct": 33.33333333333333
         },
         "AD-147": {
           "idade": [
             {
               "k": "35 a 44 anos",
               "n": 5,
-              "pct": 45.45454545454545
+              "pct": 35.714285714285715
             },
             {
               "k": "45 a 54 anos",
-              "n": 3,
-              "pct": 27.27272727272727
+              "n": 4,
+              "pct": 28.57142857142857
             },
             {
               "k": "26 a 34 anos",
-              "n": 2,
-              "pct": 18.181818181818183
+              "n": 3,
+              "pct": 21.428571428571427
             },
             {
               "k": "55 a 64 anos",
-              "n": 1,
-              "pct": 9.090909090909092
+              "n": 2,
+              "pct": 14.285714285714285
             }
           ],
           "genero": [
             {
               "k": "Feminino",
               "n": 10,
-              "pct": 90.9090909090909
+              "pct": 71.42857142857143
             },
             {
               "k": "Masculino",
-              "n": 1,
-              "pct": 9.090909090909092
+              "n": 4,
+              "pct": 28.57142857142857
             }
           ],
           "tempo": [
             {
               "k": "Mais de 1 ano",
-              "n": 6,
-              "pct": 54.54545454545454
+              "n": 8,
+              "pct": 57.14285714285714
+            },
+            {
+              "k": "Conheci agora",
+              "n": 2,
+              "pct": 14.285714285714285
             },
             {
               "k": "Menos de 6 meses",
               "n": 2,
-              "pct": 18.181818181818183
+              "pct": 14.285714285714285
             },
             {
               "k": "De 7 meses a 1 ano",
               "n": 2,
-              "pct": 18.181818181818183
-            },
-            {
-              "k": "Conheci agora",
-              "n": 1,
-              "pct": 9.090909090909092
+              "pct": 14.285714285714285
             }
           ],
           "previo": [
             {
               "k": "No",
-              "n": 9,
-              "pct": 81.81818181818183
+              "n": 11,
+              "pct": 78.57142857142857
             },
             {
               "k": "Yes",
-              "n": 2,
-              "pct": 18.181818181818183
+              "n": 3,
+              "pct": 21.428571428571427
             }
           ],
           "ocupacao": [
             {
               "k": "Profissional Autônomo(a)",
               "n": 4,
-              "pct": 36.36363636363637
+              "pct": 28.57142857142857
             },
             {
               "k": "Professor(a)",
+              "n": 3,
+              "pct": 21.428571428571427
+            },
+            {
+              "k": "Empresário(a)",
               "n": 2,
-              "pct": 18.181818181818183
+              "pct": 14.285714285714285
             },
             {
               "k": "Funcionário(a) Público(a)",
               "n": 2,
-              "pct": 18.181818181818183
+              "pct": 14.285714285714285
             },
             {
               "k": "Executivo (Diretor, Gerente, Gestor)",
               "n": 1,
-              "pct": 9.090909090909092
-            },
-            {
-              "k": "Empresário(a)",
-              "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
             },
             {
               "k": "Palestrante",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Terapeuta",
+              "n": 1,
+              "pct": 7.142857142857142
             }
           ],
           "renda": [
             {
               "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 5,
+              "pct": 35.714285714285715
+            },
+            {
+              "k": "De R$ 15.001,00 até R$ 20.000,00",
               "n": 3,
-              "pct": 27.27272727272727
+              "pct": 21.428571428571427
             },
             {
               "k": "De R$ 10.001,00 até R$ 15.000,00",
               "n": 2,
-              "pct": 18.181818181818183
+              "pct": 14.285714285714285
             },
             {
               "k": "De R$ 2.001,00 até R$ 5.000,00",
               "n": 2,
-              "pct": 18.181818181818183
-            },
-            {
-              "k": "De R$ 15.001,00 até R$ 20.000,00",
-              "n": 2,
-              "pct": 18.181818181818183
+              "pct": 14.285714285714285
             },
             {
               "k": "Até R$ 2.000,00",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
             },
             {
               "k": "Acima de R$ 20.000",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
             }
           ],
           "autoimg": [
             {
               "k": "Já palestrei, mas não me considero um palestrante.",
-              "n": 6,
-              "pct": 54.54545454545454
+              "n": 7,
+              "pct": 50.0
             },
             {
               "k": "Sou palestrante e quero me tornar memorável.",
-              "n": 4,
-              "pct": 36.36363636363637
+              "n": 5,
+              "pct": 35.714285714285715
             },
             {
               "k": "Iniciante, nunca palestrei.",
-              "n": 1,
-              "pct": 9.090909090909092
+              "n": 2,
+              "pct": 14.285714285714285
             }
           ],
           "objetivo": [
             {
               "k": "Uma nova carreira",
-              "n": 6,
-              "pct": 54.54545454545454
+              "n": 7,
+              "pct": 50.0
             },
             {
               "k": "Se destacar na profissão",
-              "n": 5,
-              "pct": 45.45454545454545
+              "n": 6,
+              "pct": 42.857142857142854
+            },
+            {
+              "k": "Mais um modelo ne negócio",
+              "n": 1,
+              "pct": 7.142857142857142
             }
           ],
           "estado": [
             {
+              "k": "São Paulo",
+              "n": 3,
+              "pct": 21.428571428571427
+            },
+            {
               "k": "Minas Gerais",
               "n": 3,
-              "pct": 27.27272727272727
+              "pct": 21.428571428571427
             },
             {
               "k": "Paraná",
               "n": 3,
-              "pct": 27.27272727272727
-            },
-            {
-              "k": "São Paulo",
-              "n": 2,
-              "pct": 18.181818181818183
+              "pct": 21.428571428571427
             },
             {
               "k": "Mato Grosso",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
             },
             {
               "k": "Rio Grande do Sul",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
             },
             {
               "k": "Federal District",
               "n": 1,
-              "pct": 9.090909090909092
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Maranhão",
+              "n": 1,
+              "pct": 7.142857142857142
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 7.142857142857142
             }
           ],
-          "total_respondentes": 11,
-          "mql": 5,
-          "mql_pct": 45.45454545454545
+          "total_respondentes": 14,
+          "mql": 6,
+          "mql_pct": 42.857142857142854
         },
         "AD-03": {
           "idade": [
@@ -22274,10 +22605,153 @@
             {
               "k": "35 a 44 anos",
               "n": 2,
-              "pct": 66.66666666666666
+              "pct": 50.0
             },
             {
               "k": "55 a 64 anos",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "26 a 34 anos",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "genero": [
+            {
+              "k": "Feminino",
+              "n": 4,
+              "pct": 100.0
+            }
+          ],
+          "tempo": [
+            {
+              "k": "Menos de 6 meses",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Mais de 1 ano",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De 7 meses a 1 ano",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "previo": [
+            {
+              "k": "No",
+              "n": 4,
+              "pct": 100.0
+            }
+          ],
+          "ocupacao": [
+            {
+              "k": "Terapeuta",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Funcionário(a) Público(a)",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "renda": [
+            {
+              "k": "De R$ 2.001,00 até R$ 5.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 10.001,00 até R$ 15.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Até R$ 2.000,00",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "autoimg": [
+            {
+              "k": "Sou palestrante e quero me tornar memorável.",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Iniciante, nunca palestrei.",
+              "n": 2,
+              "pct": 50.0
+            }
+          ],
+          "objetivo": [
+            {
+              "k": "Renda extra",
+              "n": 2,
+              "pct": 50.0
+            },
+            {
+              "k": "Se destacar na profissão",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Uma nova carreira",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "estado": [
+            {
+              "k": "Paraná",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Rio Grande do Sul",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Alagoas",
+              "n": 1,
+              "pct": 25.0
+            },
+            {
+              "k": "Santa Catarina",
+              "n": 1,
+              "pct": 25.0
+            }
+          ],
+          "total_respondentes": 4,
+          "mql": 1,
+          "mql_pct": 25.0
+        },
+        "AD-146": {
+          "idade": [
+            {
+              "k": "35 a 44 anos",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
+              "k": "45 a 54 anos",
               "n": 1,
               "pct": 33.33333333333333
             }
@@ -22292,30 +22766,30 @@
           "tempo": [
             {
               "k": "Menos de 6 meses",
-              "n": 1,
-              "pct": 33.33333333333333
+              "n": 2,
+              "pct": 66.66666666666666
             },
             {
               "k": "Mais de 1 ano",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
-              "k": "De 7 meses a 1 ano",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "previo": [
             {
+              "k": "Yes",
+              "n": 2,
+              "pct": 66.66666666666666
+            },
+            {
               "k": "No",
-              "n": 3,
-              "pct": 100.0
+              "n": 1,
+              "pct": 33.33333333333333
             }
           ],
           "ocupacao": [
             {
-              "k": "Funcionário(a) Público(a)",
+              "k": "Advogada",
               "n": 1,
               "pct": 33.33333333333333
             },
@@ -22325,31 +22799,31 @@
               "pct": 33.33333333333333
             },
             {
-              "k": "Executivo (Diretor, Gerente, Gestor)",
+              "k": "Empresário(a)",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "renda": [
             {
-              "k": "De R$ 2.001,00 até R$ 5.000,00",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
-              "k": "De R$ 10.001,00 até R$ 15.000,00",
-              "n": 1,
-              "pct": 33.33333333333333
-            },
-            {
               "k": "De R$ 5.001,00 até R$ 8.000,00",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "No momento, estou sem renda.",
+              "n": 1,
+              "pct": 33.33333333333333
+            },
+            {
+              "k": "De R$ 8.001,00 até R$ 10.000,00",
               "n": 1,
               "pct": 33.33333333333333
             }
           ],
           "autoimg": [
             {
-              "k": "Sou palestrante e quero me tornar memorável.",
+              "k": "Já palestrei, mas não me considero um palestrante.",
               "n": 2,
               "pct": 66.66666666666666
             },
@@ -22361,14 +22835,9 @@
           ],
           "objetivo": [
             {
-              "k": "Renda extra",
-              "n": 2,
-              "pct": 66.66666666666666
-            },
-            {
               "k": "Se destacar na profissão",
-              "n": 1,
-              "pct": 33.33333333333333
+              "n": 3,
+              "pct": 100.0
             }
           ],
           "estado": [
@@ -22378,12 +22847,12 @@
               "pct": 33.33333333333333
             },
             {
-              "k": "Rio Grande do Sul",
+              "k": "Sergipe",
               "n": 1,
               "pct": 33.33333333333333
             },
             {
-              "k": "Alagoas",
+              "k": "São Paulo",
               "n": 1,
               "pct": 33.33333333333333
             }
@@ -22414,33 +22883,42 @@
         },
         {
           "date": "2026-06-03",
-          "spend": 2421.4799999999996,
+          "spend": 2423.8799999999997,
           "vendas": 13,
           "ic": 18,
           "visitas": 298,
-          "impr": 32974,
-          "clicks": 323
+          "impr": 32997,
+          "clicks": 324
         },
         {
           "date": "2026-06-04",
-          "spend": 503.06999999999994,
+          "spend": 2212.6,
+          "vendas": 19,
+          "ic": 26,
+          "visitas": 370,
+          "impr": 31178,
+          "clicks": 391
+        },
+        {
+          "date": "2026-06-05",
+          "spend": 558.16,
           "vendas": 3,
           "ic": 5,
-          "visitas": 60,
-          "impr": 5648,
-          "clicks": 62
+          "visitas": 77,
+          "impr": 7075,
+          "clicks": 81
         }
       ],
-      "roas_real": 1.066396914040447,
-      "cpa_hubla": 92.43036363636364,
-      "cpa_gerenciador": 149.51970588235295
+      "roas_real": 1.043777604925915,
+      "cpa_hubla": 94.27897435897438,
+      "cpa_gerenciador": 138.75018867924533
     }
   },
   "_diag": {
     "trafego_linhas": 1144,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
-    "invest_linhas": 902
+    "invest_linhas": 925
   },
   "raw": {
     "invest": {
@@ -22789,21 +23267,30 @@
         ],
         [
           "2026-06-03",
-          2421.48,
+          2423.88,
           13,
           18,
           298,
-          32974,
-          323
+          32997,
+          324
         ],
         [
           "2026-06-04",
-          503.07,
+          2212.6,
+          19,
+          26,
+          370,
+          31178,
+          391
+        ],
+        [
+          "2026-06-05",
+          558.16,
           3,
           5,
-          60,
-          5648,
-          62
+          77,
+          7075,
+          81
         ]
       ]
     },
@@ -39008,6 +39495,981 @@
           8,
           "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-01][DP100K-FP02][NT]_mentoria-interna-ipm",
+          "AD-01",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.04,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8Ze0jKWW/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-02][DP100K-FP02][NT]_mindset-strass",
+          "AD-02",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.32,
+          27,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8b9ujGJT/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-03][DP100K-FP02][NT]_morador-rua-saco-lixo",
+          "AD-03",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.16,
+          10,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8c2_jH0N/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-04][DP100K-FP02][NT]_eric-bocardi-3M-7M",
+          "AD-04",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.07,
+          3,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8elUDAWA/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-05][DP100K-FP02][NT]_contrato-88k",
+          "AD-05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.38,
+          11,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8exMDIDq/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-06][DP100K-FP02][NT]_15-anos-palestrante",
+          "AD-06",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.05,
+          3,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8gAtjHCa/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-07][DP100K-FP02][NT]_arte-terapia-melhoria",
+          "AD-07",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.03,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8hnMjM-L/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-09][DP100K-FP02][NT]_palestrante-anos-metodo",
+          "AD-09",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.05,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8kgwDOu3/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-10][DP100K-FP02][NT]_patinho-feio-aplaudido",
+          "AD-10",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.07,
+          7,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYW8loXjG2a/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-11][DP100K-FP02][NT]_consciencia-problema",
+          "AD-11",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.2,
+          19,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK0xF-jDvM/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-12][DP100K-FP02][NT]_reel-C9LT0KcxKZ1",
+          "AD-12",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.33,
+          20,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK0-gYjKgH/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-13][DP100K-FP02][NT]_reel-C8Nl7Uax4mc",
+          "AD-13",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.51,
+          28,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK1H-DjIir/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-14][DP100K-FP02][NT]_metralhadora-depoimentos",
+          "AD-14",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.04,
+          5,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK1OkvjPVx/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-15][DP100K-FP02][NT]_reel-C6_yJlbrmjF",
+          "AD-15",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.02,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK1UVmjNRa/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-16][DP100K-FP02][NT]_teaser1-objecao-si",
+          "AD-16",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.09,
+          12,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK2BegDCDG/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-17][DP100K-FP02][NT]_teaser2-objecao-metodo",
+          "AD-17",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.05,
+          5,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK2wxzjCYy/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-18][DP100K-FP02][NT]_rodrigo-andrade-referencia",
+          "AD-18",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.04,
+          3,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK3QRTjH8J/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-19][DP100K-FP02][NT]_documental-palcos",
+          "AD-19",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.06,
+          8,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK4CHPDMyj/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-20][DP100K-FP02][NT]_filme-palcos-v3",
+          "AD-20",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.06,
+          9,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK5L8hDB0A/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-21][DP100K-FP02][NT]_teaser-imersao",
+          "AD-21",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.1,
+          13,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK6iXPjAIq/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-22][DP100K-FP02][NT]_dia3-palcos",
+          "AD-22",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.02,
+          2,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK7NDxjIkN/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-23][DP100K-FP02][NT]_grandes-nomes",
+          "AD-23",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.05,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK38gYjNd4/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-25][DP100K-FP02][NT]_provasocial2-copy02",
+          "AD-25",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.05,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK4UjMjJxN/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-26][DP100K-FP02][NT]_provasocial2-copy03",
+          "AD-26",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.03,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK4hp3jEIQ/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-27][DP100K-FP02][NT]_provasocial2-tathi",
+          "AD-27",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.02,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK4wl0DLTL/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-28][DP100K-FP02][NT]_reel-elaine-ourives",
+          "AD-28",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.21,
+          13,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK4826DGkg/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-29][DP100K-FP02][NT]_reel-luiza-vono",
+          "AD-29",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.2,
+          8,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK5L2fjKEG/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-30][DP100K-FP02][NT]_reel-rodrigo-schroder",
+          "AD-30",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.01,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK5ZGajBky/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-31][DP100K-FP02][NT]_reel-rodrigo-andrade",
+          "AD-31",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.01,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK5pUDjFCo/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-32][DP100K-FP02][NT]_depoimento-seq01",
+          "AD-32",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.33,
+          18,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK54UtjEEp/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-33][DP100K-FP02][NT]_depoimento-seq02",
+          "AD-33",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.12,
+          10,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK6J5IjALx/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-34][DP100K-FP02][NT]_depoimento-seq03",
+          "AD-34",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.15,
+          13,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK6X4wDPAp/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-35][DP100K-FP02][NT]_depoimento-seq04",
+          "AD-35",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.15,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK6mXfjMBn/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-36][DP100K-FP02][NT]_depoimento-seq05",
+          "AD-36",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.03,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK62O1DG-k/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-37][DP100K-FP02][NT]_reel-catia-damasceno",
+          "AD-37",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.11,
+          9,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK7H_QjJpK/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-38][DP100K-FP02][NT]_depoimento-catia-damasceno",
+          "AD-38",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
+          "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
+          0.14,
+          9,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZK7ywhDHsB/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "AD-152",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
+          "[DP100K-Fp02][BROAD][AD-152]_29_05",
+          10.6,
+          166,
+          1,
+          3,
+          1,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DY7H5S6jPiL/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-08][DP100K-Fp02][VID][VD]_casa_selfie",
+          "AD-08",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.6,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT2vXDECW/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-10][DP100K-Fp02][VID][VD]_palco_terno_branco",
+          "AD-10",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.43,
+          8,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT4rUDEEF/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-11][DP100K-Fp02][VID][VD]_evento_nao_adianta_ser_bom",
+          "AD-11",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.65,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT5gwDP9Y/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-12][DP100K-Fp02][VID][VD]_nr01_reacao",
+          "AD-12",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          6.88,
+          90,
+          4,
+          5,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT6ytjMq4/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-13][DP100K-Fp02][VID][VD]_nr01_bentley",
+          "AD-13",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.9,
+          11,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLI-PGDAdt/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-14][DP100K-Fp02][VID][VD]_podcast_blazer_azul",
+          "AD-14",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.13,
+          3,
+          1,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT7u2DI5A/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-155][DP100K-Fp02][EST][VD]_whatsapp_jandira",
+          "AD-155",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.68,
+          19,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJAD5DDpg/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-156][DP100K-Fp02][EST][VD]_whatsapp_angela",
+          "AD-156",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.12,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJAs-DLKj/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-157][DP100K-Fp02][EST][VD]_whatsapp_roberto",
+          "AD-157",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.53,
+          16,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJBX8jF5m/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-158][DP100K-Fp02][EST][VD]_disney_v1",
+          "AD-158",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJB0KDFD0/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-159][DP100K-Fp02][EST][VD]_apple_iphone_v1",
+          "AD-159",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.18,
+          3,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJCRbjLit/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-161][DP100K-Fp02][EST][VD]_apple_iphone_v2",
+          "AD-161",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.06,
+          2,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZLJDz-jJi9/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-17][DP100K-Fp02][VID][VD]_carro_palestra",
+          "AD-17",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.25,
+          4,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT-fODKWi/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-18][DP100K-Fp02][VID][VD]_3rs_palco",
+          "AD-18",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][RETESTE_CRIATIVOS]_04_06",
+          "[DP100K-Fp02][ADV+][BROAD][RETESTE_CRIATIVOS]_04_06",
+          0.62,
+          7,
+          1,
+          1,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT_pODKxp/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-08][DP100K-Fp02][VID][VD]_casa_selfie",
+          "AD-08",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.02,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT2vXDECW/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-10][DP100K-Fp02][VID][VD]_palco_terno_branco",
+          "AD-10",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.9,
+          2,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT4rUDEEF/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-11][DP100K-Fp02][VID][VD]_evento_nao_adianta_ser_bom",
+          "AD-11",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.33,
+          6,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT5gwDP9Y/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-12][DP100K-Fp02][VID][VD]_nr01_reacao",
+          "AD-12",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          2.17,
+          42,
+          1,
+          1,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT6ytjMq4/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-13][DP100K-Fp02][VID][VD]_nr01_bentley",
+          "AD-13",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.6,
+          11,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFUZ-bjLCg/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-14][DP100K-Fp02][VID][VD]_podcast_blazer_azul",
+          "AD-14",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.06,
+          2,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT7u2DI5A/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-155][DP100K-Fp02][EST][VD]_whatsapp_jandira",
+          "AD-155",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.81,
+          18,
+          1,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFUbmjjPbk/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-157][DP100K-Fp02][EST][VD]_whatsapp_roberto",
+          "AD-157",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.21,
+          11,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFUcR3DAlg/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
+          "AD-15",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          9.39,
+          153,
+          2,
+          2,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT8mcjP98/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-16][DP100K-Fp02][VID][VD]_meme_pov_15mil",
+          "AD-16",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          3.29,
+          89,
+          3,
+          3,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT8K7jBz9/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-17][DP100K-Fp02][VID][VD]_carro_palestra",
+          "AD-17",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.03,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT-fODKWi/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-18][DP100K-Fp02][VID][VD]_3rs_palco",
+          "AD-18",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          0.04,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT_pODKxp/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-146][EST][VD][DP100K-Fp02]",
+          "AD-146",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          8.33,
+          97,
+          3,
+          4,
+          1,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DYpIF-4jK72/"
+        ],
+        [
+          "2026-06-05",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "AD-147",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          41.2,
+          433,
+          7,
+          7,
+          1,
+          1,
+          "ACTIVE",
+          "https://www.instagram.com/p/DY0XM6BDGJP/"
         ]
       ]
     },
@@ -43496,6 +44958,90 @@
         [
           "2026-06-04",
           "crislaineasantostrindade@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "lu.clemente5@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "laridias.s@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "martarscampos@gmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "eliscaminha2017@gmail.com",
+          "meta_ads",
+          "[ad-12][dp100k-fp02][vid][vd]_nr01_reacao",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "ramon.fiori@bol.com.br",
+          "whatsapp",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "eric.f.lopes@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "deborapaixaosouza1989@gmail.com",
+          "meta_ads",
+          "[ad-146][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "izandratramontin@yahoo.com.br",
+          "meta_ads",
+          "[ad-146][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "jorn.eliasneto@gmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "daniele.almeida@semed.parauapebas.pa.gov.br",
+          "meta_ads",
+          "[ad-16][dp100k-fp02][vid][vd]_meme_pov_15mil",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "priscilaverissimo2023@gmail.com",
+          "meta_ads",
+          "[ad-12][dp100k-fp02][vid][vd]_nr01_reacao",
+          97.0
+        ],
+        [
+          "2026-06-05",
+          "thiagoferrari012@gmail.com",
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
@@ -52768,12 +54314,148 @@
           "Santa Catarina",
           false,
           false
+        ],
+        [
+          "2026-06-05",
+          "eric.f.lopes@hotmail.com",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "26 a 34 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "Yes",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Santa Catarina",
+          false,
+          false
+        ],
+        [
+          "2026-06-05",
+          "ramon.fiori@bol.com.br",
+          "whatsapp",
+          "organico",
+          "55 a 64 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Aposentado(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          true,
+          false
+        ],
+        [
+          "2026-06-05",
+          "deborapaixaosouza1989@gmail.com",
+          "meta_ads",
+          "[AD-146][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Terapeuta",
+          "No momento, estou sem renda.",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Sergipe",
+          false,
+          false
+        ],
+        [
+          "2026-06-05",
+          "martarscampos@gmail.com",
+          "instagram",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Mato Grosso do Sul",
+          true,
+          true
+        ],
+        [
+          "2026-06-05",
+          "jorn.eliasneto@gmail.com",
+          "meta_ads",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "Acima de 65 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Mato Grosso",
+          true,
+          false
+        ],
+        [
+          "2026-06-05",
+          "izandratramontin@yahoo.com.br",
+          "meta_ads",
+          "[AD-146][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "Yes",
+          "Empresário(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          true,
+          false
+        ],
+        [
+          "2026-06-05",
+          "priscilaverissimo2023@gmail.com",
+          "meta_ads",
+          "[AD-12][DP100K-Fp02][VID][VD]_nr01_reacao",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-06-05",
+          "thiagoferrari012@gmail.com",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "São Paulo",
+          true,
+          true
         ]
       ]
     },
     "date_min": "2026-04-27",
-    "date_max": "2026-06-04"
+    "date_max": "2026-06-05"
   },
-  "updated_at": "2026-06-05 05:49:55 BRT",
+  "updated_at": "2026-06-05 09:17:38 BRT",
   "schema_version": 3
 }
