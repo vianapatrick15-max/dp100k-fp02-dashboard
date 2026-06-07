@@ -47172,6 +47172,20 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-07",
+          "danibcc@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-07",
+          "roselibiffi@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -57342,12 +57356,29 @@
           "Pernambuco",
           true,
           true
+        ],
+        [
+          "2026-06-07",
+          "danibcc@hotmail.com",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "Yes",
+          "Médica ",
+          "Acima de R$ 20.000",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Pernambuco",
+          true,
+          true
         ]
       ]
     },
     "date_min": "2026-04-27",
     "date_max": "2026-06-07"
   },
-  "updated_at": "2026-06-07 17:20:39 BRT",
+  "updated_at": "2026-06-07 19:13:23 BRT",
   "schema_version": 3
 }
