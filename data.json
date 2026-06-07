@@ -16064,20 +16064,20 @@
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 4510.0,
-          "impr": 58316,
+          "spend": 4510.03,
+          "impr": 58317,
           "clicks": 450,
           "lpv": 449,
           "ic": 39,
           "purch": 34,
-          "ctr": 0.7716578640510323,
-          "cpa": 132.64705882352942,
-          "cpic": 115.64102564102564,
+          "ctr": 0.7716446319255106,
+          "cpa": 132.64794117647057,
+          "cpic": 115.64179487179487,
           "click_lpv": 99.77777777777777,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 0.7312638580931264
+          "roas": 0.7312589938426131
         },
         {
           "name": "[AD-03][VID][VD][DP100K-Fp02]",
@@ -21293,20 +21293,20 @@
           "ad_code": "AD-152",
           "campaign": "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "adset": "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          "spend": 1742.6799999999998,
-          "impr": 22424,
+          "spend": 1742.71,
+          "impr": 22425,
           "clicks": 197,
           "lpv": 185,
           "ic": 17,
           "purch": 16,
-          "ctr": 0.8785230110595791,
-          "cpa": 108.91749999999999,
-          "cpic": 102.51058823529411,
+          "ctr": 0.8784838350055741,
+          "cpa": 108.919375,
+          "cpic": 102.51235294117647,
           "click_lpv": 93.90862944162437,
           "ad_status": "ACTIVE",
           "camp_status": "ACTIVE",
           "ig_url": "https://www.instagram.com/p/DY7H5S6jPiL/",
-          "roas": 0.8905823214818556
+          "roas": 0.8905669904918202
         },
         {
           "name": "[AD-16][DP100K-Fp02][VID][VD]_meme_pov_15mil",
@@ -22925,7 +22925,7 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 1194,
+    "trafego_linhas": 1232,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
     "invest_linhas": 927
@@ -40082,8 +40082,8 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][BROAD_AD-152]_29_05",
           "[DP100K-Fp02][BROAD][AD-152]_29_05",
-          707.33,
-          9110,
+          707.36,
+          9111,
           71,
           67,
           6,
@@ -55113,6 +55113,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-06-05"
   },
-  "updated_at": "2026-06-06 21:13:35 BRT",
+  "updated_at": "2026-06-07 02:46:24 BRT",
   "schema_version": 3
 }
