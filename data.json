@@ -16454,7 +16454,7 @@
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
           "spend": 160.31999999999996,
-          "impr": 11755,
+          "impr": 11756,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -22128,7 +22128,7 @@
           "campaign": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "adset": "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
           "spend": 60.65,
-          "impr": 3023,
+          "impr": 3024,
           "clicks": 0,
           "lpv": 0,
           "ic": 0,
@@ -24772,7 +24772,7 @@
     }
   },
   "_diag": {
-    "trafego_linhas": 1341,
+    "trafego_linhas": 1342,
     "hubla_linhas": 2001,
     "pesquisa_linhas": 2839,
     "invest_linhas": 1009
@@ -43772,7 +43772,7 @@
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
           1.89,
-          145,
+          146,
           0,
           0,
           0,
@@ -44026,8 +44026,8 @@
           "AD-21",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          1.78,
-          201,
+          1.79,
+          202,
           0,
           0,
           0,
@@ -60295,6 +60295,6 @@
     "date_min": "2026-04-27",
     "date_max": "2026-06-08"
   },
-  "updated_at": "2026-06-09 18:55:38 BRT",
+  "updated_at": "2026-06-09 20:23:53 BRT",
   "schema_version": 3
 }
