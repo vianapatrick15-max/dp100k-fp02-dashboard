@@ -81773,12 +81773,29 @@
           "Bahia",
           false,
           false
+        ],
+        [
+          "2026-06-10",
+          "zinha.paz34@gmail.com",
+          "instagram",
+          "organico",
+          "35 a 44 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "Até R$ 2.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Bahia",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-10 16:42:55 BRT",
+  "updated_at": "2026-06-10 19:13:37 BRT",
   "schema_version": 3
 }
