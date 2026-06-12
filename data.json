@@ -36410,6 +36410,13 @@
           "meta_ads",
           "[ad-09][dp100k-fp02][vid][vd]_carro_selfie",
           97.0
+        ],
+        [
+          "2026-06-12",
+          "julieglauce@gmail.com",
+          "meta_ads",
+          "[ad-09][dp100k-fp02][vid][vd]_carro_selfie",
+          97.0
         ]
       ]
     },
@@ -84258,6 +84265,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-12 09:52:48 BRT",
+  "updated_at": "2026-06-12 10:35:26 BRT",
   "schema_version": 3
 }
