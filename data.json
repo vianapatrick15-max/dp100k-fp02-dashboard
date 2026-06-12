@@ -36460,6 +36460,34 @@
           "meta_ads",
           "[ad-154][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-12",
+          "marcelorodrigues3012@hotmail.com",
+          "meta_ads",
+          "{{ad.name}}",
+          97.0
+        ],
+        [
+          "2026-06-12",
+          "uanajorge@gmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-06-12",
+          "viviane.ricci@praticasos.com.br",
+          "whatsapp",
+          "organico",
+          120.48
+        ],
+        [
+          "2026-06-12",
+          "ateliejessica@hotmail.com",
+          "ipm",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -84404,12 +84432,63 @@
           "Piauí",
           true,
           true
+        ],
+        [
+          "2026-06-12",
+          "marcelorodrigues3012@hotmail.com",
+          "meta_ads",
+          "{{ad.name}}",
+          "45 a 54 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Federal District",
+          true,
+          true
+        ],
+        [
+          "2026-06-12",
+          "viviane.ricci@praticasos.com.br",
+          "whatsapp",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "Yes",
+          "Palestrante",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "São Paulo",
+          true,
+          true
+        ],
+        [
+          "2026-06-12",
+          "uanajorge@gmail.com",
+          "instagram",
+          "organico",
+          "55 a 64 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Palestrante",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "São Paulo",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-12 16:16:06 BRT",
+  "updated_at": "2026-06-12 18:57:41 BRT",
   "schema_version": 3
 }
