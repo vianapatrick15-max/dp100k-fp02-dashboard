@@ -37236,6 +37236,27 @@
           "meta_ads",
           "[ad-154][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-13",
+          "ione_campos@yahoo.com.br",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-06-13",
+          "maryjonesrv@gmail.com",
+          "meta_ads",
+          "[ad-97][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-13",
+          "advjulianakarla@gmail.com",
+          "meta_ads",
+          "[ad-154][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -85288,6 +85309,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-13 05:29:15 BRT",
+  "updated_at": "2026-06-13 08:22:41 BRT",
   "schema_version": 3
 }
