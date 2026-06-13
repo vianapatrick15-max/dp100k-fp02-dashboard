@@ -37426,6 +37426,20 @@
           "meta_ads",
           "[ad-154][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-13",
+          "priscilardcm@gmail.com",
+          "meta_ads",
+          "[ad-147][est][quiz][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-13",
+          "rafael01albernaz@gmail.com",
+          "meta_ads",
+          "[ad-154][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -85625,12 +85639,46 @@
           "Federal District",
           true,
           false
+        ],
+        [
+          "2026-06-13",
+          "brunadmoreth@gmail.com",
+          "meta_ads",
+          "[AD-154][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Professor(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          true,
+          false
+        ],
+        [
+          "2026-06-13",
+          "priscilardcm@gmail.com",
+          "meta_ads",
+          "[AD-147][EST][QUIZ][DP100K-Fp02]",
+          "26 a 34 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Rio de Janeiro",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-13 11:19:33 BRT",
+  "updated_at": "2026-06-13 13:23:06 BRT",
   "schema_version": 3
 }
