@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 1627,
-    "hubla_linhas": 2003,
+    "hubla_linhas": 2004,
     "pesquisa_linhas": 2847,
     "invest_linhas": 0
   },
@@ -38476,6 +38476,13 @@
           "meta_ads",
           "[ad-152][est][vd][dp100k-fp02]",
           103.86
+        ],
+        [
+          "2026-06-14",
+          "marliviana78@yahoo.com.br",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -86902,6 +86909,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-14 16:49:31 BRT",
+  "updated_at": "2026-06-14 18:22:51 BRT",
   "schema_version": 3
 }
