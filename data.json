@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 1627,
-    "hubla_linhas": 2007,
-    "pesquisa_linhas": 2852,
+    "hubla_linhas": 2010,
+    "pesquisa_linhas": 2854,
     "invest_linhas": 0
   },
   "raw": {
@@ -38503,6 +38503,27 @@
           "mariliamduarte@hotmail.com",
           "meta_ads",
           "{{ad.name}}",
+          97.0
+        ],
+        [
+          "2026-06-14",
+          "nelmarsetubal@gmail.com",
+          "meta_ads",
+          "",
+          97.0
+        ],
+        [
+          "2026-06-14",
+          "costa.gabrielaferreira@outlook.com",
+          "meta_ads",
+          "[ad-146][est][vd][dp100k-fp02]",
+          116.6
+        ],
+        [
+          "2026-06-15",
+          "cigano@casadocigano.com.br",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
           97.0
         ]
       ]
@@ -87009,12 +87030,46 @@
           "São Paulo",
           false,
           false
+        ],
+        [
+          "2026-06-14",
+          "costa.gabrielaferreira@outlook.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Alagoas",
+          true,
+          true
+        ],
+        [
+          "2026-06-14",
+          "cigano@casadocigano.com.br",
+          "",
+          "",
+          "45 a 54 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Iniciante, nunca palestrei.",
+          "Perder medo d e falar em reuniões e poder dar treinamento para meus colaboradores ",
+          "São Paulo",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-14 20:19:12 BRT",
+  "updated_at": "2026-06-14 22:17:03 BRT",
   "schema_version": 3
 }
