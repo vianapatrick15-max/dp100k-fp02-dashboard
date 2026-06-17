@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 1814,
-    "hubla_linhas": 2056,
-    "pesquisa_linhas": 2898,
+    "hubla_linhas": 2059,
+    "pesquisa_linhas": 2901,
     "invest_linhas": 0
   },
   "raw": {
@@ -41649,6 +41649,27 @@
         [
           "2026-06-17",
           "pmenezes.uff@gmail.com",
+          "meta_ads",
+          "[ad-187][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "contatoalmeida.anaclaudia@gmail.com",
+          "meta_ads",
+          "[ad-168][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "leosk@uol.com.br",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "anegabrieledocarmo@gmail.com",
           "meta_ads",
           "[ad-187][est][vd][dp100k-fp02]",
           97.0
@@ -90939,12 +90960,63 @@
           "Rio de Janeiro",
           false,
           false
+        ],
+        [
+          "2026-06-17",
+          "contatoalmeida.anaclaudia@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-06-17",
+          "leosk@uol.com.br",
+          "",
+          "",
+          "55 a 64 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Terapeuta",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Bahia",
+          true,
+          true
+        ],
+        [
+          "2026-06-17",
+          "anegabrieledocarmo@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-17 14:13:53 BRT",
+  "updated_at": "2026-06-17 17:26:13 BRT",
   "schema_version": 3
 }
