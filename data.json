@@ -5,9 +5,9 @@
   "meses_meta": [],
   "periodos": {},
   "_diag": {
-    "trafego_linhas": 1814,
-    "hubla_linhas": 2059,
-    "pesquisa_linhas": 2901,
+    "trafego_linhas": 1822,
+    "hubla_linhas": 2062,
+    "pesquisa_linhas": 2902,
     "invest_linhas": 0
   },
   "raw": {
@@ -9637,7 +9637,7 @@
           84,
           7,
           5,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -10312,7 +10312,7 @@
           71,
           5,
           2,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -10927,7 +10927,7 @@
           34,
           1,
           1,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -12562,7 +12562,7 @@
           3,
           1,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -12847,7 +12847,7 @@
           47,
           3,
           3,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -13087,7 +13087,7 @@
           231,
           17,
           13,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -13417,7 +13417,7 @@
           272,
           16,
           11,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -13702,7 +13702,7 @@
           30,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -13912,7 +13912,7 @@
           21,
           0,
           0,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -14137,7 +14137,7 @@
           40,
           5,
           3,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -14332,7 +14332,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -14437,7 +14437,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -14452,7 +14452,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -14467,7 +14467,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -14482,7 +14482,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -14497,7 +14497,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -14512,7 +14512,7 @@
           8,
           1,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -14527,7 +14527,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -14542,7 +14542,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUeZFDM_C/"
         ],
         [
@@ -14557,7 +14557,7 @@
           30,
           4,
           3,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -14617,7 +14617,7 @@
           95,
           10,
           8,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -14857,7 +14857,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -14962,7 +14962,7 @@
           8,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -14977,7 +14977,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -14992,7 +14992,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -15007,7 +15007,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -15022,7 +15022,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -15037,7 +15037,7 @@
           20,
           2,
           2,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -15052,7 +15052,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -15067,7 +15067,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUeZFDM_C/"
         ],
         [
@@ -15082,7 +15082,7 @@
           19,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -15142,7 +15142,7 @@
           93,
           9,
           8,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -15937,7 +15937,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -16042,7 +16042,7 @@
           8,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -16057,7 +16057,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -16072,7 +16072,7 @@
           9,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -16087,7 +16087,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -16102,7 +16102,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -16117,7 +16117,7 @@
           42,
           5,
           3,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -16132,7 +16132,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -16147,7 +16147,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUeZFDM_C/"
         ],
         [
@@ -16162,7 +16162,7 @@
           37,
           2,
           1,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -16222,7 +16222,7 @@
           116,
           10,
           8,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -17047,7 +17047,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -17137,7 +17137,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -17152,7 +17152,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -17167,7 +17167,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -17182,7 +17182,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -17197,7 +17197,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -17212,7 +17212,7 @@
           36,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -17227,7 +17227,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -17242,7 +17242,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUeZFDM_C/"
         ],
         [
@@ -17257,7 +17257,7 @@
           80,
           3,
           2,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -17317,7 +17317,7 @@
           91,
           8,
           8,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -17917,7 +17917,7 @@
           109,
           4,
           2,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -17947,7 +17947,7 @@
           116,
           10,
           4,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -18547,7 +18547,7 @@
           30,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -18562,7 +18562,7 @@
           164,
           14,
           12,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -19297,7 +19297,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -19312,7 +19312,7 @@
           93,
           4,
           3,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -19402,7 +19402,7 @@
           162,
           16,
           14,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -19987,7 +19987,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -20017,7 +20017,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -20032,7 +20032,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -20047,7 +20047,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -20062,7 +20062,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -20077,7 +20077,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -20092,7 +20092,7 @@
           21,
           2,
           2,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -20182,7 +20182,7 @@
           139,
           10,
           7,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -20767,7 +20767,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -20797,7 +20797,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -20812,7 +20812,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -20827,7 +20827,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -20842,7 +20842,7 @@
           41,
           2,
           2,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -20857,7 +20857,7 @@
           18,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -20947,7 +20947,7 @@
           27,
           2,
           2,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -21547,7 +21547,7 @@
           0,
           1,
           1,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -21577,7 +21577,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -21592,7 +21592,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -21607,7 +21607,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -21622,7 +21622,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -21637,7 +21637,7 @@
           21,
           1,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -21652,7 +21652,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -21667,7 +21667,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUeZFDM_C/"
         ],
         [
@@ -21682,7 +21682,7 @@
           6,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -21772,7 +21772,7 @@
           23,
           2,
           2,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -22432,7 +22432,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -22462,7 +22462,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -22477,7 +22477,7 @@
           6,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -22492,7 +22492,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -22507,7 +22507,7 @@
           12,
           1,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -22597,7 +22597,7 @@
           32,
           4,
           3,
-          "PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DY0XM6BDGJP/"
         ],
         [
@@ -23332,7 +23332,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -23347,7 +23347,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcR3DAlg/"
         ],
         [
@@ -23362,7 +23362,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUcjgDA83/"
         ],
         [
@@ -23377,7 +23377,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdCwjEbe/"
         ],
         [
@@ -23392,7 +23392,7 @@
           8,
           1,
           1,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -23407,7 +23407,7 @@
           2,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -24187,7 +24187,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFT2vXDECW/"
         ],
         [
@@ -24217,7 +24217,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUbmjjPbk/"
         ],
         [
@@ -24232,7 +24232,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUb1bDE9O/"
         ],
         [
@@ -24247,7 +24247,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -24262,7 +24262,7 @@
           0,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "ACTIVE",
           "https://www.instagram.com/p/DZFUdzvjE-S/"
         ],
         [
@@ -24277,7 +24277,7 @@
           1,
           0,
           0,
-          "CAMPAIGN_PAUSED",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8K7jBz9/"
         ],
         [
@@ -25126,8 +25126,8 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05_ESCALA",
           "[DP100K-Fp02][ADV+][FEMININO]_19_05",
-          1307.03,
-          18293,
+          1307.17,
+          18294,
           116,
           100,
           12,
@@ -25276,8 +25276,8 @@
           "AD-06",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.59,
-          57,
+          0.6,
+          58,
           0,
           0,
           0,
@@ -25351,8 +25351,8 @@
           "AD-11",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          3.11,
-          203,
+          3.12,
+          204,
           0,
           0,
           0,
@@ -25381,8 +25381,8 @@
           "AD-13",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          1.94,
-          152,
+          1.95,
+          153,
           0,
           0,
           0,
@@ -25547,7 +25547,7 @@
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
           11.31,
-          277,
+          278,
           0,
           0,
           0,
@@ -26221,8 +26221,8 @@
           "AD-178",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          15.97,
-          223,
+          15.98,
+          224,
           1,
           1,
           0,
@@ -26281,8 +26281,8 @@
           "AD-01",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.41,
-          20,
+          0.77,
+          41,
           0,
           0,
           0,
@@ -26296,8 +26296,8 @@
           "AD-02",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          2.35,
-          180,
+          4.14,
+          338,
           0,
           0,
           0,
@@ -26311,8 +26311,8 @@
           "AD-03",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          1.54,
-          103,
+          2.42,
+          179,
           0,
           0,
           0,
@@ -26326,8 +26326,8 @@
           "AD-04",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.74,
-          54,
+          1.03,
+          103,
           0,
           0,
           0,
@@ -26341,8 +26341,8 @@
           "AD-05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.6,
-          26,
+          0.81,
+          47,
           0,
           0,
           0,
@@ -26356,8 +26356,8 @@
           "AD-06",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.3,
-          22,
+          0.45,
+          42,
           0,
           0,
           0,
@@ -26371,8 +26371,8 @@
           "AD-07",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.36,
-          27,
+          0.67,
+          48,
           0,
           0,
           0,
@@ -26386,8 +26386,8 @@
           "AD-08",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.05,
-          1,
+          0.06,
+          2,
           0,
           0,
           0,
@@ -26401,8 +26401,8 @@
           "AD-09",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          1.22,
-          104,
+          2.13,
+          195,
           0,
           0,
           0,
@@ -26416,8 +26416,8 @@
           "AD-10",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.99,
-          102,
+          1.6,
+          186,
           0,
           0,
           0,
@@ -26431,8 +26431,8 @@
           "AD-11",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          1.61,
-          76,
+          2.76,
+          130,
           0,
           0,
           0,
@@ -26446,8 +26446,8 @@
           "AD-12",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          2.26,
-          113,
+          3.74,
+          228,
           0,
           0,
           0,
@@ -26461,8 +26461,8 @@
           "AD-13",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.95,
-          58,
+          1.33,
+          98,
           0,
           0,
           0,
@@ -26476,8 +26476,8 @@
           "AD-14",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.18,
-          13,
+          0.52,
+          29,
           0,
           0,
           0,
@@ -26491,8 +26491,8 @@
           "AD-15",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.49,
-          31,
+          3.39,
+          164,
           0,
           0,
           0,
@@ -26506,8 +26506,8 @@
           "AD-16",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.47,
-          55,
+          1.12,
+          119,
           0,
           0,
           0,
@@ -26521,8 +26521,8 @@
           "AD-17",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.39,
-          49,
+          0.62,
+          73,
           0,
           0,
           0,
@@ -26536,8 +26536,8 @@
           "AD-18",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.56,
-          39,
+          0.76,
+          56,
           0,
           0,
           0,
@@ -26551,8 +26551,8 @@
           "AD-19",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.48,
-          67,
+          0.97,
+          115,
           0,
           0,
           0,
@@ -26566,8 +26566,8 @@
           "AD-20",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.35,
-          42,
+          0.76,
+          78,
           0,
           0,
           0,
@@ -26581,8 +26581,8 @@
           "AD-21",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.51,
-          46,
+          0.8,
+          94,
           0,
           0,
           0,
@@ -26596,8 +26596,8 @@
           "AD-22",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.51,
-          52,
+          1.17,
+          104,
           0,
           0,
           0,
@@ -26611,8 +26611,8 @@
           "AD-23",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.31,
-          20,
+          0.48,
+          39,
           0,
           0,
           0,
@@ -26626,8 +26626,8 @@
           "AD-24",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          2.24,
-          40,
+          3.85,
+          83,
           0,
           0,
           0,
@@ -26641,8 +26641,8 @@
           "AD-25",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.26,
-          19,
+          1.0,
+          52,
           0,
           0,
           0,
@@ -26656,8 +26656,8 @@
           "AD-26",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.36,
-          11,
+          0.6,
+          22,
           0,
           0,
           0,
@@ -26671,8 +26671,8 @@
           "AD-27",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.19,
-          8,
+          0.28,
+          16,
           0,
           0,
           0,
@@ -26686,8 +26686,8 @@
           "AD-28",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.84,
-          35,
+          2.27,
+          93,
           0,
           0,
           0,
@@ -26701,8 +26701,8 @@
           "AD-29",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.93,
-          43,
+          2.91,
+          113,
           0,
           0,
           0,
@@ -26716,8 +26716,8 @@
           "AD-30",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.25,
-          16,
+          0.38,
+          31,
           0,
           0,
           0,
@@ -26731,8 +26731,8 @@
           "AD-31",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.38,
-          19,
+          0.59,
+          34,
           0,
           0,
           0,
@@ -26746,8 +26746,8 @@
           "AD-32",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.26,
-          23,
+          0.67,
+          43,
           0,
           0,
           0,
@@ -26761,8 +26761,8 @@
           "AD-33",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.52,
-          25,
+          1.01,
+          48,
           0,
           0,
           0,
@@ -26776,8 +26776,8 @@
           "AD-34",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.31,
-          16,
+          0.44,
+          26,
           0,
           0,
           0,
@@ -26791,8 +26791,8 @@
           "AD-35",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.1,
-          11,
+          0.35,
+          23,
           0,
           0,
           0,
@@ -26806,8 +26806,8 @@
           "AD-36",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.37,
-          18,
+          2.07,
+          77,
           0,
           0,
           0,
@@ -26821,8 +26821,8 @@
           "AD-37",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.35,
-          27,
+          0.49,
+          42,
           0,
           0,
           0,
@@ -26836,8 +26836,8 @@
           "AD-38",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]_15_05",
           "[DP100K-Fp02][NUTRICAO][VV][VISITANTES_DP100K]",
-          0.48,
-          61,
+          0.95,
+          104,
           0,
           0,
           0,
@@ -26847,12 +26847,57 @@
         ],
         [
           "2026-06-17",
+          "[AD-154][EST][VD][DP100K-Fp02]",
+          "AD-154",
+          "[DP100K-Fp02][VENDA][ABO][TOP_CPA]_17_06",
+          "[DP100K-Fp02][ADV+][AMPLO][AD-154]_17_06",
+          100.98,
+          1715,
+          12,
+          11,
+          1,
+          1,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZsoev9jOKl/"
+        ],
+        [
+          "2026-06-17",
+          "[AD-15][DP100K-Fp02][VID][VD]_palco_tudo_comeca_aqui",
+          "AD-15",
+          "[DP100K-Fp02][VENDA][ABO][TOP_CPA]_17_06",
+          "[DP100K-Fp02][ADV+][AMPLO][AD-15]_17_06",
+          38.14,
+          609,
+          2,
+          2,
+          1,
+          1,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT8mcjP98/"
+        ],
+        [
+          "2026-06-17",
+          "[AD-162][EST][VD][DP100K-Fp02]",
+          "AD-162",
+          "[DP100K-Fp02][VENDA][ABO][TOP_CPA]_17_06",
+          "[DP100K-Fp02][ADV+][AMPLO][AD-162]_17_06",
+          49.58,
+          638,
+          2,
+          1,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZsoePaDOyC/"
+        ],
+        [
+          "2026-06-17",
           "[AD-183][EST][VD][DP100K-Fp02]",
           "AD-183",
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
-          3.08,
-          44,
+          3.22,
+          47,
           0,
           0,
           0,
@@ -26862,12 +26907,27 @@
         ],
         [
           "2026-06-17",
+          "[AD-184][EST][VD][DP100K-Fp02]",
+          "AD-184",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
+          "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
+          0.02,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZpipUdMkPq/"
+        ],
+        [
+          "2026-06-17",
           "[AD-186][EST][VD][DP100K-Fp02]",
           "AD-186",
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
-          0.01,
-          1,
+          0.04,
+          2,
           0,
           0,
           0,
@@ -26881,12 +26941,12 @@
           "AD-187",
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
-          191.95,
-          3070,
-          76,
-          83,
-          32,
-          5,
+          235.41,
+          3859,
+          104,
+          112,
+          41,
+          6,
           "ACTIVE",
           "https://www.instagram.com/p/DZpipKFsKSy/"
         ],
@@ -26896,8 +26956,8 @@
           "AD-188",
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
-          0.53,
-          7,
+          0.77,
+          12,
           0,
           1,
           0,
@@ -26919,6 +26979,21 @@
           0,
           "ACTIVE",
           "https://www.instagram.com/p/DZpiou4sDfc/"
+        ],
+        [
+          "2026-06-17",
+          "[AD-191][EST][VD][DP100K-Fp02]",
+          "AD-191",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
+          "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
+          0.01,
+          1,
+          0,
+          0,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZpinX7sCfH/"
         ],
         [
           "2026-06-17",
@@ -26957,7 +27032,7 @@
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
           0.14,
-          1,
+          2,
           0,
           0,
           0,
@@ -26986,8 +27061,8 @@
           "AD-196",
           "[DP100K-Fp02][VENDA][CBO][ADV+][QUIZ]_13_06",
           "[DP100K-Fp02][ADV+][AMPLO][QUIZ]_13_06",
-          4.43,
-          93,
+          4.81,
+          102,
           0,
           0,
           0,
@@ -26997,12 +27072,57 @@
         ],
         [
           "2026-06-17",
+          "[AD-08][DP100K-Fp02][VID][VD]_casa_selfie",
+          "AD-08",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ADS_NOVOS]_02_06",
+          "[DP100K-Fp02][ADV+][BROAD][TESTE_ADS_NOVOS]_02_06",
+          149.74,
+          2347,
+          18,
+          15,
+          1,
+          1,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZFT2vXDECW/"
+        ],
+        [
+          "2026-06-17",
+          "[AD-147][EST][VD][DP100K-Fp02]",
+          "AD-147",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          60.84,
+          1002,
+          3,
+          2,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DY0XM6BDGJP/"
+        ],
+        [
+          "2026-06-17",
+          "[AD-152][EST][VD][DP100K-Fp02]",
+          "AD-152",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS]_19_05",
+          "[DP100K-Fp02][ADV+][AMPLO]_19_05",
+          71.4,
+          856,
+          8,
+          7,
+          0,
+          0,
+          "PAUSED",
+          "https://www.instagram.com/p/DYpIF9hjPAg/"
+        ],
+        [
+          "2026-06-17",
           "[AD-165][EST][VD][DP100K-Fp02]",
           "AD-165",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          1.02,
-          20,
+          4.1,
+          60,
           1,
           1,
           0,
@@ -27016,8 +27136,8 @@
           "AD-166",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          6.0,
-          89,
+          9.09,
+          137,
           0,
           0,
           0,
@@ -27031,8 +27151,8 @@
           "AD-167",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          28.72,
-          395,
+          31.75,
+          437,
           2,
           2,
           0,
@@ -27046,12 +27166,12 @@
           "AD-168",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          77.28,
-          882,
-          11,
-          9,
-          1,
-          1,
+          101.66,
+          1228,
+          17,
+          16,
+          2,
+          2,
           "ACTIVE",
           "https://www.instagram.com/p/DZoTsR5DGac/"
         ],
@@ -27061,8 +27181,8 @@
           "AD-169",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.17,
-          5,
+          0.2,
+          8,
           0,
           0,
           0,
@@ -27076,10 +27196,10 @@
           "AD-170",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          4.28,
-          62,
-          0,
-          0,
+          11.26,
+          140,
+          2,
+          2,
           0,
           0,
           "ACTIVE",
@@ -27091,10 +27211,10 @@
           "AD-171",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.01,
+          1.65,
+          16,
           1,
-          0,
-          0,
+          1,
           0,
           0,
           "ACTIVE",
@@ -27106,8 +27226,8 @@
           "AD-172",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.12,
-          3,
+          1.0,
+          19,
           0,
           0,
           0,
@@ -27121,8 +27241,8 @@
           "AD-173",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.18,
-          4,
+          0.96,
+          19,
           0,
           0,
           0,
@@ -27136,8 +27256,8 @@
           "AD-174",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.24,
-          4,
+          0.95,
+          13,
           0,
           0,
           0,
@@ -27151,10 +27271,10 @@
           "AD-175",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_165-175]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_165-175]_15_06",
-          0.02,
+          1.55,
+          19,
           1,
-          0,
-          0,
+          1,
           0,
           0,
           "ACTIVE",
@@ -27166,8 +27286,8 @@
           "AD-176",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          27.54,
-          274,
+          33.55,
+          338,
           2,
           1,
           0,
@@ -27181,9 +27301,9 @@
           "AD-177",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          79.47,
-          940,
-          11,
+          105.39,
+          1254,
+          12,
           11,
           0,
           0,
@@ -27196,9 +27316,9 @@
           "AD-178",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          0.96,
-          13,
-          0,
+          6.94,
+          123,
+          1,
           0,
           0,
           0,
@@ -27211,8 +27331,8 @@
           "AD-179",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          0.76,
-          6,
+          2.05,
+          26,
           0,
           0,
           0,
@@ -27226,8 +27346,8 @@
           "AD-180",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          0.19,
-          3,
+          1.78,
+          26,
           0,
           0,
           0,
@@ -27241,8 +27361,8 @@
           "AD-181",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_ESTATICOS_176-181]_15_06",
           "[DP100K-Fp02][ADV+][AMPLO][TESTE_ESTATICOS_176-181]_15_06",
-          0.77,
-          10,
+          5.85,
+          53,
           0,
           0,
           0,
@@ -41672,6 +41792,27 @@
           "anegabrieledocarmo@gmail.com",
           "meta_ads",
           "[ad-187][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "carminha.1970@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "joaoalbero@bmflorianopolis.com.br",
+          "meta_ads",
+          "[ad-154][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "flaviamontfotografia@gmail.com",
+          "meta_ads",
+          "[ad-08][dp100k-fp02][vid][vd]_casa_selfie",
           97.0
         ]
       ]
@@ -91011,12 +91152,29 @@
           "São Paulo",
           false,
           false
+        ],
+        [
+          "2026-06-17",
+          "carminha.1970@hotmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Conheci agora",
+          "Yes",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Piauí",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-17 17:26:13 BRT",
+  "updated_at": "2026-06-17 19:49:33 BRT",
   "schema_version": 3
 }
