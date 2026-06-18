@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 1822,
-    "hubla_linhas": 2062,
-    "pesquisa_linhas": 2902,
+    "hubla_linhas": 2063,
+    "pesquisa_linhas": 2903,
     "invest_linhas": 0
   },
   "raw": {
@@ -41813,6 +41813,13 @@
           "flaviamontfotografia@gmail.com",
           "meta_ads",
           "[ad-08][dp100k-fp02][vid][vd]_casa_selfie",
+          97.0
+        ],
+        [
+          "2026-06-17",
+          "mgomesbrito8@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
           97.0
         ]
       ]
@@ -91169,12 +91176,29 @@
           "Piauí",
           false,
           false
+        ],
+        [
+          "2026-06-17",
+          "mgomesbrito8@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Bahia",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-17 19:49:33 BRT",
+  "updated_at": "2026-06-17 21:22:42 BRT",
   "schema_version": 3
 }
