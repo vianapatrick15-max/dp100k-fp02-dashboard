@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 1992,
-    "hubla_linhas": 2112,
-    "pesquisa_linhas": 2941,
+    "hubla_linhas": 2113,
+    "pesquisa_linhas": 2942,
     "invest_linhas": 0
   },
   "raw": {
@@ -44714,6 +44714,13 @@
           "meta_ads",
           "[ad-177][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-19",
+          "allanmatias91@gmail.com",
+          "meta_ads",
+          "[ad-135][est][vd][dp100k-fp02]",
+          107.4
         ]
       ]
     },
@@ -94732,12 +94739,29 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-06-19",
+          "allanmatias91@gmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Paraná",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-19 16:59:32 BRT",
+  "updated_at": "2026-06-19 18:16:11 BRT",
   "schema_version": 3
 }
