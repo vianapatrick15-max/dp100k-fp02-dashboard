@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 2093,
     "hubla_linhas": 2130,
-    "pesquisa_linhas": 2956,
+    "pesquisa_linhas": 2957,
     "invest_linhas": 0
   },
   "raw": {
@@ -96628,12 +96628,29 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-06-20",
+          "jeruzamoura@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Funcionário(a) Público(a)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Paraná",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-20 17:22:01 BRT",
+  "updated_at": "2026-06-20 19:17:52 BRT",
   "schema_version": 3
 }
