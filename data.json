@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2183,
-    "hubla_linhas": 2159,
-    "pesquisa_linhas": 2984,
+    "hubla_linhas": 2163,
+    "pesquisa_linhas": 2987,
     "invest_linhas": 0
   },
   "raw": {
@@ -47908,6 +47908,34 @@
           "meta_ads",
           "[ad-183][est][vd][dp100k-fp02]",
           116.6
+        ],
+        [
+          "2026-06-21",
+          "goana65@hotmail.com",
+          "meta_ads",
+          "[ad-183][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "socorrofa_santos@yahoo.com.br",
+          "meta_ads",
+          "[ad-168][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "sheyla@doctor.com",
+          "meta_ads",
+          "[ad-15][dp100k-fp02][vid][vd]_palco_tudo_comeca_aqui",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "seanijr@yahoo.com.br",
+          "meta_ads",
+          "[ad-172][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -98657,12 +98685,63 @@
           "Bahia",
           false,
           false
+        ],
+        [
+          "2026-06-21",
+          "goana65@hotmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Professor(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Bahia",
+          true,
+          true
+        ],
+        [
+          "2026-06-21",
+          "sheyla@doctor.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Goiás",
+          true,
+          true
+        ],
+        [
+          "2026-06-21",
+          "seanijr@yahoo.com.br",
+          "",
+          "",
+          "35 a 44 anos",
+          "Masculino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Artista",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Servir com tudo que já recebi de Deus",
+          "Rio de Janeiro",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-21 16:56:08 BRT",
+  "updated_at": "2026-06-21 18:23:08 BRT",
   "schema_version": 3
 }
