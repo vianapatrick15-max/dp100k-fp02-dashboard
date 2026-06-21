@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2174,
-    "hubla_linhas": 2149,
-    "pesquisa_linhas": 2974,
+    "hubla_linhas": 2153,
+    "pesquisa_linhas": 2977,
     "invest_linhas": 0
   },
   "raw": {
@@ -47702,6 +47702,34 @@
           "kagy.fk@gmail.com",
           "meta_ads",
           "[ad-215][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "carlaizidoriodecor@gmail.com",
+          "meta_ads",
+          "[ad-15][dp100k-fp02][vid][vd]_palco_tudo_comeca_aqui",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "madalenacosta302@gmail.com",
+          "email",
+          "organico",
+          109.2
+        ],
+        [
+          "2026-06-21",
+          "gilmaraandrade.nutri@gmail.com",
+          "meta_ads",
+          "[ad-170][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-21",
+          "rogerio.ba.1973@gmail.com",
+          "meta_ads",
+          "[ad-161][dp100k-fp02][est][vd]_apple_iphone_v2",
           97.0
         ]
       ]
@@ -98282,12 +98310,63 @@
           "Bahia",
           false,
           false
+        ],
+        [
+          "2026-06-21",
+          "manoel32@hotmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Bahia",
+          true,
+          true
+        ],
+        [
+          "2026-06-21",
+          "madalenacosta302@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Clt",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Santa Catarina",
+          false,
+          false
+        ],
+        [
+          "2026-06-21",
+          "gilmaraandrade.nutri@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Profissional Autônomo(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Sergipe",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-21 10:15:01 BRT",
+  "updated_at": "2026-06-21 13:02:13 BRT",
   "schema_version": 3
 }
