@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2452,
-    "hubla_linhas": 2233,
+    "hubla_linhas": 2234,
     "pesquisa_linhas": 3048,
     "invest_linhas": 0
   },
@@ -52461,6 +52461,13 @@
           "meta_ads",
           "[ad-29][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-24",
+          "elianepegoraro29@yahoo.com.br",
+          "meta_ads",
+          "[ad-165][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -104304,6 +104311,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-24 17:01:23 BRT",
+  "updated_at": "2026-06-24 18:39:38 BRT",
   "schema_version": 3
 }
