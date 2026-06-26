@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2538,
-    "hubla_linhas": 2253,
-    "pesquisa_linhas": 3063,
+    "hubla_linhas": 2254,
+    "pesquisa_linhas": 3064,
     "invest_linhas": 0
   },
   "raw": {
@@ -53891,6 +53891,13 @@
           "meta_ads",
           "[ad-15][dp100k-fp02][vid][vd]_palco_tudo_comeca_aqui",
           97.0
+        ],
+        [
+          "2026-06-25",
+          "linda_laff@yahoo.com.br",
+          "meta_ads",
+          "[ad-163][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -105983,12 +105990,29 @@
           "Santa Catarina",
           true,
           true
+        ],
+        [
+          "2026-06-25",
+          "linda_laff@yahoo.com.br",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "Yes",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Sergipe",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-25 19:39:30 BRT",
+  "updated_at": "2026-06-25 21:18:25 BRT",
   "schema_version": 3
 }
