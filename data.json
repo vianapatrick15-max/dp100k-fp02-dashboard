@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2712,
-    "hubla_linhas": 2274,
+    "hubla_linhas": 2276,
     "pesquisa_linhas": 3083,
     "invest_linhas": 0
   },
@@ -56648,6 +56648,20 @@
           "meta_ads",
           "[ad-29][vid][vd][dp100k-fp02]",
           102.12
+        ],
+        [
+          "2026-06-27",
+          "helenanmuller@gmail.com",
+          "meta_ads",
+          "[ad-153][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-27",
+          "profsuelenmedeiros@gmail.com",
+          "meta_ads",
+          "[ad-153][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -109086,6 +109100,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-27 13:15:06 BRT",
+  "updated_at": "2026-06-27 15:12:04 BRT",
   "schema_version": 3
 }
