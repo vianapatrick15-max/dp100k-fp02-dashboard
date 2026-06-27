@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2712,
-    "hubla_linhas": 2276,
-    "pesquisa_linhas": 3083,
+    "hubla_linhas": 2277,
+    "pesquisa_linhas": 3084,
     "invest_linhas": 0
   },
   "raw": {
@@ -56662,6 +56662,13 @@
           "meta_ads",
           "[ad-153][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-27",
+          "marianajunque.mj@gmail.com",
+          "meta_ads",
+          "[ad-173][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -109094,12 +109101,29 @@
           "Bahia",
           false,
           false
+        ],
+        [
+          "2026-06-27",
+          "marianajunque.mj@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "São Paulo",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-27 15:12:04 BRT",
+  "updated_at": "2026-06-27 17:15:33 BRT",
   "schema_version": 3
 }
