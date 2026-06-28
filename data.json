@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2795,
-    "hubla_linhas": 2294,
-    "pesquisa_linhas": 3100,
+    "hubla_linhas": 2295,
+    "pesquisa_linhas": 3101,
     "invest_linhas": 0
   },
   "raw": {
@@ -58033,6 +58033,13 @@
           "meta_ads",
           "[ad-23][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-28",
+          "suzanatorres.morais@gmail.com",
+          "meta_ads",
+          "[ad-213][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -110754,12 +110761,29 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-06-28",
+          "suzanatorres.morais@gmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Terapeuta",
+          "No momento, estou sem renda.",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Maranhão",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-28 15:12:02 BRT",
+  "updated_at": "2026-06-28 17:19:37 BRT",
   "schema_version": 3
 }
