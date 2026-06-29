@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 2817,
     "hubla_linhas": 2300,
-    "pesquisa_linhas": 3106,
+    "pesquisa_linhas": 3107,
     "invest_linhas": 0
   },
   "raw": {
@@ -26872,7 +26872,7 @@
           44,
           2,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -28012,7 +28012,7 @@
           87,
           3,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -29272,7 +29272,7 @@
           54,
           2,
           2,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -30697,7 +30697,7 @@
           72,
           4,
           3,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -32107,7 +32107,7 @@
           86,
           5,
           3,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -33547,7 +33547,7 @@
           84,
           4,
           3,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -35062,7 +35062,7 @@
           81,
           5,
           4,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -36382,7 +36382,7 @@
           58,
           6,
           3,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -37567,7 +37567,7 @@
           83,
           8,
           5,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -38782,7 +38782,7 @@
           37,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -41497,7 +41497,7 @@
           23,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -42151,13 +42151,13 @@
           "AD-15",
           "[DP100K-Fp02][VENDA][ABO][TOP_CPA]_17_06",
           "[DP100K-Fp02][ADV+][AMPLO][AD-15]_17_06",
-          297.86,
-          4207,
-          63,
-          56,
+          312.18,
+          4413,
+          64,
+          57,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZFT8mcjP98/"
         ],
         [
@@ -42166,8 +42166,8 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][PRE_ESCALA_AD-152]_28_06",
           "[DP100K-Fp02][ADV+][AMPLO][PRE_ESCALA_AD-152]_28_06",
-          66.22,
-          666,
+          76.88,
+          783,
           4,
           3,
           4,
@@ -42181,8 +42181,8 @@
           "AD-21",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          2.77,
-          27,
+          2.97,
+          37,
           0,
           0,
           0,
@@ -42196,8 +42196,8 @@
           "AD-22",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          2.54,
-          33,
+          2.57,
+          34,
           0,
           0,
           0,
@@ -42226,10 +42226,10 @@
           "AD-24",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          0.05,
+          8.97,
+          76,
           3,
-          0,
-          0,
+          2,
           0,
           0,
           "ACTIVE",
@@ -42241,10 +42241,10 @@
           "AD-25",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          30.05,
-          370,
-          3,
-          3,
+          65.47,
+          912,
+          5,
+          5,
           0,
           0,
           "ACTIVE",
@@ -42271,8 +42271,8 @@
           "AD-29",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          161.21,
-          1629,
+          161.96,
+          1635,
           19,
           19,
           0,
@@ -111228,12 +111228,29 @@
           "Rio Grande do Sul",
           true,
           true
+        ],
+        [
+          "2026-06-29",
+          "keilacri@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Renda extra",
+          "São Paulo",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-29 15:18:33 BRT",
+  "updated_at": "2026-06-29 17:53:16 BRT",
   "schema_version": 3
 }
