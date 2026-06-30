@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2840,
-    "hubla_linhas": 2313,
+    "hubla_linhas": 2314,
     "pesquisa_linhas": 3116,
     "invest_linhas": 0
   },
@@ -58841,6 +58841,13 @@
           "meta_ads",
           "[ad-152][est][quiz][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-06-30",
+          "giovannadesiqueira@hotmail.com",
+          "meta_ads",
+          "{{ad.name}}",
+          97.0
         ]
       ]
     },
@@ -111840,6 +111847,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-30 18:01:21 BRT",
+  "updated_at": "2026-06-30 19:20:18 BRT",
   "schema_version": 3
 }
