@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2819,
-    "hubla_linhas": 2300,
-    "pesquisa_linhas": 3107,
+    "hubla_linhas": 2302,
+    "pesquisa_linhas": 3109,
     "invest_linhas": 0
   },
   "raw": {
@@ -58435,6 +58435,20 @@
           "ipm",
           "organico",
           97.0
+        ],
+        [
+          "2026-06-29",
+          "joyce.karoline.pinheiro.lima@gmail.com",
+          "meta_ads",
+          "[ad-216][est][vd][dp100k-fp02]",
+          102.12
+        ],
+        [
+          "2026-06-29",
+          "carmenponce0216@gmail.com",
+          "ipm",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -111275,12 +111289,46 @@
           "São Paulo",
           true,
           false
+        ],
+        [
+          "2026-06-29",
+          "joyce.karoline.pinheiro.lima@gmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Pernambuco",
+          true,
+          true
+        ],
+        [
+          "2026-06-29",
+          "carmenponce0216@gmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Perder a inibição ",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-29 19:15:55 BRT",
+  "updated_at": "2026-06-29 21:13:53 BRT",
   "schema_version": 3
 }
