@@ -5,8 +5,8 @@
   "meses_meta": [],
   "periodos": {},
   "_diag": {
-    "trafego_linhas": 2819,
-    "hubla_linhas": 2302,
+    "trafego_linhas": 2821,
+    "hubla_linhas": 2304,
     "pesquisa_linhas": 3109,
     "invest_linhas": 0
   },
@@ -34312,7 +34312,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -35572,7 +35572,7 @@
           1,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -36817,7 +36817,7 @@
           2,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -39427,7 +39427,7 @@
           1,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -40762,7 +40762,7 @@
           4,
           1,
           1,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -41917,7 +41917,7 @@
           0,
           0,
           0,
-          "ACTIVE",
+          "PAUSED",
           "https://www.instagram.com/p/DZ5shOvMSa3/"
         ],
         [
@@ -42151,8 +42151,8 @@
           "AD-15",
           "[DP100K-Fp02][VENDA][ABO][TOP_CPA]_17_06",
           "[DP100K-Fp02][ADV+][AMPLO][AD-15]_17_06",
-          312.39,
-          4426,
+          312.61,
+          4430,
           64,
           57,
           1,
@@ -42166,12 +42166,12 @@
           "AD-152",
           "[DP100K-Fp02][VENDA][CBO][ADV+][PRE_ESCALA_AD-152]_28_06",
           "[DP100K-Fp02][ADV+][AMPLO][PRE_ESCALA_AD-152]_28_06",
-          88.0,
-          930,
-          7,
-          5,
-          5,
-          1,
+          117.37,
+          1359,
+          16,
+          14,
+          11,
+          2,
           "ACTIVE",
           "https://www.instagram.com/p/DaJlynBs6Dz/"
         ],
@@ -42181,8 +42181,8 @@
           "AD-20",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          3.35,
-          59,
+          3.42,
+          60,
           1,
           2,
           0,
@@ -42241,8 +42241,8 @@
           "AD-24",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          8.97,
-          76,
+          15.68,
+          186,
           3,
           2,
           0,
@@ -42256,14 +42256,44 @@
           "AD-25",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          138.18,
-          2245,
-          28,
-          23,
+          160.85,
+          2665,
+          33,
+          32,
+          0,
+          0,
+          "PAUSED",
+          "https://www.instagram.com/p/DZ5shOvMSa3/"
+        ],
+        [
+          "2026-06-29",
+          "[AD-26][VID][VD][DP100K-Fp02]",
+          "AD-26",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
+          "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
+          7.3,
+          225,
+          3,
+          3,
           0,
           0,
           "ACTIVE",
-          "https://www.instagram.com/p/DZ5shOvMSa3/"
+          "https://www.instagram.com/p/DZ5ucX5MdWx/"
+        ],
+        [
+          "2026-06-29",
+          "[AD-27][VID][VD][DP100K-Fp02]",
+          "AD-27",
+          "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
+          "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
+          13.2,
+          219,
+          2,
+          2,
+          0,
+          0,
+          "ACTIVE",
+          "https://www.instagram.com/p/DZ5uiFXMfx7/"
         ],
         [
           "2026-06-29",
@@ -42286,8 +42316,8 @@
           "AD-29",
           "[DP100K-Fp02][VENDA][CBO][ADV+][TESTE_VIDEOS_19-32]_22_06",
           "[DP100K-Fp02][ADV+][AMPLO][VIDEOS_19-32]_22_06",
-          162.3,
-          1638,
+          162.49,
+          1641,
           19,
           19,
           0,
@@ -58447,6 +58477,20 @@
           "2026-06-29",
           "carmenponce0216@gmail.com",
           "ipm",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-06-30",
+          "vita-ab@hotmail.com",
+          "meta_ads",
+          "[ad-152][est][quiz][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-06-30",
+          "dmsecretariado@gmail.com",
+          "email",
           "organico",
           97.0
         ]
@@ -111329,6 +111373,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-06-29 21:13:53 BRT",
+  "updated_at": "2026-06-30 02:12:45 BRT",
   "schema_version": 3
 }
