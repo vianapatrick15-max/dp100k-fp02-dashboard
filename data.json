@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2884,
-    "hubla_linhas": 2326,
-    "pesquisa_linhas": 3125,
+    "hubla_linhas": 2327,
+    "pesquisa_linhas": 3127,
     "invest_linhas": 0
   },
   "raw": {
@@ -59592,6 +59592,13 @@
           "meta_ads",
           "[ad-185][est][vd][dp100k-fp02]",
           102.12
+        ],
+        [
+          "2026-07-01",
+          "melaniafiametti@gmail.com",
+          "meta_ads",
+          "[ad-169][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -112738,12 +112745,46 @@
           "Rio de Janeiro",
           false,
           false
+        ],
+        [
+          "2026-07-01",
+          "brasilcravinho@yahoo.com.br",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Aposentado(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Renda extra",
+          "Espírito Santo",
+          false,
+          false
+        ],
+        [
+          "2026-07-01",
+          "melaniafiametti@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra",
+          "Santa Catarina",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-01 17:51:32 BRT",
+  "updated_at": "2026-07-01 19:23:41 BRT",
   "schema_version": 3
 }
