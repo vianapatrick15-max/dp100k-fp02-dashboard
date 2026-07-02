@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2912,
-    "hubla_linhas": 2349,
-    "pesquisa_linhas": 3146,
+    "hubla_linhas": 2350,
+    "pesquisa_linhas": 3147,
     "invest_linhas": 0
   },
   "raw": {
@@ -60173,6 +60173,13 @@
           "meta_ads",
           "[ad-187][est][vd][dp100k-fp02]",
           120.48
+        ],
+        [
+          "2026-07-02",
+          "fefefurtado@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -113676,12 +113683,29 @@
           "Santa Catarina",
           false,
           false
+        ],
+        [
+          "2026-07-02",
+          "fefefurtado@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Palestrante",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-02 17:24:43 BRT",
+  "updated_at": "2026-07-02 19:15:07 BRT",
   "schema_version": 3
 }
