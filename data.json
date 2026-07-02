@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2911,
-    "hubla_linhas": 2344,
-    "pesquisa_linhas": 3141,
+    "hubla_linhas": 2349,
+    "pesquisa_linhas": 3145,
     "invest_linhas": 0
   },
   "raw": {
@@ -60123,6 +60123,41 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-02",
+          "elisreginag.carlin@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-02",
+          "kika.mmatos@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-02",
+          "luciana.dallagnol@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-02",
+          "kmila_bp@yahoo.com.br",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-02",
+          "cmellodavid@gmail.com",
+          "meta_ads",
+          "[ad-187][est][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -113541,12 +113576,80 @@
           "Rio de Janeiro",
           false,
           false
+        ],
+        [
+          "2026-07-02",
+          "elisreginagcarlin@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Mato Grosso",
+          false,
+          false
+        ],
+        [
+          "2026-07-02",
+          "kika.mmatos@gmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Federal District",
+          true,
+          true
+        ],
+        [
+          "2026-07-02",
+          "cmellodavid@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "Tenho uma reserva financeira temporária.",
+          "Já palestrei muito e quero voltar. Estava em cargos executivos",
+          "Renda extra",
+          "Paraná",
+          false,
+          false
+        ],
+        [
+          "2026-07-02",
+          "kmila_bp@yahoo.com.br",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Consultora de imagem pessoal",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-02 13:57:41 BRT",
+  "updated_at": "2026-07-02 15:41:08 BRT",
   "schema_version": 3
 }
