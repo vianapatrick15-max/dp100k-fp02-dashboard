@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2932,
-    "hubla_linhas": 2359,
-    "pesquisa_linhas": 3157,
+    "hubla_linhas": 2361,
+    "pesquisa_linhas": 3158,
     "invest_linhas": 0
   },
   "raw": {
@@ -60543,6 +60543,20 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-03",
+          "villelladejesus@gmail.com",
+          "ipm",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-03",
+          "betipietro@hotmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -114233,12 +114247,29 @@
           "São Paulo",
           false,
           false
+        ],
+        [
+          "2026-07-03",
+          "betipietro@hotmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Aposentado(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Rio Grande do Sul",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-03 17:20:01 BRT",
+  "updated_at": "2026-07-03 19:11:57 BRT",
   "schema_version": 3
 }
