@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2927,
-    "hubla_linhas": 2353,
+    "hubla_linhas": 2355,
     "pesquisa_linhas": 3150,
     "invest_linhas": 0
   },
@@ -60426,6 +60426,20 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-03",
+          "simone.lipe@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-03",
+          "marcioostemberg@hotmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -114003,6 +114017,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-03 05:16:49 BRT",
+  "updated_at": "2026-07-03 08:39:15 BRT",
   "schema_version": 3
 }
