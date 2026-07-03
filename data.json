@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2928,
-    "hubla_linhas": 2356,
+    "hubla_linhas": 2357,
     "pesquisa_linhas": 3152,
     "invest_linhas": 0
   },
@@ -60462,6 +60462,13 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-03",
+          "carminha.vale@yahoo.com.br",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -114073,6 +114080,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-03 11:27:35 BRT",
+  "updated_at": "2026-07-03 13:41:37 BRT",
   "schema_version": 3
 }
