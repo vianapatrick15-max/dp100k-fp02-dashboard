@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 2944,
     "hubla_linhas": 2366,
-    "pesquisa_linhas": 3162,
+    "pesquisa_linhas": 3163,
     "invest_linhas": 0
   },
   "raw": {
@@ -114547,12 +114547,29 @@
           "Rio de Janeiro",
           true,
           true
+        ],
+        [
+          "2026-07-04",
+          "anapaulasilvares@educacao.saomateus.es.gov.br",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "Yes",
+          "Professor(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Espírito Santo",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-04 04:53:13 BRT",
+  "updated_at": "2026-07-04 07:20:56 BRT",
   "schema_version": 3
 }
