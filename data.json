@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 2948,
     "hubla_linhas": 2370,
-    "pesquisa_linhas": 3164,
+    "pesquisa_linhas": 3165,
     "invest_linhas": 0
   },
   "raw": {
@@ -114669,12 +114669,29 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-07-04",
+          "profa_val74@yahoo.com.br",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Professor(a)",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Rio Grande do Sul",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-04 11:42:35 BRT",
+  "updated_at": "2026-07-04 13:11:09 BRT",
   "schema_version": 3
 }
