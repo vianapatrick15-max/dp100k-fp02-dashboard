@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 2971,
-    "hubla_linhas": 2378,
-    "pesquisa_linhas": 3171,
+    "hubla_linhas": 2381,
+    "pesquisa_linhas": 3173,
     "invest_linhas": 0
   },
   "raw": {
@@ -61261,6 +61261,27 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-05",
+          "annamuller.ciclofeminino@gmail.com",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-05",
+          "francicfontoura17@icloud.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-05",
+          "gisele.dias@beinyou.com.br",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -115189,12 +115210,46 @@
           "Minas Gerais",
           true,
           true
+        ],
+        [
+          "2026-07-05",
+          "annamuller.ciclofeminino@gmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Paraná",
+          false,
+          false
+        ],
+        [
+          "2026-07-05",
+          "francicfontoura17@icloud.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Rio Grande do Sul",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-05 10:59:51 BRT",
+  "updated_at": "2026-07-05 12:19:36 BRT",
   "schema_version": 3
 }
