@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3156,
-    "hubla_linhas": 2426,
+    "hubla_linhas": 2427,
     "pesquisa_linhas": 3208,
     "invest_linhas": 0
   },
@@ -64372,6 +64372,13 @@
           "meta_ads",
           "[ad-151][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-08",
+          "cleide_vieira29@hotmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -118935,6 +118942,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-08 14:47:04 BRT",
+  "updated_at": "2026-07-08 16:47:22 BRT",
   "schema_version": 3
 }
