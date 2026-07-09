@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3216,
-    "hubla_linhas": 2438,
-    "pesquisa_linhas": 3219,
+    "hubla_linhas": 2441,
+    "pesquisa_linhas": 3222,
     "invest_linhas": 0
   },
   "raw": {
@@ -65356,6 +65356,27 @@
           "meta_ads",
           "[ad-232][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-09",
+          "erika45aguiar@gmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-09",
+          "pamela_engel@hotmail.com",
+          "meta_ads",
+          "[ad-187][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-09",
+          "wcabral_92@hotmail.com",
+          "meta_ads",
+          "[ad-187][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -120100,12 +120121,63 @@
           "Minas Gerais",
           true,
           false
+        ],
+        [
+          "2026-07-09",
+          "erika45aguiar@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Ceará",
+          true,
+          false
+        ],
+        [
+          "2026-07-09",
+          "pamela_engel@hotmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Funcionário(a) Público(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Bahia",
+          true,
+          true
+        ],
+        [
+          "2026-07-09",
+          "wcabral_92@hotmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "São Paulo",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-09 17:00:38 BRT",
+  "updated_at": "2026-07-09 18:36:35 BRT",
   "schema_version": 3
 }
