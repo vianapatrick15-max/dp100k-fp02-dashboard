@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3291,
-    "hubla_linhas": 2456,
+    "hubla_linhas": 2458,
     "pesquisa_linhas": 3235,
     "invest_linhas": 0
   },
@@ -66607,6 +66607,20 @@
           "meta_ads",
           "[ad-30][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-10",
+          "nutri.emanuelearaujo@gmail.com",
+          "meta_ads",
+          "[ad-247][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-10",
+          "cutnei@gmail.com",
+          "meta_ads",
+          "[ad-245][est][rmkt][dp100k-fp02]",
+          47.0
         ]
       ]
     },
@@ -121629,6 +121643,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-10 17:38:28 BRT",
+  "updated_at": "2026-07-10 18:31:00 BRT",
   "schema_version": 3
 }
