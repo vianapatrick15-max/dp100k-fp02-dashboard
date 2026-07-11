@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3355,
-    "hubla_linhas": 2471,
-    "pesquisa_linhas": 3246,
+    "hubla_linhas": 2472,
+    "pesquisa_linhas": 3251,
     "invest_linhas": 0
   },
   "raw": {
@@ -67672,6 +67672,13 @@
           "meta_ads",
           "[ad-243][est][rmkt][dp100k-fp02]",
           47.0
+        ],
+        [
+          "2026-07-11",
+          "erivanmourajr@gmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
         ]
       ]
     },
@@ -122875,12 +122882,97 @@
           "São Paulo",
           true,
           false
+        ],
+        [
+          "2026-07-11",
+          "carmendepaulaterapeuta@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Terapeuta",
+          "Até R$ 2.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "erivanmourajr@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "Yes",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "sobrinhojudith@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "Yes",
+          "Funcionário(a) Público(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Rondônia",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "naiara.reis@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Minas Gerais",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "janemarf@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 12:04:01 BRT",
+  "updated_at": "2026-07-11 13:05:55 BRT",
   "schema_version": 3
 }
