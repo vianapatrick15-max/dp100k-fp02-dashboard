@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 3359,
     "hubla_linhas": 2486,
-    "pesquisa_linhas": 3259,
+    "pesquisa_linhas": 3261,
     "invest_linhas": 0
   },
   "raw": {
@@ -123261,12 +123261,46 @@
           "Pará",
           true,
           true
+        ],
+        [
+          "2026-07-11",
+          "rosematoliveira@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Terapeuta",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "fernando60rico@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Funcionário(a) Público(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 18:00:17 BRT",
+  "updated_at": "2026-07-11 18:57:21 BRT",
   "schema_version": 3
 }
