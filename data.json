@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3352,
-    "hubla_linhas": 2466,
-    "pesquisa_linhas": 3244,
+    "hubla_linhas": 2468,
+    "pesquisa_linhas": 3245,
     "invest_linhas": 0
   },
   "raw": {
@@ -67592,6 +67592,20 @@
           "meta_ads",
           "[ad-245][est][rmkt][dp100k-fp02]",
           47.0
+        ],
+        [
+          "2026-07-11",
+          "esmlife2014@gmail.com",
+          "meta_ads",
+          "[ad-31][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-11",
+          "janelimaterapeuta@gmail.com",
+          "meta_ads",
+          "[ad-21][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -122761,12 +122775,29 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-07-11",
+          "esmlife2014@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra",
+          "Florida",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 08:59:03 BRT",
+  "updated_at": "2026-07-11 10:44:33 BRT",
   "schema_version": 3
 }
