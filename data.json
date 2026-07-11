@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3359,
-    "hubla_linhas": 2479,
-    "pesquisa_linhas": 3253,
+    "hubla_linhas": 2486,
+    "pesquisa_linhas": 3259,
     "invest_linhas": 0
   },
   "raw": {
@@ -67788,6 +67788,55 @@
           "meta_ads",
           "[ad-243][est][rmkt][dp100k-fp02]",
           47.0
+        ],
+        [
+          "2026-07-11",
+          "erika@comunidadefilhosdemaria.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-11",
+          "danielezamvaltur@msn.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-11",
+          "libaniacassia@hotmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-11",
+          "mangalahealimgart@gmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-11",
+          "nascimentomayara27@hotmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-11",
+          "rosematoliveira@gmail.com",
+          "meta_ads",
+          "[ad-245][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-11",
+          "fernando60rico@gmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
         ]
       ]
     },
@@ -123110,12 +123159,114 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-07-11",
+          "elizandrapovi@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Renda extra",
+          "São Paulo",
+          true,
+          true
+        ],
+        [
+          "2026-07-11",
+          "palestranteviviansouza@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Analista ",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "erika@comunidadefilhosdemaria.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Psiquiatra ",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Minas Gerais",
+          true,
+          true
+        ],
+        [
+          "2026-07-11",
+          "libaniacassia@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Minas Gerais",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "anamirianforesto@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Pastora ",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          true,
+          true
+        ],
+        [
+          "2026-07-11",
+          "nascimentomayara27@hotmail.com",
+          "",
+          "",
+          "26 a 34 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Pará",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 16:17:32 BRT",
+  "updated_at": "2026-07-11 18:00:17 BRT",
   "schema_version": 3
 }
