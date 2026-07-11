@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3293,
-    "hubla_linhas": 2461,
-    "pesquisa_linhas": 3239,
+    "hubla_linhas": 2462,
+    "pesquisa_linhas": 3240,
     "invest_linhas": 0
   },
   "raw": {
@@ -66672,6 +66672,13 @@
           "meta_ads",
           "[ad-232][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-11",
+          "dr.minoru.ishiko@gmx.com",
+          "meta_ads",
+          "[ad-30][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -121756,12 +121763,29 @@
           "São Paulo",
           false,
           false
+        ],
+        [
+          "2026-07-11",
+          "dr.minoru.ishiko@gmx.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Paraná",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 00:35:55 BRT",
+  "updated_at": "2026-07-11 03:22:26 BRT",
   "schema_version": 3
 }
