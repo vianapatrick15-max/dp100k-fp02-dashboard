@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3359,
-    "hubla_linhas": 2487,
-    "pesquisa_linhas": 3262,
+    "hubla_linhas": 2490,
+    "pesquisa_linhas": 3265,
     "invest_linhas": 0
   },
   "raw": {
@@ -67844,6 +67844,27 @@
           "meta_ads",
           "[ad-29][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-11",
+          "mni.mabel@hotmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-11",
+          "marciovalverde30@gmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          50.34
+        ],
+        [
+          "2026-07-11",
+          "reinaldomartinazzo@hotmail.com",
+          "meta_ads",
+          "[ad-232][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -123319,12 +123340,63 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-07-11",
+          "mjosealemonge@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "podologa",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Espírito Santo",
+          false,
+          false
+        ],
+        [
+          "2026-07-11",
+          "mni.mabel@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Minas Gerais",
+          true,
+          true
+        ],
+        [
+          "2026-07-11",
+          "marciovalverde30@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Masculino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Federal District",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-11 19:58:26 BRT",
+  "updated_at": "2026-07-11 21:02:33 BRT",
   "schema_version": 3
 }
