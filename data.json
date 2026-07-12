@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3411,
-    "hubla_linhas": 2496,
-    "pesquisa_linhas": 3269,
+    "hubla_linhas": 2502,
+    "pesquisa_linhas": 3273,
     "invest_linhas": 0
   },
   "raw": {
@@ -68687,6 +68687,48 @@
           "meta_ads",
           "[ad-243][est][rmkt][dp100k-fp02]",
           47.0
+        ],
+        [
+          "2026-07-12",
+          "ianaramedica@gmail.com",
+          "meta_ads",
+          "[ad-21][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "bianca@biancacunharh.com.br",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "cravolilian@gmail.com",
+          "meta_ads",
+          "[ad-244][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-12",
+          "welidaalves02@gmail.com",
+          "meta_ads",
+          "[ad-21][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "biabocchi86@hotmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "ciomaraosterno10@gmail.com",
+          "meta_ads",
+          "[ad-244][est][rmkt][dp100k-fp02]",
+          47.0
         ]
       ]
     },
@@ -124281,12 +124323,80 @@
           "Ceará",
           true,
           true
+        ],
+        [
+          "2026-07-12",
+          "ianaramedica@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Médica e advogada ",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra, ajudar pessoas e destaque ",
+          "Paraíba",
+          true,
+          false
+        ],
+        [
+          "2026-07-12",
+          "bianca@biancacunharh.com.br",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Rio Grande do Sul",
+          true,
+          true
+        ],
+        [
+          "2026-07-12",
+          "welidaalves02@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Espírito Santo",
+          true,
+          false
+        ],
+        [
+          "2026-07-12",
+          "reinaldomartinazzo@hotmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Paraná",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-12 06:09:11 BRT",
+  "updated_at": "2026-07-12 08:18:10 BRT",
   "schema_version": 3
 }
