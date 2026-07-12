@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3417,
-    "hubla_linhas": 2521,
-    "pesquisa_linhas": 3286,
+    "hubla_linhas": 2526,
+    "pesquisa_linhas": 3290,
     "invest_linhas": 0
   },
   "raw": {
@@ -68952,6 +68952,41 @@
           "whatsapp",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-12",
+          "dzangirolami1@gmail.com",
+          "meta_ads",
+          "[ad-244][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-12",
+          "dcaspirro@gmail.com",
+          "ipm",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "snildamara@gmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-12",
+          "rhvkcl@gmail.com",
+          "meta_ads",
+          "[ad-244][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-12",
+          "carlabezerra86@hotmail.com",
+          "meta_ads",
+          "[ad-31][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -124835,12 +124870,80 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-07-12",
+          "dzangirolami1@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Bahia",
+          false,
+          false
+        ],
+        [
+          "2026-07-12",
+          "dcaspirro@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Passar meu conhecimento acumulado em anos e ajudar mais pessoas possível ",
+          "São Paulo",
+          true,
+          true
+        ],
+        [
+          "2026-07-12",
+          "para.carol87@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Paraná",
+          true,
+          true
+        ],
+        [
+          "2026-07-12",
+          "rhvkcl@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Professor(a)",
+          "Acima de R$ 20.000",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra",
+          "Ceará",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-12 16:16:56 BRT",
+  "updated_at": "2026-07-12 18:02:26 BRT",
   "schema_version": 3
 }
