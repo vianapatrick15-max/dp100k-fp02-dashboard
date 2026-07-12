@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3417,
-    "hubla_linhas": 2526,
+    "hubla_linhas": 2527,
     "pesquisa_linhas": 3290,
     "invest_linhas": 0
   },
@@ -68987,6 +68987,13 @@
           "meta_ads",
           "[ad-31][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-12",
+          "celeste_coach@hotmail.com",
+          "instagram",
+          "organico",
+          102.12
         ]
       ]
     },
@@ -124944,6 +124951,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-12 18:02:26 BRT",
+  "updated_at": "2026-07-12 18:59:22 BRT",
   "schema_version": 3
 }
