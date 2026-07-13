@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3472,
-    "hubla_linhas": 2545,
-    "pesquisa_linhas": 3312,
+    "hubla_linhas": 2546,
+    "pesquisa_linhas": 3313,
     "invest_linhas": 0
   },
   "raw": {
@@ -69945,6 +69945,13 @@
           "meta_ads",
           "[ad-233][est][vd][dp100k-fp02]",
           120.48
+        ],
+        [
+          "2026-07-13",
+          "a.lair2008@hotmail.com",
+          "meta_ads",
+          "[ad-230][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -126270,12 +126277,29 @@
           "Santa Catarina",
           false,
           false
+        ],
+        [
+          "2026-07-13",
+          "valdecir.sbardelini@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Palestrante",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Santa Catarina",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-13 16:40:21 BRT",
+  "updated_at": "2026-07-13 18:06:17 BRT",
   "schema_version": 3
 }
