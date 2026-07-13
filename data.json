@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 3417,
     "hubla_linhas": 2529,
-    "pesquisa_linhas": 3294,
+    "pesquisa_linhas": 3296,
     "invest_linhas": 0
   },
   "raw": {
@@ -125027,12 +125027,46 @@
           "Minas Gerais",
           true,
           false
+        ],
+        [
+          "2026-07-12",
+          "januzzi.renata@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
+        ],
+        [
+          "2026-07-12",
+          "fernando60rico@gmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Funcionário(a) Público(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-12 19:58:26 BRT",
+  "updated_at": "2026-07-12 21:02:35 BRT",
   "schema_version": 3
 }
