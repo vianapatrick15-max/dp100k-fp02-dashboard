@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3534,
-    "hubla_linhas": 2559,
-    "pesquisa_linhas": 3321,
+    "hubla_linhas": 2560,
+    "pesquisa_linhas": 3323,
     "invest_linhas": 0
   },
   "raw": {
@@ -70973,6 +70973,13 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-14",
+          "gloriaconsultoria15@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          120.48
         ]
       ]
     },
@@ -127451,12 +127458,46 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-07-14",
+          "notavelsaber@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Goiás",
+          false,
+          false
+        ],
+        [
+          "2026-07-14",
+          "gloriaconsultoria15@gmail.com",
+          "",
+          "",
+          "Acima de 65 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "São Paulo",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-14 11:04:48 BRT",
+  "updated_at": "2026-07-14 12:40:15 BRT",
   "schema_version": 3
 }
