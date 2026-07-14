@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3535,
-    "hubla_linhas": 2561,
-    "pesquisa_linhas": 3324,
+    "hubla_linhas": 2564,
+    "pesquisa_linhas": 3326,
     "invest_linhas": 0
   },
   "raw": {
@@ -71002,6 +71002,27 @@
           "meta_ads",
           "[ad-147][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-14",
+          "edsonvianna1979@outlook.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-14",
+          "dalipauladias@gmail.com",
+          "meta_ads",
+          "[ad-228][est][vd][dp100k-fp02]",
+          103.86
+        ],
+        [
+          "2026-07-14",
+          "silvia_spinelli@yahoo.com.br",
+          "ipm",
+          "organico",
+          102.12
         ]
       ]
     },
@@ -90475,8 +90496,8 @@
         [
           "2025-12-08",
           "edsonvianna1979@outlook.com",
-          "#n/a",
-          "#N/A",
+          "meta_ads",
+          "[AD-147][EST][VD][DP100K-Fp02]",
           "45 a 54 anos",
           "Masculino",
           "Mais de 1 ano",
@@ -127531,12 +127552,46 @@
           "Bahia",
           false,
           false
+        ],
+        [
+          "2026-07-14",
+          "dalipauladias@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Paraná",
+          true,
+          true
+        ],
+        [
+          "2026-07-14",
+          "silvia_spinelli@yahoo.com.br",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Professor(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-14 14:22:49 BRT",
+  "updated_at": "2026-07-14 16:38:32 BRT",
   "schema_version": 3
 }
