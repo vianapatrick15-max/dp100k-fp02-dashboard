@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3472,
-    "hubla_linhas": 2548,
+    "hubla_linhas": 2549,
     "pesquisa_linhas": 3317,
     "invest_linhas": 0
   },
@@ -69966,6 +69966,13 @@
           "instagram",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-13",
+          "valentedeise5@gmail.com",
+          "meta_ads",
+          "[ad-228][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -126382,6 +126389,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-13 20:03:09 BRT",
+  "updated_at": "2026-07-13 21:00:59 BRT",
   "schema_version": 3
 }
