@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3587,
-    "hubla_linhas": 2574,
-    "pesquisa_linhas": 3342,
+    "hubla_linhas": 2577,
+    "pesquisa_linhas": 3344,
     "invest_linhas": 0
   },
   "raw": {
@@ -71873,6 +71873,27 @@
           "meta_ads",
           "[ad-230][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-15",
+          "missm.coiffeur@gmail.com",
+          "whatsapp",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-15",
+          "alynefreitas@gmail.com",
+          "whatsapp",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-15",
+          "jaleite30@gmail.com",
+          "meta_ads",
+          "[ad-150][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -128708,12 +128729,46 @@
           "Santa Catarina",
           false,
           false
+        ],
+        [
+          "2026-07-15",
+          "missm.coiffeur@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-07-15",
+          "jaleite30@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Desempregado ",
+          "No momento, estou sem renda.",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Bahia",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-15 11:01:24 BRT",
+  "updated_at": "2026-07-15 12:40:43 BRT",
   "schema_version": 3
 }
