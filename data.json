@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 3535,
     "hubla_linhas": 2565,
-    "pesquisa_linhas": 3327,
+    "pesquisa_linhas": 3329,
     "invest_linhas": 0
   },
   "raw": {
@@ -127610,12 +127610,46 @@
           "Federal District",
           true,
           true
+        ],
+        [
+          "2026-07-14",
+          "notavelsaber@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Professor(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Goiás",
+          false,
+          false
+        ],
+        [
+          "2026-07-14",
+          "anaanjosimoveis@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Bahia",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-14 20:03:31 BRT",
+  "updated_at": "2026-07-14 21:01:18 BRT",
   "schema_version": 3
 }
