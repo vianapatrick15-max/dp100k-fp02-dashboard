@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3586,
-    "hubla_linhas": 2571,
-    "pesquisa_linhas": 3338,
+    "hubla_linhas": 2573,
+    "pesquisa_linhas": 3341,
     "invest_linhas": 0
   },
   "raw": {
@@ -71837,6 +71837,20 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-15",
+          "professorluizcarlos@gmail.com",
+          "meta_ads",
+          "[ad-230][est][vd][dp100k-fp02]",
+          102.12
+        ],
+        [
+          "2026-07-15",
+          "oemaildebeta@yahoo.com.br",
+          "meta_ads",
+          "[ad-232][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -128604,12 +128618,63 @@
           "Paraná",
           true,
           true
+        ],
+        [
+          "2026-07-15",
+          "professorluizcarlos@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "No",
+          "Professor(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Espírito Santo",
+          true,
+          false
+        ],
+        [
+          "2026-07-15",
+          "oemaildebeta@yahoo.com.br",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Bahia",
+          false,
+          false
+        ],
+        [
+          "2026-07-15",
+          "nalinlearantes@gmail.com",
+          "",
+          "",
+          "55 a 64 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Renda extra",
+          "Paraná",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-15 08:42:18 BRT",
+  "updated_at": "2026-07-15 09:23:40 BRT",
   "schema_version": 3
 }
