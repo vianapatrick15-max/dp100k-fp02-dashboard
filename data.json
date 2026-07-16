@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3667,
-    "hubla_linhas": 2585,
-    "pesquisa_linhas": 3351,
+    "hubla_linhas": 2587,
+    "pesquisa_linhas": 3352,
     "invest_linhas": 0
   },
   "raw": {
@@ -73150,6 +73150,20 @@
           "instagram",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-16",
+          "rozecarvalhoterapeuta@gmail.com",
+          "meta_ads",
+          "[ad-26][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-16",
+          "nmarly976@gmail.com",
+          "meta_ads",
+          "[ad-230][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -130138,12 +130152,29 @@
           "Mato Grosso",
           false,
           false
+        ],
+        [
+          "2026-07-16",
+          "nmarly976@gmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "Yes",
+          "Profissional Autônomo(a)",
+          "No momento, estou sem renda.",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Pará",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-16 12:09:17 BRT",
+  "updated_at": "2026-07-16 14:26:48 BRT",
   "schema_version": 3
 }
