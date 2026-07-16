@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3589,
-    "hubla_linhas": 2582,
+    "hubla_linhas": 2583,
     "pesquisa_linhas": 3349,
     "invest_linhas": 0
   },
@@ -71959,6 +71959,13 @@
           "ipm",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-15",
+          "floresalessandra077@gmail.com",
+          "meta_ads",
+          "[ad-21][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -128919,6 +128926,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-15 20:05:09 BRT",
+  "updated_at": "2026-07-15 21:06:57 BRT",
   "schema_version": 3
 }
