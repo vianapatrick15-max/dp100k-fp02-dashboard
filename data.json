@@ -6,8 +6,8 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3671,
-    "hubla_linhas": 2590,
-    "pesquisa_linhas": 3354,
+    "hubla_linhas": 2591,
+    "pesquisa_linhas": 3356,
     "invest_linhas": 0
   },
   "raw": {
@@ -73245,6 +73245,13 @@
           "instagram",
           "organico",
           107.4
+        ],
+        [
+          "2026-07-16",
+          "adsonascimento@hotmail.com",
+          "whatsapp",
+          "organico",
+          120.48
         ]
       ]
     },
@@ -130284,12 +130291,46 @@
           "Pernambuco",
           true,
           false
+        ],
+        [
+          "2026-07-16",
+          "rafaelafariapsi@gmail.com",
+          "",
+          "",
+          "Menos de 25",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Psicóloga ",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Minas Gerais",
+          false,
+          false
+        ],
+        [
+          "2026-07-16",
+          "adsonascimento@hotmail.com",
+          "",
+          "",
+          "45 a 54 anos",
+          "Masculino",
+          "Mais de 1 ano",
+          "Yes",
+          "Funcionário(a) Público(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Goiás",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-16 18:11:40 BRT",
+  "updated_at": "2026-07-16 20:04:50 BRT",
   "schema_version": 3
 }
