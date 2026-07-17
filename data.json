@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3723,
-    "hubla_linhas": 2598,
+    "hubla_linhas": 2599,
     "pesquisa_linhas": 3364,
     "invest_linhas": 0
   },
@@ -74081,6 +74081,13 @@
           "meta_ads",
           "[ad-248][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-17",
+          "camilamvcosta@gmail.com",
+          "meta_ads",
+          "[ad-147][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -131296,6 +131303,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-17 11:49:10 BRT",
+  "updated_at": "2026-07-17 13:21:45 BRT",
   "schema_version": 3
 }
