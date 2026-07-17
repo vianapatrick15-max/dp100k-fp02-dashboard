@@ -7,7 +7,7 @@
   "_diag": {
     "trafego_linhas": 3717,
     "hubla_linhas": 2596,
-    "pesquisa_linhas": 3360,
+    "pesquisa_linhas": 3361,
     "invest_linhas": 0
   },
   "raw": {
@@ -131118,12 +131118,29 @@
           "Paraná",
           false,
           false
+        ],
+        [
+          "2026-07-17",
+          "jessianerios86@gmail.com",
+          "",
+          "",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "CLT Coordenador Comercial ",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Iniciante, nunca palestrei.",
+          "Renda extra",
+          "Ceará",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-17 04:24:22 BRT",
+  "updated_at": "2026-07-17 07:07:20 BRT",
   "schema_version": 3
 }
