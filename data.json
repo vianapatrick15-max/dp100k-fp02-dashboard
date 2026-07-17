@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3734,
-    "hubla_linhas": 2600,
+    "hubla_linhas": 2601,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -74260,6 +74260,13 @@
           "meta_ads",
           "[ad-230][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-17",
+          "professorerivaldo17@gmail.com",
+          "meta_ads",
+          "[ad-228][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -131469,12 +131476,46 @@
           "Amazonas",
           false,
           false
+        ],
+        [
+          "2026-07-17",
+          "chico@chicomello.com",
+          "meta_ads",
+          "[AD-230][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Paraná",
+          true,
+          false
+        ],
+        [
+          "2026-07-17",
+          "professorerivaldo17@gmail.com",
+          "meta_ads",
+          "[AD-228][EST][VD][DP100K-Fp02]",
+          "Acima de 65 anos",
+          "Masculino",
+          "Menos de 6 meses",
+          "No",
+          "Professor(a)",
+          "Acima de R$ 20.000",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Bahia",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-17 15:12:32 BRT",
+  "updated_at": "2026-07-17 17:11:47 BRT",
   "schema_version": 3
 }
