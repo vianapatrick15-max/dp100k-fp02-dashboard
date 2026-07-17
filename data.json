@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3737,
-    "hubla_linhas": 2602,
+    "hubla_linhas": 2603,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -74319,6 +74319,13 @@
           "meta_ads",
           "[ad-248][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-17",
+          "jocelenepereirasilva@gmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -131585,6 +131592,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-17 19:00:28 BRT",
+  "updated_at": "2026-07-17 19:56:51 BRT",
   "schema_version": 3
 }
