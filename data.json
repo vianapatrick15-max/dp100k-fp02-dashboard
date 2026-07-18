@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3799,
-    "hubla_linhas": 2612,
+    "hubla_linhas": 2615,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -75319,6 +75319,27 @@
           "meta_ads",
           "[ad-26][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-18",
+          "eloasilvaadvogados@gmail.com",
+          "whatsapp",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-18",
+          "francienemayaracouto@gmail.com",
+          "meta_ads",
+          "[ad-243][est][rmkt][dp100k-fp02]",
+          47.0
+        ],
+        [
+          "2026-07-18",
+          "cidinhamv@hotmail.com",
+          "instagram",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -132715,12 +132736,29 @@
           "Minas Gerais",
           true,
           true
+        ],
+        [
+          "2026-07-18",
+          "cidinhamv@hotmail.com",
+          "instagram",
+          "organico",
+          "55 a 64 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Mato Grosso",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-18 18:00:27 BRT",
+  "updated_at": "2026-07-18 18:57:09 BRT",
   "schema_version": 3
 }
