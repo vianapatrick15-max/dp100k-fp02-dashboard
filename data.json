@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3789,
-    "hubla_linhas": 2603,
+    "hubla_linhas": 2604,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -75106,6 +75106,13 @@
           "meta_ads",
           "[ad-29][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-18",
+          "lucianovmfernandes@gmail.com",
+          "meta_ads",
+          "[ad-248][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -132383,12 +132390,29 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-07-18",
+          "lucianovmfernandes@gmail.com",
+          "meta_ads",
+          "[AD-248][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Rio Grande do Sul",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-18 08:59:00 BRT",
+  "updated_at": "2026-07-18 10:39:57 BRT",
   "schema_version": 3
 }
