@@ -132528,12 +132528,29 @@
           "Rio Grande do Sul",
           false,
           false
+        ],
+        [
+          "2026-07-18",
+          "rheggina@gmail.com",
+          "instagram",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-18 12:03:47 BRT",
+  "updated_at": "2026-07-18 13:05:34 BRT",
   "schema_version": 3
 }
