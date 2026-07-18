@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3799,
-    "hubla_linhas": 2606,
+    "hubla_linhas": 2608,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -75277,6 +75277,20 @@
           "instagram",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-18",
+          "psicologia.sir@gmail.com",
+          "ipm",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-18",
+          "kamillagflorentino@gmail.com",
+          "ipm",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -132611,6 +132625,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-18 15:00:45 BRT",
+  "updated_at": "2026-07-18 16:16:05 BRT",
   "schema_version": 3
 }
