@@ -134041,12 +134041,29 @@
           "Santa Catarina",
           false,
           false
+        ],
+        [
+          "2026-07-19",
+          "varaschinj@gmail.com",
+          "whatsapp",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Terapeuta",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "Paraná",
+          true,
+          true
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-19 16:19:15 BRT",
+  "updated_at": "2026-07-19 18:01:51 BRT",
   "schema_version": 3
 }
