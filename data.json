@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3865,
-    "hubla_linhas": 2626,
+    "hubla_linhas": 2627,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -76407,6 +76407,13 @@
           "whatsapp",
           "organico",
           102.12
+        ],
+        [
+          "2026-07-19",
+          "brenda.nantes@hotmail.com",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -134064,6 +134071,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-19 18:01:51 BRT",
+  "updated_at": "2026-07-19 19:00:31 BRT",
   "schema_version": 3
 }
