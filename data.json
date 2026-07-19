@@ -132845,12 +132845,29 @@
           "Minas Gerais",
           false,
           false
+        ],
+        [
+          "2026-07-18",
+          "eloasilvaadvogados@gmail.com",
+          "whatsapp",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 8.001,00 até R$ 10.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Rio de Janeiro",
+          true,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-18 21:00:14 BRT",
+  "updated_at": "2026-07-18 22:29:10 BRT",
   "schema_version": 3
 }
