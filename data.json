@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3855,
-    "hubla_linhas": 2618,
+    "hubla_linhas": 2619,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -76201,6 +76201,13 @@
           "meta_ads",
           "[ad-29][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-19",
+          "marins.telmo@gmail.com",
+          "meta_ads",
+          "[ad-248][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -133716,12 +133723,29 @@
           "Corsica",
           false,
           false
+        ],
+        [
+          "2026-07-19",
+          "marins.telmo@gmail.com",
+          "meta_ads",
+          "[AD-248][EST][VD][DP100K-Fp02]",
+          "55 a 64 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Empreendedor ",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-19 06:10:06 BRT",
+  "updated_at": "2026-07-19 08:16:01 BRT",
   "schema_version": 3
 }
