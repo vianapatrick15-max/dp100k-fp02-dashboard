@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3912,
-    "hubla_linhas": 2632,
+    "hubla_linhas": 2633,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -77154,6 +77154,13 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-20",
+          "harlemcastelo@gmail.com",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -134862,6 +134869,6 @@
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-20 07:18:31 BRT",
+  "updated_at": "2026-07-20 08:53:41 BRT",
   "schema_version": 3
 }
