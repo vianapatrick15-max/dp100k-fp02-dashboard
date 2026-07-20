@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3866,
-    "hubla_linhas": 2627,
+    "hubla_linhas": 2628,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -76429,6 +76429,13 @@
           "meta_ads",
           "[ad-207][est][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-19",
+          "thaisamorais1012@gmail.com",
+          "meta_ads",
+          "[ad-21][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -134097,12 +134104,29 @@
           "São Paulo",
           true,
           true
+        ],
+        [
+          "2026-07-19",
+          "thaisamorais1012@gmail.com",
+          "meta_ads",
+          "[AD-21][VID][VD][DP100K-Fp02]",
+          "26 a 34 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Minas Gerais",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-19 20:00:18 BRT",
+  "updated_at": "2026-07-19 21:04:08 BRT",
   "schema_version": 3
 }
