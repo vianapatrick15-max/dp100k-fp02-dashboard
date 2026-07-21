@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3969,
-    "hubla_linhas": 2656,
+    "hubla_linhas": 2657,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -78177,6 +78177,13 @@
           "whatsapp",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-21",
+          "contatoempresarialjunior@gmail.com",
+          "",
+          "",
+          97.0
         ]
       ]
     },
@@ -136219,12 +136226,29 @@
           "Minas Gerais",
           false,
           false
+        ],
+        [
+          "2026-07-21",
+          "lucianalima.enf@gmail.com",
+          "meta_ads",
+          "[AD-248][EST][VD][DP100K-Fp02]",
+          "45 a 54 anos",
+          "Feminino",
+          "Mais de 1 ano",
+          "Yes",
+          "Funcionário(a) Público(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-21 17:21:55 BRT",
+  "updated_at": "2026-07-21 19:08:48 BRT",
   "schema_version": 3
 }
