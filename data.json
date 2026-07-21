@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 3969,
-    "hubla_linhas": 2649,
+    "hubla_linhas": 2652,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -78128,6 +78128,27 @@
           "meta_ads",
           "{{ad.name}}",
           97.0
+        ],
+        [
+          "2026-07-21",
+          "monalise.evane@hotmail.com",
+          "meta_ads",
+          "[ad-26][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-21",
+          "desianny.varela@gmail.com",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-21",
+          "magnusjuliana65@gmail.com",
+          "meta_ads",
+          "[ad-207][est][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -136068,12 +136089,63 @@
           "Rio Grande do Sul",
           false,
           false
+        ],
+        [
+          "2026-07-21",
+          "monalise.evane@hotmail.com",
+          "meta_ads",
+          "[AD-26][VID][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Paraíba",
+          true,
+          true
+        ],
+        [
+          "2026-07-21",
+          "desianny.varela@gmail.com",
+          "meta_ads",
+          "[AD-207][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 15.001,00 até R$ 20.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Se destacar na profissão",
+          "Santa Catarina",
+          true,
+          true
+        ],
+        [
+          "2026-07-21",
+          "magnusjuliana65@gmail.com",
+          "meta_ads",
+          "[AD-207][EST][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Terapeuta",
+          "Até R$ 2.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Santa Catarina",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-21 11:11:40 BRT",
+  "updated_at": "2026-07-21 13:37:19 BRT",
   "schema_version": 3
 }
