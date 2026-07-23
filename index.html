@@ -349,6 +349,7 @@ function computeAds(a,b){
   const m={};
   DATA.ads_daily.forEach(r=>{
     if(r.d<a||r.d>b)return;
+    if(r.seg==='nutricao')return;   // nutrição não foca em venda — fora da análise de ads
     if(funil!=='todos'&&r.seg!==funil)return;
     const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0});
     o.spend+=r.spend;o.purch+=r.purch;o.impr+=r.impr;o.ic+=r.ic;o.lpv+=r.lpv;o.lclk+=r.lclk;
@@ -462,7 +463,8 @@ function initControls(){
   $$('.tab').forEach(t=>t.onclick=()=>showView(t.dataset.view));
   // funil (dimensão global)
   const fc=$('#funil-chips');
-  const funs=[{key:'todos',label:'Todos'},...(DATA.funnels||[])];
+  // nutrição não foca em venda: fora do seletor de funil (spend segue no CPA do Geral)
+  const funs=[{key:'todos',label:'Todos'},...(DATA.funnels||[]).filter(f=>f.key!=='nutricao')];
   const NOTE='Tráfego + ingressos atribuídos via UTM a este funil. IPM/back-end e vendas orgânicas aparecem só no Geral (Todos).';
   funs.forEach(f=>{const c=document.createElement('div');c.className='fchip';c.dataset.f=f.key;c.textContent=f.label;
     if(f.key==='todos')c.classList.add('on');
