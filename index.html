@@ -1,990 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DP100K-Fp02 · Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DP100K — Dashboard Geral</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0a0b0f;
-  --card:#131520;
-  --card2:#1c1f2d;
-  --card3:#242838;
-  --border:#252938;
-  --border2:#343a4f;
-  --gold:#c9a84c;
-  --gold2:#e8c97a;
-  --white:#eceef5;
-  --muted:#5a5f72;
-  --muted2:#8b8fa8;
-  --green:#2db87a;
-  --green2:#5fd4a0;
-  --red:#e05252;
-  --blue:#4b8ef5;
-  --orange:#e08832;
-  --purple:#9b6dea;
-}
-html{font-size:13px}
-body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;min-height:100vh;padding-bottom:60px}
-
-.hdr{background:var(--card);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.hdr-l{display:flex;align-items:baseline;gap:12px}
-.hdr-title{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.hdr-sub{font-size:10px;color:var(--muted2);letter-spacing:.05em}
-.hdr-r{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--muted2)}
-.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);margin-right:6px}
-
-.fbar{background:var(--card);border-bottom:1px solid var(--border);padding:10px 28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.fg{display:flex;align-items:center;gap:6px}
-.fl{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);white-space:nowrap;margin-right:4px}
-.fb{font-size:11px;padding:6px 12px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:3px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
-.fb:hover{color:var(--white);border-color:var(--border2)}
-.fb.on{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.55);color:var(--gold2)}
-#filter-mes .fb{font-weight:600}
-#filter-mes .fb.on{background:var(--gold2);border-color:var(--gold2);color:#1a1205}
-.fb.custom-on{background:rgba(155,109,234,.18);border-color:rgba(155,109,234,.55);color:#c08fff}
-.fsep{width:1px;height:22px;background:var(--border)}
-.fb-sub{font-size:9px;color:var(--muted);margin-left:6px}
-.fd{font-size:11px;padding:5px 9px;background:var(--card2);border:1px solid var(--border);color:var(--white);border-radius:3px;font-family:'Inter',sans-serif;color-scheme:dark}
-.fd:focus{outline:none;border-color:var(--gold)}
-.fb-apply{border-color:rgba(155,109,234,.55);color:#c08fff}
-.fb-apply:hover{background:rgba(155,109,234,.15)}
-.fb-clear{border-color:var(--border2);color:var(--muted2)}
-
-.main{padding:20px 28px;display:flex;flex-direction:column;gap:22px;max-width:1480px;margin:0 auto}
-
-.section-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
-.section-title{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2)}
-.section-num{font-family:'Roboto Mono',monospace;color:var(--gold);font-size:9px;letter-spacing:.15em;margin-right:8px;opacity:.7}
-.section-hint{font-size:10px;color:var(--muted);font-style:italic}
-
-/* ── VEREDITO (5 KPIs) ── */
-.veredito{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.kpi-big{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px;position:relative;overflow:hidden}
-.kpi-big::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px}
-.kpi-big.spend::after{background:var(--gold)}
-.kpi-big.vendas::after{background:var(--green)}
-.kpi-big.cpa::after{background:var(--blue)}
-.kpi-big.roas::after{background:var(--green)}
-.kpi-big.mql::after{background:var(--purple)}
-.kpi-lbl{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.kpi-val{font-size:30px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--white);font-family:'Roboto Mono',monospace;margin-bottom:10px}
-.kpi-bot{display:flex;justify-content:space-between;align-items:flex-end;font-size:11px}
-.kpi-delta{font-weight:600}
-.kpi-delta.up{color:var(--green)}
-.kpi-delta.dn{color:var(--red)}
-.kpi-delta.inv-up{color:var(--red)}
-.kpi-delta.inv-dn{color:var(--green)}
-.kpi-delta.neutral{color:var(--muted2)}
-.kpi-delta-lbl{font-size:9px;color:var(--muted);margin-left:4px}
-.kpi-sub{font-size:10px;color:var(--muted2);text-align:right}
-
-/* ── FUNIL ── */
-.funnel-grid{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px}
-.funnel-hdr{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.funnel-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch}
-.fnl-step{position:relative;padding:14px 18px;border-right:1px solid var(--border)}
-.fnl-step:last-child{border-right:0}
-.fnl-name{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.fnl-val{font-size:22px;font-weight:600;color:var(--white);font-family:'Roboto Mono',monospace;line-height:1}
-.fnl-rate{position:absolute;right:-18px;top:50%;transform:translateY(-50%);background:var(--card2);border:1px solid var(--border2);border-radius:14px;padding:4px 10px;font-size:10px;color:var(--gold);font-family:'Roboto Mono',monospace;z-index:2;font-weight:600}
-.fnl-step:last-child .fnl-rate{display:none}
-.fnl-bar{height:5px;background:var(--card2);border-radius:2px;margin-top:10px;overflow:hidden}
-.fnl-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px}
-
-/* ── LINHA DO TEMPO ── */
-.chart-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:18px 20px}
-.chart-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.chart-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.chart-leg{display:flex;gap:14px;font-size:10px;color:var(--muted2)}
-.leg-item{display:flex;align-items:center;gap:5px}
-.leg-sw{width:14px;height:3px;border-radius:2px}
-.leg-sw.spend{background:rgba(201,168,76,.65)}
-.leg-sw.vendas{background:var(--green)}
-.chart-wrap{height:260px}
-
-/* ── TOP ADS TABLE ── */
-.tbl-card{background:var(--card);border:1px solid var(--border);border-radius:5px;overflow:hidden}
-.tbl-hdr{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border)}
-.tbl-title{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.tbl-sub{font-size:10px;color:var(--muted2)}
-.tbl-wrap{overflow-x:auto;max-height:520px;overflow-y:auto}
-.tbl{width:100%;border-collapse:collapse;font-size:11.5px}
-.tbl thead th{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 12px;text-align:right;background:var(--card2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1;white-space:nowrap}
-.tbl thead th:first-child{text-align:left;padding-left:20px}
-.tbl tbody tr{border-bottom:1px solid rgba(35,40,56,.45);transition:background .15s}
-.tbl tbody tr:hover{background:rgba(255,255,255,.018)}
-.tbl tbody td{padding:10px 12px;text-align:right;font-family:'Roboto Mono',monospace;color:var(--white);font-weight:500;white-space:nowrap}
-.tbl tbody td:first-child{text-align:left;padding-left:20px;font-family:'Inter',sans-serif;font-weight:500}
-.cell-spend{color:var(--gold2)}
-.cell-good{color:var(--green)}
-.cell-warn{color:#d4c44c}
-.cell-bad{color:var(--red)}
-.cell-muted{color:var(--muted)}
-.ad-name{font-size:11.5px;font-weight:500;color:var(--white)}
-.ad-meta{font-size:9px;color:var(--muted);margin-top:1px;letter-spacing:.04em}
-.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
-.sg{background:var(--green);box-shadow:0 0 4px var(--green)}
-.sr{background:#777}
-.ig-link{font-size:10px;color:var(--gold);text-decoration:none;border-bottom:1px dotted rgba(201,168,76,.4)}
-.ig-link:hover{color:var(--gold2)}
-
-/* ── PERSONA CARDS ── */
-.persona-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.p-card{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:14px 14px;min-width:0;overflow:hidden}
-.p-card-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:8px}
-.p-title{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.p-total{font-size:9px;color:var(--gold);font-family:'Roboto Mono',monospace}
-.p-row{display:grid;grid-template-columns:1fr 50px;align-items:center;margin-bottom:8px;gap:8px;font-size:10.5px}
-.p-row-top{display:flex;justify-content:space-between;align-items:baseline;gap:6px;min-width:0}
-.p-label{color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;min-width:0;flex:1}
-.p-bar{height:5px;background:var(--card2);border-radius:3px;overflow:hidden;position:relative;grid-column:1/3}
-.p-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .35s}
-.p-fill.compradoras{background:linear-gradient(90deg,var(--green),var(--green2))}
-.p-fill.adfocus{background:linear-gradient(90deg,var(--purple),#c08fff)}
-.p-fill.mql{background:linear-gradient(90deg,var(--purple),#c08fff)}
-.p-pct{font-size:10px;color:var(--muted2);font-family:'Roboto Mono',monospace;text-align:right;white-space:nowrap}
-.p-n{font-size:9px;color:var(--muted);font-family:'Roboto Mono',monospace}
-
-.persona-mode-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:5px;margin-bottom:10px;flex-wrap:wrap;gap:10px}
-.pm-l{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.pm-title{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:4px}
-.pm-pill{font-size:11px;font-weight:500;padding:5px 11px;background:transparent;border:1px solid var(--border);color:var(--muted2);border-radius:14px;cursor:pointer;transition:all .15s;font-family:'Inter',sans-serif}
-.pm-pill:hover{color:var(--white);border-color:var(--border2)}
-.pm-pill.on.leads{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.55);color:var(--gold2)}
-.pm-pill.on.buyers{background:rgba(45,184,122,.18);border-color:rgba(45,184,122,.55);color:var(--green2)}
-.pm-pill.on.adfocus{background:rgba(155,109,234,.2);border-color:rgba(155,109,234,.6);color:#c08fff}
-.pm-pill-close{margin-left:4px;color:inherit;opacity:.6}
-.pm-pill-close:hover{opacity:1}
-.pm-sub{font-size:11px;color:var(--muted2);font-family:'Roboto Mono',monospace}
-.pm-sub b{color:var(--white);font-family:'Roboto Mono',monospace}
-
-.clickable-row{cursor:pointer;transition:background .15s}
-.clickable-row:hover{background:rgba(155,109,234,.06)!important}
-.clickable-row.active{background:rgba(155,109,234,.13)!important;box-shadow:inset 3px 0 0 var(--purple)}
-
-/* ── HUBLA SUMMARY ── */
-.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-
-/* ── MQL POR AD ── */
-.mql-card{background:var(--card);border:1px solid var(--border);border-radius:5px;overflow:hidden}
-.mql-tbl-wrap{max-height:480px;overflow-y:auto}
-
-/* ── FOOTER ── */
-.footer{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:9px 28px;display:flex;justify-content:space-between;align-items:center;z-index:90;font-size:11px}
-.foot-l{display:flex;gap:18px;align-items:center}
-.foot-item{display:flex;align-items:center;gap:6px}
-.foot-lbl{color:var(--muted);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
-.foot-val{color:var(--white);font-family:'Roboto Mono',monospace;font-weight:600}
-.foot-val.green{color:var(--green)}
-.foot-val.yellow{color:#d4c44c}
-.foot-val.gold{color:var(--gold)}
-.foot-r{font-size:10px;color:var(--muted2)}
-.foot-r a{color:var(--gold2);font-size:11px;text-decoration:none;border-bottom:1px dotted var(--gold)}
-.foot-r a:hover{color:var(--gold)}
-
-/* ── BADGE ── */
-.badge{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border-radius:2px;font-family:'Inter',sans-serif;vertical-align:middle}
-.badge.live{background:rgba(45,184,122,.15);color:var(--green);border:1px solid rgba(45,184,122,.4)}
-.badge.paused{background:rgba(122,122,122,.15);color:var(--muted2);border:1px solid var(--border2)}
-
-@media (max-width: 1280px){
-  .persona-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width: 1100px){
-  .veredito{grid-template-columns:repeat(2,1fr)}
-  .persona-grid{grid-template-columns:repeat(2,1fr)}
-  .summary-grid{grid-template-columns:repeat(2,1fr)}
-  .funnel-steps{grid-template-columns:1fr;gap:8px}
-  .fnl-step{border-right:0;border-bottom:1px solid var(--border)}
-  .fnl-rate{display:none!important}
-}
-@media (max-width: 720px){
-  .persona-grid{grid-template-columns:1fr}
-  .summary-grid{grid-template-columns:1fr}
-}
+  :root{
+    --bg:#0d1320; --bg2:#111a2b; --card:#151f33; --card2:#1a2540;
+    --line:#26324b; --line2:#2f3d5c;
+    --tx:#e8eefb; --mut:#93a1bd; --mut2:#6c7a97;
+    --ing:#4c9aff; --ipm:#f5c451; --out:#b491f7; --fat:#35d6a4;
+    --pos:#35d6a4; --neg:#ff6b6b;
+    --r:14px; --sh:0 1px 0 rgba(255,255,255,.03), 0 8px 24px rgba(0,0,0,.28);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 20px 64px}
+  header{position:sticky;top:0;z-index:30;background:rgba(13,19,32,.86);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .hd{max-width:1240px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;
+    justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:baseline;gap:10px}
+  .brand b{font-size:20px;letter-spacing:.5px}
+  .brand span{color:var(--mut);font-size:13px}
+  .upd{color:var(--mut2);font-size:12px;text-align:right;line-height:1.5}
+  .upd b{color:var(--mut);font-weight:600}
+  nav{display:flex;gap:6px;margin:18px 0 10px}
+  .tab{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);
+    color:var(--mut);font-size:14px;font-weight:600;cursor:pointer;transition:.15s;user-select:none}
+  .tab:hover{color:var(--tx);border-color:var(--line2)}
+  .tab.on{background:var(--ing);border-color:var(--ing);color:#04121f}
+  .scope{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 22px;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+  .scope .lbl{font-size:12px;color:var(--mut2);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+  .scope input[type=date]{background:var(--bg2);border:1px solid var(--line2);color:var(--tx);
+    border-radius:9px;padding:7px 10px;font-size:13px;font-family:inherit;color-scheme:dark}
+  .chip{padding:6px 12px;border-radius:999px;border:1px solid var(--line2);background:var(--bg2);
+    color:var(--mut);font-size:12.5px;font-weight:600;cursor:pointer;transition:.12s;user-select:none}
+  .chip:hover{color:var(--tx)}
+  .chip.on{background:var(--card2);border-color:var(--ing);color:var(--tx)}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .sep{width:1px;align-self:stretch;background:var(--line);margin:0 2px}
+  .rangetxt{color:var(--mut);font-size:12.5px;margin-left:auto}
+  .h2{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px;
+    font-weight:700;margin:30px 2px 12px}
+  .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:16px;box-shadow:var(--sh);position:relative;overflow:hidden}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line2)}
+  .kpi.k-inv::before{background:var(--mut)} .kpi.k-ing::before{background:var(--ing)}
+  .kpi.k-ipm::before{background:var(--ipm)} .kpi.k-out::before{background:var(--out)}
+  .kpi.k-fat::before{background:var(--fat)} .kpi.k-roas::before{background:#ff9f6b}
+  .kpi .t{font-size:11.5px;color:var(--mut2);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+  .kpi .v{font-size:26px;font-weight:750;margin-top:9px;letter-spacing:-.5px;line-height:1}
+  .kpi .s{font-size:12.5px;color:var(--mut);margin-top:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+    padding:18px;box-shadow:var(--sh)}
+  .card .ct{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:12px;flex-wrap:wrap}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--mut)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .chartbox{position:relative;width:100%}
+  svg{display:block;width:100%;height:auto}
+  .tip{position:absolute;pointer-events:none;background:#0a1120;border:1px solid var(--line2);
+    border-radius:10px;padding:9px 11px;font-size:12px;color:var(--tx);opacity:0;transition:opacity .1s;
+    box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:5;min-width:158px}
+  .tip b{color:var(--mut);font-weight:600}
+  .tip .r{display:flex;justify-content:space-between;gap:14px;margin-top:3px}
+  .tip .r i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:6px}
+  .tbl-scroll{overflow-x:auto;border-radius:12px;border:1px solid var(--line)}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:940px}
+  th,td{padding:9px 12px;text-align:right;white-space:nowrap}
+  th{background:var(--bg2);color:var(--mut2);font-weight:700;text-transform:uppercase;
+    font-size:10.5px;letter-spacing:.4px;position:sticky;top:0;border-bottom:1px solid var(--line2)}
+  th:first-child,td:first-child{text-align:left;position:sticky;left:0}
+  td:first-child{background:var(--card)}
+  th:first-child{background:var(--bg2);z-index:2}
+  tbody tr:nth-child(even) td,tbody tr:nth-child(even) td:first-child{background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums}
+  tfoot td,tfoot td:first-child{background:var(--bg2)!important;font-weight:750;
+    border-top:2px solid var(--line2);color:var(--tx)}
+  .ads-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .ad{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+    box-shadow:var(--sh);display:flex;flex-direction:column}
+  .ad .thumb{aspect-ratio:1/1;background:var(--bg2);position:relative;display:flex;
+    align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+  .ad .thumb img{width:100%;height:100%;object-fit:cover}
+  .ad .thumb .ph{color:var(--mut2);font-size:12px;text-align:center;padding:20px;line-height:1.6}
+  .ad .thumb .ph a{color:var(--ing);text-decoration:none;font-weight:700}
+  .ad .rank{position:absolute;top:8px;left:8px;background:#04121f;color:var(--ing);
+    font-size:12px;font-weight:800;border-radius:8px;padding:3px 9px;border:1px solid var(--ing)}
+  .ad .stbadge{position:absolute;top:8px;right:8px;font-size:10px;font-weight:800;border-radius:6px;
+    padding:3px 8px;text-transform:uppercase;letter-spacing:.4px}
+  .stbadge.active{background:rgba(53,214,164,.16);color:var(--pos);border:1px solid rgba(53,214,164,.4)}
+  .stbadge.paused{background:rgba(147,161,189,.14);color:var(--mut);border:1px solid var(--line2)}
+  .ad .body{padding:13px 14px 15px}
+  .ad .name{font-size:14px;font-weight:750;line-height:1.35;margin-bottom:2px}
+  .ad .camp{font-size:11px;color:var(--mut2);margin-bottom:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ad .mx{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 8px}
+  .ad .mx .m .ml{font-size:9.5px;color:var(--mut2);text-transform:uppercase;letter-spacing:.4px;font-weight:700}
+  .ad .mx .m .mv{font-size:15px;font-weight:750;margin-top:2px;font-variant-numeric:tabular-nums}
+  .ad .links{display:flex;gap:8px;margin-top:12px}
+  .ad .links a{flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:7px;border-radius:8px;
+    border:1px solid var(--line2);color:var(--mut);text-decoration:none;transition:.12s}
+  .ad .links a:hover{color:var(--tx);border-color:var(--ing)}
+  .muted{color:var(--mut2)}
+  .empty{padding:60px 20px;text-align:center;color:var(--mut2);font-size:14px}
+  .hide{display:none!important}
+  @media(max-width:960px){.kpis{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.kpis{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
+<header>
+  <div class="hd">
+    <div class="brand"><b>DP100K</b><span>Dashboard Geral · Vendas &amp; Tráfego</span></div>
+    <div class="upd" id="upd"></div>
+  </div>
+</header>
 
-<div class="hdr">
-  <div class="hdr-l">
-    <div class="hdr-title">DP100K-Fp02 · Dashboard</div>
-    <div class="hdr-sub">Tráfego · MQL · Persona · Pesquisa</div>
-  </div>
-  <div class="hdr-r">
-    <span><span class="live-dot"></span><span id="last-update">carregando...</span></span>
-    <span style="color:var(--muted)">·</span>
-    <span style="color:var(--muted);font-size:10px">refresh hourly</span>
-  </div>
-</div>
+<div class="wrap">
+  <nav>
+    <div class="tab on" data-view="geral">Geral</div>
+    <div class="tab" data-view="turma">Por turma</div>
+    <div class="tab" data-view="ads">Ads</div>
+  </nav>
 
-<div class="fbar">
-  <div class="fg" id="filter-mes">
-    <span class="fl">Mês</span>
-  </div>
-  <div class="fsep"></div>
-  <div class="fg" id="filter-periodo">
-    <span class="fl">Período</span>
-    <button class="fb on" data-key="mes">Mês completo</button>
-  </div>
-  <div class="fsep"></div>
-  <div class="fg" id="filter-custom">
-    <span class="fl">Personalizado</span>
-    <input type="date" id="date-from" class="fd">
-    <span style="color:var(--muted2);font-size:11px">→</span>
-    <input type="date" id="date-to" class="fd">
-    <button class="fb fb-apply" id="apply-custom">Aplicar</button>
-    <button class="fb fb-clear" id="clear-custom" style="display:none">Limpar</button>
-  </div>
-</div>
-
-<div class="main">
-
-  <!-- LAYER 1 · VEREDITO -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">01</span>Veredito</div><div class="section-hint">tá no azul? — em 5 segundos</div></div>
-  </div>
-  <div class="veredito" id="veredito"></div>
-
-  <!-- LAYER 2 · FUNIL -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">02</span>Funil</div><div class="section-hint">onde tá vazando?</div></div>
-  </div>
-  <div class="funnel-grid">
-    <div class="funnel-hdr">Impressões → Cliques → LPV → IC → Compras</div>
-    <div class="funnel-steps" id="funnel"></div>
-  </div>
-
-  <!-- LAYER 3 · LINHA DO TEMPO -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">03</span>Linha do tempo</div><div class="section-hint">tendência diária</div></div>
-  </div>
-  <div class="chart-card">
-    <div class="chart-hdr">
-      <div class="chart-title">Spend & Vendas Gerenciador por dia</div>
-      <div class="chart-leg">
-        <span class="leg-item"><span class="leg-sw spend"></span>Spend (R$)</span>
-        <span class="leg-item"><span class="leg-sw vendas"></span>Vendas Gerenciador</span>
-      </div>
+  <!-- GERAL -->
+  <section id="v-geral">
+    <div class="scope">
+      <span class="lbl">Período</span>
+      <input type="date" id="g-de"><span class="muted">até</span><input type="date" id="g-ate">
+      <div class="sep"></div>
+      <div class="chips" id="g-presets"></div>
+      <span class="rangetxt" id="g-rtxt"></span>
     </div>
-    <div class="chart-wrap"><canvas id="chart-daily"></canvas></div>
-  </div>
-
-  <!-- LAYER 4 · HUBLA SUMMARY -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">04</span>Vendas Hubla</div><div class="section-hint">faturamento real e origem</div></div>
-  </div>
-  <div class="summary-grid" id="hubla-summary"></div>
-
-  <!-- LAYER 5 · TOP ADS -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">05</span>Top Ads (por spend)</div><div class="section-hint">quem está puxando o resultado</div></div>
-  </div>
-  <div class="tbl-card">
-    <div class="tbl-hdr">
-      <div class="tbl-title">Performance por anúncio</div>
-      <div class="tbl-sub"><span id="topads-count">0</span> anúncios · ordenado por spend</div>
+    <div class="kpis" id="g-kpis"></div>
+    <div class="h2">Vendas e faturamento por dia</div>
+    <div class="card">
+      <div class="ct"><div class="legend">
+        <span><i style="background:var(--ing)"></i>Ingressos</span>
+        <span><i style="background:var(--ipm)"></i>IPM</span>
+        <span><i style="background:var(--out)"></i>Outras</span>
+        <span><i style="background:var(--fat)"></i>Faturamento</span>
+      </div></div>
+      <div class="chartbox"><svg id="g-chart" viewBox="0 0 1000 340" preserveAspectRatio="none"></svg><div class="tip" id="g-tip"></div></div>
     </div>
-    <div class="tbl-wrap">
-      <table class="tbl" id="tbl-topads">
-        <thead><tr>
-          <th>Ad</th><th>Status</th><th>Spend</th><th>Impr</th><th>CTR</th>
-          <th>LPV</th><th>IC</th><th>Vendas</th><th>CPA</th><th>ROAS</th><th>IG</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
+    <div class="h2">Métricas de tráfego por dia</div>
+    <div class="card"><div class="tbl-scroll" id="g-tbl"></div></div>
+  </section>
 
-  <!-- LAYER 6 · PERSONA -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">06</span>Persona · Pesquisa</div><div class="section-hint">clique num ad nas tabelas abaixo pra filtrar quem respondeu</div></div>
-  </div>
-  <div id="persona-section">
-    <div class="persona-mode-hdr">
-      <div class="pm-l">
-        <span class="pm-title">Modo</span>
-        <button class="pm-pill on leads" data-mode="leads">Todos leads Meta</button>
-        <button class="pm-pill buyers" data-mode="buyers">Só compradoras</button>
-        <button class="pm-pill adfocus" data-mode="adfocus" id="pm-adfocus" style="display:none">
-          <span id="pm-adfocus-label">—</span>
-          <span class="pm-pill-close" id="pm-adfocus-close">✕</span>
-        </button>
-      </div>
-      <div class="pm-sub" id="persona-sub">—</div>
+  <!-- POR TURMA -->
+  <section id="v-turma" class="hide">
+    <div class="scope">
+      <span class="lbl">Turma</span>
+      <div class="chips" id="t-chips"></div>
+      <span class="rangetxt" id="t-rtxt"></span>
     </div>
-    <div class="persona-grid" id="persona-grid"></div>
-  </div>
-
-  <!-- LAYER 7 · MQL POR AD -->
-  <div>
-    <div class="section-hdr"><div class="section-title"><span class="section-num">07</span>MQL por anúncio</div><div class="section-hint">qual criativo qualifica melhor (Pesquisa)</div></div>
-  </div>
-  <div class="mql-card tbl-card">
-    <div class="tbl-hdr">
-      <div class="tbl-title">Eficiência de qualificação</div>
-      <div class="tbl-sub">ordenado por # MQL · respondentes Meta Ads</div>
+    <div class="kpis" id="t-kpis"></div>
+    <div class="h2">Vendas e faturamento por dia</div>
+    <div class="card">
+      <div class="ct"><div class="legend">
+        <span><i style="background:var(--ing)"></i>Ingressos</span>
+        <span><i style="background:var(--ipm)"></i>IPM</span>
+        <span><i style="background:var(--out)"></i>Outras</span>
+        <span><i style="background:var(--fat)"></i>Faturamento</span>
+      </div></div>
+      <div class="chartbox"><svg id="t-chart" viewBox="0 0 1000 340" preserveAspectRatio="none"></svg><div class="tip" id="t-tip"></div></div>
     </div>
-    <div class="mql-tbl-wrap">
-      <table class="tbl" id="tbl-mqlad">
-        <thead><tr>
-          <th>Ad</th><th>Respondentes</th><th>MQL</th><th>MQL %</th><th>Barra</th>
-        </tr></thead>
-        <tbody></tbody>
-      </table>
+    <div class="h2">Métricas de tráfego por dia</div>
+    <div class="card"><div class="tbl-scroll" id="t-tbl"></div></div>
+  </section>
+
+  <!-- ADS -->
+  <section id="v-ads" class="hide">
+    <div class="scope">
+      <span class="lbl">Filtro</span>
+      <input type="date" id="a-de"><span class="muted">até</span><input type="date" id="a-ate">
+      <div class="sep"></div>
+      <div class="chips" id="a-chips"></div>
     </div>
-  </div>
-
-</div>
-
-<div class="footer">
-  <div class="foot-l">
-    <div class="foot-item"><span class="foot-lbl">Período ativo:</span><span class="foot-val gold" id="foot-periodo">—</span></div>
-    <div class="foot-item"><span class="foot-lbl">Match Hubla×Pesquisa:</span><span class="foot-val green" id="foot-match">—</span></div>
-    <div class="foot-item"><span class="foot-lbl">Schema:</span><span class="foot-val" id="foot-schema">v1</span></div>
-  </div>
-  <div class="foot-r"><a href="data.json" target="_blank">data.json</a></div>
+    <div class="scope" style="margin-top:-14px">
+      <span class="lbl">Ordenar</span>
+      <div class="chips" id="a-sort"></div>
+      <span class="rangetxt" id="a-rtxt"></span>
+    </div>
+    <div id="a-grid" class="ads-grid"></div>
+  </section>
 </div>
 
 <script>
-let DATA = null;
-let activeMes = null;     // mes ativo ('maio' | 'junho')
-let activeKey = null;     // chave de periodo COMPLETA ('junho_mes', 'maio_sem1', ...)
-let chartDaily = null;
-let customPeriod = null;  // {ini, fim, periodo blob} quando filtro custom ativo
+let DATA;
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const nf=new Intl.NumberFormat('pt-BR');
+const fmtI=n=>(n==null||isNaN(n))?'—':nf.format(Math.round(n));
+const fmtM=n=>(n==null||isNaN(n))?'—':'R$ '+nf.format(Math.round(n));
+function fmtMk(n){if(n==null||isNaN(n))return'—';const a=Math.abs(n);
+  if(a>=1e6)return'R$ '+(n/1e6).toLocaleString('pt-BR',{maximumFractionDigits:2})+'M';
+  if(a>=1000)return'R$ '+(n/1e3).toLocaleString('pt-BR',{maximumFractionDigits:1})+'k';
+  return'R$ '+nf.format(Math.round(n));}
+const fmtP=(n,d=1)=>(n==null||isNaN(n)||!isFinite(n))?'—':n.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+const dash=v=>(v==null||v===0||isNaN(v))?'—':v;
+const dmy=s=>s?s.slice(8,10)+'/'+s.slice(5,7):'';
+const dmyy=s=>s?s.slice(8,10)+'/'+s.slice(5,7)+'/'+s.slice(2,4):'';
+function addDays(s,n){const d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function monthStart(d){return d.slice(0,7)+'-01';}
+function prevMonth(d){const x=new Date(d+'T00:00:00');x.setMonth(x.getMonth()-1);return x.toISOString().slice(0,10);}
 
-const AD_RE = /AD-(\d+)/i;
-const TICKET_FALLBACK = 97;
-
-function safeDiv(a, b) { return b ? a / b : 0; }
-
-function tableToObjs(tbl) {
-  if (!tbl || !tbl.rows) return [];
-  return tbl.rows.map(r => Object.fromEntries(tbl.cols.map((c, i) => [c, r[i]])));
+function rowsIn(a,b){return DATA.daily.filter(x=>x.d>=a&&x.d<=b);}
+function agg(rows){
+  const s=k=>rows.reduce((t,x)=>t+(x[k]||0),0);
+  const inv=s('spend');const fat=s('ing_rev')+s('ipm_rev')+s('out_rev');
+  return{inv,ing:s('ing_n'),ing_rev:s('ing_rev'),ipm:s('ipm_n'),ipm_rev:s('ipm_rev'),
+    out:s('out_n'),out_rev:s('out_rev'),fat,roas:inv?fat/inv:null};
 }
 
-function buildPeriodFromRaw(ini, fim, label, nome) {
-  if (!DATA || !DATA.raw) return null;
-  const R = DATA.raw;
-  const inRange = d => d && d >= ini && d <= fim;
-
-  const inv = R.invest.rows.filter(r => inRange(r[0]));
-  const tr  = R.trafego.rows.filter(r => inRange(r[0]));
-  const hb  = R.hubla.rows.filter(r => inRange(r[0]));
-  const pq  = R.pesquisa.rows.filter(r => inRange(r[0]));
-
-  // INVEST agg
-  const inv_sum = inv.reduce((a, r) => {
-    a.spend   += r[1]; a.vendas  += r[2]; a.ic     += r[3];
-    a.visitas += r[4]; a.impr    += r[5]; a.clicks += r[6];
-    return a;
-  }, {spend:0,vendas:0,ic:0,visitas:0,impr:0,clicks:0});
-
-  const trafego_agg = {
-    spend: inv_sum.spend,
-    vendas_gerenciador: inv_sum.vendas,
-    ic: inv_sum.ic,
-    visitas: inv_sum.visitas,
-    impressions: inv_sum.impr,
-    clicks: inv_sum.clicks,
-    ctr:   safeDiv(inv_sum.clicks, inv_sum.impr) * 100,
-    cpm:   safeDiv(inv_sum.spend, inv_sum.impr) * 1000,
-    cpc:   safeDiv(inv_sum.spend, inv_sum.clicks),
-    cpa:   safeDiv(inv_sum.spend, inv_sum.vendas),
-    cpic:  safeDiv(inv_sum.spend, inv_sum.ic),
-    cplpv: safeDiv(inv_sum.spend, inv_sum.visitas),
-    click_lpv: safeDiv(inv_sum.visitas, inv_sum.clicks) * 100,
-    lpv_ic:    safeDiv(inv_sum.ic, inv_sum.visitas) * 100,
-    ic_purch:  safeDiv(inv_sum.vendas, inv_sum.ic) * 100,
-    lpv_purch: safeDiv(inv_sum.vendas, inv_sum.visitas) * 100,
-  };
-
-  // HUBLA agg
-  const hubla_agg = {
-    total: hb.length,
-    meta_ads: hb.filter(r => /meta|facebook/i.test(r[2])).length,
-    faturamento: hb.reduce((s, r) => s + r[4], 0),
-    ticket_medio: hb.length ? hb.reduce((s, r) => s + r[4], 0) / hb.length : 0,
-    pct_meta: 0,
-  };
-  hubla_agg.pct_meta = safeDiv(hubla_agg.meta_ads, hubla_agg.total) * 100;
-
-  // PESQUISA agg
-  const pq_meta = pq.filter(r => /meta|facebook/i.test(r[2]));
-  const mql_meta = pq_meta.filter(r => r[13]);
-  const mql_total = pq.filter(r => r[13]);
-  const mql10k_meta = pq_meta.filter(r => r[14]);
-  const mql10k_total = pq.filter(r => r[14]);
-  const pesq_agg = {
-    total: pq.length,
-    meta_ads: pq_meta.length,
-    pct_meta: safeDiv(pq_meta.length, pq.length) * 100,
-    mql: mql_meta.length,
-    mql_pct: safeDiv(mql_meta.length, pq_meta.length) * 100,
-    mql_total: mql_total.length,
-    mql_total_pct: safeDiv(mql_total.length, pq.length) * 100,
-    mql_10k: mql10k_total.length,
-    mql_10k_pct: safeDiv(mql10k_total.length, pq.length) * 100,
-    mql_10k_meta: mql10k_meta.length,
-  };
-
-  // MATCH (Hubla email -> Pesquisa email)
-  const buyerEmails = new Set(hb.map(r => r[1]).filter(Boolean));
-  const buyer_pesq = pq.filter(r => buyerEmails.has(r[1]));
-  const match = {
-    vendas_total: hb.length,
-    matched_pesquisa: buyer_pesq.length,
-    match_pct: safeDiv(buyer_pesq.length, hb.length) * 100,
-  };
-
-  // TOP_ADS agregado por Ad Name
-  const byAd = {};
-  for (const r of tr) {
-    const k = r[1] || '_';
-    if (!byAd[k]) byAd[k] = {name: r[1], ad_code: r[2], campaign: r[3], adset: r[4],
-                            spend:0, impr:0, clicks:0, lpv:0, ic:0, purch:0,
-                            ad_status: r[11], ig_url: r[12]};
-    const b = byAd[k];
-    b.spend += r[5]; b.impr += r[6]; b.clicks += r[7];
-    b.lpv += r[8]; b.ic += r[9]; b.purch += r[10];
-    if (r[11]) b.ad_status = r[11];
-    if (r[12]) b.ig_url = r[12];
-  }
-  const top_ads = Object.values(byAd).map(a => ({
-    ...a,
-    ctr: safeDiv(a.clicks, a.impr) * 100,
-    cpa: safeDiv(a.spend, a.purch),
-    roas: safeDiv(a.purch * TICKET_FALLBACK, a.spend),
-  })).sort((x, y) => y.spend - x.spend).slice(0, 30);
-
-  // MQL POR AD (a partir de Pesquisa.content + origem Meta)
-  const byAdMql = {};
-  for (const r of pq) {
-    if (!/meta|facebook/i.test(r[2])) continue;
-    const m = (r[3] || '').match(AD_RE);
-    const code = m ? `AD-${parseInt(m[1], 10).toString().padStart(2, '0')}` : 'unknown';
-    if (!byAdMql[code]) byAdMql[code] = {total:0, mql:0};
-    byAdMql[code].total += 1;
-    if (r[13]) byAdMql[code].mql += 1;
-  }
-  const mql_por_ad = Object.entries(byAdMql)
-    .map(([ad, v]) => ({ad, total: v.total, mql: v.mql, mql_pct: safeDiv(v.mql, v.total) * 100}))
-    .sort((a, b) => b.mql - a.mql || b.total - a.total)
-    .slice(0, 20);
-
-  // PERSONA por origem (leads Meta, compradoras Meta)
-  function personaFromRows(rows) {
-    if (!rows.length) return {};
-    const dist = (idx, topN) => {
-      const c = {};
-      for (const r of rows) {
-        const k = (r[idx] || '').trim();
-        if (!k) continue;
-        c[k] = (c[k] || 0) + 1;
-      }
-      const total = Object.values(c).reduce((a, b) => a + b, 0);
-      return Object.entries(c).sort((a, b) => b[1] - a[1]).slice(0, topN)
-        .map(([k, n]) => ({k, n, pct: total ? n / total * 100 : 0}));
-    };
-    return {
-      total_respondentes: rows.length,
-      mql: rows.filter(r => r[13]).length,
-      mql_pct: safeDiv(rows.filter(r => r[13]).length, rows.length) * 100,
-      idade:    dist(4, 8),
-      genero:   dist(5, 4),
-      tempo:    dist(6, 6),
-      previo:   dist(7, 3),
-      ocupacao: dist(8, 8),
-      renda:    dist(9, 8),
-      autoimg:  dist(10, 5),
-      objetivo: dist(11, 6),
-      estado:   dist(12, 12),
-    };
-  }
-
-  const persona_leads = personaFromRows(pq_meta);
-  const persona_buyers = personaFromRows(buyer_pesq.filter(r => /meta|facebook/i.test(r[2])));
-
-  // PERSONA POR AD (min 3 respondentes)
-  const adGroups = {};
-  for (const r of pq) {
-    if (!/meta|facebook/i.test(r[2])) continue;
-    const m = (r[3] || '').match(AD_RE);
-    const code = m ? `AD-${parseInt(m[1], 10).toString().padStart(2, '0')}` : 'unknown';
-    if (!adGroups[code]) adGroups[code] = [];
-    adGroups[code].push(r);
-  }
-  const persona_por_ad = {};
-  for (const [code, rows] of Object.entries(adGroups)) {
-    if (rows.length < 3) continue;
-    persona_por_ad[code] = personaFromRows(rows);
-  }
-
-  // SERIE DIARIA (vai do invest)
-  const byDate = {};
-  for (const r of inv) {
-    const d = r[0];
-    if (!byDate[d]) byDate[d] = {date:d, spend:0, vendas:0, ic:0, visitas:0, impr:0, clicks:0};
-    const b = byDate[d];
-    b.spend += r[1]; b.vendas += r[2]; b.ic += r[3];
-    b.visitas += r[4]; b.impr += r[5]; b.clicks += r[6];
-  }
-  const serie_diaria = Object.values(byDate).sort((a, b) => a.date.localeCompare(b.date));
-
-  // CPA gerenciador, hubla, ROAS real
-  const cpa_ger = safeDiv(inv_sum.spend, inv_sum.vendas);
-  const cpa_hubla = safeDiv(inv_sum.spend, hubla_agg.total);
-  const roas_real = safeDiv(hubla_agg.faturamento, inv_sum.spend);
-
-  return {
-    periodo: {inicio: ini, fim: fim, label, nome, custom: true},
-    trafego: trafego_agg,
-    hubla:   hubla_agg,
-    pesquisa: pesq_agg,
-    persona_leads_meta: persona_leads,
-    persona_compradoras_meta: persona_buyers,
-    match,
-    top_ads,
-    mql_por_ad,
-    persona_por_ad,
-    serie_diaria,
-    roas_real,
-    cpa_hubla,
-    cpa_gerenciador: cpa_ger,
-  };
+function renderKPIs(el,a){
+  const card=(cls,t,v,s)=>`<div class="kpi ${cls}"><div class="t">${t}</div><div class="v">${v}</div><div class="s">${s||'&nbsp;'}</div></div>`;
+  el.innerHTML=
+    card('k-inv','Investimento',a.inv?fmtM(a.inv):'—','')+
+    card('k-ing','Vendas Ingressos',a.ing?fmtI(a.ing):'—',a.ing?fmtMk(a.ing_rev):'')+
+    card('k-ipm','Vendas IPM',a.ipm?fmtI(a.ipm):'—',a.ipm?fmtMk(a.ipm_rev):'')+
+    card('k-out','Outras Vendas',a.out?fmtI(a.out):'—',a.out?fmtMk(a.out_rev):'')+
+    card('k-fat','Faturamento',a.fat?fmtM(a.fat):'—','')+
+    card('k-roas','ROAS',a.roas?a.roas.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'x':'—',
+        a.inv?fmtMk(a.fat)+' / '+fmtMk(a.inv):'');
 }
 
-const fmt = {
-  brl: v => 'R$ ' + (v||0).toLocaleString('pt-BR',{minimumFractionDigits:0, maximumFractionDigits:0}),
-  brlk: v => {
-    const n = v||0;
-    if (n >= 1e6) return 'R$ ' + (n/1e6).toFixed(1) + 'M';
-    if (n >= 1e3) return 'R$ ' + (n/1e3).toFixed(1) + 'k';
-    return 'R$ ' + n.toFixed(0);
-  },
-  int: v => (v||0).toLocaleString('pt-BR'),
-  pct: v => (v||0).toFixed(1) + '%',
-  pct0: v => (v||0).toFixed(0) + '%',
-  dec: v => (v||0).toFixed(2),
-};
-
-function delta(now, prev) {
-  if (!prev) return { v: 0, dir: 'neutral', text: '—' };
-  const d = (now - prev) / prev * 100;
-  if (Math.abs(d) < 0.5) return { v: d, dir: 'neutral', text: '~ 0%' };
-  return {
-    v: d,
-    dir: d > 0 ? 'up' : 'dn',
-    text: (d > 0 ? '↑ ' : '↓ ') + Math.abs(d).toFixed(0) + '%',
+function renderChart(svg,tip,rows){
+  const W=1000,H=340,pl=54,pr=66,pt=14,pb=34,plotW=W-pl-pr,plotH=H-pt-pb;
+  const n=rows.length;const ns='http://www.w3.org/2000/svg';
+  svg.innerHTML='';tip.style.opacity=0;
+  if(!n){const t=document.createElementNS(ns,'text');t.setAttribute('x',W/2);t.setAttribute('y',H/2);
+    t.setAttribute('fill','#6c7a97');t.setAttribute('font-size',14);t.setAttribute('text-anchor','middle');
+    t.textContent='Sem dados no período';svg.appendChild(t);return;}
+  const mk=(t,at)=>{const e=document.createElementNS(ns,t);for(const k in at)e.setAttribute(k,at[k]);return e;};
+  const ing=rows.map(r=>r.ing_n),ipm=rows.map(r=>r.ipm_n),out=rows.map(r=>r.out_n);
+  const fat=rows.map(r=>r.ing_rev+r.ipm_rev+r.out_rev);
+  const cMax=Math.max(5,...ing,...ipm,...out),fMax=Math.max(1000,...fat);
+  const X=i=>n===1?pl+plotW/2:pl+i*plotW/(n-1);
+  const YL=v=>pt+plotH-(v/cMax)*plotH, YR=v=>pt+plotH-(v/fMax)*plotH;
+  const G=4;
+  for(let i=0;i<=G;i++){
+    const y=pt+plotH*i/G;
+    svg.appendChild(mk('line',{x1:pl,y1:y,x2:pl+plotW,y2:y,stroke:'#26324b','stroke-width':1}));
+    const tl=mk('text',{x:pl-8,y:y+4,fill:'#6c7a97','font-size':11,'text-anchor':'end'});tl.textContent=nf.format(Math.round(cMax*(1-i/G)));svg.appendChild(tl);
+    const tr=mk('text',{x:pl+plotW+8,y:y+4,fill:'#6c7a97','font-size':11,'text-anchor':'start'});tr.textContent=fmtMk(fMax*(1-i/G));svg.appendChild(tr);
+  }
+  const step=Math.max(1,Math.ceil(n/8));
+  for(let i=0;i<n;i+=step){const t=mk('text',{x:X(i),y:H-12,fill:'#6c7a97','font-size':11,'text-anchor':'middle'});t.textContent=dmy(rows[i].d);svg.appendChild(t);}
+  const draw=(vals,Y,color,w,fill)=>{
+    let d='';vals.forEach((v,i)=>{d+=(i?'L':'M')+X(i)+' '+Y(v)+' ';});
+    if(fill)svg.appendChild(mk('path',{d:d+'L'+X(n-1)+' '+(pt+plotH)+' L'+X(0)+' '+(pt+plotH)+' Z',fill:color,opacity:.10}));
+    svg.appendChild(mk('path',{d:d.trim(),fill:'none',stroke:color,'stroke-width':w,'stroke-linejoin':'round','stroke-linecap':'round'}));
   };
-}
-
-function mesMetaByKey(mk) {
-  return (DATA.meses_meta || []).find(m => m.key === mk) || null;
-}
-
-// previousKey recebe pk completa ('junho_sem2') e devolve a pk da semana anterior
-// DO MESMO mes ('junho_sem1'), ou null pra "mes completo" / primeira semana.
-function previousKey(key) {
-  if (!key) return null;
-  const [mk, sub] = key.split('_');
-  if (sub === 'mes') return null;
-  const m = mesMetaByKey(mk);
-  if (!m) return null;
-  const order = m.semanas.map(s => s.pk);
-  const i = order.indexOf(key);
-  return i > 0 ? order[i-1] : null;
-}
-
-function buildMesButtons() {
-  const fm = document.getElementById('filter-mes');
-  fm.innerHTML = '<span class="fl">Mês</span>' +
-    (DATA.meses_meta || []).map(m =>
-      `<button class="fb ${m.key===activeMes?'on':''}" data-mes="${m.key}">${m.nome}</button>`
-    ).join('');
-  fm.querySelectorAll('.fb').forEach(b => {
-    b.addEventListener('click', () => selectMes(b.dataset.mes));
+  draw(fat,YR,'#35d6a4',2,true);
+  draw(out,YL,'#b491f7',2);
+  draw(ipm,YL,'#f5c451',2);
+  draw(ing,YL,'#4c9aff',2.4);
+  const guide=mk('line',{x1:0,y1:pt,x2:0,y2:pt+plotH,stroke:'#4c9aff','stroke-width':1,opacity:0});svg.appendChild(guide);
+  const dots=['#4c9aff','#f5c451','#b491f7','#35d6a4'].map(c=>{const d=mk('circle',{r:4,fill:c,stroke:'#0a1120','stroke-width':1.5,opacity:0});svg.appendChild(d);return d;});
+  const over=mk('rect',{x:pl,y:pt,width:plotW,height:plotH,fill:'transparent'});svg.appendChild(over);
+  over.addEventListener('mousemove',ev=>{
+    const rc=svg.getBoundingClientRect();const px=(ev.clientX-rc.left)/rc.width*W;
+    let i=Math.round((px-pl)/(plotW/(n>1?n-1:1)));i=Math.max(0,Math.min(n-1,i));
+    const r=rows[i],xx=X(i);
+    guide.setAttribute('x1',xx);guide.setAttribute('x2',xx);guide.setAttribute('opacity',.5);
+    [YL(r.ing_n),YL(r.ipm_n),YL(r.out_n),YR(r.ing_rev+r.ipm_rev+r.out_rev)].forEach((y,k)=>{
+      dots[k].setAttribute('cx',xx);dots[k].setAttribute('cy',y);dots[k].setAttribute('opacity',1);});
+    tip.style.opacity=1;
+    tip.innerHTML=`<b>${dmyy(r.d)}</b>
+      <div class="r"><span><i style="background:#4c9aff"></i>Ingressos</span><b style="color:#e8eefb">${r.ing_n}</b></div>
+      <div class="r"><span><i style="background:#f5c451"></i>IPM</span><b style="color:#e8eefb">${r.ipm_n}</b></div>
+      <div class="r"><span><i style="background:#b491f7"></i>Outras</span><b style="color:#e8eefb">${r.out_n}</b></div>
+      <div class="r"><span><i style="background:#35d6a4"></i>Faturamento</span><b style="color:#e8eefb">${fmtMk(r.ing_rev+r.ipm_rev+r.out_rev)}</b></div>`;
+    const box=svg.parentElement.getBoundingClientRect();
+    let lx=(ev.clientX-box.left)+14;if(lx>box.width-176)lx=(ev.clientX-box.left)-190;
+    tip.style.left=lx+'px';tip.style.top=Math.max(4,(ev.clientY-box.top)-10)+'px';
   });
+  over.addEventListener('mouseleave',()=>{tip.style.opacity=0;guide.setAttribute('opacity',0);dots.forEach(d=>d.setAttribute('opacity',0));});
 }
 
-function buildPeriodoButtons() {
-  const m = mesMetaByKey(activeMes);
-  const fp = document.getElementById('filter-periodo');
-  if (!m) { fp.innerHTML = '<span class="fl">Período</span>'; return; }
-  fp.innerHTML = '<span class="fl">Período</span>' +
-    `<button class="fb ${activeKey===m.mes_pk?'on':''}" data-key="${m.mes_pk}">Mês completo</button>` +
-    (m.semanas || []).map(s => {
-      const ini = (s.inicio||'').slice(5).replace('-','/');
-      const fim = (s.fim||'').slice(5).replace('-','/');
-      return `<button class="fb ${activeKey===s.pk?'on':''}" data-key="${s.pk}">${s.nome} <span class="fb-sub">${ini}–${fim}</span></button>`;
-    }).join('');
-  fp.querySelectorAll('.fb').forEach(b => {
-    b.addEventListener('click', () => {
-      clearCustomFlags();
-      render(b.dataset.key);
-    });
+function renderTable(el,rows){
+  if(!rows.length){el.innerHTML='<div class="empty">Sem dados no período.</div>';return;}
+  const head=['Data','Investimento','Vendas ing.','Impressões','CPM','Alcance','Cliques link','CTR link','Visitas pág.','Checkout','Conv. Página','Conv. Checkout'];
+  let h='<table><thead><tr>'+head.map(x=>`<th>${x}</th>`).join('')+'</tr></thead><tbody>';
+  const T={spend:0,ing:0,impr:0,reach:0,lclk:0,lpv:0,ic:0};
+  rows.forEach(r=>{
+    T.spend+=r.spend;T.ing+=r.ing_n;T.impr+=r.impr;T.reach+=r.reach;T.lclk+=r.lclk;T.lpv+=r.lpv;T.ic+=r.ic;
+    const cpm=r.impr?r.spend/r.impr*1000:null,ctr=r.impr?r.lclk/r.impr*100:null,
+      cvPag=r.lpv?r.ic/r.lpv*100:null,cvChk=r.ic?r.ing_n/r.ic*100:null;
+    h+=`<tr><td>${dmyy(r.d)}</td>
+      <td class="num">${r.spend?fmtM(r.spend):'—'}</td>
+      <td class="num">${r.ing_n?fmtI(r.ing_n):'—'}</td>
+      <td class="num">${r.impr?fmtI(r.impr):'—'}</td>
+      <td class="num">${cpm?fmtM(cpm):'—'}</td>
+      <td class="num">${r.reach?fmtI(r.reach):'—'}</td>
+      <td class="num">${r.lclk?fmtI(r.lclk):'—'}</td>
+      <td class="num">${fmtP(ctr,2)}</td>
+      <td class="num">${r.lpv?fmtI(r.lpv):'—'}</td>
+      <td class="num">${r.ic?fmtI(r.ic):'—'}</td>
+      <td class="num">${fmtP(cvPag)}</td>
+      <td class="num">${fmtP(cvChk)}</td></tr>`;
   });
+  const cpmT=T.impr?T.spend/T.impr*1000:null,ctrT=T.impr?T.lclk/T.impr*100:null,
+    cvPagT=T.lpv?T.ic/T.lpv*100:null,cvChkT=T.ic?T.ing/T.ic*100:null;
+  h+=`</tbody><tfoot><tr><td>Total</td>
+    <td class="num">${fmtM(T.spend)}</td><td class="num">${fmtI(T.ing)}</td>
+    <td class="num">${fmtI(T.impr)}</td><td class="num">${cpmT?fmtM(cpmT):'—'}</td>
+    <td class="num">${fmtI(T.reach)}</td><td class="num">${fmtI(T.lclk)}</td>
+    <td class="num">${fmtP(ctrT,2)}</td><td class="num">${fmtI(T.lpv)}</td>
+    <td class="num">${fmtI(T.ic)}</td><td class="num">${fmtP(cvPagT)}</td><td class="num">${fmtP(cvChkT)}</td>
+    </tr></tfoot></table>`;
+  el.innerHTML=h;
 }
 
-function clearCustomFlags() {
-  customPeriod = null;
-  document.getElementById('apply-custom').classList.remove('custom-on');
-  document.getElementById('clear-custom').style.display = 'none';
-}
-
-function selectMes(mk) {
-  const m = mesMetaByKey(mk);
-  if (!m || mk === activeMes) return;
-  activeMes = mk;
-  clearCustomFlags();
-  buildMesButtons();
-  activeKey = m.mes_pk;     // ao trocar de mes, abre no "Mês completo"
-  buildPeriodoButtons();
-  render(m.mes_pk);
-}
-
-function load() {
-  fetch('data.json?_=' + Date.now()).then(r => r.json()).then(d => {
-    DATA = d;
-    document.getElementById('last-update').textContent = 'Atualizado ' + (d.updated_at || '—');
-    document.getElementById('foot-schema').textContent = 'v' + (d.schema_version || 1);
-    // mes default (mes corrente), com fallback pro primeiro disponivel
-    activeMes = (mesMetaByKey(d.mes_default) ? d.mes_default : (d.meses_meta?.[0]?.key)) || null;
-    const m = mesMetaByKey(activeMes);
-    activeKey = m ? m.mes_pk : null;
-    buildMesButtons();
-    buildPeriodoButtons();
-    // popula limites dos date inputs com base nos dados disponiveis (cobre todos os meses)
-    if (d.raw && d.raw.invest && d.raw.invest.rows.length) {
-      const dates = d.raw.invest.rows.map(r => r[0]).sort();
-      const minD = dates[0], maxD = dates[dates.length - 1];
-      const df = document.getElementById('date-from');
-      const dt = document.getElementById('date-to');
-      df.min = minD; df.max = maxD; df.value = minD;
-      dt.min = minD; dt.max = maxD; dt.value = maxD;
-    }
-    if (activeKey) render(activeKey);
+function computeAds(a,b){
+  const m={};
+  DATA.ads_daily.forEach(r=>{
+    if(r.d<a||r.d>b)return;
+    const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0});
+    o.spend+=r.spend;o.purch+=r.purch;o.impr+=r.impr;o.ic+=r.ic;o.lpv+=r.lpv;o.lclk+=r.lclk;
   });
+  return Object.values(m).filter(o=>o.spend>0||o.purch>0);
 }
-
-document.getElementById('apply-custom').addEventListener('click', applyCustom);
-document.getElementById('clear-custom').addEventListener('click', clearCustom);
-
-function render(key, customP) {
-  if (!DATA) return;
-  const p = customP || DATA.periodos[key];
-  if (!p) return;
-  if (!customP) {
-    activeKey = key;
-    // se a pk pertence a outro mes (ex: deep-link futuro), sincroniza o seletor de mes
-    const mk = key.split('_')[0];
-    if (mk !== activeMes && mesMetaByKey(mk)) {
-      activeMes = mk;
-      buildMesButtons();
-      buildPeriodoButtons();
-    }
-  }
-  document.querySelectorAll('#filter-periodo .fb').forEach(b => {
-    b.classList.toggle('on', !customP && b.dataset.key === key);
-  });
-  // Reset filtro de ad ao trocar de periodo
-  if (personaMode.kind === 'adfocus') personaMode = { kind: 'leads', ad: null };
-  document.getElementById('foot-periodo').textContent = p.periodo.nome + ' (' + p.periodo.inicio + ' a ' + p.periodo.fim + ')';
-  document.getElementById('foot-match').textContent = (p.match.match_pct||0).toFixed(0) + '%';
-  renderVeredito(p, customP ? null : key);
-  renderFunnel(p);
-  renderChart(p);
-  renderHublaSummary(p);
-  renderTopAds(p);
-  renderPersona(p);
-  renderMqlAd(p);
-}
-
-function applyCustom() {
-  const ini = document.getElementById('date-from').value;
-  const fim = document.getElementById('date-to').value;
-  if (!ini || !fim) { alert('Escolha início e fim'); return; }
-  if (ini > fim) { alert('Início > fim'); return; }
-  const nome = `${ini} a ${fim}`;
-  const p = buildPeriodFromRaw(ini, fim, 'Personalizado', nome);
-  customPeriod = p;
-  document.getElementById('apply-custom').classList.add('custom-on');
-  document.getElementById('clear-custom').style.display = 'inline-flex';
-  render(null, p);
-}
-
-function clearCustom() {
-  clearCustomFlags();
-  const m = mesMetaByKey(activeMes);
-  render(m ? m.mes_pk : activeKey);
-}
-
-function renderVeredito(p, key) {
-  const prev = DATA.periodos[previousKey(key)];
-  const t = p.trafego;
-  const m = p.pesquisa;
-  const h = p.hubla;
-  const dSpend = delta(t.spend, prev?.trafego.spend);
-  const dVendas = delta(t.vendas_gerenciador, prev?.trafego.vendas_gerenciador);
-  const dCpa = delta(p.cpa_gerenciador, prev?.cpa_gerenciador);
-  const dRoasR = delta(p.roas_real, prev?.roas_real);
-  const dMql = delta(m.mql_total_pct, prev?.pesquisa.mql_total_pct);
-  const roasCls = p.roas_real >= 1 ? 'cell-good' : p.roas_real >= 0.5 ? 'cell-warn' : 'cell-bad';
-  document.getElementById('veredito').innerHTML = `
-    <div class="kpi-big spend">
-      <div class="kpi-lbl">Investimento Tráfego</div>
-      <div class="kpi-val">${fmt.brlk(t.spend)}</div>
-      <div class="kpi-bot"><span><span class="kpi-delta inv-${dSpend.dir==='up'?'up':dSpend.dir==='dn'?'dn':'neutral'}">${dSpend.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${t.impressions.toLocaleString('pt-BR')} impr · ${t.ctr.toFixed(2)}% CTR</span></div>
-    </div>
-    <div class="kpi-big vendas">
-      <div class="kpi-lbl">Vendas Gerenciador · Hubla</div>
-      <div class="kpi-val">${t.vendas_gerenciador} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${h.total}</div>
-      <div class="kpi-bot"><span><span class="kpi-delta ${dVendas.dir}">${dVendas.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">Fat. ${fmt.brlk(h.faturamento)} · Ticket ${fmt.brl(h.ticket_medio)}</span></div>
-    </div>
-    <div class="kpi-big cpa">
-      <div class="kpi-lbl">CPA Tráfego</div>
-      <div class="kpi-val">${fmt.brl(p.cpa_gerenciador)}</div>
-      <div class="kpi-bot"><span><span class="kpi-delta inv-${dCpa.dir==='up'?'up':dCpa.dir==='dn'?'dn':'neutral'}">${dCpa.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">spend ÷ vendas ger.</span></div>
-    </div>
-    <div class="kpi-big roas">
-      <div class="kpi-lbl">ROAS Venda Direta</div>
-      <div class="kpi-val ${roasCls}">${fmt.dec(p.roas_real)}x</div>
-      <div class="kpi-bot"><span><span class="kpi-delta ${dRoasR.dir}">${dRoasR.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">fat. Hubla ÷ spend</span></div>
-    </div>
-    <div class="kpi-big mql">
-      <div class="kpi-lbl">MQL +8k · Taxa</div>
-      <div class="kpi-val">${m.mql_total} <span style="font-size:14px;color:var(--muted2);font-weight:400">·</span> ${m.mql_total_pct.toFixed(0)}%</div>
-      <div class="kpi-bot"><span><span class="kpi-delta ${dMql.dir}">${dMql.text}</span><span class="kpi-delta-lbl">vs sem ant.</span></span>
-        <span class="kpi-sub">${m.total} respondentes (MQL+10k: ${m.mql_10k})</span></div>
-    </div>`;
-}
-
-function renderFunnel(p) {
-  const t = p.trafego;
-  const steps = [
-    { name: 'Impressões', val: t.impressions, rate: null },
-    { name: 'Cliques', val: t.clicks, rate: t.ctr, rateLbl: 'CTR' },
-    { name: 'Visitas Página', val: t.visitas, rate: t.click_lpv, rateLbl: 'Click→LPV' },
-    { name: 'Initiated Checkout', val: t.ic, rate: t.lpv_ic, rateLbl: 'LPV→IC' },
-    { name: 'Vendas Gerenciador', val: t.vendas_gerenciador, rate: t.ic_purch, rateLbl: 'IC→Compra' },
-  ];
-  const maxV = Math.max(...steps.map(s => s.val), 1);
-  document.getElementById('funnel').innerHTML = steps.map((s, i) => {
-    const pct = (s.val / maxV) * 100;
-    const rate = s.rate !== null
-      ? `<div class="fnl-rate">${s.rateLbl}: ${s.rate.toFixed(1)}%</div>` : '';
-    return `<div class="fnl-step">
-      ${rate}
-      <div class="fnl-name">${s.name}</div>
-      <div class="fnl-val">${fmt.int(s.val)}</div>
-      <div class="fnl-bar"><div class="fnl-fill" style="width:${pct}%"></div></div>
-    </div>`;
+function adCode(name){const m=name.match(/\[(AD-[^\]]+)\]/i);return m?m[1].toUpperCase():name.slice(0,16);}
+function renderAdsGrid(el,list,sortKey){
+  if(!list.length){el.innerHTML='<div class="empty">Nenhum anúncio com investimento no período.</div>';return;}
+  const sorters={vendas:x=>-x.purch,invest:x=>-x.spend,cpa:x=>x.purch?x.spend/x.purch:1e15};
+  list.sort((p,q)=>(sorters[sortKey](p)-sorters[sortKey](q))||(q.spend-p.spend));
+  el.innerHTML=list.map((o,i)=>{
+    const meta=DATA.ads_meta[o.ad]||{};
+    const cpa=o.purch?o.spend/o.purch:null, ctr=o.impr?o.lclk/o.impr*100:null;
+    const active=(meta.status||'').toUpperCase()==='ACTIVE';
+    let thumb;
+    if(meta.thumb)thumb=`<img src="${meta.thumb}" loading="lazy" alt="">`;
+    else{const lk=meta.permalink||meta.preview;
+      thumb=`<div class="ph">${lk?`<a href="${lk}" target="_blank" rel="noopener">Ver criativo &nearr;</a>`:'sem preview'}</div>`;}
+    return `<div class="ad">
+      <div class="thumb"><span class="rank">#${i+1}</span>
+        <span class="stbadge ${active?'active':'paused'}">${active?'Ativo':'Pausado'}</span>${thumb}</div>
+      <div class="body">
+        <div class="name">${adCode(o.ad)}</div>
+        <div class="camp" title="${o.ad}">${o.ad}</div>
+        <div class="mx">
+          <div class="m"><div class="ml">Vendas</div><div class="mv" style="color:var(--ing)">${o.purch}</div></div>
+          <div class="m"><div class="ml">Investido</div><div class="mv">${fmtMk(o.spend)}</div></div>
+          <div class="m"><div class="ml">CPA</div><div class="mv">${cpa?fmtM(cpa):'—'}</div></div>
+          <div class="m"><div class="ml">Impressões</div><div class="mv">${fmtI(o.impr)}</div></div>
+          <div class="m"><div class="ml">CTR link</div><div class="mv">${fmtP(ctr,2)}</div></div>
+          <div class="m"><div class="ml">Checkout</div><div class="mv">${fmtI(o.ic)}</div></div>
+        </div>
+        ${(meta.permalink||meta.preview)?`<div class="links">
+          ${meta.permalink?`<a href="${meta.permalink}" target="_blank" rel="noopener">Instagram</a>`:''}
+          ${meta.preview?`<a href="${meta.preview}" target="_blank" rel="noopener">Preview</a>`:''}
+        </div>`:''}
+      </div></div>`;
   }).join('');
 }
 
-function renderChart(p) {
-  const dates = p.serie_diaria.map(r => r.date);
-  const spend = p.serie_diaria.map(r => r.spend);
-  const purch = p.serie_diaria.map(r => r.vendas);
-  if (chartDaily) chartDaily.destroy();
-  const ctx = document.getElementById('chart-daily').getContext('2d');
-  chartDaily = new Chart(ctx, {
-    data: {
-      labels: dates,
-      datasets: [
-        { type: 'bar', label: 'Spend (R$)', yAxisID: 'y1',
-          data: spend, backgroundColor: 'rgba(201,168,76,.55)', borderColor: 'rgba(201,168,76,.85)', borderWidth: 1 },
-        { type: 'line', label: 'Vendas', yAxisID: 'y2',
-          data: purch, borderColor: '#2db87a', backgroundColor: 'rgba(45,184,122,.18)',
-          tension: 0.25, pointBackgroundColor: '#5fd4a0', pointRadius: 3, borderWidth: 2 },
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0a0b0f', borderColor: '#252938', borderWidth: 1 } },
-      scales: {
-        x: { ticks: { color: '#8b8fa8', font: { size: 10 } }, grid: { color: 'rgba(35,40,56,.4)' } },
-        y1: { position: 'left', ticks: { color: '#c9a84c', font: { size: 10 },
-              callback: v => 'R$ ' + (v >= 1000 ? (v/1000).toFixed(1)+'k' : v) },
-              grid: { color: 'rgba(35,40,56,.4)' } },
-        y2: { position: 'right', ticks: { color: '#5fd4a0', font: { size: 10 }, precision: 0 },
-              grid: { display: false }, beginAtZero: true },
-      }
-    }
-  });
+/* ---- state + view drawing ---- */
+const st={geral:{a:null,b:null},turma:{i:0},ads:{a:null,b:null,sort:'vendas'}};
+
+function drawGeral(){
+  const{a,b}=st.geral;const rows=rowsIn(a,b);
+  renderKPIs($('#g-kpis'),agg(rows));
+  renderChart($('#g-chart'),$('#g-tip'),rows);
+  renderTable($('#g-tbl'),rows);
+  $('#g-de').value=a;$('#g-ate').value=b;
+  $('#g-rtxt').textContent=rows.length?`${rows.length} dias · ${dmyy(a)} – ${dmyy(b)}`:'sem dados';
+}
+function drawTurma(){
+  const t=DATA.turmas[st.turma.i];if(!t)return;
+  const rows=rowsIn(t.inicio,t.fim);
+  renderKPIs($('#t-kpis'),agg(rows));
+  renderChart($('#t-chart'),$('#t-tip'),rows);
+  renderTable($('#t-tbl'),rows);
+  $$('#t-chips .chip').forEach((c,i)=>c.classList.toggle('on',i===st.turma.i));
+  $('#t-rtxt').textContent=`${t.label} · ${dmyy(t.inicio)} – ${dmyy(t.fim)}`;
+}
+function drawAds(){
+  const{a,b,sort}=st.ads;
+  $('#a-de').value=a;$('#a-ate').value=b;
+  const list=computeAds(a,b);
+  renderAdsGrid($('#a-grid'),list,sort);
+  $$('#a-sort .chip').forEach(c=>c.classList.toggle('on',c.dataset.sort===sort));
+  $('#a-rtxt').textContent=`${list.length} anúncios · ${dmyy(a)} – ${dmyy(b)}`;
+}
+function showView(v){
+  $$('.tab').forEach(t=>t.classList.toggle('on',t.dataset.view===v));
+  $('#v-geral').classList.toggle('hide',v!=='geral');
+  $('#v-turma').classList.toggle('hide',v!=='turma');
+  $('#v-ads').classList.toggle('hide',v!=='ads');
+  if(v==='geral')drawGeral();if(v==='turma')drawTurma();if(v==='ads')drawAds();
 }
 
-function renderHublaSummary(p) {
-  const h = p.hubla;
-  const cards = [
-    { l: 'Vendas (Hubla)', v: h.total, sub: 'da turma · ' + (h.pct_meta||0).toFixed(0) + '% via Meta' },
-    { l: 'Faturamento', v: fmt.brlk(h.faturamento), sub: 'Ticket médio ' + fmt.brl(h.ticket_medio) },
-    { l: 'Match Pesquisa', v: p.match.matched_pesquisa + '/' + p.match.vendas_total, sub: (p.match.match_pct||0).toFixed(0) + '% compradoras responderam' },
-    { l: 'MQL +10k', v: p.pesquisa.mql_10k + ' (' + (p.pesquisa.mql_10k_pct||0).toFixed(0) + '%)', sub: 'renda mensal ≥ R$ 10.001' },
-  ];
-  document.getElementById('hubla-summary').innerHTML = cards.map(c => `
-    <div class="kpi-big" style="--bar:var(--green)">
-      <div class="kpi-lbl">${c.l}</div>
-      <div class="kpi-val" style="font-size:24px">${c.v}</div>
-      <div class="kpi-bot"><span class="kpi-sub" style="text-align:left">${c.sub}</span></div>
-    </div>`).join('');
+function initControls(){
+  const min=DATA.meta.date_min,max=DATA.meta.date_max;
+  [$('#g-de'),$('#g-ate'),$('#a-de'),$('#a-ate')].forEach(el=>{el.min=min;el.max=max;});
+  const pmStart=monthStart(prevMonth(max)),pmEnd=addDays(monthStart(max),-1);
+  const presets=[['Este mês',()=>[monthStart(max),max]],['Mês passado',()=>[pmStart,pmEnd]],
+    ['Últimos 30d',()=>[addDays(max,-29),max]],['Últimos 7d',()=>[addDays(max,-6),max]],['Tudo',()=>[min,max]]];
+  const gp=$('#g-presets');
+  const markPreset=(box,c)=>[...box.children].forEach(x=>x.classList.toggle('on',x===c));
+  presets.forEach(([lb,fn])=>{const c=document.createElement('div');c.className='chip';c.textContent=lb;
+    c.onclick=()=>{const[a,b]=fn();st.geral.a=a;st.geral.b=b;markPreset(gp,c);drawGeral();};gp.appendChild(c);});
+  $('#g-de').onchange=e=>{st.geral.a=e.target.value;markPreset(gp,null);drawGeral();};
+  $('#g-ate').onchange=e=>{st.geral.b=e.target.value;markPreset(gp,null);drawGeral();};
+  gp.children[0].classList.add('on');
+  const tc=$('#t-chips');
+  DATA.turmas.forEach((t,i)=>{const c=document.createElement('div');c.className='chip';c.textContent=t.label;
+    c.onclick=()=>{st.turma.i=i;drawTurma();};tc.appendChild(c);});
+  st.turma.i=Math.max(0,DATA.turmas.length-1);
+  const ac=$('#a-chips');
+  const adsPresets=[['Este mês',[monthStart(max),max]]];
+  DATA.turmas.forEach(t=>adsPresets.push([t.label,[t.inicio,t.fim]]));
+  adsPresets.forEach(([lb,[a,b]])=>{const c=document.createElement('div');c.className='chip';c.textContent=lb;
+    c.onclick=()=>{st.ads.a=a;st.ads.b=b;drawAds();};ac.appendChild(c);});
+  $('#a-de').onchange=e=>{st.ads.a=e.target.value;drawAds();};
+  $('#a-ate').onchange=e=>{st.ads.b=e.target.value;drawAds();};
+  const as=$('#a-sort');
+  [['vendas','Mais vendas'],['invest','Maior investimento'],['cpa','Melhor CPA']].forEach(([k,lb])=>{
+    const c=document.createElement('div');c.className='chip';c.dataset.sort=k;c.textContent=lb;
+    c.onclick=()=>{st.ads.sort=k;drawAds();};as.appendChild(c);});
+  $$('.tab').forEach(t=>t.onclick=()=>showView(t.dataset.view));
+  let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{
+    if(!$('#v-geral').classList.contains('hide'))drawGeral();
+    if(!$('#v-turma').classList.contains('hide'))drawTurma();},200);});
 }
 
-function renderTopAds(p) {
-  const tb = document.querySelector('#tbl-topads tbody');
-  document.getElementById('topads-count').textContent = p.top_ads.length;
-  const personaSet = new Set(Object.keys(p.persona_por_ad || {}));
-  tb.innerHTML = p.top_ads.map(a => {
-    const cpaCls = a.cpa <= 100 ? 'cell-good' : a.cpa <= 200 ? 'cell-warn' : a.cpa > 0 ? 'cell-bad' : 'cell-muted';
-    const roasCls = a.roas >= 1 ? 'cell-good' : a.roas >= 0.5 ? 'cell-warn' : a.roas > 0 ? 'cell-bad' : 'cell-muted';
-    const statusOn = (a.ad_status === 'ACTIVE');
-    const ig = a.ig_url ? `<a class="ig-link" href="${a.ig_url}" target="_blank" onclick="event.stopPropagation()">↗ ver</a>` : '<span class="cell-muted">—</span>';
-    const code = a.ad_code;
-    const clickable = code && personaSet.has(code);
-    return `<tr class="${clickable?'clickable-row':''}" ${clickable?`data-ad="${code}"`:''}>
-      <td>
-        <div class="ad-name">${code || a.name.substring(0,42)} ${clickable?'<span style="font-size:9px;color:var(--purple);margin-left:6px;letter-spacing:.08em">↳ FILTRA PERSONA</span>':''}</div>
-        <div class="ad-meta">${(a.adset||'').substring(0,80)}</div>
-      </td>
-      <td><span class="status-dot ${statusOn?'sg':'sr'}"></span><span class="${statusOn?'cell-good':'cell-muted'}" style="font-size:10px">${statusOn?'LIVE':'PAUSED'}</span></td>
-      <td class="cell-spend">${fmt.brl(a.spend)}</td>
-      <td>${fmt.int(a.impr)}</td>
-      <td>${a.ctr.toFixed(1)}%</td>
-      <td>${fmt.int(a.lpv)}</td>
-      <td>${fmt.int(a.ic)}</td>
-      <td>${fmt.int(a.purch)}</td>
-      <td class="${cpaCls}">${a.cpa>0?fmt.brl(a.cpa):'—'}</td>
-      <td class="${roasCls}">${a.roas>0?a.roas.toFixed(1)+'x':'—'}</td>
-      <td>${ig}</td>
-    </tr>`;
-  }).join('');
-  // bind clicks
-  tb.querySelectorAll('.clickable-row').forEach(tr => {
-    tr.addEventListener('click', () => setPersonaMode('adfocus', tr.dataset.ad));
-  });
-}
-
-function renderDistList(items, fillClass) {
-  const N = (items || []).slice(0, 5);
-  return N.map(i => `
-    <div class="p-row">
-      <div class="p-row-top">
-        <div class="p-label" title="${i.k}">${i.k}</div>
-        <div class="p-pct">${i.pct.toFixed(0)}% <span class="p-n">(${i.n})</span></div>
-      </div>
-      <div class="p-bar"><div class="p-fill ${fillClass||''}" style="width:${i.pct.toFixed(1)}%"></div></div>
-    </div>`).join('');
-}
-
-function personaCards(p, fillClass) {
-  if (!p || !p.idade) return '<div style="grid-column:1/-1;color:var(--muted);text-align:center;padding:32px;background:var(--card);border:1px dashed var(--border);border-radius:5px">Sem dados de pesquisa neste corte</div>';
-  const cards = [
-    { t: 'Idade', d: p.idade },
-    { t: 'Gênero', d: p.genero },
-    { t: 'Renda mensal', d: p.renda },
-    { t: 'Ocupação', d: p.ocupacao },
-    { t: 'Tempo me conhece', d: p.tempo },
-    { t: 'Já participou?', d: p.previo },
-    { t: 'Autoimagem palestras', d: p.autoimg },
-    { t: 'Objetivo', d: p.objetivo },
-  ];
-  return cards.map(c => `
-    <div class="p-card">
-      <div class="p-card-hdr"><div class="p-title">${c.t}</div></div>
-      ${renderDistList(c.d, fillClass)}
-    </div>`).join('');
-}
-
-// ── PERSONA STATE: 'leads' | 'buyers' | { ad: 'AD-XX' } ──
-let personaMode = { kind: 'leads', ad: null };
-
-function setPersonaMode(kind, ad) {
-  personaMode = { kind, ad: ad || null };
-  // toggle pills
-  document.querySelectorAll('#persona-section .pm-pill').forEach(b => {
-    b.classList.toggle('on', b.dataset.mode === kind);
-  });
-  // ad focus pill
-  const adPill = document.getElementById('pm-adfocus');
-  if (kind === 'adfocus' && ad) {
-    adPill.style.display = 'inline-flex';
-    document.getElementById('pm-adfocus-label').textContent = ad;
-    adPill.classList.add('on');
-  } else {
-    adPill.classList.remove('on');
-    if (kind !== 'adfocus') adPill.style.display = 'none';
-  }
-  // re-render (respeita filtro custom ativo)
-  renderPersona(customPeriod || DATA.periodos[activeKey]);
-  // marcar linha ativa nas tabelas
-  document.querySelectorAll('.clickable-row').forEach(tr => {
-    tr.classList.toggle('active', kind === 'adfocus' && tr.dataset.ad === ad);
-  });
-}
-
-function renderPersona(p) {
-  const grid = document.getElementById('persona-grid');
-  const sub = document.getElementById('persona-sub');
-  let pData = null, fillCls = '';
-  if (personaMode.kind === 'leads') {
-    pData = p.persona_leads_meta || {};
-    fillCls = '';
-    sub.innerHTML = `<b>${pData.total_respondentes || 0}</b> respondentes · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
-  } else if (personaMode.kind === 'buyers') {
-    pData = p.persona_compradoras_meta || {};
-    fillCls = 'compradoras';
-    sub.innerHTML = `<b>${pData.total_respondentes || 0}</b> compradoras matched · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
-  } else if (personaMode.kind === 'adfocus' && personaMode.ad) {
-    pData = (p.persona_por_ad || {})[personaMode.ad] || {};
-    fillCls = 'adfocus';
-    sub.innerHTML = `Filtro <b>${personaMode.ad}</b> · <b>${pData.total_respondentes || 0}</b> respondentes · MQL <b>${pData.mql || 0}</b> (${(pData.mql_pct||0).toFixed(0)}%)`;
-  }
-  grid.innerHTML = personaCards(pData, fillCls);
-}
-
-// pills handlers
-document.querySelectorAll('#persona-section .pm-pill').forEach(b => {
-  b.addEventListener('click', e => {
-    if (e.target.id === 'pm-adfocus-close') return;
-    const mode = b.dataset.mode;
-    if (mode === 'adfocus') return; // só ativa via clique em ad
-    setPersonaMode(mode);
-  });
-});
-document.getElementById('pm-adfocus-close').addEventListener('click', e => {
-  e.stopPropagation();
-  setPersonaMode('leads');
-});
-
-function renderMqlAd(p) {
-  const tb = document.querySelector('#tbl-mqlad tbody');
-  const personaSet = new Set(Object.keys(p.persona_por_ad || {}));
-  tb.innerHTML = (p.mql_por_ad || []).map(r => {
-    const pctCls = r.mql_pct >= 60 ? 'cell-good' : r.mql_pct >= 40 ? 'cell-warn' : 'cell-bad';
-    const clickable = personaSet.has(r.ad);
-    return `<tr class="${clickable?'clickable-row':''}" ${clickable?`data-ad="${r.ad}"`:''}>
-      <td><div class="ad-name">${r.ad}${clickable?'<span style="font-size:9px;color:var(--purple);margin-left:6px;letter-spacing:.08em">↳ FILTRA PERSONA</span>':''}</div></td>
-      <td>${r.total}</td>
-      <td class="cell-good" style="font-weight:600">${r.mql}</td>
-      <td class="${pctCls}">${r.mql_pct.toFixed(0)}%</td>
-      <td style="text-align:left;padding-left:0;min-width:140px"><div class="p-bar" style="width:140px;height:5px"><div class="p-fill mql" style="width:${Math.min(100, r.mql_pct).toFixed(1)}%"></div></div></td>
-    </tr>`;
-  }).join('');
-  tb.querySelectorAll('.clickable-row').forEach(tr => {
-    tr.addEventListener('click', () => setPersonaMode('adfocus', tr.dataset.ad));
-  });
-}
-
-load();
-setInterval(load, 5 * 60 * 1000); // recarrega a cada 5 min
+fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{
+  DATA=d;const m=d.meta;
+  st.geral.a=m.default_start;st.geral.b=m.default_end;
+  st.ads.a=m.default_start;st.ads.b=m.default_end;
+  $('#upd').innerHTML=`<b>Atualizado</b> ${d.updated_at||'—'}<br>Dados: ${dmyy(m.date_min)} – ${dmyy(m.date_max)}`;
+  initControls();showView('geral');
+}).catch(e=>{document.querySelector('.wrap').innerHTML='<div class="empty">Erro ao carregar data.json: '+e+'</div>';});
 </script>
 </body>
 </html>

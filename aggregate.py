@@ -1,4 +1,4 @@
-"""Orquestrador — gera data.json para o dashboard."""
+"""Orquestrador — gera data.json para o dashboard geral DP100K."""
 import json
 import os
 from datetime import datetime, timezone, timedelta
@@ -6,44 +6,49 @@ from datetime import datetime, timezone, timedelta
 from fetch_sheets import fetch
 from analytics import build_all
 
+HERE = os.path.dirname(__file__)
+
+
+def _load_thumbs():
+    p = os.path.join(HERE, "thumbs.json")
+    if os.path.exists(p):
+        try:
+            with open(p, encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
 
 def main():
     raw = fetch()
-    data = build_all(raw['trafego'], raw['hubla'], raw['pesquisa'], raw['invest'])
-    data['updated_at'] = datetime.now(timezone(timedelta(hours=-3))).strftime('%Y-%m-%d %H:%M:%S BRT')
-    data['schema_version'] = 3  # v3: multi-mes (Maio+Junho), chaves de periodo namespaced por mes
+    thumbs = _load_thumbs()
+    data = build_all(raw["trafego"], raw["hubla_rows"], raw["invest_rows"],
+                     raw["origem_rows"], thumbs=thumbs)
+    data["updated_at"] = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M:%S BRT")
+    data["schema_version"] = 4  # v4: dash geral (vendas ingresso+IPM+outras / tráfego diário / ads)
 
-    out_path = os.path.join(os.path.dirname(__file__), 'data.json')
-    with open(out_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    size = os.path.getsize(out_path)
-    print(f"data.json: {size:,} bytes")
+    out_path = os.path.join(HERE, "data.json")
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"data.json: {os.path.getsize(out_path):,} bytes")
 
-    # resumo rapido — por mes
-    print("\n=== Resumo ===")
-    print(f"meses: {[m['key'] for m in data['meses_meta']]}  default={data.get('mes_default')}")
-    for m in data['meses_meta']:
-        mes = data['periodos'][m['mes_pk']]
-        print(f"\n## {m['nome']} ({m.get('inicio','?')} a {m.get('fim','?')}) — todas as turmas")
-        print(f"  spend:    R$ {mes['trafego']['spend']:>10,.2f}")
-        print(f"  vendas:   gerenc {mes['trafego']['vendas_gerenciador']:3d}  hubla {mes['hubla']['total']:3d}")
-        print(f"  CPA:      ger R$ {mes['cpa_gerenciador']:>6,.2f}  hubla R$ {mes['cpa_hubla']:>6,.2f}")
-        print(f"  ROAS:     {mes['roas_real']:.2f}x  (fat R$ {mes['hubla']['faturamento']:,.0f})")
-        print(f"  CTR:      {mes['trafego']['ctr']:.2f}%  ({mes['trafego']['clicks']} cliques / {mes['trafego']['impressions']:,} impr)")
-        print(f"  LPV:      {mes['trafego']['visitas']}  IC: {mes['trafego']['ic']}")
-        print(f"  pesq:     total {mes['pesquisa']['total']:3d} | meta {mes['pesquisa']['meta_ads']:3d} | MQL+8k {mes['pesquisa']['mql']} ({mes['pesquisa']['mql_pct']:.1f}%) | MQL+10k {mes['pesquisa']['mql_10k']} ({mes['pesquisa']['mql_10k_pct']:.1f}%)")
-        print(f"  match:    {mes['match']['matched_pesquisa']}/{mes['match']['vendas_total']} = {mes['match']['match_pct']:.0f}%")
-        for s in m['semanas']:
-            p = data['periodos'][s['pk']]
-            t = p['trafego']
-            print(f"  {s['nome']:9s} ({s.get('inicio','?')}-{s.get('fim','?')}): "
-                  f"spend R$ {t['spend']:>8,.0f}  "
-                  f"ger {t['vendas_gerenciador']:3d}  "
-                  f"hubla {p['hubla']['total']:3d}  "
-                  f"CPA-ger R$ {p['cpa_gerenciador']:>5,.0f}  "
-                  f"CTR {t['ctr']:.2f}%  "
-                  f"LPV {t['visitas']:>4d}  "
-                  f"pesq {p['pesquisa']['total']:3d} (mql+8k {p['pesquisa']['mql']})")
+    # resumo
+    dl = data["daily"]
+    tot = lambda k: sum(x[k] for x in dl)
+    fat = tot("ing_rev") + tot("ipm_rev") + tot("out_rev")
+    print(f"\n=== Resumo ({data['meta']['date_min']} a {data['meta']['date_max']}) ===")
+    print(f"  dias:         {len(dl)}")
+    print(f"  investimento: R$ {tot('spend'):>12,.2f}")
+    print(f"  ingressos:    {tot('ing_n'):4d}  (R$ {tot('ing_rev'):,.0f})")
+    print(f"  IPM:          {tot('ipm_n'):4d}  (R$ {tot('ipm_rev'):,.0f})")
+    print(f"  outras:       {tot('out_n'):4d}  (R$ {tot('out_rev'):,.0f})")
+    print(f"  faturamento:  R$ {fat:,.2f}")
+    print(f"  ROAS:         {(fat / tot('spend')) if tot('spend') else 0:.2f}x")
+    print(f"  turmas:       {len(data['turmas'])}  ({', '.join(t['label'] for t in data['turmas'])})")
+    print(f"  ads_daily:    {len(data['ads_daily'])} linhas | ads distintos: {len(data['ads_meta'])}")
+    thumbs_ok = sum(1 for m in data["ads_meta"].values() if m.get("thumb"))
+    print(f"  thumbs:       {thumbs_ok}/{len(data['ads_meta'])}")
 
 
 if __name__ == "__main__":

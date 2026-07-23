@@ -1,6 +1,10 @@
-"""Fetch DP100K-Fp02 — le 3 fontes brutas.
+"""Fetch — lê as 4 fontes brutas do dashboard geral DP100K.
 
-Output: { trafego: [dicts], hubla: [dicts], pesquisa: [dicts] }
+Retorna:
+  trafego     : list[dict]  (Página1, header linha 0, headers únicos)
+  hubla_rows  : list[list]  (Dados_venda_Hubla, cru c/ header em [0])
+  invest_rows : list[list]  (Investimento por Hora, cru)
+  origem_rows : list[list]  (ORIGEM DE VENDAS, cru; header real em idx 3)
 """
 import os
 import sys
@@ -10,9 +14,9 @@ from google.oauth2.service_account import Credentials
 
 from config import (
     TRAFEGO_SHEET_ID, TRAFEGO_TAB,
-    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_PESQUISA, TAB_INVEST,
+    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_INVEST,
+    ORIGEM_SHEET_ID, TAB_ORIGEM,
 )
-
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 
@@ -28,52 +32,53 @@ def _client():
                         cred_path = line.split("=", 1)[1].strip().strip('"').strip("'")
                         break
     if not cred_path or not os.path.exists(cred_path):
-        sys.exit(f"Credenciais nao encontradas: {cred_path}")
+        sys.exit(f"Credenciais não encontradas: {cred_path}")
     creds = Credentials.from_service_account_file(cred_path, scopes=SCOPES)
     return gspread.authorize(creds)
 
 
-def _read(sheet_id, tab):
-    client = _client()
-    sh = client.open_by_key(sheet_id)
-    ws = sh.worksheet(tab)
-    rows = ws.get_all_values()
+def _rows(client, sheet_id, tab):
+    return client.open_by_key(sheet_id).worksheet(tab).get_all_values()
+
+
+def _dicts(rows):
     if not rows:
         return []
     header = rows[0]
-    # disambigua headers duplicados (ex.: planilha Pesquisa tem 2 cols "Turma")
-    seen = {}
-    norm_hdr = []
+    seen, hdr = {}, []
     for h in header:
-        h = h or ''
+        h = h or ""
         if h in seen:
             seen[h] += 1
-            norm_hdr.append(f"{h}__{seen[h]}")
+            hdr.append(f"{h}__{seen[h]}")
         else:
             seen[h] = 1
-            norm_hdr.append(h)
+            hdr.append(h)
     out = []
     for r in rows[1:]:
-        if not any((c or '').strip() for c in r):
+        if not any((c or "").strip() for c in r):
             continue
-        d = {h: (r[i] if i < len(r) else '') for i, h in enumerate(norm_hdr)}
-        out.append(d)
+        out.append({h: (r[i] if i < len(r) else "") for i, h in enumerate(hdr)})
     return out
 
 
 def fetch():
-    trafego = _read(TRAFEGO_SHEET_ID, TRAFEGO_TAB)
-    hubla = _read(CONSOLIDADO_SHEET_ID, TAB_HUBLA)
-    pesquisa = _read(CONSOLIDADO_SHEET_ID, TAB_PESQUISA)
-    invest = _read(CONSOLIDADO_SHEET_ID, TAB_INVEST)
-    return {"trafego": trafego, "hubla": hubla, "pesquisa": pesquisa, "invest": invest}
+    c = _client()
+    trafego_rows = _rows(c, TRAFEGO_SHEET_ID, TRAFEGO_TAB)
+    hubla_rows = _rows(c, CONSOLIDADO_SHEET_ID, TAB_HUBLA)
+    invest_rows = _rows(c, CONSOLIDADO_SHEET_ID, TAB_INVEST)
+    origem_rows = _rows(c, ORIGEM_SHEET_ID, TAB_ORIGEM)
+    return {
+        "trafego": _dicts(trafego_rows),
+        "hubla_rows": hubla_rows,
+        "invest_rows": invest_rows,
+        "origem_rows": origem_rows,
+    }
 
 
 if __name__ == "__main__":
     d = fetch()
-    print(f"trafego  : {len(d['trafego']):5d} linhas")
-    print(f"hubla    : {len(d['hubla']):5d} linhas")
-    print(f"pesquisa : {len(d['pesquisa']):5d} linhas")
-    print(f"invest   : {len(d['invest']):5d} linhas")
-    if d['trafego']:
-        print("\ntrafego cols:", list(d['trafego'][0].keys()))
+    print(f"trafego : {len(d['trafego']):5d} linhas")
+    print(f"hubla   : {len(d['hubla_rows']):5d} linhas")
+    print(f"invest  : {len(d['invest_rows']):5d} linhas")
+    print(f"origem  : {len(d['origem_rows']):5d} linhas")

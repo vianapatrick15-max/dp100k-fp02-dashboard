@@ -1,47 +1,35 @@
-# DP100K-Fp02 — Dashboard
+# DP100K — Dashboard Geral
 
-Dashboard de performance do **DP100K — Fp02** (Maio/26).
-Consolida três fontes em uma visão única (mês + seletor por semana):
-
-- **Tráfego**: aba `Página1` da planilha `[DP100K-Fp]` (importada via IMPORTRANGE da Meta Ads daily granular)
-- **Vendas**: aba `Dados_venda_Hubla` da consolidada `[DP100K-Fp01][CONSOLIDADO][TURMA]`
-- **Pesquisa**: aba `Pesquisa` da mesma consolidada (persona + MQL)
+Dashboard geral de **vendas e tráfego** do DP100K. Consolida ingressos (Hubla),
+back-end IPM/outras (origem de vendas) e tráfego ad-level (Meta) num só painel,
+com filtro de data livre e visão por turma.
 
 **Live:** https://vianapatrick15-max.github.io/dp100k-fp02-dashboard/
 
-## Camadas do dash
+## Views
+- **Geral** — período livre (default: mês corrente). 3 dobras:
+  1. KPIs: Investimento · Vendas Ingressos · Vendas IPM · Outras Vendas · Faturamento · ROAS
+  2. Gráfico de linha por dia: ingressos, IPM, outras (contagem) + faturamento (R$)
+  3. Tabela de tráfego por dia: investimento, vendas, impressões, CPM, alcance,
+     cliques link, CTR link, visitas página, checkout, conv. página, conv. checkout
+- **Por turma** — as mesmas 3 dobras, escopadas por turma (Maio/26 em diante).
+- **Ads** — anúncios de melhor desempenho (preview + métricas), filtráveis por turma
+  ou período, ordenáveis por vendas / investimento / CPA.
 
-1. **Veredito** — 5 KPIs (Spend · Vendas · CPA · ROAS · MQL%) com delta vs semana anterior
-2. **Funil** — Impr → Click → LPV → IC → Compra, com taxa em cada degrau
-3. **Linha do tempo** — spend (barra) + vendas (linha) por dia
-4. **Hubla** — faturamento, ticket médio, % via Meta, match com Pesquisa
-5. **Top Ads** — performance por anúncio ordenado por spend
-6. **Persona** — distribuição por idade/gênero/renda/ocupação/etc.
-   - Dual view: **todos os leads Meta** vs **só compradoras** (matched)
-7. **MQL por anúncio** — qual criativo qualifica melhor
+## Fontes (lidas pela SA `ga4-reader@n8n-tathi`)
+| Dado | Planilha / aba |
+|---|---|
+| Tráfego ad-level | `1R2Md…` / `Página1` (spend, impr, alcance, link clicks, LPV, IC, permalink) |
+| Ingressos (real) | `1G6fj…` / `Dados_venda_Hubla` (data col1, turma col0, valor col11) |
+| Janelas de turma | `1G6fj…` / `Investimento por Hora` (TURMA + DATA) |
+| IPM / outras (backend) | `1nIPZ…` / `[ORIGEM DE VENDAS] - Rafael`, filtrando `CAMPANHA=DP100K` |
 
-## Regras
-
-- **MQL = renda mensal ≥ R$ 8.001** (regra DP100K)
-- **Filtro Fp02:** só linhas cuja `Campaign Name` contém `Fp02` (exclui Fp01 ainda rodando)
-- **Match Hubla×Pesquisa:** pelo email (lowercase, trim) — typical ~70%
-- **ROAS** calculado com ticket médio R$ 1.100 (config.py: `TICKET_MEDIO`)
-
-## Rodar localmente
-
-```bash
-export GOOGLE_SHEETS_CREDENTIALS_PATH=/path/to/service-account.json
-python3 aggregate.py        # gera data.json
-python3 -m http.server 8765 # abre http://localhost:8765
-```
+IPM = produto contém "IPM"; o resto (MXP/VPO/DZP/II/…) = outras vendas.
 
 ## Pipeline
+`aggregate.py` → `fetch_sheets.fetch()` (4 abas) → `analytics.build_all()` → `data.json`.
+Refresh horário via GitHub Action (`.github/workflows`, cron `5 * * * *`), secret `GCP_SA_B64`.
+`data.json` schema v4.
 
-```
-Google Sheets (3 abas) ──► fetch_sheets ──► analytics ──► aggregate ──► data.json ──► index.html
-                                                                            ▲
-GitHub Action (cron 5 * * * *) ─────────────────────────────────────────────┘
-   commits data.json → Pages rebuild
-```
-
-Veja [STATUS.md](STATUS.md) pra retomar trabalho.
+Thumbnails dos ads: `thumbs.json` (mapa `ad_name → image_url`, opcional) é mesclado
+no aggregate. Sem thumb, o card cai no link "Ver criativo" (Instagram/Preview).
