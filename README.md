@@ -33,3 +33,6 @@ Refresh horário via GitHub Action (`.github/workflows`, cron `5 * * * *`), secr
 
 Thumbnails dos ads: `thumbs.json` (mapa `ad_name → image_url`, opcional) é mesclado
 no aggregate. Sem thumb, o card cai no link "Ver criativo" (Instagram/Preview).
+Gerar/atualizar com `/usr/bin/python3 pull_thumbs.py` (puxa da Meta API, conta C1).
+As URLs são do CDN da Meta (scontent) e podem expirar em semanas — se as imagens
+sumirem, rode `pull_thumbs.py` de novo e commit o `thumbs.json`.
