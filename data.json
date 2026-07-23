@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 4070,
-    "hubla_linhas": 2683,
+    "hubla_linhas": 2688,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -79881,6 +79881,41 @@
           "meta_ads",
           "[ad-22][vid][vd][dp100k-fp02]",
           102.12
+        ],
+        [
+          "2026-07-22",
+          "paula@legerecomunicacao.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-22",
+          "marilenemorandin@yahoo.com.br",
+          "meta_ads",
+          "[ad-248][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-22",
+          "michele.antonia1@hotmail.com",
+          "meta_ads",
+          "[ad-30][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-22",
+          "marlinunes2006@hotmail.com",
+          "meta_ads",
+          "[ad-152][est][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-22",
+          "elaiperez@hotmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -138246,12 +138281,46 @@
           "Minas Gerais",
           false,
           false
+        ],
+        [
+          "2026-07-22",
+          "michele.antonia1@hotmail.comm",
+          "#n/a",
+          "#N/A",
+          "45 a 54 anos",
+          "Feminino",
+          "De 7 meses a 1 ano",
+          "No",
+          "Empresário(a)",
+          "De R$ 5.001,00 até R$ 8.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Santa Catarina",
+          false,
+          false
+        ],
+        [
+          "2026-07-22",
+          "elaiperez@hotmail.com",
+          "meta_ads",
+          "[AD-29][VID][VD][DP100K-Fp02]",
+          "55 a 64 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Executivo (Diretor, Gerente, Gestor)",
+          "Tenho uma reserva financeira temporária.",
+          "Iniciante, nunca palestrei.",
+          "Uma nova carreira",
+          "Rio de Janeiro",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-22 19:12:02 BRT",
+  "updated_at": "2026-07-22 21:08:59 BRT",
   "schema_version": 3
 }
