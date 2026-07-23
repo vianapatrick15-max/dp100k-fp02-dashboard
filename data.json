@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 4082,
-    "hubla_linhas": 2697,
+    "hubla_linhas": 2701,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -80159,6 +80159,34 @@
           "whatsapp",
           "organico",
           97.0
+        ],
+        [
+          "2026-07-23",
+          "luana.almeida2203@hotmail.com",
+          "meta_ads",
+          "[ad-22][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-23",
+          "cynthiacostaadvocacia@gmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          109.2
+        ],
+        [
+          "2026-07-23",
+          "manoelalima91@yahoo.com",
+          "ipm",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-23",
+          "calheirosdonizetti@gmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          97.0
         ]
       ]
     },
@@ -138660,12 +138688,97 @@
           "São Paulo",
           false,
           false
+        ],
+        [
+          "2026-07-23",
+          "salmos23.danil@gmail.com",
+          "whatsapp",
+          "organico",
+          "45 a 54 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Começando a entrar no digital ",
+          "Até R$ 2.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio Grande do Sul",
+          false,
+          false
+        ],
+        [
+          "2026-07-23",
+          "luana.almeida2203@hotmail.com",
+          "meta_ads",
+          "[AD-22][VID][VD][DP100K-Fp02]",
+          "26 a 34 anos",
+          "Feminino",
+          "Conheci agora",
+          "No",
+          "Empresário(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Iniciante, nunca palestrei.",
+          "Renda extra",
+          "São Paulo",
+          false,
+          false
+        ],
+        [
+          "2026-07-23",
+          "cynthiacostaadvocacia@gmail.com",
+          "meta_ads",
+          "[AD-29][VID][VD][DP100K-Fp02]",
+          "26 a 34 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Profissional Autônomo(a)",
+          "De R$ 10.001,00 até R$ 15.000,00",
+          "Já palestrei, mas não me considero um palestrante.",
+          "Uma nova carreira",
+          "Rio Grande do Norte",
+          true,
+          true
+        ],
+        [
+          "2026-07-23",
+          "manoelalima91@yahoo.com",
+          "ipm",
+          "organico",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "Yes",
+          "Terapeuta",
+          "Até R$ 2.000,00",
+          "Iniciante, nunca palestrei.",
+          "Renda extra",
+          "Rio de Janeiro",
+          false,
+          false
+        ],
+        [
+          "2026-07-23",
+          "manoelalima91@yahoo.com",
+          "ipm",
+          "organico",
+          "35 a 44 anos",
+          "Feminino",
+          "Conheci agora",
+          "Yes",
+          "Terapeuta",
+          "Até R$ 2.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Se destacar na profissão",
+          "Rio de Janeiro",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-23 07:32:12 BRT",
+  "updated_at": "2026-07-23 09:45:16 BRT",
   "schema_version": 3
 }
