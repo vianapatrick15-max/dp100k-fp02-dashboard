@@ -14,7 +14,7 @@ from google.oauth2.service_account import Credentials
 
 from config import (
     TRAFEGO_SHEET_ID, TRAFEGO_TAB,
-    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_INVEST,
+    CONSOLIDADO_SHEET_ID, TAB_HUBLA, TAB_INVEST, TAB_PESQUISA,
     ORIGEM_SHEET_ID, TAB_ORIGEM,
 )
 
@@ -67,11 +67,13 @@ def fetch():
     trafego_rows = _rows(c, TRAFEGO_SHEET_ID, TRAFEGO_TAB)
     hubla_rows = _rows(c, CONSOLIDADO_SHEET_ID, TAB_HUBLA)
     invest_rows = _rows(c, CONSOLIDADO_SHEET_ID, TAB_INVEST)
+    pesquisa_rows = _rows(c, CONSOLIDADO_SHEET_ID, TAB_PESQUISA)
     origem_rows = _rows(c, ORIGEM_SHEET_ID, TAB_ORIGEM)
     return {
         "trafego": _dicts(trafego_rows),
         "hubla_rows": hubla_rows,
         "invest_rows": invest_rows,
+        "pesquisa_rows": pesquisa_rows,
         "origem_rows": origem_rows,
     }
 

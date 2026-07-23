@@ -24,7 +24,8 @@ def main():
     raw = fetch()
     thumbs = _load_thumbs()
     data = build_all(raw["trafego"], raw["hubla_rows"], raw["invest_rows"],
-                     raw["origem_rows"], thumbs=thumbs)
+                     raw["origem_rows"], pesquisa_rows=raw.get("pesquisa_rows"),
+                     thumbs=thumbs)
     data["updated_at"] = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M:%S BRT")
     data["schema_version"] = 4  # v4: dash geral (vendas ingresso+IPM+outras / tráfego diário / ads)
 
@@ -40,7 +41,9 @@ def main():
     print(f"\n=== Resumo ({data['meta']['date_min']} a {data['meta']['date_max']}) ===")
     print(f"  dias:         {len(dl)}")
     print(f"  investimento: R$ {tot('spend'):>12,.2f}")
+    _rn, _mq = tot('ing_renda'), tot('ing_mql')
     print(f"  ingressos:    {tot('ing_n'):4d}  (R$ {tot('ing_rev'):,.0f})")
+    print(f"  MQL(>=10k):   {_mq:4d}  ({(_mq/_rn*100 if _rn else 0):.1f}% de {_rn} c/ renda; cobertura {(_rn/tot('ing_n')*100 if tot('ing_n') else 0):.0f}%)")
     print(f"  IPM:          {tot('ipm_n'):4d}  (R$ {tot('ipm_rev'):,.0f})")
     print(f"  outras:       {tot('out_n'):4d}  (R$ {tot('out_rev'):,.0f})")
     print(f"  faturamento:  R$ {fat:,.2f}")

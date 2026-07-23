@@ -15,6 +15,7 @@ from config import (
     parse_money, parse_num, parse_date, is_ipm, norm_campanha,
     ORIGEM_HEADER_ROW, ORIGEM_CAMPANHA_DP100K, TURMA_MIN_DATE,
     classify_funnel, FUNNELS, FUNNEL_LABELS,
+    is_mql_renda, renda_conhecida,
 )
 
 ADS_SINCE = "2026-01-01"
@@ -47,8 +48,34 @@ def _turma_windows(invest_rows):
     return wins
 
 
-def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
+def _email_renda_map(pesquisa_rows):
+    """Mapa email(lower) -> faixa de renda, a partir da aba Pesquisa."""
+    if not pesquisa_rows:
+        return {}
+    hdr = pesquisa_rows[0]
+    ie = ir = None
+    for i, h in enumerate(hdr):
+        hl = (h or "").lower()
+        if ie is None and ("e-mail" in hl or "email" in hl):
+            ie = i
+        if ir is None and "renda" in hl:
+            ir = i
+    if ie is None or ir is None:
+        return {}
+    m = {}
+    for r in pesquisa_rows[1:]:
+        if len(r) <= max(ie, ir):
+            continue
+        e = (r[ie] or "").strip().lower()
+        rd = (r[ir] or "").strip()
+        if e and rd and e not in m:
+            m[e] = rd
+    return m
+
+
+def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None, thumbs=None):
     thumbs = thumbs or {}
+    email_renda = _email_renda_map(pesquisa_rows or [])
 
     # ---- Turmas (janelas) ----
     turmas_all = _turma_windows(invest_rows)
@@ -56,11 +83,15 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
 
     daily = defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0, "lclk": 0.0,
                                  "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0,
+                                 "ing_renda": 0, "ing_mql": 0,
                                  "ipm_n": 0, "ipm_rev": 0.0, "out_n": 0, "out_rev": 0.0})
     # seg_daily[funil][data] -> tráfego + ingressos atribuídos ao funil pago
     seg_daily = {f: defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0,
-                 "lclk": 0.0, "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0})
+                 "lclk": 0.0, "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0,
+                 "ing_renda": 0, "ing_mql": 0})
                  for f in FUNNELS}
+    # hubla por ad (utm_content) x dia -> ingressos + renda conhecida + MQL
+    hubla_ads = defaultdict(lambda: {"ing": 0, "renda": 0, "mql": 0})
     ads_daily = []
     ads_meta = {}
 
@@ -125,8 +156,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
     for m in ads_meta.values():
         m.pop("_last", None)
 
-    # ---- Ingressos (Hubla) — col1 data, col5 oferta, col7 utm_campaign,
-    #      col8 utm_content, col11 valor. Venda atribuída ao funil pago pelo utm_content.
+    # ---- Ingressos (Hubla) — col1 data, col3 email, col5 oferta, col7 utm_campaign,
+    #      col8 utm_content, col11 valor. Renda vem da Pesquisa (join por email) -> MQL>=10k.
     for r in hubla_rows[1:]:
         if len(r) < 12:
             continue
@@ -137,13 +168,28 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
         if not d:
             continue
         val = parse_money(r[11])
-        daily[d]["ing_n"] += 1
-        daily[d]["ing_rev"] += val
-        seg = classify_funnel(r[8], r[7], is_sale=True)  # utm_content, utm_campaign
+        renda = email_renda.get((r[3] or "").strip().lower(), "")
+        has_renda = 1 if renda_conhecida(renda) else 0
+        mql = 1 if (has_renda and is_mql_renda(renda)) else 0
+        day = daily[d]
+        day["ing_n"] += 1
+        day["ing_rev"] += val
+        day["ing_renda"] += has_renda
+        day["ing_mql"] += mql
+        utm_content = (r[8] or "").strip()
+        seg = classify_funnel(utm_content, r[7], is_sale=True)  # utm_content, utm_campaign
         if seg:
             sd = seg_daily[seg][d]
             sd["ing_n"] += 1
             sd["ing_rev"] += val
+            sd["ing_renda"] += has_renda
+            sd["ing_mql"] += mql
+        k = utm_content.lower()
+        if "ad-" in k:
+            ha = hubla_ads[(k, d)]
+            ha["ing"] += 1
+            ha["renda"] += has_renda
+            ha["mql"] += mql
 
     # ---- Backend IPM/Outras (ORIGEM DE VENDAS, CAMPANHA=DP100K) ----
     for r in origem_rows[ORIGEM_HEADER_ROW + 1:]:
@@ -172,6 +218,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
             "spend": round(v["spend"], 2), "impr": int(v["impr"]), "reach": int(v["reach"]),
             "lclk": int(v["lclk"]), "lpv": int(v["lpv"]), "ic": int(v["ic"]),
             "ing_n": v["ing_n"], "ing_rev": round(v["ing_rev"], 2),
+            "ing_renda": v["ing_renda"], "ing_mql": v["ing_mql"],
             "ipm_n": v["ipm_n"], "ipm_rev": round(v["ipm_rev"], 2),
             "out_n": v["out_n"], "out_rev": round(v["out_rev"], 2),
         })
@@ -186,8 +233,15 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
                 "d": d, "spend": round(v["spend"], 2), "impr": int(v["impr"]),
                 "reach": int(v["reach"]), "lclk": int(v["lclk"]), "lpv": int(v["lpv"]),
                 "ic": int(v["ic"]), "ing_n": v["ing_n"], "ing_rev": round(v["ing_rev"], 2),
+                "ing_renda": v["ing_renda"], "ing_mql": v["ing_mql"],
             })
         seg_out[f] = rows
+
+    # ---- Hubla por ad x dia (p/ % MQL nos ads) ----
+    hubla_ads_daily = [
+        {"d": d, "k": k, "ing": v["ing"], "renda": v["renda"], "mql": v["mql"]}
+        for (k, d), v in hubla_ads.items()
+    ]
 
     date_min = dates[0] if dates else None
     date_max = dates[-1] if dates else None
@@ -201,6 +255,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
         "seg_daily": seg_out,
         "funnels": [{"key": f, "label": FUNNEL_LABELS[f]} for f in FUNNELS],
         "ads_daily": ads_daily,
+        "hubla_ads_daily": hubla_ads_daily,
         "ads_meta": ads_meta,
         "turmas": turmas,
         "meta": {

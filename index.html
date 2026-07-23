@@ -85,7 +85,7 @@
   .tip .r{display:flex;justify-content:space-between;gap:14px;margin-top:3px}
   .tip .r i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:6px}
   .tbl-scroll{overflow-x:auto;border-radius:12px;border:1px solid var(--line)}
-  table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:1040px}
+  table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:1120px}
   th,td{padding:9px 12px;text-align:right;white-space:nowrap}
   th{background:var(--bg2);color:var(--mut2);font-weight:700;text-transform:uppercase;
     font-size:10.5px;letter-spacing:.4px;position:sticky;top:0;border-bottom:1px solid var(--line2)}
@@ -311,17 +311,18 @@ function renderChart(svg,tip,rows){
 
 function renderTable(el,rows){
   if(!rows.length){el.innerHTML='<div class="empty">Sem dados no período.</div>';return;}
-  const head=['Data','Investimento','Vendas ing.','CPA ing.','Impressões','CPM','Alcance','Cliques link','CTR link','Visitas pág.','Checkout','Conv. Página','Conv. Checkout'];
+  const head=['Data','Investimento','Vendas ing.','CPA ing.','% MQL','Impressões','CPM','Alcance','Cliques link','CTR link','Visitas pág.','Checkout','Conv. Página','Conv. Checkout'];
   let h='<table><thead><tr>'+head.map(x=>`<th>${x}</th>`).join('')+'</tr></thead><tbody>';
-  const T={spend:0,ing:0,impr:0,reach:0,lclk:0,lpv:0,ic:0};
+  const T={spend:0,ing:0,renda:0,mql:0,impr:0,reach:0,lclk:0,lpv:0,ic:0};
   rows.forEach(r=>{
-    T.spend+=r.spend;T.ing+=r.ing_n;T.impr+=r.impr;T.reach+=r.reach;T.lclk+=r.lclk;T.lpv+=r.lpv;T.ic+=r.ic;
-    const cpaI=r.ing_n?r.spend/r.ing_n:null,cpm=r.impr?r.spend/r.impr*1000:null,ctr=r.impr?r.lclk/r.impr*100:null,
+    T.spend+=r.spend;T.ing+=r.ing_n;T.renda+=r.ing_renda||0;T.mql+=r.ing_mql||0;T.impr+=r.impr;T.reach+=r.reach;T.lclk+=r.lclk;T.lpv+=r.lpv;T.ic+=r.ic;
+    const cpaI=r.ing_n?r.spend/r.ing_n:null,mqlP=r.ing_renda?r.ing_mql/r.ing_renda*100:null,cpm=r.impr?r.spend/r.impr*1000:null,ctr=r.impr?r.lclk/r.impr*100:null,
       cvPag=r.lpv?r.ic/r.lpv*100:null,cvChk=r.ic?r.ing_n/r.ic*100:null;
     h+=`<tr><td>${dmyy(r.d)}</td>
       <td class="num">${r.spend?fmtM(r.spend):'—'}</td>
       <td class="num">${r.ing_n?fmtI(r.ing_n):'—'}</td>
       <td class="num">${cpaI?fmtM(cpaI):'—'}</td>
+      <td class="num">${fmtP(mqlP)}</td>
       <td class="num">${r.impr?fmtI(r.impr):'—'}</td>
       <td class="num">${cpm?fmtM(cpm):'—'}</td>
       <td class="num">${r.reach?fmtI(r.reach):'—'}</td>
@@ -332,11 +333,12 @@ function renderTable(el,rows){
       <td class="num">${fmtP(cvPag)}</td>
       <td class="num">${fmtP(cvChk)}</td></tr>`;
   });
-  const cpaIT=T.ing?T.spend/T.ing:null,cpmT=T.impr?T.spend/T.impr*1000:null,ctrT=T.impr?T.lclk/T.impr*100:null,
+  const cpaIT=T.ing?T.spend/T.ing:null,mqlPT=T.renda?T.mql/T.renda*100:null,cpmT=T.impr?T.spend/T.impr*1000:null,ctrT=T.impr?T.lclk/T.impr*100:null,
     cvPagT=T.lpv?T.ic/T.lpv*100:null,cvChkT=T.ic?T.ing/T.ic*100:null;
   h+=`</tbody><tfoot><tr><td>Total do período</td>
     <td class="num">${fmtM(T.spend)}</td><td class="num">${fmtI(T.ing)}</td>
     <td class="num">${cpaIT?fmtM(cpaIT):'—'}</td>
+    <td class="num">${fmtP(mqlPT)}</td>
     <td class="num">${fmtI(T.impr)}</td><td class="num">${cpmT?fmtM(cpmT):'—'}</td>
     <td class="num">${fmtI(T.reach)}</td><td class="num">${fmtI(T.lclk)}</td>
     <td class="num">${fmtP(ctrT,2)}</td><td class="num">${fmtI(T.lpv)}</td>
@@ -354,7 +356,11 @@ function computeAds(a,b){
     const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0});
     o.spend+=r.spend;o.purch+=r.purch;o.impr+=r.impr;o.ic+=r.ic;o.lpv+=r.lpv;o.lclk+=r.lclk;
   });
-  return Object.values(m).filter(o=>o.spend>0||o.purch>0);
+  const hub={};
+  (DATA.hubla_ads_daily||[]).forEach(r=>{if(r.d<a||r.d>b)return;const o=hub[r.k]||(hub[r.k]={ing:0,renda:0,mql:0});o.ing+=r.ing;o.renda+=r.renda;o.mql+=r.mql;});
+  const list=Object.values(m).filter(o=>o.spend>0||o.purch>0);
+  list.forEach(o=>{o.hub=hub[o.ad.toLowerCase()]||{ing:0,renda:0,mql:0};});
+  return list;
 }
 function adCode(name){const m=name.match(/\[(AD-[^\]]+)\]/i);return m?m[1].toUpperCase():name.slice(0,16);}
 function renderAdsGrid(el,list,sortKey){
@@ -379,9 +385,9 @@ function renderAdsGrid(el,list,sortKey){
           <div class="m"><div class="ml">Vendas</div><div class="mv" style="color:var(--ing)">${o.purch}</div></div>
           <div class="m"><div class="ml">Investido</div><div class="mv">${fmtMk(o.spend)}</div></div>
           <div class="m"><div class="ml">CPA</div><div class="mv">${cpa?fmtM(cpa):'—'}</div></div>
+          <div class="m"><div class="ml">% MQL</div><div class="mv" style="color:var(--ipm)">${o.hub&&o.hub.renda?fmtP(o.hub.mql/o.hub.renda*100):'—'}</div></div>
           <div class="m"><div class="ml">Impressões</div><div class="mv">${fmtI(o.impr)}</div></div>
           <div class="m"><div class="ml">CTR link</div><div class="mv">${fmtP(ctr,2)}</div></div>
-          <div class="m"><div class="ml">Checkout</div><div class="mv">${fmtI(o.ic)}</div></div>
         </div>
         ${(meta.permalink||meta.preview)?`<div class="links">
           ${meta.permalink?`<a href="${meta.permalink}" target="_blank" rel="noopener">Instagram</a>`:''}

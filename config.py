@@ -15,10 +15,11 @@ TICKET_MEDIO = 97.0  # fallback ingresso (não usado — Hubla traz valor real)
 TRAFEGO_SHEET_ID = "1R2MdILmwPZKwBqFpmT5i6VEaiaHYtpwtwCI4F7HLKQo"
 TRAFEGO_TAB = "Página1"
 
-# --- Consolidada DP100K (Hubla + Investimento por Hora) ---
+# --- Consolidada DP100K (Hubla + Investimento por Hora + Pesquisa) ---
 CONSOLIDADO_SHEET_ID = "1G6fjdMB9iwCrnDIHhmSoCC2nbHYIOaEvfRYxPUpBIK8"
 TAB_HUBLA = "Dados_venda_Hubla"
 TAB_INVEST = "Investimento por Hora"   # usada só p/ derivar janelas de turma
+TAB_PESQUISA = "Pesquisa"              # renda por email (join p/ MQL)
 
 # --- Origem de vendas (backend IPM / outras) — planilha Memorável/Tathi ---
 ORIGEM_SHEET_ID = "1nIPZROarNZOtI5p_gdEn4A3brTL7011O7kYfyha84_s"
@@ -140,6 +141,32 @@ def classify_funnel(*parts, is_sale=False):
 
 def is_ipm(produto):
     return "ipm" in (produto or "").lower()
+
+
+# --- MQL: renda mensal >= R$ 10.001 (renda vem da Pesquisa, join por email) ---
+_RE_ACIMA = _re.compile(r"acima de r\$\s?([\d.]+)", _re.I)
+_RENDA_VAZIA = {"", "#n/a", "#ref!", "#value!", "-"}
+
+
+def renda_conhecida(renda):
+    """True se o comprador respondeu a faixa de renda na pesquisa (qualquer resposta)."""
+    return (renda or "").strip().lower() not in _RENDA_VAZIA
+
+
+def is_mql_renda(renda):
+    """MQL = renda mensal >= R$ 10.001. A faixa 8.001-10.000 NÃO conta."""
+    s = (renda or "").lower().strip()
+    if s in _RENDA_VAZIA:
+        return False
+    if "r$ 10.001" in s or "r$ 15.001" in s or "r$ 20.001" in s:
+        return True
+    m = _RE_ACIMA.search(s)
+    if m:
+        try:
+            return float(m.group(1).replace(".", "")) >= 10000
+        except Exception:
+            return False
+    return False
 
 
 def norm_campanha(s):
