@@ -50,6 +50,21 @@ def main():
     thumbs_ok = sum(1 for m in data["ads_meta"].values() if m.get("thumb"))
     print(f"  thumbs:       {thumbs_ok}/{len(data['ads_meta'])}")
 
+    # reconciliação por funil
+    print("\n=== Por funil (reconciliação) ===")
+    seg = data["seg_daily"]
+    tot_spend = tot("spend")
+    tot_ing = tot("ing_n")
+    ssp = sing = 0.0
+    for f in [x["key"] for x in data["funnels"]]:
+        sp = sum(x["spend"] for x in seg[f]); ig = sum(x["ing_n"] for x in seg[f])
+        igr = sum(x["ing_rev"] for x in seg[f])
+        ssp += sp; sing += ig
+        pct = (sp / tot_spend * 100) if tot_spend else 0
+        print(f"  {f:16s} spend R$ {sp:>10,.0f} ({pct:4.1f}%) | ingressos {ig:4d} (R$ {igr:,.0f})")
+    print(f"  {'SOMA funis':16s} spend R$ {ssp:>10,.0f} / total R$ {tot_spend:,.0f}  (dif R$ {tot_spend-ssp:,.2f})")
+    print(f"  ingressos atribuídos: {int(sing)}/{tot_ing}  (orgânico/CRM/IPM fora dos funis pagos: {tot_ing-int(sing)})")
+
 
 if __name__ == "__main__":
     main()

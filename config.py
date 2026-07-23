@@ -95,6 +95,49 @@ def safe_div(a, b):
     return (a / b) if b else 0.0
 
 
+# --- Classificação de FUNIL (oferta_principal / quiz / rmkt / nutricao) -------
+# Spec verificado (workflow adversarial 3 lentes + juiz, 2026-07-23):
+# precedência rmkt > quiz > nutricao > oferta_principal; token do nome/UTM, nunca
+# o número do anúncio (o mesmo AD-NN aparece em funis diferentes). Cobertura de
+# spend = 100%. Vendas orgânicas/owned/macros/IPM-backend ficam FORA dos funis pagos.
+import re as _re
+
+FUNNELS = ["oferta_principal", "quiz", "rmkt", "nutricao"]
+FUNNEL_LABELS = {
+    "oferta_principal": "Oferta principal",
+    "quiz": "Quiz",
+    "rmkt": "RMKT",
+    "nutricao": "Nutrição",
+}
+_RE_RMKT = _re.compile(r"\brmkt\b|\brkmt\b|remarket", _re.I)
+_RE_QUIZ = _re.compile(r"\bquiz", _re.I)
+_RE_NUTRI = _re.compile(r"\[nt\]|\[vv\]|nutric[aã]o", _re.I)
+_RE_VD = _re.compile(r"\[vd\]|\[vendas?\]", _re.I)
+_RE_DPAD = _re.compile(r"dp100k-fp0\d", _re.I)
+_RE_ISAD = _re.compile(r"\[ad-\d", _re.I)
+
+
+def classify_funnel(*parts, is_sale=False):
+    """Retorna 'oferta_principal'|'quiz'|'rmkt'|'nutricao', ou None (só p/ vendas
+    não atribuíveis a funil pago — orgânico/CRM/macro/IPM-backend).
+    Tráfego: passar (campaign, adset, ad_name) -> sempre retorna um funil (residual).
+    Venda:   passar (utm_content, utm_campaign) com is_sale=True."""
+    s = " ".join((p or "") for p in parts).lower()
+    if _RE_RMKT.search(s):
+        return "rmkt"
+    if _RE_QUIZ.search(s):
+        return "quiz"
+    if _RE_NUTRI.search(s):
+        return "nutricao"
+    if _RE_VD.search(s):
+        return "oferta_principal"
+    if is_sale:
+        # venda sem token de funil mas de anúncio DP100K identificável -> oferta
+        return "oferta_principal" if (_RE_ISAD.search(s) and _RE_DPAD.search(s)) else None
+    # tráfego: residual ancorado (toda campanha é dp100k-fp0x) -> oferta
+    return "oferta_principal" if _RE_DPAD.search(s) else "oferta_principal"
+
+
 def is_ipm(produto):
     return "ipm" in (produto or "").lower()
 

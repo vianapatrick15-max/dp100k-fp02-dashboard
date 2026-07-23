@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 from config import (
     parse_money, parse_num, parse_date, is_ipm, norm_campanha,
     ORIGEM_HEADER_ROW, ORIGEM_CAMPANHA_DP100K, TURMA_MIN_DATE,
+    classify_funnel, FUNNELS, FUNNEL_LABELS,
 )
 
 ADS_SINCE = "2026-01-01"
@@ -56,6 +57,10 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
     daily = defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0, "lclk": 0.0,
                                  "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0,
                                  "ipm_n": 0, "ipm_rev": 0.0, "out_n": 0, "out_rev": 0.0})
+    # seg_daily[funil][data] -> tráfego + ingressos atribuídos ao funil pago
+    seg_daily = {f: defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0,
+                 "lclk": 0.0, "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0})
+                 for f in FUNNELS}
     ads_daily = []
     ads_meta = {}
 
@@ -73,6 +78,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
         d = parse_date(g(r, "Date"))
         if not d:
             continue
+        adset = g(r, "Adset Name")
+        ad = g(r, "Ad Name").strip()
         spend = parse_money(g(r, "Spend (Cost, Amount Spent)"))
         impr = parse_num(g(r, "Impressions"))
         reach = parse_num(g(r, "Reach (Estimated)"))
@@ -89,10 +96,18 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
         day["lpv"] += lpv
         day["ic"] += ic
 
-        ad = g(r, "Ad Name").strip()
+        seg = classify_funnel(camp, adset, ad)  # tráfego: sempre um funil
+        sd = seg_daily[seg][d]
+        sd["spend"] += spend
+        sd["impr"] += impr
+        sd["reach"] += reach
+        sd["lclk"] += lclk
+        sd["lpv"] += lpv
+        sd["ic"] += ic
+
         if d >= ADS_SINCE and ad and (spend > 0 or impr > 0):
             ads_daily.append({
-                "d": d, "ad": ad, "camp": camp,
+                "d": d, "ad": ad, "camp": camp, "seg": seg,
                 "spend": round(spend, 2), "purch": int(purch), "impr": int(impr),
                 "ic": int(ic), "lpv": int(lpv), "lclk": int(lclk),
             })
@@ -110,7 +125,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
     for m in ads_meta.values():
         m.pop("_last", None)
 
-    # ---- Ingressos (Hubla) — col0 turma, col1 data, col5 oferta, col11 valor ----
+    # ---- Ingressos (Hubla) — col1 data, col5 oferta, col7 utm_campaign,
+    #      col8 utm_content, col11 valor. Venda atribuída ao funil pago pelo utm_content.
     for r in hubla_rows[1:]:
         if len(r) < 12:
             continue
@@ -120,8 +136,14 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
         d = parse_date(r[1])
         if not d:
             continue
+        val = parse_money(r[11])
         daily[d]["ing_n"] += 1
-        daily[d]["ing_rev"] += parse_money(r[11])
+        daily[d]["ing_rev"] += val
+        seg = classify_funnel(r[8], r[7], is_sale=True)  # utm_content, utm_campaign
+        if seg:
+            sd = seg_daily[seg][d]
+            sd["ing_n"] += 1
+            sd["ing_rev"] += val
 
     # ---- Backend IPM/Outras (ORIGEM DE VENDAS, CAMPANHA=DP100K) ----
     for r in origem_rows[ORIGEM_HEADER_ROW + 1:]:
@@ -154,6 +176,19 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
             "out_n": v["out_n"], "out_rev": round(v["out_rev"], 2),
         })
 
+    # ---- Serializa seg_daily (por funil) ----
+    seg_out = {}
+    for f in FUNNELS:
+        rows = []
+        for d in sorted(seg_daily[f].keys()):
+            v = seg_daily[f][d]
+            rows.append({
+                "d": d, "spend": round(v["spend"], 2), "impr": int(v["impr"]),
+                "reach": int(v["reach"]), "lclk": int(v["lclk"]), "lpv": int(v["lpv"]),
+                "ic": int(v["ic"]), "ing_n": v["ing_n"], "ing_rev": round(v["ing_rev"], 2),
+            })
+        seg_out[f] = rows
+
     date_min = dates[0] if dates else None
     date_max = dates[-1] if dates else None
     default_start = default_end = None
@@ -163,6 +198,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, thumbs=None):
 
     return {
         "daily": daily_list,
+        "seg_daily": seg_out,
+        "funnels": [{"key": f, "label": FUNNEL_LABELS[f]} for f in FUNNELS],
         "ads_daily": ads_daily,
         "ads_meta": ads_meta,
         "turmas": turmas,

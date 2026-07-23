@@ -32,6 +32,20 @@
     color:var(--mut);font-size:14px;font-weight:600;cursor:pointer;transition:.15s;user-select:none}
   .tab:hover{color:var(--tx);border-color:var(--line2)}
   .tab.on{background:var(--ing);border-color:var(--ing);color:#04121f}
+  .funilbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 6px;
+    background:linear-gradient(180deg,#141d30,#111a2b);border:1px solid var(--line);
+    border-radius:var(--r);padding:11px 14px}
+  .funilbar .lbl{font-size:12px;color:var(--mut2);text-transform:uppercase;letter-spacing:.6px;font-weight:800}
+  .fchip{padding:7px 15px;border-radius:999px;border:1px solid var(--line2);background:var(--bg2);
+    color:var(--mut);font-size:13px;font-weight:700;cursor:pointer;transition:.12s;user-select:none}
+  .fchip:hover{color:var(--tx)}
+  .fchip.on{color:#04121f}
+  .fchip.on[data-f="todos"]{background:#e8eefb;border-color:#e8eefb}
+  .fchip.on[data-f="oferta_principal"]{background:var(--ing);border-color:var(--ing)}
+  .fchip.on[data-f="quiz"]{background:var(--ipm);border-color:var(--ipm)}
+  .fchip.on[data-f="rmkt"]{background:var(--out);border-color:var(--out)}
+  .fchip.on[data-f="nutricao"]{background:var(--fat);border-color:var(--fat)}
+  .funil-note{font-size:11.5px;color:var(--mut2);margin-left:auto;max-width:520px;text-align:right;line-height:1.4}
   .scope{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 22px;
     background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
   .scope .lbl{font-size:12px;color:var(--mut2);text-transform:uppercase;letter-spacing:.6px;font-weight:700}
@@ -127,6 +141,12 @@
     <div class="tab" data-view="ads">Ads</div>
   </nav>
 
+  <div class="funilbar">
+    <span class="lbl">Funil</span>
+    <div class="chips" id="funil-chips"></div>
+    <span class="funil-note" id="funil-note"></span>
+  </div>
+
   <!-- GERAL -->
   <section id="v-geral">
     <div class="scope">
@@ -208,7 +228,9 @@ function addDays(s,n){const d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);r
 function monthStart(d){return d.slice(0,7)+'-01';}
 function prevMonth(d){const x=new Date(d+'T00:00:00');x.setMonth(x.getMonth()-1);return x.toISOString().slice(0,10);}
 
-function rowsIn(a,b){return DATA.daily.filter(x=>x.d>=a&&x.d<=b);}
+let funil='todos';
+function activeDaily(){return funil==='todos'?DATA.daily:(DATA.seg_daily[funil]||[]);}
+function rowsIn(a,b){return activeDaily().filter(x=>x.d>=a&&x.d<=b);}
 function agg(rows){
   const s=k=>rows.reduce((t,x)=>t+(x[k]||0),0);
   const inv=s('spend');const fat=s('ing_rev')+s('ipm_rev')+s('out_rev');
@@ -217,14 +239,15 @@ function agg(rows){
 }
 
 function renderKPIs(el,a){
+  const seg=funil!=='todos';
   const card=(cls,t,v,s)=>`<div class="kpi ${cls}"><div class="t">${t}</div><div class="v">${v}</div><div class="s">${s||'&nbsp;'}</div></div>`;
   el.innerHTML=
     card('k-inv','Investimento',a.inv?fmtM(a.inv):'—','')+
-    card('k-ing','Vendas Ingressos',a.ing?fmtI(a.ing):'—',a.ing?fmtMk(a.ing_rev):'')+
-    card('k-ipm','Vendas IPM',a.ipm?fmtI(a.ipm):'—',a.ipm?fmtMk(a.ipm_rev):'')+
-    card('k-out','Outras Vendas',a.out?fmtI(a.out):'—',a.out?fmtMk(a.out_rev):'')+
-    card('k-fat','Faturamento',a.fat?fmtM(a.fat):'—','')+
-    card('k-roas','ROAS',a.roas?a.roas.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'x':'—',
+    card('k-ing','Vendas Ingressos',a.ing?fmtI(a.ing):'—',a.ing?fmtMk(a.ing_rev):(seg?'atribuídas via UTM':''))+
+    card('k-ipm','Vendas IPM',seg?'—':(a.ipm?fmtI(a.ipm):'—'),seg?'só no Geral':(a.ipm?fmtMk(a.ipm_rev):''))+
+    card('k-out','Outras Vendas',seg?'—':(a.out?fmtI(a.out):'—'),seg?'só no Geral':(a.out?fmtMk(a.out_rev):''))+
+    card('k-fat',seg?'Faturamento ingressos':'Faturamento',a.fat?fmtM(a.fat):'—',seg?'front-end':'')+
+    card('k-roas',seg?'ROAS front':'ROAS',a.roas?a.roas.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})+'x':'—',
         a.inv?fmtMk(a.fat)+' / '+fmtMk(a.inv):'');
 }
 
@@ -236,8 +259,8 @@ function renderChart(svg,tip,rows){
     t.setAttribute('fill','#6c7a97');t.setAttribute('font-size',14);t.setAttribute('text-anchor','middle');
     t.textContent='Sem dados no período';svg.appendChild(t);return;}
   const mk=(t,at)=>{const e=document.createElementNS(ns,t);for(const k in at)e.setAttribute(k,at[k]);return e;};
-  const ing=rows.map(r=>r.ing_n),ipm=rows.map(r=>r.ipm_n),out=rows.map(r=>r.out_n);
-  const fat=rows.map(r=>r.ing_rev+r.ipm_rev+r.out_rev);
+  const ing=rows.map(r=>r.ing_n||0),ipm=rows.map(r=>r.ipm_n||0),out=rows.map(r=>r.out_n||0);
+  const fat=rows.map(r=>(r.ing_rev||0)+(r.ipm_rev||0)+(r.out_rev||0));
   const cMax=Math.max(5,...ing,...ipm,...out),fMax=Math.max(1000,...fat);
   const X=i=>n===1?pl+plotW/2:pl+i*plotW/(n-1);
   const YL=v=>pt+plotH-(v/cMax)*plotH, YR=v=>pt+plotH-(v/fMax)*plotH;
@@ -267,14 +290,15 @@ function renderChart(svg,tip,rows){
     let i=Math.round((px-pl)/(plotW/(n>1?n-1:1)));i=Math.max(0,Math.min(n-1,i));
     const r=rows[i],xx=X(i);
     guide.setAttribute('x1',xx);guide.setAttribute('x2',xx);guide.setAttribute('opacity',.5);
-    [YL(r.ing_n),YL(r.ipm_n),YL(r.out_n),YR(r.ing_rev+r.ipm_rev+r.out_rev)].forEach((y,k)=>{
+    const rfat=(r.ing_rev||0)+(r.ipm_rev||0)+(r.out_rev||0);
+    [YL(r.ing_n||0),YL(r.ipm_n||0),YL(r.out_n||0),YR(rfat)].forEach((y,k)=>{
       dots[k].setAttribute('cx',xx);dots[k].setAttribute('cy',y);dots[k].setAttribute('opacity',1);});
     tip.style.opacity=1;
     tip.innerHTML=`<b>${dmyy(r.d)}</b>
-      <div class="r"><span><i style="background:#4c9aff"></i>Ingressos</span><b style="color:#e8eefb">${r.ing_n}</b></div>
-      <div class="r"><span><i style="background:#f5c451"></i>IPM</span><b style="color:#e8eefb">${r.ipm_n}</b></div>
-      <div class="r"><span><i style="background:#b491f7"></i>Outras</span><b style="color:#e8eefb">${r.out_n}</b></div>
-      <div class="r"><span><i style="background:#35d6a4"></i>Faturamento</span><b style="color:#e8eefb">${fmtMk(r.ing_rev+r.ipm_rev+r.out_rev)}</b></div>`;
+      <div class="r"><span><i style="background:#4c9aff"></i>Ingressos</span><b style="color:#e8eefb">${r.ing_n||0}</b></div>
+      <div class="r"><span><i style="background:#f5c451"></i>IPM</span><b style="color:#e8eefb">${r.ipm_n||0}</b></div>
+      <div class="r"><span><i style="background:#b491f7"></i>Outras</span><b style="color:#e8eefb">${r.out_n||0}</b></div>
+      <div class="r"><span><i style="background:#35d6a4"></i>Faturamento</span><b style="color:#e8eefb">${fmtMk(rfat)}</b></div>`;
     const box=svg.parentElement.getBoundingClientRect();
     let lx=(ev.clientX-box.left)+14;if(lx>box.width-176)lx=(ev.clientX-box.left)-190;
     tip.style.left=lx+'px';tip.style.top=Math.max(4,(ev.clientY-box.top)-10)+'px';
@@ -320,6 +344,7 @@ function computeAds(a,b){
   const m={};
   DATA.ads_daily.forEach(r=>{
     if(r.d<a||r.d>b)return;
+    if(funil!=='todos'&&r.seg!==funil)return;
     const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0});
     o.spend+=r.spend;o.purch+=r.purch;o.impr+=r.impr;o.ic+=r.ic;o.lpv+=r.lpv;o.lclk+=r.lclk;
   });
@@ -395,6 +420,11 @@ function showView(v){
   $('#v-ads').classList.toggle('hide',v!=='ads');
   if(v==='geral')drawGeral();if(v==='turma')drawTurma();if(v==='ads')drawAds();
 }
+function redrawActive(){
+  if(!$('#v-geral').classList.contains('hide'))drawGeral();
+  if(!$('#v-turma').classList.contains('hide'))drawTurma();
+  if(!$('#v-ads').classList.contains('hide'))drawAds();
+}
 
 function initControls(){
   const min=DATA.meta.date_min,max=DATA.meta.date_max;
@@ -425,9 +455,18 @@ function initControls(){
     const c=document.createElement('div');c.className='chip';c.dataset.sort=k;c.textContent=lb;
     c.onclick=()=>{st.ads.sort=k;drawAds();};as.appendChild(c);});
   $$('.tab').forEach(t=>t.onclick=()=>showView(t.dataset.view));
-  let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{
-    if(!$('#v-geral').classList.contains('hide'))drawGeral();
-    if(!$('#v-turma').classList.contains('hide'))drawTurma();},200);});
+  // funil (dimensão global)
+  const fc=$('#funil-chips');
+  const funs=[{key:'todos',label:'Todos'},...(DATA.funnels||[])];
+  const NOTE='Tráfego + ingressos atribuídos via UTM a este funil. IPM/back-end e vendas orgânicas aparecem só no Geral (Todos).';
+  funs.forEach(f=>{const c=document.createElement('div');c.className='fchip';c.dataset.f=f.key;c.textContent=f.label;
+    if(f.key==='todos')c.classList.add('on');
+    c.onclick=()=>{funil=f.key;
+      $$('#funil-chips .fchip').forEach(x=>x.classList.toggle('on',x.dataset.f===f.key));
+      $('#funil-note').textContent=funil==='todos'?'':NOTE;
+      redrawActive();};
+    fc.appendChild(c);});
+  let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(redrawActive,200);});
 }
 
 fetch('data.json?v='+Date.now()).then(r=>r.json()).then(d=>{

@@ -16,6 +16,15 @@ com filtro de data livre e visão por turma.
 - **Ads** — anúncios de melhor desempenho (preview + métricas), filtráveis por turma
   ou período, ordenáveis por vendas / investimento / CPA.
 
+**Dimensão Funil** (chips Todos / Oferta principal / Quiz / RMKT / Nutrição — global,
+aplica nas 3 views). Classificação verificada (workflow adversarial 3 lentes + juiz):
+precedência `rmkt > quiz > nutricao > oferta_principal`, pelo TOKEN do nome/UTM (nunca
+pelo número do ad — o mesmo AD-152 tem variante `[vd]` e `[quiz]`). Regex em
+`config.classify_funnel`. Cobertura de spend = 100%. No funil, a métrica é tráfego +
+ingressos atribuídos via `utm_content`; vendas orgânicas/owned/CRM e IPM/back-end NÃO
+entram nos funis pagos — só no Geral (Todos). Nutrição (VV/awareness) tem spend e ~0
+venda direta, por isso é bucket próprio (não infla o CPA da oferta).
+
 ## Fontes (lidas pela SA `ga4-reader@n8n-tathi`)
 | Dado | Planilha / aba |
 |---|---|
