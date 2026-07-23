@@ -6,7 +6,7 @@
   "periodos": {},
   "_diag": {
     "trafego_linhas": 4082,
-    "hubla_linhas": 2692,
+    "hubla_linhas": 2697,
     "pesquisa_linhas": 3451,
     "invest_linhas": 0
   },
@@ -80124,6 +80124,41 @@
           "meta_ads",
           "[ad-22][vid][vd][dp100k-fp02]",
           97.0
+        ],
+        [
+          "2026-07-23",
+          "elson.gratidao@gmail.com",
+          "instagram",
+          "organico",
+          97.0
+        ],
+        [
+          "2026-07-23",
+          "biancacardilli.imagem@gmail.com",
+          "meta_ads",
+          "[ad-29][vid][vd][dp100k-fp02]",
+          102.12
+        ],
+        [
+          "2026-07-23",
+          "melinaguedesconsultoria@gmail.com",
+          "meta_ads",
+          "[ad-26][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-23",
+          "georgebpc@hotmail.com",
+          "meta_ads",
+          "[ad-23][vid][vd][dp100k-fp02]",
+          97.0
+        ],
+        [
+          "2026-07-23",
+          "salmos23.danil@gmail.com",
+          "whatsapp",
+          "organico",
+          97.0
         ]
       ]
     },
@@ -138591,12 +138626,46 @@
           "Bahia",
           true,
           true
+        ],
+        [
+          "2026-07-23",
+          "elson.gratidao@gmail.com",
+          "instagram",
+          "organico",
+          "45 a 54 anos",
+          "Masculino",
+          "Conheci agora",
+          "No",
+          "Vendedor(a)",
+          "Até R$ 2.000,00",
+          "Iniciante, nunca palestrei.",
+          "Se destacar na profissão",
+          "Federal District",
+          false,
+          false
+        ],
+        [
+          "2026-07-23",
+          "biancacardilli.imagem@gmail.com",
+          "meta_ads",
+          "[AD-29][VID][VD][DP100K-Fp02]",
+          "35 a 44 anos",
+          "Feminino",
+          "Menos de 6 meses",
+          "No",
+          "Empresário(a)",
+          "De R$ 2.001,00 até R$ 5.000,00",
+          "Sou palestrante e quero me tornar memorável.",
+          "Uma nova carreira",
+          "São Paulo",
+          false,
+          false
         ]
       ]
     },
     "date_min": null,
     "date_max": null
   },
-  "updated_at": "2026-07-23 04:39:49 BRT",
+  "updated_at": "2026-07-23 07:32:12 BRT",
   "schema_version": 3
 }
