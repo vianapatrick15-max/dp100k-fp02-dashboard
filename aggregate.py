@@ -27,7 +27,7 @@ def main():
                      raw["origem_rows"], pesquisa_rows=raw.get("pesquisa_rows"),
                      thumbs=thumbs)
     data["updated_at"] = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M:%S BRT")
-    data["schema_version"] = 4  # v4: dash geral (vendas ingresso+IPM+outras / tráfego diário / ads)
+    data["schema_version"] = 5  # v5: + ing_meta (CPA Meta Ads) e join venda x ad normalizado
 
     out_path = os.path.join(HERE, "data.json")
     with open(out_path, "w", encoding="utf-8") as f:
@@ -48,6 +48,10 @@ def main():
     print(f"  outras:       {tot('out_n'):4d}  (R$ {tot('out_rev'):,.0f})")
     print(f"  faturamento:  R$ {fat:,.2f}")
     print(f"  ROAS:         {(fat / tot('spend')) if tot('spend') else 0:.2f}x")
+    _sp, _ing, _mt = tot('spend'), tot('ing_n'), tot('ing_meta')
+    print(f"  CPA geral:    R$ {(_sp/_ing if _ing else 0):>8,.2f}  ({_ing} ingressos, blended)")
+    print(f"  CPA Meta Ads: R$ {(_sp/_mt if _mt else 0):>8,.2f}  ({_mt} c/ utm_source=meta_ads, "
+          f"{(_mt/_ing*100 if _ing else 0):.1f}% do total)")
     print(f"  turmas:       {len(data['turmas'])}  ({', '.join(t['label'] for t in data['turmas'])})")
     print(f"  ads_daily:    {len(data['ads_daily'])} linhas | ads distintos: {len(data['ads_meta'])}")
     thumbs_ok = sum(1 for m in data["ads_meta"].values() if m.get("thumb"))
@@ -67,6 +71,17 @@ def main():
         print(f"  {f:16s} spend R$ {sp:>10,.0f} ({pct:4.1f}%) | ingressos {ig:4d} (R$ {igr:,.0f})")
     print(f"  {'SOMA funis':16s} spend R$ {ssp:>10,.0f} / total R$ {tot_spend:,.0f}  (dif R$ {tot_spend-ssp:,.2f})")
     print(f"  ingressos atribuídos: {int(sing)}/{tot_ing}  (orgânico/CRM/IPM fora dos funis pagos: {tot_ing-int(sing)})")
+
+    # reconciliação do join venda x criativo (o que aparece nos cards de Ads)
+    ads_names = {a.lower() for a in data["ads_meta"]}
+    ha = data["hubla_ads_daily"]
+    casadas = sum(x["ing"] for x in ha if x["k"] in ads_names)
+    orfas = sum(x["ing"] for x in ha if x["k"] not in ads_names)
+    print("\n=== Join venda x criativo (view Ads) ===")
+    print(f"  vendas com utm de ad:  {casadas + orfas}")
+    print(f"  casam com um card:     {casadas}")
+    print(f"  órfãs (sem card):      {orfas}  (ad de outro funil ou já removido)")
+    print(f"  sem utm de ad:         {tot_ing - casadas - orfas}  (orgânico/CRM/macro)")
 
 
 if __name__ == "__main__":

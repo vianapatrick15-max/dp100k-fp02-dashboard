@@ -60,14 +60,14 @@
   .rangetxt{color:var(--mut);font-size:12.5px;margin-left:auto}
   .h2{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px;
     font-weight:700;margin:30px 2px 12px}
-  .kpis{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+  .kpis{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
   .kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
     padding:16px;box-shadow:var(--sh);position:relative;overflow:hidden}
   .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line2)}
   .kpi.k-inv::before{background:var(--mut)} .kpi.k-ing::before{background:var(--ing)}
   .kpi.k-ipm::before{background:var(--ipm)} .kpi.k-out::before{background:var(--out)}
   .kpi.k-fat::before{background:var(--fat)} .kpi.k-roas::before{background:#ff9f6b}
-  .kpi.k-cpa::before{background:#54c7e0}
+  .kpi.k-cpa::before{background:#54c7e0} .kpi.k-cpam::before{background:#8f7bff}
   .kpi .t{font-size:11px;color:var(--mut2);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
   .kpi .v{font-size:23px;font-weight:750;margin-top:9px;letter-spacing:-.5px;line-height:1}
   .kpi .s{font-size:12.5px;color:var(--mut);margin-top:6px}
@@ -123,7 +123,7 @@
   .muted{color:var(--mut2)}
   .empty{padding:60px 20px;text-align:center;color:var(--mut2);font-size:14px}
   .hide{display:none!important}
-  @media(max-width:1080px){.kpis{grid-template-columns:repeat(4,1fr)}}
+  @media(max-width:1400px){.kpis{grid-template-columns:repeat(4,1fr)}}
   @media(max-width:720px){.kpis{grid-template-columns:repeat(3,1fr)}}
   @media(max-width:520px){.kpis{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -236,7 +236,7 @@ function rowsIn(a,b){return activeDaily().filter(x=>x.d>=a&&x.d<=b);}
 function agg(rows){
   const s=k=>rows.reduce((t,x)=>t+(x[k]||0),0);
   const inv=s('spend');const fat=s('ing_rev')+s('ipm_rev')+s('out_rev');
-  return{inv,ing:s('ing_n'),ing_rev:s('ing_rev'),ipm:s('ipm_n'),ipm_rev:s('ipm_rev'),
+  return{inv,ing:s('ing_n'),ing_rev:s('ing_rev'),ing_meta:s('ing_meta'),ipm:s('ipm_n'),ipm_rev:s('ipm_rev'),
     out:s('out_n'),out_rev:s('out_rev'),fat,roas:inv?fat/inv:null};
 }
 
@@ -246,7 +246,9 @@ function renderKPIs(el,a){
   el.innerHTML=
     card('k-inv','Investimento',a.inv?fmtM(a.inv):'—','')+
     card('k-ing','Vendas Ingressos',a.ing?fmtI(a.ing):'—',a.ing?fmtMk(a.ing_rev):(seg?'atribuídas via UTM':''))+
-    card('k-cpa','CPA Ingresso',(a.ing&&a.inv)?fmtM(a.inv/a.ing):'—',(a.ing&&a.inv)?'investimento / ingresso':'')+
+    card('k-cpa','CPA Geral',(a.ing&&a.inv)?fmtM(a.inv/a.ing):'—',(a.ing&&a.inv)?'invest. / todas as vendas':'')+
+    card('k-cpam','CPA Meta Ads',(a.ing_meta&&a.inv)?fmtM(a.inv/a.ing_meta):'—',
+        a.ing_meta?fmtI(a.ing_meta)+' vendas via meta_ads'+(a.ing?' ('+Math.round(a.ing_meta/a.ing*100)+'%)':''):'')+
     card('k-ipm','Vendas IPM',seg?'—':(a.ipm?fmtI(a.ipm):'—'),seg?'só no Geral':(a.ipm?fmtMk(a.ipm_rev):''))+
     card('k-out','Outras Vendas',seg?'—':(a.out?fmtI(a.out):'—'),seg?'só no Geral':(a.out?fmtMk(a.out_rev):''))+
     card('k-fat',seg?'Faturamento ingressos':'Faturamento',a.fat?fmtM(a.fat):'—',seg?'front-end':'')+
@@ -311,17 +313,19 @@ function renderChart(svg,tip,rows){
 
 function renderTable(el,rows){
   if(!rows.length){el.innerHTML='<div class="empty">Sem dados no período.</div>';return;}
-  const head=['Data','Investimento','Vendas ing.','CPA ing.','% MQL','Impressões','CPM','Alcance','Cliques link','CTR link','Visitas pág.','Checkout','Conv. Página','Conv. Checkout'];
+  const head=['Data','Investimento','Vendas ing.','CPA geral','Vendas Meta','CPA Meta','% MQL','Impressões','CPM','Alcance','Cliques link','CTR link','Visitas pág.','Checkout','Conv. Página','Conv. Checkout'];
   let h='<table><thead><tr>'+head.map(x=>`<th>${x}</th>`).join('')+'</tr></thead><tbody>';
-  const T={spend:0,ing:0,renda:0,mql:0,impr:0,reach:0,lclk:0,lpv:0,ic:0};
+  const T={spend:0,ing:0,meta:0,renda:0,mql:0,impr:0,reach:0,lclk:0,lpv:0,ic:0};
   rows.forEach(r=>{
-    T.spend+=r.spend;T.ing+=r.ing_n;T.renda+=r.ing_renda||0;T.mql+=r.ing_mql||0;T.impr+=r.impr;T.reach+=r.reach;T.lclk+=r.lclk;T.lpv+=r.lpv;T.ic+=r.ic;
-    const cpaI=r.ing_n?r.spend/r.ing_n:null,mqlP=r.ing_renda?r.ing_mql/r.ing_renda*100:null,cpm=r.impr?r.spend/r.impr*1000:null,ctr=r.impr?r.lclk/r.impr*100:null,
+    T.spend+=r.spend;T.ing+=r.ing_n;T.meta+=r.ing_meta||0;T.renda+=r.ing_renda||0;T.mql+=r.ing_mql||0;T.impr+=r.impr;T.reach+=r.reach;T.lclk+=r.lclk;T.lpv+=r.lpv;T.ic+=r.ic;
+    const cpaI=r.ing_n?r.spend/r.ing_n:null,cpaM=r.ing_meta?r.spend/r.ing_meta:null,mqlP=r.ing_renda?r.ing_mql/r.ing_renda*100:null,cpm=r.impr?r.spend/r.impr*1000:null,ctr=r.impr?r.lclk/r.impr*100:null,
       cvPag=r.lpv?r.ic/r.lpv*100:null,cvChk=r.ic?r.ing_n/r.ic*100:null;
     h+=`<tr><td>${dmyy(r.d)}</td>
       <td class="num">${r.spend?fmtM(r.spend):'—'}</td>
       <td class="num">${r.ing_n?fmtI(r.ing_n):'—'}</td>
       <td class="num">${cpaI?fmtM(cpaI):'—'}</td>
+      <td class="num">${r.ing_meta?fmtI(r.ing_meta):'—'}</td>
+      <td class="num">${cpaM?fmtM(cpaM):'—'}</td>
       <td class="num">${fmtP(mqlP)}</td>
       <td class="num">${r.impr?fmtI(r.impr):'—'}</td>
       <td class="num">${cpm?fmtM(cpm):'—'}</td>
@@ -333,11 +337,13 @@ function renderTable(el,rows){
       <td class="num">${fmtP(cvPag)}</td>
       <td class="num">${fmtP(cvChk)}</td></tr>`;
   });
-  const cpaIT=T.ing?T.spend/T.ing:null,mqlPT=T.renda?T.mql/T.renda*100:null,cpmT=T.impr?T.spend/T.impr*1000:null,ctrT=T.impr?T.lclk/T.impr*100:null,
+  const cpaIT=T.ing?T.spend/T.ing:null,cpaMT=T.meta?T.spend/T.meta:null,mqlPT=T.renda?T.mql/T.renda*100:null,cpmT=T.impr?T.spend/T.impr*1000:null,ctrT=T.impr?T.lclk/T.impr*100:null,
     cvPagT=T.lpv?T.ic/T.lpv*100:null,cvChkT=T.ic?T.ing/T.ic*100:null;
   h+=`</tbody><tfoot><tr><td>Total do período</td>
     <td class="num">${fmtM(T.spend)}</td><td class="num">${fmtI(T.ing)}</td>
     <td class="num">${cpaIT?fmtM(cpaIT):'—'}</td>
+    <td class="num">${T.meta?fmtI(T.meta):'—'}</td>
+    <td class="num">${cpaMT?fmtM(cpaMT):'—'}</td>
     <td class="num">${fmtP(mqlPT)}</td>
     <td class="num">${fmtI(T.impr)}</td><td class="num">${cpmT?fmtM(cpmT):'—'}</td>
     <td class="num">${fmtI(T.reach)}</td><td class="num">${fmtI(T.lclk)}</td>

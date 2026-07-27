@@ -143,6 +143,83 @@ def is_ipm(produto):
     return "ipm" in (produto or "").lower()
 
 
+# --- Join venda x criativo: utm_content (Hubla) -> nome do anúncio (Meta) ------
+# O utm_content chega deformado pela URL e por renome de ad: '+' no lugar de
+# espaço, zero à esquerda ('ad-033' vs 'AD-33'), prefixo 'Teste - ', sufixo de
+# funil ausente ('[ad-132][est][vd]' vs '[AD-132][EST][VD][DP100K-Fp02]').
+# Igualdade de string crua perdia 229 vendas (todas viravam card fantasma).
+_RE_ADPAD = _re.compile(r"ad-?0*(\d+)")
+_RE_FUNIL_SUF = _re.compile(r"dp100kfp0\d$")
+# venda originada em anúncio de OUTRO funil (IPM/IPL/VPO): o spend dela não está
+# neste dashboard, então nunca pode cair no card de um ad DP100K de mesmo número.
+_RE_OUTRO_FUNIL = _re.compile(r"\b(ipm|ipl|vpo)-(fp|le)\d", _re.I)
+
+
+def ad_norm(s):
+    s = (s or "").lower().replace("+", " ")
+    s = _re.sub(r"^teste\s*-\s*", "", s)
+    s = _RE_ADPAD.sub(lambda m: "ad" + str(int(m.group(1))), s)
+    return _re.sub(r"[^a-z0-9]+", "", s)
+
+
+def ad_base(s):
+    """Normalizado sem o sufixo de funil (dp100kfp01/dp100kfp02)."""
+    return _RE_FUNIL_SUF.sub("", ad_norm(s))
+
+
+def ad_code(s):
+    m = _RE_ADPAD.search((s or "").lower())
+    return int(m.group(1)) if m else None
+
+
+def build_ad_resolver(ad_names, spend_by_ad=None):
+    """Devolve resolve(utm_content) -> nome canônico do ad (ou None).
+
+    Escada: exato > normalizado > sem sufixo de funil > código AD-NN.
+    O código AD-NN só é usado quando o utm_content NÃO aponta outro funil —
+    senão uma venda do [AD-22] do IPM-Fp01 cairia no [AD-22] do DP100K.
+    Empate de código resolve pelo ad de maior investimento.
+    """
+    spend_by_ad = spend_by_ad or {}
+    exact, by_norm, by_base, by_code = {}, {}, {}, {}
+    for a in ad_names:
+        exact.setdefault(a.lower(), a)
+        by_norm.setdefault(ad_norm(a), []).append(a)
+        by_base.setdefault(ad_base(a), []).append(a)
+        c = ad_code(a)
+        if c is not None:
+            by_code.setdefault(c, []).append(a)
+
+    def pick(cands):
+        return max(cands, key=lambda a: spend_by_ad.get(a, 0.0))
+
+    def resolve(utm):
+        k = (utm or "").strip().lower()
+        if not k:
+            return None
+        if k in exact:
+            return exact[k]
+        n = ad_norm(k)
+        if n in by_norm:
+            return pick(by_norm[n])
+        b = ad_base(k)
+        if b in by_base:
+            return pick(by_base[b])
+        if _RE_OUTRO_FUNIL.search(k):
+            return None
+        c = ad_code(k)
+        if c is not None and c in by_code:
+            return pick(by_code[c])
+        return None
+
+    return resolve
+
+
+# --- Origem da venda: paga (Meta Ads) vs demais ------------------------------
+def is_meta_ads(utm_source):
+    return (utm_source or "").strip().lower() in ("meta_ads", "fb", "facebook", "instagram_ads")
+
+
 # --- MQL: renda mensal >= R$ 10.001 (renda vem da Pesquisa, join por email) ---
 _RE_ACIMA = _re.compile(r"acima de r\$\s?([\d.]+)", _re.I)
 _RENDA_VAZIA = {"", "#n/a", "#ref!", "#value!", "-"}

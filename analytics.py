@@ -16,6 +16,7 @@ from config import (
     ORIGEM_HEADER_ROW, ORIGEM_CAMPANHA_DP100K, TURMA_MIN_DATE,
     classify_funnel, FUNNELS, FUNNEL_LABELS,
     is_mql_renda, renda_conhecida,
+    build_ad_resolver, is_meta_ads,
 )
 
 ADS_SINCE = "2026-01-01"
@@ -84,11 +85,12 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
     daily = defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0, "lclk": 0.0,
                                  "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0,
                                  "ing_renda": 0, "ing_mql": 0,
+                                 "ing_meta": 0, "ing_meta_rev": 0.0,
                                  "ipm_n": 0, "ipm_rev": 0.0, "out_n": 0, "out_rev": 0.0})
     # seg_daily[funil][data] -> tráfego + ingressos atribuídos ao funil pago
     seg_daily = {f: defaultdict(lambda: {"spend": 0.0, "impr": 0.0, "reach": 0.0,
                  "lclk": 0.0, "lpv": 0.0, "ic": 0.0, "ing_n": 0, "ing_rev": 0.0,
-                 "ing_renda": 0, "ing_mql": 0})
+                 "ing_renda": 0, "ing_mql": 0, "ing_meta": 0, "ing_meta_rev": 0.0})
                  for f in FUNNELS}
     # hubla por ad (utm_content) x dia -> ingressos + renda conhecida + MQL
     hubla_ads = defaultdict(lambda: {"ing": 0, "renda": 0, "mql": 0})
@@ -156,6 +158,12 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
     for m in ads_meta.values():
         m.pop("_last", None)
 
+    # Resolver de utm_content -> nome canônico do ad (empate resolve por spend)
+    spend_by_ad = defaultdict(float)
+    for r in ads_daily:
+        spend_by_ad[r["ad"]] += r["spend"]
+    resolve_ad = build_ad_resolver(ads_meta.keys(), spend_by_ad)
+
     # ---- Ingressos (Hubla) — col1 data, col3 email, col5 oferta, col7 utm_campaign,
     #      col8 utm_content, col11 valor. Renda vem da Pesquisa (join por email) -> MQL>=10k.
     for r in hubla_rows[1:]:
@@ -171,11 +179,14 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         renda = email_renda.get((r[3] or "").strip().lower(), "")
         has_renda = 1 if renda_conhecida(renda) else 0
         mql = 1 if (has_renda and is_mql_renda(renda)) else 0
+        meta = 1 if is_meta_ads(r[6]) else 0
         day = daily[d]
         day["ing_n"] += 1
         day["ing_rev"] += val
         day["ing_renda"] += has_renda
         day["ing_mql"] += mql
+        day["ing_meta"] += meta
+        day["ing_meta_rev"] += val if meta else 0.0
         utm_content = (r[8] or "").strip()
         seg = classify_funnel(utm_content, r[7], is_sale=True)  # utm_content, utm_campaign
         if seg:
@@ -184,9 +195,12 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
             sd["ing_rev"] += val
             sd["ing_renda"] += has_renda
             sd["ing_mql"] += mql
+            sd["ing_meta"] += meta
+            sd["ing_meta_rev"] += val if meta else 0.0
         k = utm_content.lower()
         if "ad-" in k:
-            ha = hubla_ads[(k, d)]
+            canon = resolve_ad(utm_content)
+            ha = hubla_ads[(canon.lower() if canon else k, d)]
             ha["ing"] += 1
             ha["renda"] += has_renda
             ha["mql"] += mql
@@ -219,6 +233,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
             "lclk": int(v["lclk"]), "lpv": int(v["lpv"]), "ic": int(v["ic"]),
             "ing_n": v["ing_n"], "ing_rev": round(v["ing_rev"], 2),
             "ing_renda": v["ing_renda"], "ing_mql": v["ing_mql"],
+            "ing_meta": v["ing_meta"], "ing_meta_rev": round(v["ing_meta_rev"], 2),
             "ipm_n": v["ipm_n"], "ipm_rev": round(v["ipm_rev"], 2),
             "out_n": v["out_n"], "out_rev": round(v["out_rev"], 2),
         })
@@ -234,6 +249,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
                 "reach": int(v["reach"]), "lclk": int(v["lclk"]), "lpv": int(v["lpv"]),
                 "ic": int(v["ic"]), "ing_n": v["ing_n"], "ing_rev": round(v["ing_rev"], 2),
                 "ing_renda": v["ing_renda"], "ing_mql": v["ing_mql"],
+                "ing_meta": v["ing_meta"], "ing_meta_rev": round(v["ing_meta_rev"], 2),
             })
         seg_out[f] = rows
 
