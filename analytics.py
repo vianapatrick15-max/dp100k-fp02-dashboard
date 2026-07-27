@@ -39,6 +39,33 @@ def _hourly(invest_rows):
     return out
 
 
+def _spend_oficial(invest_rows):
+    """{data: investido} da aba 'Investimento por Hora' — FONTE OFICIAL de gasto.
+
+    Trocada em 27/07/2026. A planilha de tráfego ad-level (Página1) só exporta a
+    conta C1 Instituto (act_1725623984282551); desde 22/07 parte do DP100K roda
+    na conta Memorável (act_1835702343244302) e esse gasto ficava invisível
+    (Julho/26 - 5: R$ 15.192 no dash vs R$ 18.490 real). A aba horária soma as
+    DUAS contas (n8n atualizado 27/07) e é a mesma fonte que o time usa no
+    fechamento semanal, então o dash passa a bater com a planilha deles.
+
+    Ressalva conhecida: a coleta horária filtra objetivo IN (OUTCOME_SALES,
+    CONVERSIONS, PRODUCT_CATALOG_SALES), então as campanhas de NUTRIÇÃO (VV)
+    ficam de fora — ~R$ 500/turma. Validado em 14-19/07: aba horária
+    R$ 14.484,36 == ad-level sem nutrição R$ 14.484,34 (Meta API: R$ 14.976,94
+    com nutrição). Dias anteriores à cobertura da aba caem no ad-level.
+    """
+    by_day = defaultdict(float)
+    for r in invest_rows[1:]:
+        if len(r) < 6:
+            continue
+        d = parse_date(r[3])
+        if not d:
+            continue
+        by_day[d] += parse_money(r[5])
+    return dict(by_day)
+
+
 def _turma_windows(invest_rows):
     """Janelas de turma com precisão de HORA.
 
@@ -215,6 +242,24 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
 
     for m in ads_meta.values():
         m.pop("_last", None)
+
+    # ---- Investimento oficial: aba 'Investimento por Hora' (2 contas) --------
+    # Substitui o spend ad-level (1 conta só) nos dias cobertos pela aba. Os
+    # funis são reescalados pela participação ad-level do dia, pra somarem o
+    # total oficial. `ads_daily` fica com o spend ad-level cru de propósito: o
+    # ranking de criativo tem que continuar sendo gasto real por anúncio, não
+    # rateio. Ver docstring de _spend_oficial().
+    spend_dia = _spend_oficial(invest_rows)
+    for d, oficial in spend_dia.items():
+        antigo = daily[d]["spend"]
+        daily[d]["spend"] = oficial
+        if antigo > 0:
+            k = oficial / antigo
+            for f in FUNNELS:
+                if d in seg_daily[f]:
+                    seg_daily[f][d]["spend"] *= k
+        elif oficial > 0:
+            seg_daily["oferta_principal"][d]["spend"] = oficial
 
     # Resolver de utm_content -> nome canônico do ad (empate resolve por spend)
     spend_by_ad = defaultdict(float)
