@@ -416,7 +416,10 @@ function drawGeral(){
 }
 function drawTurma(){
   const t=DATA.turmas[st.turma.i];if(!t)return;
-  const rows=rowsIn(t.inicio,t.fim);
+  // escopo da turma vem pronto do pipeline (virada por hora, não por dia);
+  // filtrar por data aqui jogaria o dia inteiro da virada na turma errada
+  const rows=funil==='todos'?(DATA.turma_daily?.[t.label]||rowsIn(t.inicio,t.fim))
+                            :(DATA.turma_seg_daily?.[t.label]?.[funil]||rowsIn(t.inicio,t.fim));
   renderKPIs($('#t-kpis'),agg(rows));
   renderChart($('#t-chart'),$('#t-tip'),rows);
   renderTable($('#t-tbl'),rows);

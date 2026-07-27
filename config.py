@@ -92,6 +92,30 @@ def parse_date(s):
     return None
 
 
+def parse_dt(s):
+    """Como parse_date, mas devolve datetime (BRT) em vez de só a data.
+    Precisa existir porque a virada de turma acontece numa HORA do dia
+    (ex: 20/07/2026 18:00), não à meia-noite."""
+    if not s:
+        return None
+    s = str(s).strip()
+    if not s or s in ("-", "#N/A", "#VALUE!"):
+        return None
+    if "T" in s and s.endswith("Z"):
+        try:
+            return datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S") - timedelta(hours=3)
+        except Exception:
+            return None
+    for f in ("%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M", "%d/%m/%Y",
+              "%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(s, f)
+        except ValueError:
+            continue
+    d = parse_date(s)
+    return datetime.strptime(d, "%Y-%m-%d") if d else None
+
+
 def safe_div(a, b):
     return (a / b) if b else 0.0
 

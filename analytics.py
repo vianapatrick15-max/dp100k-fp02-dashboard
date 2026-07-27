@@ -12,7 +12,7 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 
 from config import (
-    parse_money, parse_num, parse_date, is_ipm, norm_campanha,
+    parse_money, parse_num, parse_date, parse_dt, is_ipm, norm_campanha,
     ORIGEM_HEADER_ROW, ORIGEM_CAMPANHA_DP100K, TURMA_MIN_DATE,
     classify_funnel, FUNNELS, FUNNEL_LABELS,
     is_mql_renda, renda_conhecida,
@@ -22,31 +22,88 @@ from config import (
 ADS_SINCE = "2026-01-01"
 
 
-def _turma_windows(invest_rows):
-    starts, ends = {}, {}
+def _hourly(invest_rows):
+    """[(datetime_da_hora, turma, investido)] da aba 'Investimento por Hora'."""
+    out = []
     for r in invest_rows[1:]:
-        if len(r) < 4:
+        if len(r) < 6:
             continue
         t = (r[1] or "").strip()
-        d = parse_date(r[3])
-        if not t or not d:
+        if not t:
             continue
-        if t not in starts or d < starts[t]:
-            starts[t] = d
-        if t not in ends or d > ends[t]:
-            ends[t] = d
-    seq = sorted(((t, starts[t], ends[t]) for t in starts), key=lambda x: x[1])
+        dt = parse_dt(f"{parse_date(r[3])} {(r[4] or '00:00').strip()}") if parse_date(r[3]) else None
+        if not dt:
+            continue
+        out.append((dt, t, parse_money(r[5])))
+    out.sort(key=lambda x: x[0])
+    return out
+
+
+def _turma_windows(invest_rows):
+    """Janelas de turma com precisão de HORA.
+
+    A virada não é à meia-noite: a aba 'Investimento por Hora' marca a TURMA
+    hora a hora e o corte cai no fim da aula (ex: 20/07/2026 às 18:00). Cortar
+    por dia jogava o dia inteiro da virada na turma nova — em Julho/26 - 5 isso
+    inflava 12 vendas e ~R$ 950 de investimento que eram da turma 4.
+    """
+    hourly = _hourly(invest_rows)
+    starts, ends = {}, {}
+    for dt, t, _ in hourly:
+        if t not in starts or dt < starts[t]:
+            starts[t] = dt
+        if t not in ends or dt > ends[t]:
+            ends[t] = dt
+    seq = sorted(starts, key=lambda t: starts[t])
     wins = []
-    for i, (t, s, e) in enumerate(seq):
-        if i + 1 < len(seq):
-            nxt = seq[i + 1][1]
-            end = (datetime.strptime(nxt, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
-            if end < s:
-                end = e
-        else:
-            end = e
-        wins.append({"label": t, "inicio": s, "fim": end})
+    for i, t in enumerate(seq):
+        ini = starts[t]
+        fim = starts[seq[i + 1]] if i + 1 < len(seq) else ends[t] + timedelta(hours=1)
+        if fim <= ini:
+            fim = ends[t] + timedelta(hours=1)
+        wins.append({
+            "label": t,
+            "inicio": ini.strftime("%Y-%m-%d"),
+            "fim": (fim - timedelta(seconds=1)).strftime("%Y-%m-%d"),
+            "ini_dt": ini,
+            "fim_dt": fim,   # exclusivo
+        })
     return wins
+
+
+def _turma_frac(wins, hourly):
+    """frac[label][data] = fatia daquele DIA que pertence à turma (0..1).
+
+    Dia inteiro dentro da janela -> 1.0. Dia de virada -> proporção do
+    investimento por hora (a curva real de gasto), com fallback pro número de
+    horas quando a aba horária não cobre o dia.
+    """
+    spend_by_day_turma = defaultdict(float)
+    spend_by_day = defaultdict(float)
+    for dt, t, v in hourly:
+        d = dt.strftime("%Y-%m-%d")
+        spend_by_day_turma[(t, d)] += v
+        spend_by_day[d] += v
+
+    frac = {w["label"]: {} for w in wins}
+    for w in wins:
+        lab, ini, fim = w["label"], w["ini_dt"], w["fim_dt"]
+        d = datetime.strptime(ini.strftime("%Y-%m-%d"), "%Y-%m-%d")
+        last = fim - timedelta(seconds=1)
+        while d <= last:
+            key = d.strftime("%Y-%m-%d")
+            dia_ini, dia_fim = d, d + timedelta(days=1)
+            if ini <= dia_ini and fim >= dia_fim:
+                frac[lab][key] = 1.0
+            else:
+                tot = spend_by_day.get(key, 0.0)
+                if tot > 0:
+                    frac[lab][key] = spend_by_day_turma.get((lab, key), 0.0) / tot
+                else:
+                    horas = (min(fim, dia_fim) - max(ini, dia_ini)).total_seconds() / 3600.0
+                    frac[lab][key] = max(0.0, min(1.0, horas / 24.0))
+            d += timedelta(days=1)
+    return frac
 
 
 def _email_renda_map(pesquisa_rows):
@@ -94,6 +151,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
                  for f in FUNNELS}
     # hubla por ad (utm_content) x dia -> ingressos + renda conhecida + MQL
     hubla_ads = defaultdict(lambda: {"ing": 0, "renda": 0, "mql": 0})
+    vendas = []   # cada ingresso com timestamp, p/ escopo de turma com hora exata
     ads_daily = []
     ads_meta = {}
 
@@ -197,6 +255,9 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
             sd["ing_mql"] += mql
             sd["ing_meta"] += meta
             sd["ing_meta_rev"] += val if meta else 0.0
+        vendas.append({"dt": parse_dt(r[1]) or datetime.strptime(d, "%Y-%m-%d"), "d": d,
+                       "turma": (r[0] or "").strip(),
+                       "seg": seg, "val": val, "renda": has_renda, "mql": mql, "meta": meta})
         k = utm_content.lower()
         if "ad-" in k:
             canon = resolve_ad(utm_content)
@@ -259,6 +320,73 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         for (k, d), v in hubla_ads.items()
     ]
 
+    # ---- Escopo por turma (virada por HORA) --------------------------------
+    # Tráfego é diário: no dia da virada rateia pela curva de investimento por
+    # hora. Venda tem timestamp: vai pra turma exata, sem rateio.
+    frac = _turma_frac(turmas_all, _hourly(invest_rows))
+    daily_by_d = {x["d"]: x for x in daily_list}
+    seg_by_d = {f: {x["d"]: x for x in seg_out[f]} for f in FUNNELS}
+    TRAF = ("spend", "impr", "reach", "lclk", "lpv", "ic")
+    ING = ("ing_n", "ing_rev", "ing_renda", "ing_mql", "ing_meta", "ing_meta_rev")
+
+    def _blank(d):
+        z = {"d": d}
+        z.update({k: 0 for k in TRAF})
+        z.update({k: 0 for k in ING})
+        return z
+
+    # A venda vai pra turma que a PRÓPRIA planilha marcou (col0 da Hubla, 99,6%
+    # preenchida) — é o corte real do carrinho, mais fino que a hora cheia.
+    # Sem rótulo, cai no timestamp contra a janela horária.
+    labels_conhecidos = {w["label"] for w in turmas_all}
+
+    turma_daily, turma_seg = {}, {}
+    for w in turmas:
+        lab, f_lab = w["label"], frac.get(w["label"], {})
+        v_by_d = defaultdict(lambda: dict.fromkeys(ING, 0))
+        vseg_by_d = {f: defaultdict(lambda: dict.fromkeys(ING, 0)) for f in FUNNELS}
+        for v in vendas:
+            if v["turma"] in labels_conhecidos:
+                if v["turma"] != lab:
+                    continue
+            elif not (w["ini_dt"] <= v["dt"] < w["fim_dt"]):
+                continue
+            for tgt in (v_by_d[v["d"]],) + ((vseg_by_d[v["seg"]][v["d"]],) if v["seg"] else ()):
+                tgt["ing_n"] += 1
+                tgt["ing_rev"] += v["val"]
+                tgt["ing_renda"] += v["renda"]
+                tgt["ing_mql"] += v["mql"]
+                tgt["ing_meta"] += v["meta"]
+                tgt["ing_meta_rev"] += v["val"] if v["meta"] else 0.0
+        rows, srows = [], {f: [] for f in FUNNELS}
+        # dias da turma = dias com investimento + dias com venda rotulada nela
+        for d in sorted(set(f_lab) | set(v_by_d)):
+            fr = f_lab.get(d, 0.0)
+            base, row = daily_by_d.get(d), _blank(d)
+            if base:
+                for k in TRAF:
+                    row[k] = round(base[k] * fr, 2) if k == "spend" else int(round(base[k] * fr))
+            row.update(v_by_d.get(d, {}))
+            # IPM/outras só têm data (sem hora): ficam com a turma dona do meio-dia
+            meio = datetime.strptime(d, "%Y-%m-%d") + timedelta(hours=12)
+            dono = w["ini_dt"] <= meio < w["fim_dt"]
+            for k in ("ipm_n", "ipm_rev", "out_n", "out_rev"):
+                row[k] = (base or {}).get(k, 0) if (base and dono) else 0
+            rows.append(row)
+            for f in FUNNELS:
+                sb, srow = seg_by_d[f].get(d), _blank(d)
+                if sb:
+                    for k in TRAF:
+                        srow[k] = round(sb[k] * fr, 2) if k == "spend" else int(round(sb[k] * fr))
+                srow.update(vseg_by_d[f].get(d, {}))
+                srows[f].append(srow)
+        turma_daily[lab] = rows
+        turma_seg[lab] = srows
+
+    for w in turmas_all:
+        w.pop("ini_dt", None)
+        w.pop("fim_dt", None)
+
     date_min = dates[0] if dates else None
     date_max = dates[-1] if dates else None
     default_start = default_end = None
@@ -274,6 +402,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         "hubla_ads_daily": hubla_ads_daily,
         "ads_meta": ads_meta,
         "turmas": turmas,
+        "turma_daily": turma_daily,
+        "turma_seg_daily": turma_seg,
         "meta": {
             "date_min": date_min,
             "date_max": date_max,
