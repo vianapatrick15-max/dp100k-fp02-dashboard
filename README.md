@@ -14,7 +14,19 @@ com filtro de data livre e visão por turma.
      cliques link, CTR link, visitas página, checkout, conv. página, conv. checkout
 - **Por turma** — as mesmas 3 dobras, escopadas por turma (Maio/26 em diante).
 - **Ads** — anúncios de melhor desempenho (preview + métricas), filtráveis por turma
-  ou período, ordenáveis por vendas / investimento / CPA.
+  ou período, ordenáveis por vendas / investimento / CPA / **hook** / **hold**.
+  Ad de vídeo ganha a faixa **Retenção**: hook rate, hold rate e a curva 25/50/75/100.
+
+### Hook rate e hold rate (ads de vídeo)
+| Métrica | Fórmula | O que responde |
+|---|---|---|
+| **Hook rate** | visualizações de 3s ÷ impressões | quantos pararam o scroll |
+| **Hold rate** | 100% assistido ÷ visualizações de 3s | dos que pararam, quantos foram até o fim |
+| **Curva** | p25/p50/p75/p100 ÷ visualizações de 3s | **onde** o vídeo perde a audiência |
+
+A curva é o que separa "gancho fraco" de "gancho que promete o que o corpo não entrega":
+hook alto com p25 despencando é problema de entrega, não de abertura. Ads estáticos não
+têm faixa. Piso de 30 visualizações de 3s — abaixo disso é ruído de placement, não leitura.
 
 **Dimensão Funil** (chips Todos / Oferta principal / Quiz / RMKT / Nutrição — global,
 aplica nas 3 views). Classificação verificada (workflow adversarial 3 lentes + juiz):
@@ -29,19 +41,32 @@ venda direta, por isso é bucket próprio (não infla o CPA da oferta).
 | Dado | Planilha / aba |
 |---|---|
 | Tráfego ad-level | `1R2Md…` / `Página1` (spend, impr, alcance, link clicks, LPV, IC, permalink) |
-| Ingressos (real) | `1G6fj…` / `Dados_venda_Hubla` (data col1, turma col0, valor col11) |
+| Ingressos (real) | `1G6fj…` / `Dados_venda_Hubla` — **colunas resolvidas pelo header**, não por posição |
 | Janelas de turma | `1G6fj…` / `Investimento por Hora` (TURMA + DATA) |
 | IPM / outras (backend) | `1nIPZ…` / `[ORIGEM DE VENDAS] - Rafael`, filtrando `CAMPANHA=DP100K` |
 
 IPM = produto contém "IPM"; o resto (MXP/VPO/DZP/II/…) = outras vendas.
 
+> **28/07/2026** — inseriram a coluna `Mes` na frente da aba da Hubla, todos os índices
+> deslizaram +1, `oferta` passou a ler telefone e o dashboard ficou ~14h no ar com
+> **0 ingressos**. Desde então `analytics._hubla_cols()` resolve as colunas pelo nome do
+> header, e `aggregate.py` aborta antes de gravar se der 0 venda com a aba cheia
+> (o CI mantém o `data.json` anterior no ar em vez de publicar zero).
+
 ## Pipeline
 `aggregate.py` → `fetch_sheets.fetch()` (4 abas) → `analytics.build_all()` → `data.json`.
 Refresh horário via GitHub Action (`.github/workflows`, cron `5 * * * *`), secret `GCP_SA_B64`.
-`data.json` schema v4.
+`data.json` schema v6.
 
-Thumbnails dos ads: `thumbs.json` (mapa `ad_name → image_url`, opcional) é mesclado
-no aggregate. Sem thumb, o card cai no link "Ver criativo" (Instagram/Preview).
-Gerar/atualizar com `/usr/bin/python3 pull_thumbs.py` (puxa da Meta API, conta C1).
-As URLs são do CDN da Meta (scontent) e podem expirar em semanas — se as imagens
-sumirem, rode `pull_thumbs.py` de novo e commit o `thumbs.json`.
+## Enriquecimentos (rodam local, fora do CI)
+Os dois geram um JSON que o `aggregate.py` mescla; o refresh horário só relê o arquivo
+já commitado. Rodar com `/usr/bin/python3` (o SDK da Meta só está nele) e commitar.
+
+| Script | Gera | Quando rodar |
+|---|---|---|
+| `pull_thumbs.py` | `thumbs.json` (`ad_name → image_url`) | quando as imagens sumirem — as URLs do CDN da Meta (scontent) expiram em semanas |
+| `pull_video.py` | `video.json` (vídeo por ad × dia) | junto do fechamento — sem ele, hook/hold param no último dia puxado |
+
+`pull_video.py` é incremental: sem argumento repuxa os últimos 4 dias (a Meta ainda
+revisa número recente) mais o que faltar; `--full` refaz desde 01/01/2026. Lê as duas
+contas (C1 Instituto + Memorável). Sem thumb, o card cai no link "Ver criativo".

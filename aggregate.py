@@ -9,8 +9,9 @@ from analytics import build_all
 HERE = os.path.dirname(__file__)
 
 
-def _load_thumbs():
-    p = os.path.join(HERE, "thumbs.json")
+def _load_json(nome):
+    """Enriquecimentos gerados fora do CI (thumbs.json, video.json). Ausente = {}."""
+    p = os.path.join(HERE, nome)
     if os.path.exists(p):
         try:
             with open(p, encoding="utf-8") as f:
@@ -22,12 +23,27 @@ def _load_thumbs():
 
 def main():
     raw = fetch()
-    thumbs = _load_thumbs()
+    thumbs = _load_json("thumbs.json")
+    video = _load_json("video.json")
     data = build_all(raw["trafego"], raw["hubla_rows"], raw["invest_rows"],
                      raw["origem_rows"], pesquisa_rows=raw.get("pesquisa_rows"),
-                     thumbs=thumbs)
+                     thumbs=thumbs, video=video)
     data["updated_at"] = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M:%S BRT")
-    data["schema_version"] = 5  # v5: + ing_meta (CPA Meta Ads) e join venda x ad normalizado
+    data["schema_version"] = 6  # v6: + métricas de vídeo por ad x dia (hook/hold/retenção)
+
+    # Guarda-corpo: em 28/07/2026 inseriram uma coluna na aba da Hubla, os índices
+    # deslizaram e o refresh horário publicou ~14h de dashboard com 0 ingressos sem
+    # ninguém perceber. Se a fonte tem linhas e o resultado é zero, é bug — aborta
+    # antes de gravar, e o CI mantém o data.json anterior no ar.
+    ing_total = sum(x["ing_n"] for x in data["daily"])
+    spend_total = sum(x["spend"] for x in data["daily"])
+    if ing_total == 0 and len(raw["hubla_rows"]) > 1:
+        raise SystemExit(
+            f"ABORTADO: 0 ingressos com {len(raw['hubla_rows'])-1} linhas na aba da Hubla. "
+            "Provável mudança de coluna na planilha — conferir analytics._hubla_cols()."
+        )
+    if spend_total == 0:
+        raise SystemExit("ABORTADO: investimento total zerado — conferir fontes de tráfego.")
 
     out_path = os.path.join(HERE, "data.json")
     with open(out_path, "w", encoding="utf-8") as f:
@@ -56,6 +72,14 @@ def main():
     print(f"  ads_daily:    {len(data['ads_daily'])} linhas | ads distintos: {len(data['ads_meta'])}")
     thumbs_ok = sum(1 for m in data["ads_meta"].values() if m.get("thumb"))
     print(f"  thumbs:       {thumbs_ok}/{len(data['ads_meta'])}")
+    vid_rows = [r for r in data["ads_daily"] if "v3" in r]
+    vid_ads = {r["ad"] for r in vid_rows}
+    v3 = sum(r["v3"] for r in vid_rows)
+    vimpr = sum(r["impr"] for r in vid_rows)
+    p100 = sum(r["p100"] for r in vid_rows)
+    print(f"  vídeo:        {len(vid_ads)}/{len(data['ads_meta'])} ads com dado "
+          f"({len(vid_rows)} linhas ad x dia) | hook {(v3/vimpr*100 if vimpr else 0):.1f}% "
+          f"· hold {(p100/v3*100 if v3 else 0):.1f}%")
 
     # reconciliação por funil
     print("\n=== Por funil (reconciliação) ===")

@@ -116,6 +116,21 @@
   .ad .mx{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px 8px}
   .ad .mx .m .ml{font-size:9.5px;color:var(--mut2);text-transform:uppercase;letter-spacing:.4px;font-weight:700}
   .ad .mx .m .mv{font-size:15px;font-weight:750;margin-top:2px;font-variant-numeric:tabular-nums}
+  /* faixa de vídeo: hook / hold / curva de retenção (só em ad de vídeo) */
+  .ad .ret{margin-top:13px;padding-top:11px;border-top:1px solid var(--line)}
+  .ad .ret .rt{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:9px}
+  .ad .ret .rt .rl{font-size:9.5px;color:var(--mut2);text-transform:uppercase;letter-spacing:.4px;
+    font-weight:700;white-space:nowrap}
+  .ad .ret .rt .rr{font-size:11.5px;font-weight:750;font-variant-numeric:tabular-nums;color:var(--mut);
+    white-space:nowrap}
+  .ad .ret .rt .rr b{font-weight:800}
+  .ad .bars{display:flex;gap:4px;align-items:flex-end;height:30px}
+  .ad .bars .b{flex:1;height:100%;background:var(--bg2);border-radius:4px;
+    display:flex;align-items:flex-end;overflow:hidden}
+  .ad .bars .b i{display:block;width:100%;min-height:2px;background:var(--ing);opacity:.85;border-radius:4px}
+  .ad .blbl{display:flex;gap:4px;margin-top:4px}
+  .ad .blbl span{flex:1;text-align:center;font-size:9px;color:var(--mut2);font-weight:700;
+    font-variant-numeric:tabular-nums}
   .ad .links{display:flex;gap:8px;margin-top:12px}
   .ad .links a{flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:7px;border-radius:8px;
     border:1px solid var(--line2);color:var(--mut);text-decoration:none;transition:.12s}
@@ -359,8 +374,12 @@ function computeAds(a,b){
     if(r.d<a||r.d>b)return;
     if(r.seg==='nutricao')return;   // nutrição não foca em venda — fora da análise de ads
     if(funil!=='todos'&&r.seg!==funil)return;
-    const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0});
+    const o=m[r.ad]||(m[r.ad]={ad:r.ad,spend:0,purch:0,impr:0,ic:0,lpv:0,lclk:0,
+                               vimpr:0,v3:0,p25:0,p50:0,p75:0,p100:0});
     o.spend+=r.spend;o.purch+=r.purch;o.impr+=r.impr;o.ic+=r.ic;o.lpv+=r.lpv;o.lclk+=r.lclk;
+    // v3 só existe em dia de ad de vídeo; vimpr acumula a impressão SÓ desses dias,
+    // pra o hook rate não ser diluído por dia sem coleta de vídeo
+    if(r.v3!==undefined){o.vimpr+=r.impr;o.v3+=r.v3;o.p25+=r.p25;o.p50+=r.p50;o.p75+=r.p75;o.p100+=r.p100;}
   });
   const hub={};
   (DATA.hubla_ads_daily||[]).forEach(r=>{if(r.d<a||r.d>b)return;const o=hub[r.k]||(hub[r.k]={ing:0,renda:0,mql:0});o.ing+=r.ing;o.renda+=r.renda;o.mql+=r.mql;});
@@ -369,9 +388,36 @@ function computeAds(a,b){
   return list;
 }
 function adCode(name){const m=name.match(/\[(AD-[^\]]+)\]/i);return m?m[1].toUpperCase():name.slice(0,16);}
+/* HOOK = visualizações de 3s ÷ impressões (quantos pararam o scroll)
+   HOLD = 100% assistido ÷ visualizações de 3s (dos que pararam, quantos foram até o fim)
+   Estático não tem vídeo: os dois voltam null e a faixa nem é desenhada.
+   Piso de 30 visualizações: alguns estáticos registram um punhado de video_view em
+   placement de Reels e sairiam com hook 0,1%, que é ruído, não leitura. */
+const V3_MIN=30;
+const temVideo=o=>o.vimpr>0&&o.v3>=V3_MIN;
+const hookRate=o=>temVideo(o)?o.v3/o.vimpr*100:null;
+const holdRate=o=>temVideo(o)?o.p100/o.v3*100:null;
+/* Curva de retenção: 4 barras (25/50/75/100) como % das visualizações de 3s.
+   Mostra ONDE o vídeo perde a audiência — hook alto com p25 despencando é gancho
+   que promete o que o corpo não entrega. */
+function retencao(o){
+  const hk=hookRate(o),hd=holdRate(o);
+  if(hk==null&&hd==null)return '';
+  const q=[['25',o.p25],['50',o.p50],['75',o.p75],['100',o.p100]];
+  const pct=v=>o.v3?v/o.v3*100:0;
+  const bars=q.map(([k,v])=>`<div class="b" title="${k}% assistido: ${fmtI(v)} (${fmtP(pct(v))} dos 3s)"><i style="height:${Math.max(2,Math.min(100,pct(v)))}%"></i></div>`).join('');
+  const lbls=q.map(([k])=>`<span>${k}%</span>`).join('');
+  return `<div class="ret">
+    <div class="rt"><span class="rl">Retenção</span>
+      <span class="rr" title="Hook = 3s ÷ impressões · Hold = 100% ÷ 3s">hook <b style="color:var(--fat)">${fmtP(hk)}</b> · hold <b style="color:var(--out)">${fmtP(hd)}</b></span></div>
+    <div class="bars">${bars}</div><div class="blbl">${lbls}</div></div>`;
+}
 function renderAdsGrid(el,list,sortKey){
   if(!list.length){el.innerHTML='<div class="empty">Nenhum anúncio com investimento no período.</div>';return;}
-  const sorters={vendas:x=>-x.purch,invest:x=>-x.spend,cpa:x=>x.purch?x.spend/x.purch:1e15};
+  // ads sem vídeo vão pro fim quando a ordenação é de vídeo (não competem com null)
+  const sorters={vendas:x=>-x.purch,invest:x=>-x.spend,cpa:x=>x.purch?x.spend/x.purch:1e15,
+    hook:x=>{const v=hookRate(x);return v==null?1e15:-v;},
+    hold:x=>{const v=holdRate(x);return v==null?1e15:-v;}};
   list.sort((p,q)=>(sorters[sortKey](p)-sorters[sortKey](q))||(q.spend-p.spend));
   el.innerHTML=list.map((o,i)=>{
     const meta=DATA.ads_meta[o.ad]||{};
@@ -395,6 +441,7 @@ function renderAdsGrid(el,list,sortKey){
           <div class="m"><div class="ml">Impressões</div><div class="mv">${fmtI(o.impr)}</div></div>
           <div class="m"><div class="ml">CTR link</div><div class="mv">${fmtP(ctr,2)}</div></div>
         </div>
+        ${retencao(o)}
         ${(meta.permalink||meta.preview)?`<div class="links">
           ${meta.permalink?`<a href="${meta.permalink}" target="_blank" rel="noopener">Instagram</a>`:''}
           ${meta.preview?`<a href="${meta.preview}" target="_blank" rel="noopener">Preview</a>`:''}
@@ -472,7 +519,8 @@ function initControls(){
   $('#a-de').onchange=e=>{st.ads.a=e.target.value;drawAds();};
   $('#a-ate').onchange=e=>{st.ads.b=e.target.value;drawAds();};
   const as=$('#a-sort');
-  [['vendas','Mais vendas'],['invest','Maior investimento'],['cpa','Melhor CPA']].forEach(([k,lb])=>{
+  [['vendas','Mais vendas'],['invest','Maior investimento'],['cpa','Melhor CPA'],
+   ['hook','Melhor hook'],['hold','Melhor hold']].forEach(([k,lb])=>{
     const c=document.createElement('div');c.className='chip';c.dataset.sort=k;c.textContent=lb;
     c.onclick=()=>{st.ads.sort=k;drawAds();};as.appendChild(c);});
   $$('.tab').forEach(t=>t.onclick=()=>showView(t.dataset.view));

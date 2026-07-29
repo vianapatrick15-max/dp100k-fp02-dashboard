@@ -4,6 +4,7 @@ Saída (data.json):
   daily     : [{d, spend, impr, reach, lclk, lpv, ic, ing_n, ing_rev,
                ipm_n, ipm_rev, out_n, out_rev}]  — 1 linha por dia (union tráfego+vendas)
   ads_daily : [{d, ad, camp, spend, purch, impr, ic, lpv, lclk}]  — ad×dia (>= 2026-01-01)
+              + {v3, p25, p50, p75, p100} nos dias em que o ad é vídeo (video.json)
   ads_meta  : {ad: {permalink, preview, status, camp, thumb}}
   turmas    : [{label, inicio, fim}]  — Maio/26 em diante
   meta      : {updated_at, date_min, date_max, default_start, default_end}
@@ -133,6 +134,48 @@ def _turma_frac(wins, hourly):
     return frac
 
 
+def _hubla_cols(hubla_rows):
+    """Índices das colunas da aba Dados_venda_Hubla, resolvidos pelo HEADER.
+
+    Eram hardcoded por posição até 28/07/2026, quando inseriram a coluna 'Mes' na
+    frente: tudo deslizou +1, `oferta` passou a ler telefone, nenhuma linha casava
+    com 'dp100k' e o dashboard foi ao ar com 0 ingressos. Resolver por nome evita
+    a próxima inserção de coluna.
+
+    A turma fina (ex: 'Julho/26 - 5') está na coluna de header 'x'; a de header
+    'Turma' é uma segunda cópia, historicamente desatualizada — só usada se 'x'
+    sumir. Levanta ValueError se faltar coluna essencial: melhor quebrar o refresh
+    do que publicar zero.
+    """
+    hdr = [(h or "").strip().lower() for h in (hubla_rows[0] if hubla_rows else [])]
+
+    def find(*alvos, obrigatorio=True):
+        for a in alvos:
+            if a in hdr:
+                return hdr.index(a)
+        for a in alvos:                      # 2ª passada: casamento parcial
+            for i, h in enumerate(hdr):
+                if h and a in h:
+                    return i
+        if obrigatorio:
+            raise ValueError(f"Dados_venda_Hubla: coluna {alvos[0]!r} não encontrada em {hdr}")
+        return None
+
+    turma = find("x", obrigatorio=False)
+    if turma is None:
+        turma = find("turma")
+    return {
+        "turma": turma,
+        "data": find("data"),
+        "email": find("email", "e-mail"),
+        "oferta": find("oferta"),
+        "utm_source": find("utm source", "utm_source"),
+        "utm_campaign": find("utm campaign", "utm_campaign"),
+        "utm_content": find("utm content", "utm_content"),
+        "valor": find("valor"),
+    }
+
+
 def _email_renda_map(pesquisa_rows):
     """Mapa email(lower) -> faixa de renda, a partir da aba Pesquisa."""
     if not pesquisa_rows:
@@ -158,8 +201,10 @@ def _email_renda_map(pesquisa_rows):
     return m
 
 
-def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None, thumbs=None):
+def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
+              thumbs=None, video=None):
     thumbs = thumbs or {}
+    video = video or {}
     email_renda = _email_renda_map(pesquisa_rows or [])
 
     # ---- Turmas (janelas) ----
@@ -224,11 +269,19 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         sd["ic"] += ic
 
         if d >= ADS_SINCE and ad and (spend > 0 or impr > 0):
-            ads_daily.append({
+            row = {
                 "d": d, "ad": ad, "camp": camp, "seg": seg,
                 "spend": round(spend, 2), "purch": int(purch), "impr": int(impr),
                 "ic": int(ic), "lpv": int(lpv), "lclk": int(lclk),
-            })
+            }
+            # Métricas de vídeo (video.json, puxadas por pull_video.py). Só entram
+            # nos dias em que o ad é vídeo — estático não gera chave nenhuma, pra
+            # não inflar o data.json com zeros.
+            vv = (video.get(ad) or {}).get(d)
+            if vv:
+                row["v3"], row["p25"], row["p50"], row["p75"], row["p100"] = (
+                    int(vv[0]), int(vv[1]), int(vv[2]), int(vv[3]), int(vv[4]))
+            ads_daily.append(row)
             m = ads_meta.get(ad)
             if not m or d >= m.get("_last", ""):
                 ads_meta[ad] = {
@@ -267,22 +320,24 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         spend_by_ad[r["ad"]] += r["spend"]
     resolve_ad = build_ad_resolver(ads_meta.keys(), spend_by_ad)
 
-    # ---- Ingressos (Hubla) — col1 data, col3 email, col5 oferta, col7 utm_campaign,
-    #      col8 utm_content, col11 valor. Renda vem da Pesquisa (join por email) -> MQL>=10k.
+    # ---- Ingressos (Hubla) — colunas resolvidas pelo header (ver _hubla_cols).
+    #      Renda vem da Pesquisa (join por email) -> MQL >= R$ 10.001.
+    C = _hubla_cols(hubla_rows)
+    largura = max(C.values()) + 1
     for r in hubla_rows[1:]:
-        if len(r) < 12:
+        if len(r) < largura:
             continue
-        oferta = (r[5] or "").strip()
+        oferta = (r[C["oferta"]] or "").strip()
         if "dp100k" not in oferta.lower():
             continue
-        d = parse_date(r[1])
+        d = parse_date(r[C["data"]])
         if not d:
             continue
-        val = parse_money(r[11])
-        renda = email_renda.get((r[3] or "").strip().lower(), "")
+        val = parse_money(r[C["valor"]])
+        renda = email_renda.get((r[C["email"]] or "").strip().lower(), "")
         has_renda = 1 if renda_conhecida(renda) else 0
         mql = 1 if (has_renda and is_mql_renda(renda)) else 0
-        meta = 1 if is_meta_ads(r[6]) else 0
+        meta = 1 if is_meta_ads(r[C["utm_source"]]) else 0
         day = daily[d]
         day["ing_n"] += 1
         day["ing_rev"] += val
@@ -290,8 +345,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         day["ing_mql"] += mql
         day["ing_meta"] += meta
         day["ing_meta_rev"] += val if meta else 0.0
-        utm_content = (r[8] or "").strip()
-        seg = classify_funnel(utm_content, r[7], is_sale=True)  # utm_content, utm_campaign
+        utm_content = (r[C["utm_content"]] or "").strip()
+        seg = classify_funnel(utm_content, r[C["utm_campaign"]], is_sale=True)
         if seg:
             sd = seg_daily[seg][d]
             sd["ing_n"] += 1
@@ -300,8 +355,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
             sd["ing_mql"] += mql
             sd["ing_meta"] += meta
             sd["ing_meta_rev"] += val if meta else 0.0
-        vendas.append({"dt": parse_dt(r[1]) or datetime.strptime(d, "%Y-%m-%d"), "d": d,
-                       "turma": (r[0] or "").strip(),
+        vendas.append({"dt": parse_dt(r[C["data"]]) or datetime.strptime(d, "%Y-%m-%d"), "d": d,
+                       "turma": (r[C["turma"]] or "").strip(),
                        "seg": seg, "val": val, "renda": has_renda, "mql": mql, "meta": meta})
         k = utm_content.lower()
         if "ad-" in k:
