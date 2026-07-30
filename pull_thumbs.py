@@ -47,9 +47,12 @@ for acc in accts:
             url = cr.get("image_url") or cr.get("thumbnail_url")
             if url:
                 key = targets[nm]
-                if key not in thumbs or not thumbs[key]:
-                    thumbs[key] = url
+                # sempre sobrescreve: as URLs scontent são assinadas e expiram em
+                # semanas ("URL signature expired" / 403). Só preencher faltante
+                # deixava o card com imagem quebrada pra sempre.
+                if thumbs.get(key) != url:
                     found += 1
+                thumbs[key] = url
     except Exception as e:
         print(f"  act_{acc}: ERRO {str(e)[:80]} (vistos {seen})", file=sys.stderr)
         continue
