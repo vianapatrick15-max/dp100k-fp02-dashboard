@@ -44,6 +44,13 @@ def main():
         )
     if spend_total == 0:
         raise SystemExit("ABORTADO: investimento total zerado — conferir fontes de tráfego.")
+    # Mesma classe de bug na aba ORIGEM DE VENDAS (renomeada em 04/08/2026, header
+    # mudou de linha): all-time sempre tem venda de IPM atribuída ao DP100K.
+    if sum(x["ipm_n"] for x in data["daily"]) == 0 and len(raw["origem_rows"]) > 1:
+        raise SystemExit(
+            f"ABORTADO: 0 vendas IPM com {len(raw['origem_rows'])-1} linhas na aba ORIGEM DE VENDAS. "
+            "Provável mudança de header/coluna — conferir analytics._origem_header_row()."
+        )
 
     out_path = os.path.join(HERE, "data.json")
     with open(out_path, "w", encoding="utf-8") as f:

@@ -37,8 +37,34 @@ def _client():
     return gspread.authorize(creds)
 
 
+def _norm_tab(s):
+    return "".join((s or "").lower().split())
+
+
+def _worksheet(sh, tab):
+    """Resolve a aba tolerando renomeação de sufixo.
+
+    Em 04/08/2026 a aba '[ORIGEM DE VENDAS] - Rafael' virou '[ORIGEM DE VENDAS]'
+    e o refresh quebrou (WorksheetNotFound). Escada: título exato > uma aba cujo
+    título seja prefixo do procurado (ou vice-versa), normalizado.
+    """
+    titles = [w.title for w in sh.worksheets()]
+    if tab in titles:
+        return sh.worksheet(tab)
+    alvo = _norm_tab(tab)
+    cand = [t for t in titles
+            if _norm_tab(t) and (_norm_tab(t).startswith(alvo) or alvo.startswith(_norm_tab(t)))]
+    if len(cand) == 1:
+        print(f"AVISO: aba '{tab}' não existe; usando '{cand[0]}'.")
+        return sh.worksheet(cand[0])
+    raise SystemExit(
+        f"Aba '{tab}' não encontrada e resolução ambígua ({cand or 'nenhum candidato'}). "
+        f"Abas disponíveis: {titles}"
+    )
+
+
 def _rows(client, sheet_id, tab):
-    return client.open_by_key(sheet_id).worksheet(tab).get_all_values()
+    return _worksheet(client.open_by_key(sheet_id), tab).get_all_values()
 
 
 def _dicts(rows):

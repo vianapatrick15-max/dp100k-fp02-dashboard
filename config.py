@@ -23,8 +23,8 @@ TAB_PESQUISA = "Pesquisa"              # renda por email (join p/ MQL)
 
 # --- Origem de vendas (backend IPM / outras) — planilha Memorável/Tathi ---
 ORIGEM_SHEET_ID = "1nIPZROarNZOtI5p_gdEn4A3brTL7011O7kYfyha84_s"
-TAB_ORIGEM = "[ORIGEM DE VENDAS] - Rafael"
-ORIGEM_HEADER_ROW = 3       # header real está na 4ª linha (idx 3); dados começam idx 4
+TAB_ORIGEM = "[ORIGEM DE VENDAS]"   # era "... - Rafael" até 04/08/2026 (resolver tolera sufixo)
+ORIGEM_HEADER_ROW = 0       # fallback; a altura real é detectada por analytics._origem_header_row
 ORIGEM_CAMPANHA_DP100K = "dp100k"   # normalizado (sem espaço/lower)
 
 # Turmas exibidas na página "Por turma": de Maio/26 em diante

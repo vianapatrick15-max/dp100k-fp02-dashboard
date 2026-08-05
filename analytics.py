@@ -201,6 +201,20 @@ def _email_renda_map(pesquisa_rows):
     return m
 
 
+def _origem_header_row(rows):
+    """Acha a linha de header da aba ORIGEM DE VENDAS pelo conteúdo.
+
+    A aba já teve o header na 4ª linha (idx 3, versão '- Rafael') e hoje tem na 1ª.
+    Índices de coluna seguem os mesmos (DATA=0, PRODUTO=1, VALOR=2, CAMPANHA=7);
+    só a altura do header muda. Fallback: ORIGEM_HEADER_ROW.
+    """
+    for i, r in enumerate(rows[:12]):
+        if len(r) > 7 and "campanha" in (r[7] or "").strip().lower() \
+                and "produto" in (r[1] or "").strip().lower():
+            return i
+    return ORIGEM_HEADER_ROW
+
+
 def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
               thumbs=None, video=None):
     thumbs = thumbs or {}
@@ -367,7 +381,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
             ha["mql"] += mql
 
     # ---- Backend IPM/Outras (ORIGEM DE VENDAS, CAMPANHA=DP100K) ----
-    for r in origem_rows[ORIGEM_HEADER_ROW + 1:]:
+    for r in origem_rows[_origem_header_row(origem_rows) + 1:]:
         if len(r) < 8:
             continue
         d = parse_date(r[0])
