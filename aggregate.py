@@ -21,11 +21,61 @@ def _load_json(nome):
     return {}
 
 
+# Cabeçalhos da planilha `Página1`, na ordem em que pull_adlevel.py grava as colunas.
+# Manter esses nomes: é por eles que analytics.build_all lê cada métrica.
+ADLEVEL_COLS = [
+    "Date", "Campaign Name", "Adset Name", "Ad Name",
+    "Spend (Cost, Amount Spent)", "Impressions", "Reach (Estimated)",
+    "Action Link Clicks", "Action Landing Page View",
+    "Action Omni Initiated Checkout", "Action Omni Purchase",
+]
+
+
+def _merge_adlevel(trafego, adlevel):
+    """Troca o tráfego da planilha pelo puxado da Meta nos dias que a API cobre.
+
+    A planilha do n8n congelou em 2026-07-27 e, mesmo viva, só via a conta C1 —
+    o que sumia com a Memorável desde 22/07. `pull_adlevel.py` puxa as 2 contas
+    direto da Insights e grava adlevel.json. Aqui as linhas dele viram dicts com
+    os MESMOS cabeçalhos da planilha, então analytics.py segue igual.
+
+    Dia coberto pela API vence o dia da planilha (não soma — dobraria). Dia fora
+    da cobertura continua vindo da planilha, que fica como fallback histórico.
+    """
+    rows = (adlevel or {}).get("rows") or []
+    if not rows:
+        print("AVISO: adlevel.json vazio/ausente — tráfego ad-level vindo só da planilha.")
+        return trafego
+    ads_meta = adlevel.get("ads") or {}
+    dias_api = {r[0] for r in rows}
+    out = []
+    for r in rows:
+        d = dict(zip(ADLEVEL_COLS, r))
+        m = ads_meta.get(d["Ad Name"]) or ["", "", ""]
+        d["Instagram Permalink URL"], d["Preview Shareable Link"], d["Ad Status"] = m
+        out.append(d)
+    resto = [r for r in trafego if (r.get("Date") or "").strip() not in dias_api]
+    ate = max(dias_api)
+    print(f"ad-level: {len(out)} linhas da Meta API ({min(dias_api)} a {ate}) "
+          f"+ {len(resto)} linhas remanescentes da planilha")
+    # adlevel.json é gerado FORA do CI (precisa do token da Meta). Se ninguém rodar
+    # pull_adlevel.py, a view Ads / split por funil / hook-hold congelam sem que
+    # nada mais no dash pareça errado — foi exatamente assim que a planilha passou
+    # 11 dias parada sem ninguém ver. Daí o aviso alto no log do refresh.
+    atraso = (datetime.now(timezone(timedelta(hours=-3))).date()
+              - datetime.strptime(ate, "%Y-%m-%d").date()).days
+    if atraso > 2:
+        print(f"AVISO: tráfego ad-level parado há {atraso} dias (último dia {ate}). "
+              f"Rodar `/usr/bin/python3 pull_adlevel.py` local e commitar adlevel.json.")
+    return out + resto
+
+
 def main():
     raw = fetch()
     thumbs = _load_json("thumbs.json")
     video = _load_json("video.json")
-    data = build_all(raw["trafego"], raw["hubla_rows"], raw["invest_rows"],
+    trafego = _merge_adlevel(raw["trafego"], _load_json("adlevel.json"))
+    data = build_all(trafego, raw["hubla_rows"], raw["invest_rows"],
                      raw["origem_rows"], pesquisa_rows=raw.get("pesquisa_rows"),
                      thumbs=thumbs, video=video)
     data["updated_at"] = datetime.now(timezone(timedelta(hours=-3))).strftime("%Y-%m-%d %H:%M:%S BRT")

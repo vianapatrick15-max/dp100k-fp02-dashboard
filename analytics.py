@@ -240,6 +240,7 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
     vendas = []   # cada ingresso com timestamp, p/ escopo de turma com hora exata
     ads_daily = []
     ads_meta = {}
+    nut_dia = defaultdict(float)  # spend ad-level de nutrição/distribuição, por dia
 
     def g(row, *names):
         for n in names:
@@ -274,6 +275,8 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
         day["ic"] += ic
 
         seg = classify_funnel(camp, adset, ad)  # tráfego: sempre um funil
+        if seg == "nutricao":
+            nut_dia[d] += spend
         sd = seg_daily[seg][d]
         sd["spend"] += spend
         sd["impr"] += impr
@@ -312,18 +315,26 @@ def build_all(trafego, hubla_rows, invest_rows, origem_rows, pesquisa_rows=None,
 
     # ---- Investimento oficial: aba 'Investimento por Hora' (2 contas) --------
     # Substitui o spend ad-level (1 conta só) nos dias cobertos pela aba. Os
-    # funis são reescalados pela participação ad-level do dia, pra somarem o
-    # total oficial. `ads_daily` fica com o spend ad-level cru de propósito: o
-    # ranking de criativo tem que continuar sendo gasto real por anúncio, não
-    # rateio. Ver docstring de _spend_oficial().
+    # funis de VENDA são reescalados pela participação ad-level do dia, pra
+    # somarem o total oficial. `ads_daily` fica com o spend ad-level cru de
+    # propósito: o ranking de criativo tem que continuar sendo gasto real por
+    # anúncio, não rateio. Ver docstring de _spend_oficial().
+    #
+    # NUTRIÇÃO/DISTRIBUIÇÃO (09/08/2026): a aba horária filtra objetivo IN
+    # (OUTCOME_SALES, CONVERSIONS, PRODUCT_CATALOG_SALES), então as campanhas de
+    # VV/distribuição não entram nela. Elas são somadas de volta pelo ad-level
+    # (`nut_dia`), a pedido do Patrick, pra que investimento/CPA/ROAS reflitam o
+    # gasto TOTAL da operação e não só o gasto de venda. O funil nutrição fica
+    # com seu spend cru (não é reescalado — o oficial não o contém).
     spend_dia = _spend_oficial(invest_rows)
     for d, oficial in spend_dia.items():
-        antigo = daily[d]["spend"]
-        daily[d]["spend"] = oficial
-        if antigo > 0:
-            k = oficial / antigo
+        nut = nut_dia.get(d, 0.0)
+        venda_antigo = daily[d]["spend"] - nut   # ad-level só dos funis de venda
+        daily[d]["spend"] = oficial + nut
+        if venda_antigo > 0:
+            k = oficial / venda_antigo
             for f in FUNNELS:
-                if d in seg_daily[f]:
+                if f != "nutricao" and d in seg_daily[f]:
                     seg_daily[f][d]["spend"] *= k
         elif oficial > 0:
             seg_daily["oferta_principal"][d]["spend"] = oficial
