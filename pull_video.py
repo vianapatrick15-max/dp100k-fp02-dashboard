@@ -46,6 +46,8 @@ LOOKBACK_DAYS = 4                 # Meta ainda revisa números de dias recentes
 ACCOUNTS = [
     ("act_1725623984282551", "C1 Instituto"),
     ("act_1835702343244302", "Memorável"),
+    # 27/08/2026: DP100K migrou pra C4 — sem ela o ad-level congela nessa data
+    ("act_1631219441753243", "C4 Memorável"),
 ]
 
 FIELDS = [
